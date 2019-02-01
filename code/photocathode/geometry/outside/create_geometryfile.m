@@ -1,7 +1,7 @@
 function [] = create_geometryfile (outside_ptcs, filename)
 [interfaces, boundaries] = nrbmultipatch (outside_ptcs);
-boundaries = []; 
-% rechts oben ist nur ein patch
+boundaries = [];
+
 boundaries(1).patches = [1 2 3 4 5 6 7 8 9 9 9 10 11];
 boundaries(1).faces   = [3 3 3 3 1 1 4 4 1 2 4  2  4];
 

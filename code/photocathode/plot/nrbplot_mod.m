@@ -1,5 +1,5 @@
 function nrbplot_mod (color, width, nurbs, subd, varargin)
-% plots the boundary in color color with linewidth width
+% plots the boundary in color 'color' with linewidth 'width'
 %
 % NRBPLOT: Plot a NURBS curve or surface, or the boundary of a NURBS volume.
 % 

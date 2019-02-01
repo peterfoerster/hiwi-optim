@@ -3,12 +3,12 @@ addpath(genpath(pwd));
 
 % plot the geometry
 geometry_file = "gun_half_short.txt";
-%nsub = 5;
-%width = 8;
-%options.numbers = 1;
-%options.boundary = 1;
-%plot_geometry_2D (geometry_file, nsub, width, options);
-
+nsub = 5;
+width = 8;
+options.numbers = 1;
+options.boundary = 1;
+plot_geometry_2D (geometry_file, nsub, width, options);
+return
 % solve for the potential
 voltage = 90e3;
 [problem_data, method_data] = init_ptnl_2D (geometry_file, voltage);

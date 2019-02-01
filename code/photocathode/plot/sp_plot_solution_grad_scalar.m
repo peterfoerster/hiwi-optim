@@ -31,7 +31,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-function sp_plot_solution_grad (u, space, geometry, npts, ncuts)
+function sp_plot_solution_grad_scalar (u, space, geometry, npts, ncuts)
 
 ndim = numel (space.knots);
 

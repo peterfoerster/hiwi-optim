@@ -1,5 +1,5 @@
 function nrbkntplot_mod (nsub, color, width, nurbs)
-% plots the boundary in color color with linewidth width
+% plots the boundary in color 'color' with linewidth 'width'
 %
 % NRBKNTPLOT: Plot a NURBS entity with the knots subdivision.
 % 
