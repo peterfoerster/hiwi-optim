@@ -3,13 +3,13 @@ pkg load geopdes;
 addpath(genpath(pwd));
 
 % plot the geometry
-geometry_file = "inhomogeneous_square.txt";
-%nsub = 100;
-%width = 4;
-%options.numbers = 0;
-%options.boundary = 1;
-%plot_geometry (geometry_file, nsub, width, options);
-%return
+geometry_file = "photocathode.txt";
+nsub = 100;
+width = 4;
+options.numbers = 0;
+options.boundary = 1;
+plot_geometry (geometry_file, nsub, width, options);
+return
 % solve for the potential
 voltage = -60e3;
 [problem_data, method_data] = init_potential_example (geometry_file, voltage);

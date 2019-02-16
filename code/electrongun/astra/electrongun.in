@@ -1,0 +1,22 @@
+&NEWRUN
+  HEAD = ' Egun'
+  Distribution = 'electrongun.ini'
+  N_red=1
+  Zoff=0
+  TRACK_ALL=True
+  Lmonitor=True
+/
+
+&OUTPUT
+  ZSTOP=0.3
+  Zemit=100
+  Zphase=1
+  TrackS=True
+/
+
+&CAVITY
+  LEField=True
+  File_Efield(1)='DC-3D'
+  C_noscale(1)=True
+  Nue(1)=0
+/

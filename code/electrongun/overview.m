@@ -1,13 +1,20 @@
 pkg load geopdes;
 addpath(genpath(pwd));
 
+% plot generatorinput
+inputfile = 'electrongun.ini';
+%generatorinput = plot_generatorinput (inputfile);
+%return
 % plot the geometry
 geometry_file = "gun_half_short.txt";
 nsub = 5;
 width = 8;
 options.numbers = 1;
-options.boundary = 1;
+options.boundary = 0;
 plot_geometry_2D (geometry_file, nsub, width, options);
+hold on;
+plot_generatorinput (inputfile);
+hold off;
 return
 % solve for the potential
 voltage = 90e3;
