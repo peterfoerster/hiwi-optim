@@ -1,5 +1,23 @@
 # hiwi-optim
 
+December
+- read: 6 h
+- electrongun: 5 h
+- photocathode: 7 h
+
+January
+- read: 4 h
+- electrongun: 5+5 h
+- photocathode: 4+7 h
+
+February
+
+March
+- read:
+- electrongun:
+- photocathode: 7 h
+
+
 - insulator inner radius: 25
 - insulator outer radius: 35
 - insulator epsilon: 9.4

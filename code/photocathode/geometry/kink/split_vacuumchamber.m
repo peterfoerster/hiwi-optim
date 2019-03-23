@@ -1,4 +1,4 @@
-function [vacuumchamber_inside] = fill_vacuumchamber (electrode_boundary, cathode, vacuumchamber)
+function [vacuumchamber_inside] = split_vacuumchamber (electrode_boundary, cathode, vacuumchamber)
 % bottom front horizontal
 p1 = nrbeval(cathode(1), 1);
 p2 = nrbeval(vacuumchamber(1), 1);

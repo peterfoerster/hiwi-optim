@@ -22,38 +22,34 @@ electrode_boundary(1) = nrbline(p1, p2);
 radius = 7.5e-3;
 center = [7.5e-3 (35+7.5)*1e-3 0];
 sang = pi/2;
-eang = sang + pi/3;
+eang = sang + pi/2;
 electrode_boundary(5) = nrbcirc(radius,center,sang,eang);
 electrode_boundary(5) = nrbreverse(electrode_boundary(5));
 
 radius = 7.5e-3;
 center = [7.5e-3 (35+7.5)*1e-3 0];
-sang = pi/2 + pi/3;
-eang = sang + pi/3;
+sang = pi/2 + pi/2;
+eang = sang + pi/2;
 electrode_boundary(6) = nrbcirc(radius,center,sang,eang);
 electrode_boundary(6) = nrbreverse(electrode_boundary(6));
-
-radius = 7.5e-3;
-center = [7.5e-3 (35+7.5)*1e-3 0];
-sang = pi/2 + 2*pi/3;
-eang = sang + pi/3;
-electrode_boundary(7) = nrbcirc(radius,center,sang,eang);
-
-% insert kink here
-
-% lower back horizontal
-p1 = [7.5*1e-3 35e-3 0];
-p2 = [(7.5+73.26)*1e-3 35e-3 0];
-electrode_boundary(8) = nrbline(p1, p2);
 
 % upper horizontal
 p1 = nrbeval(electrode_boundary(5), 1);
 p2 = nrbeval(electrode_boundary(3), 0);
 electrode_boundary(4) = nrbline(p1, p2);
 
-% front vertical
-p1 = [(7.5+73.26)*1e-3 20e-3 0];
+% lower back horizontal
+p1 = nrbeval(electrode_boundary(6), 0);
 p2 = [(7.5+73.26)*1e-3 35e-3 0];
+electrode_boundary(7) = nrbline(p1, p2);
+
+% front top vertical
+p1 = [(7.5+73.26)*1e-3 (20+15/2)*1e-3 0];
+p2 = nrbeval(electrode_boundary(7), 1);
+electrode_boundary(8) = nrbline(p1, p2);
+
+p1 = [(7.5+73.26)*1e-3 20e-3 0];
+p2 = nrbeval(electrode_boundary(8), 0);
 electrode_boundary(9) = nrbline(p1, p2);
 
 % lower front horizontal
