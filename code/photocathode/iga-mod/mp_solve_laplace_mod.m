@@ -10,7 +10,7 @@
 %
 % USAGE:
 %
-%  [geometry, msh, space, u] = 
+%  [geometry, msh, space, u] =
 %          mp_solve_laplace (problem_data, method_data)
 %
 % INPUT:
@@ -27,7 +27,7 @@
 %  method_data : a structure with discretization data. Its fields are:
 %    - degree:     degree of the spline functions.
 %    - regularity: continuity of the spline functions.
-%    - nsub:       number of subelements with respect to the geometry mesh 
+%    - nsub:       number of subelements with respect to the geometry mesh
 %                   (nsub=1 leaves the mesh unchanged)
 %    - nquad:      number of points for Gaussian quadrature rule
 %
@@ -71,7 +71,7 @@ end
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load (geo_name);
 npatch = numel (geometry);
 
-msh = cell (1, npatch); 
+msh = cell (1, npatch);
 sp = cell (1, npatch);
 for iptc = 1:npatch
 
@@ -92,7 +92,7 @@ msh = msh_multipatch (msh, boundaries);
 space = sp_multipatch (sp, msh, interfaces, boundary_interfaces);
 clear sp
 
-% Compute and assemble the matrices 
+% Compute and assemble the matrices
 stiff_mat = op_gradu_gradv_mp_mod (space, space, msh, c_diff);
 rhs = op_f_v_mp (space, msh, f);
 

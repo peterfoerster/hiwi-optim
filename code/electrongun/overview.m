@@ -6,7 +6,7 @@ inputfile = 'electrongun.ini';
 %generatorinput = plot_generatorinput (inputfile);
 %return
 % plot the geometry
-geometry_file = "gun_half_short.txt";
+geometry_file = 'gun_half_short.txt';
 nsub = 5;
 width = 8;
 options.numbers = 1;

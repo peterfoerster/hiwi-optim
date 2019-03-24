@@ -1,0 +1,20 @@
+# Created by Octave 4.4.1, Sun Mar 24 17:52:41 2019 CET <peter@peter-ubuntu>
+# name: N_it
+# type: scalar
+4
+
+
+# name: errh1
+# type: matrix
+# rows: 1
+# columns: 4
+ NaN 5478.6033759662296 5415.6075658489772 5415.5452353868541
+
+
+# name: errl2
+# type: matrix
+# rows: 1
+# columns: 4
+ NaN 21.413769180129677 22.122885534594335 22.1502066357756
+
+

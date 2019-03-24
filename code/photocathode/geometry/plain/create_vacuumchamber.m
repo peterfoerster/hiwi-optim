@@ -32,9 +32,11 @@ p2 = nrbeval(vacuumchamber(5), 0);
 p1 = [p2(1) p1(2)];
 vacuumchamber(6) = nrbline(p1, p2);
 
+% take mean to avoid sharp corner
 p1 = nrbeval(cathode_boundary(7), 0);
+p3 = nrbeval(cathode_boundary(10), 0);
 p2 = nrbeval(vacuumchamber(6), 0);
-p1 = [p2(1) p1(2)];
+p1 = [p2(1) (p1(2)+p3(2))/2];
 vacuumchamber(7) = nrbline(p1, p2);
 
 p1 = nrbeval(cathode_boundary(10), 0);
