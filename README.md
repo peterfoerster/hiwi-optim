@@ -14,8 +14,8 @@ February
 
 March
 - read:
-- electrongun:
-- photocathode: 7 h
+- electrongun: 4 h
+- photocathode: 7+7 h
 
 
 - insulator inner radius: 25
