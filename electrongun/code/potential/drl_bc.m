@@ -1,4 +1,4 @@
-function [h] = drl_bc_2D (ib, x, y, voltage)
+function [h] = drl_bc (ib, x, y, voltage)
 switch (ib)
 	% anode
 	case {1}

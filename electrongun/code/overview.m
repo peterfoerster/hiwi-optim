@@ -1,5 +1,4 @@
 pkg load geopdes;
-addpath(genpath(pwd));
 
 % plot generatorinput
 inputfile = 'electrongun.ini';

@@ -1,4 +1,4 @@
-function [g] = nm_bc_2D (ib, x, y)
+function [g] = nm_bc (ib, x, y)
 switch (ib)
 	case {3}
 		g = zeros(size(x));

@@ -1,0 +1,1 @@
+addpath('/home/peter/hiwi-optim/electrongun/code/iga-mod:/home/peter/hiwi-optim/electrongun/code/plot:/home/peter/hiwi-optim/electrongun/code/geometry:/home/peter/hiwi-optim/electrongun/code/potential', '-begin');
