@@ -25,6 +25,8 @@ end
 % compute determinant and quadrature weights
 w = msh.quad_weights .* msh.jacdet;
 
+% relative error seems to return worse results
+% errl2_elem = sum (reshape (sum (((valu_conv - valu_ref)./valu_ref).^2, 1), [msh.nqn, msh.nel]) .* w);
 errl2_elem = sum (reshape (sum ((valu_conv - valu_ref).^2, 1), [msh.nqn, msh.nel]) .* w);
 
 errl2  = sqrt (sum (errl2_elem));

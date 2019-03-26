@@ -2,7 +2,7 @@
 
 function [errh1, errl2, errh1s] = mp_sp_h1_error_ref (space_ref, msh_ref, u_ref, u_conv, space_conv, geometry)
 if (space_ref.npatch ~= msh_ref.npatch)
-	error ('The number of patches does not coincide') 
+	error ('The number of patches does not coincide')
 end
 
 for iptc = 1:msh_ref.npatch
@@ -18,7 +18,6 @@ for iptc = 1:msh_ref.npatch
 		u_ptc_conv = u_conv(space_conv.gnum{iptc}) .* space_conv.dofs_ornt{iptc}.';
 	end
 	% single patch
-%	keyboard;
 	[error_h1(iptc), error_l2(iptc), error_h1s(iptc)] = sp_h1_error_ref (msh_ref.msh_patch{iptc}, space_ref.sp_patch{iptc}, u_ptc_ref, u_ptc_conv, space_conv.sp_patch{iptc}, geometry(iptc));
 end
 errl2 = sqrt (sum (error_l2 .* error_l2));

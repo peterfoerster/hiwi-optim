@@ -20,7 +20,7 @@ grad_valu_conv = reshape(grad_valu_conv, msh.rdim, msh.nqn, msh.nel);
 grad_valu_test = reshape (grad_valu_test, sp.ncomp, msh.rdim, msh.nqn, msh.nel);
 grad_valu_ref = reshape (grad_valu_ref, sp.ncomp, msh.rdim, msh.nqn, msh.nel);
 grad_valu_conv = reshape (grad_valu_conv, sp.ncomp, msh.rdim, msh.nqn, msh.nel);
-  
+
 % tests if the original and new solution coincide
 %keyboard;
 if ( max(max(max(grad_valu_ref - grad_valu_test)))~=0 )
@@ -32,6 +32,8 @@ w = msh.quad_weights .* msh.jacdet;
 % evaluate l2
 [errl2, errl2_elem] = sp_l2_error_eval_l2_ref (sp, msh, u_ref, space_ref, u_conv, space_conv, geometry);
 
+% relative error seems to return worse results
+% errh1s_elem = sum (reshape (sum (sum (((grad_valu_conv - grad_valu_ref)./grad_valu_ref).^2, 1), 2), [msh.nqn, msh.nel]) .* w);
 errh1s_elem = sum (reshape (sum (sum ((grad_valu_conv - grad_valu_ref).^2, 1), 2), [msh.nqn, msh.nel]) .* w);
 errh1s = sqrt (sum (errh1s_elem));
 
