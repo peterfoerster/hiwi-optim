@@ -31,13 +31,13 @@ if ( r_phys(2)<0 )
 end
 
 % bt_bound_top
-[outside, in_ptc, r_param, iptc] = tfr_bt_bound_top_2D (geometry, ptcs.bt_bound_top, r_phys);
+[outside, in_ptc, r_param, iptc] = tfr_bt_bound_top (geometry, ptcs.bt_bound_top, r_phys);
 
 % bt_bound
 if ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) )
 	ii = 1;
 	while ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) && ii <= length(ptcs.bt_bound) )
-	[outside, in_ptc, r_param, iptc] = tfr_bt_bound_2D (geometry, ptcs.bt_bound(ii), r_phys);
+	[outside, in_ptc, r_param, iptc] = tfr_bt_bound (geometry, ptcs.bt_bound(ii), r_phys);
 	ii = ii + 1;
 	end%while
 end
@@ -46,26 +46,26 @@ end
 if ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) )
 	ii = 1;
 	while ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) && ii <= length(ptcs.bt) )
-		[in_ptc, r_param, iptc] = tfr_bt_2D (geometry, ptcs.bt(ii), r_phys);
+		[in_ptc, r_param, iptc] = tfr_bt (geometry, ptcs.bt(ii), r_phys);
 		ii = ii + 1;
 	end%while
 end
 
 % cath_bound
 if ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) )
-	[outside, in_ptc, r_param, iptc] = tfr_cath_bound_2D (geometry, ptcs.cath_bound, r_phys);
+	[outside, in_ptc, r_param, iptc] = tfr_cath_bound (geometry, ptcs.cath_bound, r_phys);
 end
 
 % cath
 if ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) )
-	[in_ptc, r_param, iptc] = tfr_cath_2D (geometry, ptcs.cath, r_phys);
+	[in_ptc, r_param, iptc] = tfr_cath (geometry, ptcs.cath, r_phys);
 end
 
 % cath_bt
 if ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) )
 	ii = 1;
 	while ( outside == false && in_ptc == false && isnan(r_param(1)) && isnan(r_param(2)) && ii <= length(ptcs.cath_bt) )
-		[in_ptc, r_param, iptc] = tfr_cath_bt_2D (geometry, ptcs.cath_bt(ii), r_phys);
+		[in_ptc, r_param, iptc] = tfr_cath_bt (geometry, ptcs.cath_bt(ii), r_phys);
 		ii = ii + 1;
 	end%while
 end

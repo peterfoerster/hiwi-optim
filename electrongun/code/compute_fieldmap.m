@@ -6,9 +6,9 @@ voltage = 90e3;
 
 % choose number of physical coordinates
 % z is longitudinal axis
-Nx = 5;
-Ny = 5;
-Nz = 5;
+Nx = 10;
+Ny = 10;
+Nz = 20;
 
 % determine evaluation points for the fieldmap
 cathode_top = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,1}, 0, geometry(1).rdim);
@@ -40,7 +40,7 @@ for iz=1:Nz
 end
 
 fprintf('\ntime elapsed for field evaluation:%d\n', toc);
-save('E_full', 'E');
+save('E_full.mat', 'E');
 
 % signal that the program is finished
 t = linspace(1, 20, 8000);
