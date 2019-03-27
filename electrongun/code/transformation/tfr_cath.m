@@ -1,4 +1,4 @@
-function [in_ptc, r_param, iptc] = tfr_cath_2D (geometry, iptc, r_phys)
+function [in_ptc, r_param, iptc] = tfr_cath (geometry, iptc, r_phys)
 in_ptc = false;
 r_param = NaN(3,1);
 

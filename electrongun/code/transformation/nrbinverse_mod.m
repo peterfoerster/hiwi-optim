@@ -1,6 +1,6 @@
 % OUTPUT CHANGED: if the iteration does not converge returns NaN(2,1)
 
-function u = nrbinverse_mod_2D (nrb, x, varargin)
+function u = nrbinverse_mod (nrb, x, varargin)
 %
 % NRBINVERSE: compute parametric point starting from physical point by
 % inverting the NURBS map with a Newton scheme
@@ -15,7 +15,7 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
 %      nrb     - NURBS object
 %      x       - physical point
 %      options - options in the FIELD/VALUE format. Possible choices:
-%        'u0'      : starting point in the parametric domain for Newton 
+%        'u0'      : starting point in the parametric domain for Newton
 %                    (Default = .5 * ones (ndim, 1))
 %        'MaxIter' : maximum number of Newton iterations (Default = 10)
 %        'Display' : if true the some info are shown (Default = true)
@@ -55,7 +55,7 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
 %  p.addParameter ('TolFun', 1e-8, @(x) validateattributes (x, {'numeric'}, {'scalar'}));
 %  p.parse (varargin{:});
 %  options = p.Results;
-  
+
   % Default options
   options = struct ('u0'      , .5*ones (ndim, 1), ...
                     'MaxIter' , 10, ...
@@ -71,7 +71,7 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
   if (round (nargin/2) ~= nargin/2)
      error ('NRBINVERSE needs propertyName/propertyValue pairs');
   end
-  
+
   % Check options passed
   for pair = reshape (varargin, 2, [])
     if any (strcmp (pair{1}, optionNames))
@@ -80,14 +80,14 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
       error('%s is not a recognized parameter name', pair{1});
     end
   end
-  
+
   % x as column vector
   x = x(:);
-  
+
   % Define functions for Newton iteration
   f = @(U) nrbeval (nrb, num2cell (U)) - x;
   jac = @(U) nrbjacobian (nrb, num2cell (U));
-  
+
   % Newton cycle
   u_old = options.u0(:);
 
@@ -99,7 +99,7 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
     last_knot = nrb.knots(end);
   end
   convergence = false;
-  
+
   for iter = 1:options.MaxIter
 
     u_new = u_old - jac (u_old) \ f (u_old);
@@ -107,7 +107,7 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
     % Check if the point is outside the parametric domain
     u_new = max (u_new, first_knot);
     u_new = min (u_new, last_knot);
-    
+
     % Error control
     if (norm (u_new - u_old) < options.TolX && norm (f (u_new)) < options.TolFun)
       if (options.Display)
@@ -116,20 +116,20 @@ function u = nrbinverse_mod_2D (nrb, x, varargin)
       convergence = true;
       break;
     end
-    
+
     u_old = u_new;
-    
+
   end
 
   u = u_new;
-  
+
   if (~convergence)
 %    fprintf ('Newton scheme reached the maximum number of iterations (%i) without converging.\n', options.MaxIter);
 ################################################################################
 % MODIFIED HERE
 	 u = NaN(2,1);
   end
-  
+
 
 end
 
@@ -137,7 +137,7 @@ function jac = nrbjacobian (nrb, u)
 
   ders = nrbderiv (nrb);
   [~, jac] = nrbdeval (nrb, ders, u);
-  jac = [jac{:}];  
+  jac = [jac{:}];
 
 end
 

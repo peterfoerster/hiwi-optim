@@ -3,13 +3,13 @@ pkg load geopdes;
 
 % plot the geometry
 % short, long
-% geometry_file = 'gun_half_short';
-% nsub = 100;
-% width = 4;
-% options.numbers = 1;
-% options.boundary = 1;
-% figure;
-% plot_geometry (geometry_file, nsub, width, options);
+geometry_file = 'gun_half_short';
+nsub = 100;
+width = 4;
+options.numbers = 1;
+options.boundary = 1;
+figure;
+plot_geometry (geometry_file, nsub, width, options);
 
 % solve for the potential
 % voltage = 90e3;
@@ -25,5 +25,5 @@ pkg load geopdes;
 % plot_gradient (nsub_x, nsub_y, u, space, geometry);
 
 % convergence study (with absolute error)
-filename = 'gun_half_short_degree=2_nsub=var';
-plot_convergence_study (filename);
+% filename = 'gun_half_short_degree=2_nsub=var';
+% plot_convergence_study (filename);

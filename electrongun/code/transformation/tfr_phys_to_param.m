@@ -23,7 +23,7 @@
 %  r_param:				particle position of the form r(1:3,1) in parameter space
 %  iptc:					index of the patch that the particle is inside of
 
-function [outside, r_param, iptc] = tfr_phys_to_param_2D (geometry, ptcs, r_phys)
+function [outside, r_param, iptc] = tfr_phys_to_param (geometry, ptcs, r_phys)
 negative = false;
 if ( r_phys(2)<0 )
 	r_phys(2) = -r_phys(2);
