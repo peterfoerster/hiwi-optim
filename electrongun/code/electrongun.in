@@ -1,0 +1,21 @@
+&NEWRUN
+  Distribution = 'electrongun.ini'
+  Z_Cathode = 0
+/
+
+&OUTPUT
+  ZSTOP = 1
+  TrackS = True
+/
+
+&CHARGE
+ LSPCH = True
+/
+
+&CAVITY
+  LEField = True
+  File_Efield(1) = 'DC-3D'
+  C_noscale(1) = True
+  Com_grid(1) = 'E'
+  Nue(1) = 0
+/

@@ -1,4 +1,4 @@
-function [] = plot_geometry (geometry_file, nsub, width, options)
+function [geometry] = plot_geometry (geometry_file, nsub, width, options)
 [geometry, boundaries, ~, ~, ~] = mp_geo_load([geometry_file '.txt']);
 
 for iptc=1:length(geometry)
