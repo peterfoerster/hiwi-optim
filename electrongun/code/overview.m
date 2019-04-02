@@ -1,35 +1,36 @@
+close all;
 pkg load geopdes;
 
-% plot generatorinput
-inputfile = 'electrongun.ini';
-%generatorinput = plot_generatorinput (inputfile);
-%return
 % plot the geometry
-geometry_file = 'gun_half_short.txt';
+% short, long
+geometry_file = 'gun_half_short';
+[geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 nsub = 5;
-width = 8;
+width = 2;
 options.numbers = 1;
-options.boundary = 0;
-plot_geometry_2D (geometry_file, nsub, width, options);
-hold on;
-plot_generatorinput (inputfile);
-hold off;
+options.boundary = 1;
+figure;
+plot_geometry (geometry, boundaries, nsub, width, options);
 return
 % solve for the potential
 voltage = 90e3;
-[problem_data, method_data] = init_ptnl_2D (geometry_file, voltage);
-[geometry, msh, space, u] = mp_solve_laplace (problem_data, method_data);
-res_x = res_y = 10;
-plot_potential_2D (res_x, res_y, u, space, geometry);
+[problem_data, method_data] = init_potential (voltage);
+[geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data, geometry, boundaries, interfaces, boundary_interfaces);
 
-% Artems implementation
-%geometry_path_name = "test_geometry";
-%move = 0;
-%% length in [m]?
-%lngth = 3;
-%load("cathode_nrb_initial.mat");
-%[ crv, l, cathode_nrb ] = contruct_canon_geometry( geometry_path_name, move, lngth, cathode_nrb_initial  );
+% plot the potential and the absolute value of the gradient
+figure;
+nsub_x = method_data.nsub(1);
+nsub_y = method_data.nsub(2);
+plot_potential (nsub_x, nsub_y, u, space, geometry);
+figure;
+plot_gradient (nsub_x, nsub_y, u, space, geometry);
 
+% convergence study (with absolute error)
+filename = 'gun_half_short_degree=2_nsub=var';
+figure;
+plot_convergence_study (filename);
+
+####################################################################
 % new tests
 %crv = nrbline([0 0], [0 0.05])
 %dcrv = nrbderiv(crv);

@@ -4,7 +4,7 @@
 %   [eu, F] = sp_plot_solution (u, space, geometry, [npts], [ncuts=2]);
 %
 % INPUT:
-%     
+%
 %     u:           vector of dof weights
 %     space:       object defining the discrete space (see sp_multipatch)
 %     geometry:    an array of geometry structures (see mp_geo_load)
@@ -47,6 +47,8 @@ end
 hold_flag = ishold ;
 for iptc = 1:space.npatch
   if (isempty (space.dofs_ornt))
+    % modified here
+    ############################################################################
     sp_plot_solution_grad_scalar (u(space.gnum{iptc}), space.sp_patch{iptc}, geometry(iptc), npts, ncuts);
   else
     sp_plot_solution (u(space.gnum{iptc}) .* space.dofs_ornt{iptc}.', space.sp_patch{iptc}, geometry(iptc), npts, ncuts);

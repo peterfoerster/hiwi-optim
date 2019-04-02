@@ -20,11 +20,10 @@ grad_valu_conv = reshape(grad_valu_conv, msh.rdim, msh.nqn, msh.nel);
 grad_valu_test = reshape (grad_valu_test, sp.ncomp, msh.rdim, msh.nqn, msh.nel);
 grad_valu_ref = reshape (grad_valu_ref, sp.ncomp, msh.rdim, msh.nqn, msh.nel);
 grad_valu_conv = reshape (grad_valu_conv, sp.ncomp, msh.rdim, msh.nqn, msh.nel);
-  
+
 % tests if the original and new solution coincide
-%keyboard;
 if ( max(max(max(grad_valu_ref - grad_valu_test)))~=0 )
-	error('original and new solution differ');
+  error('original and new solution differ');
 end
 
 % compute determinant and quadrature weights

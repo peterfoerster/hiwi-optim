@@ -4,7 +4,7 @@ function [] = create_astrainput (filename, options)
     fprintf(fid, '&NEWRUN\n');
     fprintf(fid, '  Distribution = ''electrongun.ini''\n');
     % mirror plane z-coordinate
-    fprintf(fid, '  Z_Cathode = 0\n');
+    % fprintf(fid, '  Z_Cathode = 0\n');
     fprintf(fid, '/\n');
 
   % output

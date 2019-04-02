@@ -4,7 +4,7 @@
 %   [eu, F] = sp_plot_solution (u, space, geometry, [npts=51], [ncuts=2]);
 %
 % INPUT:
-%     
+%
 %     u:           vector of dof weights
 %     space:       object defining the discrete space (see sp_scalar)
 %     geometry:    geometry structure (see geo_load)
@@ -59,7 +59,8 @@ if (~exist ('vtk_pts', 'var'))
     vtk_pts{idim} = linspace (space.knots{idim}(1), space.knots{idim}(end), npts(idim));
   end
 end
-
+% modified here
+################################################################################
 [eu, F] = sp_eval (u, space, geometry, vtk_pts, 'gradient');
 eu = squeeze(sqrt( eu(1,:,:).^2 + eu(2,:,:).^2 ));
 rdim = size (F, 1);
@@ -88,7 +89,7 @@ elseif (ndim == 3)
     plot_pts{idim} = linspace(space.knots{idim}(1), space.knots{idim}(end), ncuts(idim)+2);
     [eu, F] = sp_eval (u, space, geometry, plot_pts);
     indices = {1:npts(1), 1:npts(2), 1:npts(3)};
-    
+
     if (ncuts(idim) > 0)
       cuts = 2:ncuts(idim)+1;
     else

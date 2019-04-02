@@ -1,6 +1,5 @@
 &NEWRUN
   Distribution = 'electrongun.ini'
-  Z_Cathode = 0
 /
 
 &OUTPUT

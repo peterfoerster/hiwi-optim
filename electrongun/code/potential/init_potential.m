@@ -1,5 +1,5 @@
-function [problem_data, method_data] = init_potential (geometry_file, voltage)
-problem_data.geo_name = [geometry_file '.txt'];
+function [problem_data, method_data] = init_potential (voltage)
+% problem_data.geo_name = [geometry_file '.txt'];
 
 problem_data.nmnn_sides   = [3];
 problem_data.drchlt_sides = [1 2];

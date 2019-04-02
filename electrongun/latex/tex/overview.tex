@@ -1,0 +1,31 @@
+\section{Overview}
+\begin{itemize}
+  \item fieldmap uses equidistant points, may improve if the cathode part has higher resolution, show fieldplots in Astra
+  \item maybe choose the points explicitly to obtain sufficient accuracy
+  \item only 3D field maps with nonzero entries in every coordinate direction allowed, current solution uses two very small steps in x-direction
+  \item fieldmap could be mirrored for 3D (only compute one quadrant and take care of the duplicate entries at the interfaces)
+\end{itemize}
+
+\begin{center}
+\begin{figure}
+  \input{figures/geometry}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}
+  \input{figures/potential}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}
+  \input{figures/gradient}
+\end{figure}
+\end{center}
+
+\begin{figure}
+  % move to the left
+  \hspace{-2.5cm}
+  \input{figures/convergence_study}
+\end{figure}

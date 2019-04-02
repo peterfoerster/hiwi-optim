@@ -68,7 +68,7 @@ for iopt  = 1:numel (data_names)
 end
 
 % Construct geometry structure, and information for interfaces and boundaries
-[geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load (geo_name);
+% [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load (geo_name);
 npatch = numel (geometry);
 
 msh = cell (1, npatch);

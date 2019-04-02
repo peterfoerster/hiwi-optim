@@ -19,7 +19,7 @@ valu_conv = reshape (valu_conv, sp.ncomp, msh.nqn, msh.nel);
 
 % tests if the original and new solution coincide
 if ( max(max(max(valu_ref - valu_test)))~=0 )
-	error('original and new solution differ');
+  error('original and new solution differ');
 end
 
 % compute determinant and quadrature weights

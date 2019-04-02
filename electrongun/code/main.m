@@ -1,89 +1,73 @@
-close all;
+clear all; close all; clc;
 pkg load geopdes;
+pkg load statistics;
 
-% plot the geometry
 % short, long
 geometry_file = 'gun_half_long';
-nsub = 100;
-width = 4;
-options.numbers = 1;
-options.boundary = 1;
-figure;
-[geometry] = plot_geometry (geometry_file, nsub, width, options);
-axis([0 0.1 -0.1 0.1]);
+[geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
-% solve for the potential
+% create fieldmap for astra
 voltage = 90e3;
-% [problem_data, method_data] = init_potential (geometry_file, voltage);
-% [geometry, msh, space, u] = mp_solve_laplace (problem_data, method_data);
+beamtube_end = 1;
+[ptcs] = set_ptcs (geometry_file);
+[cathode_start, y, z] = create_fieldmap (geometry, boundaries, interfaces, boundary_interfaces, ptcs, beamtube_end, voltage);
+fprintf('created fieldmap in: %d s', toc);
 
-% plot the potential and the absolute value of the gradient
-% figure;
-% nsub_x = method_data.nsub(1);
-% nsub_y = method_data.nsub(2);
-% plot_potential (nsub_x, nsub_y, u, space, geometry);
-% figure;
-% plot_gradient (nsub_x, nsub_y, u, space, geometry);
-
-% convergence study (with absolute error)
-% filename = 'gun_half_short_degree=2_nsub=var';
-% plot_convergence_study (filename);
-
-% create 3D fieldmap for astra
-% choose number of physical coordinates with z as longitudinal axis
-% Nx = 5;
-% Ny = 5;
-% Nz = 5;
-% create_fieldmap (geometry_file, voltage, Nx, Ny, Nz);
-
-% create 2D fieldmap for astra
-% choose number of physical coordinates with z as longitudinal axis
-% only gives field in the x-z plane thus no Nx required
-% maybe increase resolution at cathode and reduce it for beamtube
-% Ny = 10;
-% Nz = 100;
-% tic;
-% [geometry] = create_fieldmap_2D (geometry_file, voltage, Ny, Nz);
-% fprintf('created fieldmap in: %d s', toc);
-
-% create particle distribution for astra
-% it seems I need more particles emitted on the outside part of the cathode
-% or constant emission over timespan
-% total charge in [nC]
-Q = -4;
-N_prt = 10*12*4; % needs to be divisible by 12 for modified version
-N_probe = 6;
-iprobe = [10 30 50 70 90 110]*4;
-filename = 'electrongun.ini';
-tic;
-% implement space charge consistent emission? (1)
-% emission over a given time span probably won't produce better results
-% possibly emit morge particles at the outside of the cathode then inside to
-% achieve the desired output, is this cheating or related to (1)?
-% maybe it is best to use a normal distribution
-% this may provide what I need instead of the uniform one right now
-generate_input_mod (Q, N_prt, N_probe, iprobe, geometry, filename);
-fprintf('\ncreated input in: %d s\n', toc);
-
+% plot grid and geometry
+options.numbers = 0;
+options.boundary = 0;
+figure;
+plot_geometry (geometry, boundaries, 5, 2, options);
 hold on;
-plot_input (filename, iprobe);
+for iz=1:length(z)
+  scatter(z(iz)*ones(size(y)), y, 'k', 'o', 'filled');
+end
 hold off;
 
-% create inputfile for astra
-filename = 'electrongun.in';
-options.spacecharge = 1;
-options.solenoid = 0;
-create_astrainput (filename, options);
+% create particle distribution for astra
+% total charge in [nC]
+% total emission time T~7.5ns, how many bunches should be emitted
+% include timing spread inside the bunch?
+% emit uniformly distributed on cathode and then also normally with small sigma in front of the bunch, without timed factor
+% T = 1e-3;
+% nT = 1;
+% Q = -4;
+% N_prt = 400;
+% rho_probe = [0.3 0.4 0.5 0.6 0.7 0.8];
+% mu = 0;
+% sigma = 0.4;
+% rho_bot = -1;
+% rho_top = 1;
+% filename = 'electrongun.ini';
+% tic;
+% implement space charge consistent emission?
+% implement time dependent emission
+% N_probe = generate_input_normal (Q, N_prt, rho_probe, mu, sigma, geometry, filename);
+% N_probe = generate_input_uniform (Q, N_prt, rho_probe, rho_bot, rho_top, geometry, filename);
+% N_probe = generate_input_normal_emission (T, nT, Q, N_prt, rho_probe, mu, sigma, geometry, filename);
+% N_probe = generate_input_uniform_emission (T, nT, Q, N_prt, rho_probe, mu, sigma, geometry, filename);
+% fprintf('\ncreated input in: %d s\n', toc);
 
-tic;
-[status, output] = system(['./Astra ' filename]);
-fprintf('performed tracking in: %d s\n', toc);
-filename = ['track_N_prt=' num2str(N_prt) '_N_probe=' num2str(N_probe) '_spacecharge=' num2str(options.spacecharge) '.txt'];
-[err, msg] = rename ('electrongun.track.001', filename);
+% hold on;
+% plot_input (filename, N_probe);
+% hold off;
+
+% create inputfile for astra
+% filename = 'electrongun.in';
+% options.spacecharge = 1;
+% options.solenoid = 0;
+% create_astrainput (filename, options);
+
+% tic;
+% [status, output] = system(['./Astra ' filename]);
+% fprintf('performed tracking in: %d s\n', toc);
+% filename = ['track_N_prt=' num2str(N_prt) '_N_probe=' num2str(N_probe) '_spacecharge=' num2str(options.spacecharge) '.txt'];
+% [err, msg] = rename ('electrongun.track.001', filename);
+% delete('electrongun.Log.001');
 
 % plot particle tracks
-figure;
-plot_track (filename, N_probe);
+% figure;
+% plot_track (filename, N_probe);
 
 % signal that the program is finished
 t = linspace(1, 20, 8000);

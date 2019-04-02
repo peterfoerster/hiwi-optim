@@ -20,5 +20,4 @@ figure;
 res_x = res_y = 50;
 plot_potential (res_x, res_y, u, space, geometry);
 figure;
-% why does this not work anymore?
 plot_gradient (res_x, res_y, u, space, geometry);

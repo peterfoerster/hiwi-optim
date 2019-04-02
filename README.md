@@ -14,7 +14,7 @@ February
 
 March
 - read:
-- electrongun: 4+10+10 h
+- electrongun: 4+10+10+6+4+4+8+8 h
 - photocathode: 7+7 h
 
 

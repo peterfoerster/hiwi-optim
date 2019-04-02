@@ -1,17 +1,8 @@
-function [E, x, y, z] = compute_fieldmap (geometry_file, voltage, Nx, Ny, Nz)
-  [problem_data, method_data] = init_potential (geometry_file, voltage);
-  [geometry, msh, space, u] = mp_solve_laplace (problem_data, method_data);
-
-  % determine evaluation points for the fieldmap
-  cathode_top = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,1}, 0, geometry(1).rdim);
-  cathode_start = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,0}, 0, geometry(1).rdim);
-  beamtube_end = geo_nurbs (geometry(8).nurbs, geometry(8).dnurbs, geometry(8).dnurbs2, {1,0}, 0, geometry(8).rdim);
-  x = linspace(-cathode_top(2), cathode_top(2), Nx);
-  y = linspace(-cathode_top(2), cathode_top(2), Ny);
-  z = linspace(cathode_start(1), beamtube_end(1), Nz);
-
+function [E, Nx, Ny, Nz] = compute_fieldmap (geometry, ptcs, space, u, x, y, z)
   % transform to parametric coordinates and compute E-field in one step
-  [ptcs] = set_ptcs (geometry_file);
+  Nx = length(x);
+  Ny = length(y);
+  Nz = length(z);
   E = zeros(Nx, Ny, Nz, 3);
   for iz=1:Nz
     for iy=1:Ny
