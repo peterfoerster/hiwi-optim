@@ -1,7 +1,7 @@
 \section{Tracking}
 \begin{itemize}
   \item emission is handled on my side, either uniformly or normally distributed particles
-  \item both types depend on multiple parameters:
+  \item both types depend on multiple parameters: total charge $Q$, number of particles $N_{prt}$, position of probe particles and also bounds for uniform or $\mu, \sigma$ for normal distribution
   \item none of the parameter combinations have produced ideal results yet, show tracks
   \item I tried emission over time span, sharply increases computation time and did not yield different results (maybe try almost constant emission over a very short time span 0.1ns or even shorter)
   \item space charge is included with planar mirror plane (may be improved by approximating our cathode geometry and using the referenced paper, only works for 2D!)
@@ -9,8 +9,8 @@
   \item start with straight cathode, show tracks also for this case!
 \end{itemize}
 
-% \begin{center}
-% \begin{figure}
-%   \input{figures/geometry}
-% \end{figure}
-% \end{center}
+\begin{center}
+\begin{figure}
+  \input{figures/tracks/Q=-1}
+\end{figure}
+\end{center}

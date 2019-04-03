@@ -27,17 +27,8 @@ function [N_probe] = generate_input_uniform (Q, N_prt, rho_probe, rho_bot, rho_t
       end
   end
 
-  % 9e-3 ns entire emission time randomly emit during that time frame
-  % probe particles not emitted right at the beginning
-  % astra uses [ns]
-
-  % total charge -1nC equally distributed
-  % astra uses [nC]
+  % total charge in [nC]
   q = Q/N_prt;
-
-  % particle index 1 for electrons
-  % cathode: flag -3 for probe and -1 else
-  % otherwise flag 3 for probe and 5 else
 
   % write .ini file
   write_input (filename, N_prt, N_probe, r, q);

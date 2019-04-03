@@ -1,5 +1,6 @@
 &NEWRUN
   Distribution = 'electrongun.ini'
+  Z_Cathode = 0
 /
 
 &OUTPUT
@@ -8,7 +9,7 @@
 /
 
 &CHARGE
- LSPCH = True
+  LSPCH = True
 /
 
 &CAVITY

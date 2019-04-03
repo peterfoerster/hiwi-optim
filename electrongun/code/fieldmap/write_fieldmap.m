@@ -1,5 +1,5 @@
-function [] = write_fieldmap (Nx, x, Ny, y, Nz, z, E)
-  fid = fopen('DC-3D.ex', 'w');
+function [] = write_fieldmap (filename, Nx, x, Ny, y, Nz, z, E)
+  fid = fopen([filename '.ex'], 'w');
   dlmwrite(fid, [Nx x], ' ');
   dlmwrite(fid, [Ny y], ' ', 'append', 'on');
   dlmwrite(fid, [Nz z], ' ', 'append', 'on');
@@ -10,7 +10,7 @@ function [] = write_fieldmap (Nx, x, Ny, y, Nz, z, E)
   end
   fclose(fid);
 
-  fid = fopen('DC-3D.ey', 'w');
+  fid = fopen([filename '.ey'], 'w');
   dlmwrite(fid, [Nx x], ' ');
   dlmwrite(fid, [Ny y], ' ', 'append', 'on');
   dlmwrite(fid, [Nz z], ' ', 'append', 'on');
@@ -21,7 +21,7 @@ function [] = write_fieldmap (Nx, x, Ny, y, Nz, z, E)
   end
   fclose(fid);
 
-  fid = fopen('DC-3D.ez', 'w');
+  fid = fopen([filename '.ez'], 'w');
   dlmwrite(fid, [Nx x], ' ');
   dlmwrite(fid, [Ny y], ' ', 'append', 'on');
   dlmwrite(fid, [Nz z], ' ', 'append', 'on');

@@ -14,9 +14,11 @@ February
 
 March
 - read:
-- electrongun: 4+10+10+6+4+4+8+8 h
+- electrongun: 4+10+10+6+4+4 h
 - photocathode: 7+7 h
 
+April
+- electrongun: 8+8+6 h
 
 - insulator inner radius: 25
 - insulator outer radius: 35
