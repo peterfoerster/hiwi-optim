@@ -5,12 +5,12 @@ pkg load geopdes;
 % plain, kink, insulator
 geometry_file = 'photocathode_insulator';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
-nsub = 5;
-width = 4;
-options.numbers = 1;
-options.boundary = 1;
-figure;
-plot_geometry (geometry, nsub, width, options, boundaries);
+% nsub = 5;
+% width = 4;
+% options.numbers = 1;
+% options.boundary = 1;
+% figure;
+% plot_geometry (geometry, nsub, width, options, boundaries);
 
 % solve for the potential
 voltage = -60e3;
@@ -21,10 +21,10 @@ voltage = -60e3;
 figure;
 nsub_x = method_data.nsub(1);
 nsub_y = method_data.nsub(2);
-plot_potential (nsub_x, nsub_y, u, space, geometry);
-figure;
+% plot_potential (nsub_x, nsub_y, u, space, geometry);
+% figure;
 plot_gradient (nsub_x, nsub_y, u, space, geometry);
-
+return
 % convergence study (with absolute error)
 filename = 'photocathode_plain_degree=2_nsub=var';
 figure;

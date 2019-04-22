@@ -1,19 +1,5 @@
-clear all; close all; clc;
-pkg load geopdes;
-pkg load statistics;
 
-% short, long
-geometry_file = 'gun_half_long';
-[geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
-
-%% create fieldmap for astra
-mapname = 'DC-3D-refined';
-voltage = 90e3;
-[ptcs] = set_ptcs (geometry_file);
-tic;
-[cathode_start, y, z] = create_fieldmap (mapname, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage);
-fprintf('created fieldmap in: %d s', toc);
-
+return
 %% plot grid and geometry
 % options.numbers = 0;
 % options.boundary = 0;
@@ -68,6 +54,7 @@ fprintf('\nperformed tracking in: %d s\n', toc);
 trackname = ['track_Q=' num2str(Q) '_N_prt=' num2str(N_prt) '_N_probe=' num2str(N_probe) '_spacecharge=' num2str(options.spacecharge) '.txt'];
 [err, msg] = rename ('electrongun.track.001', trackname);
 delete('electrongun.Log.001');
+delete('NORRAN');
 
 %% plot particle tracks
 figure;

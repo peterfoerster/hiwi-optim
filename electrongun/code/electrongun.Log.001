@@ -28,14 +28,14 @@
  COR_PX  =  0.000000000000000E+000,
  COR_PY  =  0.000000000000000E+000,
  TRACK_ALL       = T,
- TRACK_ON_AXIS   = F,
+ TRACK_ON_AXIS   = T,
  AUTO_PHASE      = T,
  PHASE_SCAN      = F,
  CHECK_REF_PART  = T,
  L_RM_BACK       = F,
  LMONITOR        = F,
- H_MAX   =  1.000000000000000E-003,
- H_MIN   =  0.000000000000000E+000,
+ H_MAX   =  1.000000000000000E-004,
+ H_MIN   =  1.000000000000000E-004,
  DEBUNCH =  0.000000000000000E+000,
  MAX_STEP        =      100000,
  Z_MIN   =  1.000000000000000E+015,
@@ -975,7 +975,7 @@
  /
  &CHARGE
  LOOP    = F,
- LSPCH   = T,
+ LSPCH   = F,
  LSPCH3D = F,
  LSPCH3DMG       = F,
  L2D_3D  = F,
@@ -2936,7 +2936,7 @@
  &CAVITY
  LOOP    = F,
  LEFIELD = T,
- FILE_EFIELD     = DC-3D                                                                                                             
+ FILE_EFIELD     = DC-3D-Ny=4-Nz=100                                                                                                 
                                                                                                                                      
                                                                                                                                      
                                                                                                                                      
@@ -4992,6 +4992,6 @@
  /
  End of Input deck
 
-     execution started:    3. 4.2019     10:13
-     execution finished:   3. 4.2019     10:13
-     execution time: 25.80 sec                         
+     execution started:   21. 4.2019     22:03
+     execution finished:  21. 4.2019     22:03
+     execution time:  0.56 sec                         

@@ -9,7 +9,7 @@ function [cathode_start, y, z] = create_fieldmap (filename, geometry, boundaries
   y = linspace(-cathode_top(2), cathode_top(2), 15);
   % it seems like the off axis particle cannot be tracked correctly with this?
   % z = [linspace(cathode_start(1), 0.1, 16), linspace(0.11, 0.2, 8) linspace(0.3, beamtube_end(1), 26)];
-  z = linspace(cathode_start(1), beamtube_end(1), 100);
+  z = linspace(cathode_start(1), beamtube_end(1), 30);
 
   [problem_data, method_data] = init_potential (voltage);
   [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data, geometry, boundaries, interfaces, boundary_interfaces);
