@@ -1,4 +1,4 @@
-function [] = plot_track (filename, N_probe)
+function [r] = plot_track (filename, N_probe)
   data = dlmread(filename);
   r = data(:,3:5);
   hold on;

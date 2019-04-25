@@ -5,8 +5,6 @@ function [] = create_astrainput (filename, inputfilename, cathode_start, H_max, 
     fprintf(fid, '  Distribution = ''%s''\n', inputfilename);
     % mirror plane z-coordinate
     fprintf(fid, '  Z_Cathode = %d\n', cathode_start);
-    % to avoid error when tracking off axis particle
-    fprintf(fid, '  Track_On_Axis = True\n');
     % max time step in [ns]
     fprintf(fid, '  H_max = %d\n', H_max);
     fprintf(fid, '  H_min = %d\n', H_min);
@@ -17,6 +15,7 @@ function [] = create_astrainput (filename, inputfilename, cathode_start, H_max, 
     % end of beamtube
     fprintf(fid, '  ZSTOP = %d\n', beamtube_end);
     fprintf(fid, '  TrackS = True\n');
+    % fprintf(fid, '  RefS = True\n');
     fprintf(fid, '/\n');
 
   if (options.spacecharge)

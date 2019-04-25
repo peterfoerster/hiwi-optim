@@ -1,4 +1,4 @@
-function [] = plot_convergence_study (filename)
+function [] = plot_iga_convergence (filename)
   % N_it, errh1, errl2
   load(filename);
 
