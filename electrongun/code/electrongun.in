@@ -1,7 +1,7 @@
 &NEWRUN
   Distribution = 'electrongun.ini'
   Z_Cathode = 0
-  H_max = 0.001
+  H_max = 0.015625
   H_min = 0
 /
 
@@ -12,7 +12,7 @@
 
 &CAVITY
   LEField = True
-  File_Efield(1) = 'DC-3D-Ny=16-Nz=160'
+  File_Efield(1) = 'DC-3D-Ny=64-Nz=160'
   C_noscale(1) = True
   Com_grid(1) = 'E'
   Nue(1) = 0
