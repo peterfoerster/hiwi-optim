@@ -1,30 +1,42 @@
 \section{Overview}
 \begin{itemize}
-  \item fieldmap uses equidistant points, may improve if the cathode part has higher resolution, show fieldplots in Astra
-  \item maybe choose the points explicitly to obtain sufficient accuracy
-  \item only 3D field maps with nonzero entries in every coordinate direction allowed, current solution uses two very small steps in x-direction
-  \item fieldmap could be mirrored for 3D (only compute one quadrant and take care of the duplicate entries at the interfaces)
+  \item geometry is unchanged from Artem's version
+  \item all compuations use the full beamtube (1.5 m)
 \end{itemize}
 
 \begin{center}
-\begin{figure}
+\begin{figure}[ht]
   \input{figures/geometry}
 \end{figure}
 \end{center}
 
+\begin{itemize}
+  \item electrostatic potential using $p=2$ and $nsub=8$
+\end{itemize}
+
 \begin{center}
-\begin{figure}
+\begin{figure}[ht]
   \input{figures/potential}
 \end{figure}
 \end{center}
 
+\begin{itemize}
+  \item absolute value of the electric field using $p=2$ and $nsub=8$
+\end{itemize}
+
 \begin{center}
-\begin{figure}
+\begin{figure}[ht]
   \input{figures/gradient}
 \end{figure}
 \end{center}
 
-\begin{figure}
+\begin{itemize}
+  \item convergence studies for the electrostatic potential and the electric field
+  \item the reference uses $p=3$ and $nsub=64$
+  \item the relative error is computed using the maximum field value
+\end{itemize}
+
+\begin{figure}[ht]
   % move to the left
   \hspace{-2.5cm}
   \input{figures/convergence_study}

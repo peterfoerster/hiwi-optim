@@ -28,7 +28,7 @@ geometry_file = 'gun_half_short';
 % convergence study (with absolute error)
 filename = 'gun_half_short_degree=2_nsub=var';
 figure;
-plot_convergence_study (filename);
+plot_iga_convergence (filename);
 
 ####################################################################
 % new tests
