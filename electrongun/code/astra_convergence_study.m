@@ -2,16 +2,16 @@ clear all; clc;
 pkg load geopdes;
 pkg load statistics;
 
-N_it = 4;
+N_it = 6;
 geometry_file = 'gun_half_long';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
 % convergence study
-for iit=0:N_it
+for iit=5:N_it
   % variable parameters
   Nz = 20*2^3; % no less than 20 grid points possible
-  Ny = 4*2^iit;
-  H_max = 0.001; % seemingly suffices to change H_max and leave H_min
+  Ny = 4*2^4;
+  H_max = 2^(-3) % 0.001 standard, seemingly suffices to change H_max and leave H_min
 
   % create fieldmap for astra
   mapname = ['DC-3D-Ny=' num2str(Ny) '-Nz=' num2str(Nz)];
