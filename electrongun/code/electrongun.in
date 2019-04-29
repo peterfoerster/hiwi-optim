@@ -1,8 +1,8 @@
 &NEWRUN
   Distribution = 'electrongun.ini'
   Z_Cathode = 0
-  H_max = 0.001
-  H_min = 0.001
+  H_max = 0.03125
+  H_min = 0.03125
 /
 
 &OUTPUT

@@ -2,17 +2,18 @@ clear all; clc;
 pkg load geopdes;
 pkg load statistics;
 
-N_it = 5;
+N_it = 4;
+h = Nan(1,N_it+1);
 geometry_file = 'gun_half_long';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
 % convergence study
 for iit=1:N_it
   % variable parameters
-  Nz = 20*2^3; % no less than 20 grid points possible
-  Ny = 4*2^4;
-  % H_max = 0.001;
-  H_max = 2^(-iit); % 0.001 standard
+  dx = dy = 0.05*2^(-iit)
+  dz = 0.15*2^(-iit);
+  h = sqrt(dy^2 + sqrt(dx^2 + dz^2));
+  H_max = 0.001;
 
   % create fieldmap for astra
   mapname = ['DC-3D-Ny=' num2str(Ny) '-Nz=' num2str(Nz)];
@@ -49,14 +50,14 @@ for iit=1:N_it
   tic;
   [status, output] = system(['./Astra ' filename]);
   fprintf('\nperformed tracking in: %d s\n', toc);
-  trackname = ['tracks_field_study-Ny=' num2str(Ny) '-Nz=' num2str(Nz) '-H=' num2str(H_max) '.txt'];
+  trackname = ['track_grid_study-h=' num2str(h) '-H=' num2str(H_max) '.txt'];
   [err, msg] = rename ('electrongun.track.001', trackname);
   delete('electrongun.Log.001');
   delete('NORRAN');
 
   % plot particle tracks
   hold on;
-  r_track = plot_track (trackname, 50);
+  r_track = plot_track (trackname, 100);
   hold off;
 end
 

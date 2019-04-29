@@ -17,7 +17,7 @@ function [problem_data, method_data] = init_potential (geometry, boundaries, int
   method_data.degree     = [3 3];
   method_data.regularity = [1 1];
   % to be determined by convergence study
-  method_data.nsub       = [32 32];
+  method_data.nsub       = [64 64];
   % 3 suffices if nsub >= 1
   method_data.nquad      = [3 3];
 end

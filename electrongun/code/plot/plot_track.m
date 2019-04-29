@@ -1,3 +1,4 @@
+% N_probe can be misused to scale the number of time steps
 function [r] = plot_track (filename, N_probe)
   data = dlmread(filename);
   r = data(:,3:5);
