@@ -1,44 +1,42 @@
 \section{Full Geometry}
 \begin{itemize}
-  \item geometry including the insulator
+  \item full geometry including the insulator
+  \item patch 10 is insulator material and patches 7/8 should also partially be insulator
+  \item plots of electrostatic potential, electric field and convergence studies exist
+  \item visible patch boundaries in field plot did not vanish completely but improve significantly
 \end{itemize}
 
 \begin{center}
-\begin{figure}[ht]
+\begin{figure}[H]
   \input{figures/insulator/geometry}
+  \caption{full geometry including patches and boundary conditions}
 \end{figure}
 \end{center}
 
-\begin{itemize}
-  \item electrostatic potential including the insulator with $p=3$ $nsub=64$
-\end{itemize}
-
 \begin{center}
-\begin{figure}
+\begin{figure}[p]
   \input{figures/insulator/potential}
+    \caption{electrostatic potential with $p=3$ nsub=64}
 \end{figure}
 \end{center}
-
-\begin{itemize}
-  \item magnitude of the electric field including the insulator with $p=3$ $nsub=64$
-\end{itemize}
 
 \begin{center}
-\begin{figure}
+\begin{figure}[p]
   \input{figures/insulator/gradient}
+  \caption{absolute value of electric field with $p=3$ nsub=64}
 \end{figure}
 \end{center}
 
-\begin{itemize}
-  \item convergence study of the electrostatic potential and electric field
-  \item the reference uses $p=3$ and $nsub=64$
-  \item the relative error uses the maximum potential/field value
-\end{itemize}
+\begin{center}
+\begin{figure}[p]
+  \input{figures/insulator/gradient_nsub=8}
+  \caption{absolute value of electric field with $p=2$ nsub=8}
+\end{figure}
+\end{center}
 
-\begin{figure}
+\begin{figure}[p]
   % move to the left
   \hspace{-2.5cm}
   \input{figures/insulator/convergence_study}
+  \caption{reference uses $p=3$ nsub=64, relative error uses maximum potential/field value}
 \end{figure}
-% split the two parts
-\newpage

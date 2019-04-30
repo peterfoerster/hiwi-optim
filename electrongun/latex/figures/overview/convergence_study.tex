@@ -1,0 +1,55 @@
+\begin{tikzpicture}
+
+\begin{groupplot}[
+  group style={group size=2 by 1,
+  horizontal sep=2cm,
+  xlabels at=edge bottom,
+  ylabels at=edge left},
+  xlabel={$\ln(h)$},
+  ylabel={relative error},
+  enlargelimits=false,
+  every axis/.append style={thick},
+  legend style={at={(0.5,-0.2)},anchor=north, fill=none}]
+
+\nextgroupplot[title={Convergence of $L_2$ norm}]
+
+\addplot [color=brewerred]
+  table[row sep=crcr]{%
+  0	-6.22705252804952\\
+  -0.693147180559945	-7.41690316398516\\
+  -1.38629436111989	-8.9893446645329\\
+  -2.07944154167984	-10.5972870108008\\
+  -2.77258872223978	-12.3645467317482\\
+  -3.46573590279973	-14.17395669331\\
+};
+\addlegendentry{$L_2$ norm}
+
+\addplot [color=brewergrey]
+  table[row sep=crcr]{%
+  0	-6.22705252804952\\
+  -3.46573590279973	-16.6242602364487\\
+};
+\addlegendentry{$\ln(h^{p+1})$}
+
+\nextgroupplot[title={Convergence of $H_1$ norm}]
+
+\addplot [color=brewerblue]
+  table[row sep=crcr]{%
+  0	-5.37085945326851\\
+  -0.693147180559945	-6.11704361874409\\
+  -1.38629436111989	-7.05968958244402\\
+  -2.07944154167984	-8.05889326329352\\
+  -2.77258872223978	-9.0980440194591\\
+  -3.46573590279973	-10.0426647523495\\
+};
+\addlegendentry{$H_1$ norm}
+
+\addplot [color=brewergrey]
+  table[row sep=crcr]{%
+  0	-5.37085945326851\\
+  -3.46573590279973	-12.302331258868\\
+};
+\addlegendentry{$\ln(h^{p})$}
+
+\end{groupplot}
+\end{tikzpicture}

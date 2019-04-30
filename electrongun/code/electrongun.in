@@ -12,7 +12,7 @@
 
 &CAVITY
   LEField = True
-  File_Efield(1) = 'DC-3D-h=0.20723'
+  File_Efield(1) = 'DC-3D-h=0.0808'
   C_noscale(1) = True
   Com_grid(1) = 'E'
   Nue(1) = 0

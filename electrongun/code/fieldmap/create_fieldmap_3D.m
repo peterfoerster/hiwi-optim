@@ -1,4 +1,4 @@
-function [cathode_start, x, y, z] = create_fieldmap_3D (filename, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage, dx, dy, dz)
+function [cathode_start, x, y, z, E] = create_fieldmap_3D (filename, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage, dx, dy, dz)
   % determine boundaries of domain
   cathode_top = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,1}, 0, geometry(1).rdim);
   cathode_start = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,0}, 0, geometry(1).rdim);

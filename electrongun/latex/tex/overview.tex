@@ -2,42 +2,33 @@
 \begin{itemize}
   \item geometry is unchanged from Artem's version
   \item all compuations use the full beamtube (1.5 m)
+  \item plots of the electrostatic potential and electric field exist as well as convergence studies
 \end{itemize}
 
 \begin{center}
-\begin{figure}[ht]
-  \input{figures/geometry}
+\begin{figure}[H]
+  \input{figures/overview/geometry}
+  \caption{shortened geometry including patches and boundary conditions}
 \end{figure}
 \end{center}
-
-\begin{itemize}
-  \item electrostatic potential using $p=2$ and $nsub=8$
-\end{itemize}
 
 \begin{center}
-\begin{figure}[ht]
-  \input{figures/potential}
+\begin{figure}[p]
+  \input{figures/overview/potential}
+  \caption{electrostatic potential with degree $p=2$ and nsub=8}
 \end{figure}
 \end{center}
-
-\begin{itemize}
-  \item absolute value of the electric field using $p=2$ and $nsub=8$
-\end{itemize}
 
 \begin{center}
-\begin{figure}[ht]
-  \input{figures/gradient}
+\begin{figure}[p]
+  \input{figures/overview/gradient}
+  \caption{absolute value of electric field with $p=2$ and nsub=8}
 \end{figure}
 \end{center}
 
-\begin{itemize}
-  \item convergence studies for the electrostatic potential and the electric field
-  \item the reference uses $p=3$ and $nsub=64$
-  \item the relative error is computed using the maximum potential/field value
-\end{itemize}
-
-\begin{figure}[ht]
+\begin{figure}[H]
   % move to the left
   \hspace{-2.5cm}
-  \input{figures/convergence_study}
+  \input{figures/overview/convergence_study}
+  \caption{reference uses $p=3$ and nsub=64, relative error uses maximum potential/field value}
 \end{figure}

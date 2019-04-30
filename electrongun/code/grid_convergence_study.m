@@ -1,17 +1,16 @@
-clear all; clc;
+clear all; close all; clc;
 pkg load geopdes;
 pkg load statistics;
 
-N_it = 1;
-h = NaN(1,N_it+1);
+N_it = 4;
 geometry_file = 'gun_half_long';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
 % convergence study
-for iit=1:N_it
+for iit=0:N_it
   % variable parameters
   dx = dy = 0.03*2^(-iit); % 4 points minimum
-  dz = 0.08*2^(-iit); % need 20 grid points minimum
+  dz = 0.1*2^(-iit); % need 20 grid points minimum
   h = sqrt(dy^2 + sqrt(dx^2 + dz^2));
   H_max = 0.001;
 
@@ -21,20 +20,23 @@ for iit=1:N_it
     voltage = 90e3;
     [ptcs] = set_ptcs (geometry_file);
     tic;
-    [cathode_start, x, y, z] = create_fieldmap_3D (mapname, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage, dx, dy, dz);
+    [cathode_start, x, y, z, E] = create_fieldmap_3D (mapname, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage, dx, dy, dz);
     fprintf('created fieldmap in: %d s\n', toc);
   end
 
   % particle distribution
   inputfilename = 'electrongun.ini';
-  if (exist([inputfilename '.ex']) == 0)
-    r_2D = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0, 0.7}, 0, geometry(1).rdim);
-    r = [0 r_2D(2) r_2D(1)];
-    N_probe = 1;
-    N_prt = 0;
-    q = -1.602e-19;
-    write_input (inputfilename, N_prt, N_probe, r, q);
-  end
+  cathode = nrbrevolve(geometry(1).boundary(1).nurbs, [0 0 0], [1 0 0]);
+  % if (iit==0)
+  %   nrbkntplot(cathode);
+  % end
+  % x==2, y==3, z==1
+  r_3D = nrbeval(cathode, {0.7, 0.7});
+  r = [r_3D(2) r_3D(3) r_3D(1)];
+  N_probe = 1;
+  N_prt = 0;
+  q = -1.602e-19;
+  write_input (inputfilename, N_prt, N_probe, r, q);
 
   % create inputfile for astra
   filename = 'electrongun.in';
@@ -58,7 +60,9 @@ for iit=1:N_it
   % plot particle tracks
   hold on;
   r_track = plot_track (trackname, 100);
+  size(r_track)
   hold off;
+  view(3);
 end
 
 % signal that the program is finished

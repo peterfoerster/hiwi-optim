@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+
+\begin{axis}[
+  xlabel={$\ln(h)$},
+  ylabel={relative error},
+  legend pos={north west}
+  ]
+\addplot [color=brewerred]
+  table[row sep=crcr]{%
+-1.1254563760536	-1.38562253725557\\
+-1.47417123476753	-2.72794276976295\\
+-1.82181890788414	-3.53164020981824\\
+-2.16893040606384	-4.92096086990885\\
+};
+\addlegendentry{error}
+\addplot [color=brewergrey]
+  table[row sep=crcr]{%
+-1.1254563760536	-1.38562253725557\\
+-2.16893040606384	-4.51604462728631\\
+};
+\addlegendentry{$\ln(h^3)$}
+\end{axis}
+\end{tikzpicture}%
