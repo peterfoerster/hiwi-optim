@@ -6,12 +6,12 @@ function [] = plot_iga_convergence (filename)
   h_exp3 = h.^3;
   h_exp2 = h.^2;
 
-  plot(log(h), log(errl2/90e3), log(h), log(h_exp3) + log(errl2(1)/90e3));
+  plot(log(h), log(errl2), log(h), log(h_exp3) + log(errl2(1)));
   title('error in l2 norm');
   legend('convergence', 'expected');
 
   figure;
-  plot(log(h), log(errh1/5e6), log(h), log(h_exp2) + log(errh1(1)/5e6));
+  plot(log(h), log(errh1), log(h), log(h_exp2) + log(errh1(1)));
   title('error in H_1 norm');
   legend('convergence', 'expected');
 end

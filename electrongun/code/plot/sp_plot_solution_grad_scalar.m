@@ -4,7 +4,7 @@
 %   [eu, F] = sp_plot_solution (u, space, geometry, [npts=51], [ncuts=2]);
 %
 % INPUT:
-%     
+%
 %     u:           vector of dof weights
 %     space:       object defining the discrete space (see sp_scalar)
 %     geometry:    geometry structure (see geo_load)
@@ -31,7 +31,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-function sp_plot_solution_grad_scalar (u, space, geometry, npts, ncuts)
+function sp_plot_solution_grad_scalar (u, space, geometry, npts, ncuts, iptc)
 
 ndim = numel (space.knots);
 
@@ -76,6 +76,28 @@ elseif (ndim == 2)
   if (rdim == 2)
     [X, Y]  = deal (squeeze(F(1,:,:)), squeeze(F(2,:,:)));
     surf (X, Y, eu)
+
+    % write to .dat file
+    % fprintf(['creating gradient_' num2str(iptc) '.dat\n']);
+    % fid = fopen(['gradient_' num2str(iptc) '.dat'], 'w');
+    % fprintf(fid, 'x y c\n');
+    % for icol=1:size(X,2)
+    % dlmwrite(fid, [X(:,icol) Y(:,icol) eu(:,icol)], 'delimiter', '  ', 'append', 'on');
+    % fprintf(fid, '\n');
+    % end
+    % fclose(fid);
+
+    % write to .dat file
+    fprintf(['creating geometry_' num2str(iptc) '.dat\n']);
+    fid = fopen(['geometry_' num2str(iptc) '.dat'], 'w');
+    fprintf(fid, 'x y c\n');
+    for icol=1:size(X,2)
+    % version to write geometry
+    dlmwrite(fid, [X(:,icol) Y(:,icol) ones(size(X,1))], 'delimiter', '  ', 'append', 'on');
+    fprintf(fid, '\n');
+    end
+    fclose(fid);
+
   elseif (rdim == 3)
     [X, Y, Z]  = deal (squeeze(F(1,:,:)), squeeze(F(2,:,:)), squeeze(F(3,:,:)));
     surf (X, Y, Z, eu)
@@ -88,7 +110,7 @@ elseif (ndim == 3)
     plot_pts{idim} = linspace(space.knots{idim}(1), space.knots{idim}(end), ncuts(idim)+2);
     [eu, F] = sp_eval (u, space, geometry, plot_pts);
     indices = {1:npts(1), 1:npts(2), 1:npts(3)};
-    
+
     if (ncuts(idim) > 0)
       cuts = 2:ncuts(idim)+1;
     else

@@ -1,0 +1,34 @@
+# Created by Octave 4.4.1, Sun May 05 16:31:31 2019 CEST <peter@peter-ubuntu>
+# name: N_it
+# type: scalar
+2
+
+
+# name: h1_conv
+# type: matrix
+# rows: 1
+# columns: 3
+ 113890.44683150163 112857.23976470102 112402.98677640676
+
+
+# name: h1_ref
+# type: matrix
+# rows: 1
+# columns: 3
+ 112275.81582353017 112275.81582353017 112275.81582353017
+
+
+# name: l2_conv
+# type: matrix
+# rows: 1
+# columns: 3
+ 5221.1503213274182 5097.8010914997103 5062.3342242425551
+
+
+# name: l2_ref
+# type: matrix
+# rows: 1
+# columns: 3
+ 5054.4148114483278 5054.4148114483278 5054.4148114483278
+
+
