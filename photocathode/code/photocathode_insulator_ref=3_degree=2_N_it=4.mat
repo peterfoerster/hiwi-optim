@@ -1,0 +1,30 @@
+# Created by Octave 4.4.1, Sun May 05 22:46:30 2019 CEST <peter@peter-ThinkPad>
+# name: N_it
+# type: scalar
+4
+
+
+# name: h1_conv
+# type: matrix
+# rows: 1
+# columns: 5
+ 113890.74090380056 112857.72686546824 112404.03498751382 112289.39513932992 112269.91111842509
+
+
+# name: h1_ref
+# type: scalar
+112267.10328027514
+
+
+# name: l2_conv
+# type: matrix
+# rows: 1
+# columns: 5
+ 5221.1502033272545 5097.8008879313929 5062.3338261390609 5055.0956858308891 5053.9599710959119
+
+
+# name: l2_ref
+# type: scalar
+5053.8024619513762
+
+
