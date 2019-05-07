@@ -1,42 +1,49 @@
-\section{Full Geometry}
-\begin{itemize}
-  \item full geometry including the insulator
-  \item patch 10 is insulator material and patches 7/8 should also partially be insulator
-  \item plots of electrostatic potential, electric field and convergence studies exist
-  \item visible patch boundaries in field plot did not vanish completely but improve significantly
-\end{itemize}
+\section{Geometry}
+The current geometry was derived from the technical drawings in \cite{thesis}. Some simplifications were made especially regarding the inner part of the electrode, such that the geometry can be modeled as being rotationally symmetric. The relative permittivity of the insulator was retrieved from a CST model to be $9.4$.
+The geometry is depicted in fig.~\ref{fig:geometry}. The numbers refer to the individual patches in the context of IGA. The patch boundaries are indicated by the black lines. The red lines represent homogeneous Dirichlet boundary conditions, the blue lines inhomogeneous Dirichlet boundary conditions with a value of $-60 \mathrm{kV}$ and the green lines indicate homogeneous Neumann boundaries.
+According to the technical drawings patch $10$ as well as parts of patches $7$ and $8$ should consist of insulator material. In the case of patch $10$ this is already included in the model and it could also be added in the other cases.
 
 \begin{center}
 \begin{figure}[H]
   \input{figures/insulator/geometry}
-  \caption{full geometry including patches and boundary conditions}
+  \caption{Photocathode geometry and boundary conditions.}
+  \label{fig:geometry}
 \end{figure}
 \end{center}
 
+\section{Electrostatic Potential and Electric Field}
+The solution for the electrostatic potential is shown in fig.~\ref{fig:potential}. Fig.~\ref{fig:electric_field} depicts the absolute value of the electric field.
+Both of the solutions were computed with $p=5$ as the degree of the basis functions and $nsub=16$ as the number of elements that each knot vector is uniformly split into.
+On the boundary of patches $5$ and $6$ the solution seems to depend on the boundary. Also the sharp corners on the left boundary of patch $11$ seem to lead to a similiar behavior. Choosing $nsub$ larger may resolve these issues.
+
 \begin{center}
-\begin{figure}[p]
+\begin{figure}[H]
   \input{figures/insulator/potential}
-    \caption{electrostatic potential with $p=3$ nsub=64}
+  \caption{Electrostatic potential.}
+  \label{fig:potential}
 \end{figure}
 \end{center}
 
 \begin{center}
-\begin{figure}[p]
+\begin{figure}[H]
   \input{figures/insulator/gradient}
-  \caption{absolute value of electric field with $p=3$ nsub=64}
+  \caption{Absolute value of the electric field.}
+  \label{fig:electric_field}
 \end{figure}
 \end{center}
 
-\begin{center}
-\begin{figure}[p]
-  \input{figures/insulator/gradient_nsub=8}
-  \caption{absolute value of electric field with $p=2$ nsub=8}
-\end{figure}
-\end{center}
+\section{Convergence Study}
+The convergence studies investigate the accuracy of the solution while increasing the number of elements per patch. (Akin to $h$-refinement in classical FEA) Since no analytic solution exists a reference with $p=5$ and $nsub=16$ was chosen arbitrarily. The relative errors are then computed in respect to this solution.
+The degrees of the basis functions are given in the legend, as well as theoretical limits for the convergence rates. They are given by $p+1$ in the case of the $L_2$-norm (electrostatic potential) and $p$ in the case of the $H_1$-norm (electric field). As seen in fig.~\ref{fig:convergence_potential} and fig.~\ref{fig:convergence_gradient} we observe convergence at consistent rates.
 
-\begin{figure}[p]
-  % move to the left
-  \hspace{-2.5cm}
-  \input{figures/insulator/convergence_study}
-  \caption{reference uses $p=3$ nsub=64, relative error uses maximum potential/field value}
+\begin{figure}[H]
+  \input{figures/insulator/convergence_potential}
+  \caption{Convergence of $L_2$-norm.}
+  \label{fig:convergence_potential}
+\end{figure}
+
+\begin{figure}[H]
+  \input{figures/insulator/convergence_gradient}
+  \caption{Convergence of $H_1$-norm.}
+  \label{fig:convergence_gradient}
 \end{figure}

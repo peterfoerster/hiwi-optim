@@ -1,6 +1,5 @@
-function nrbplot_mod (color, width, nurbs, subd, varargin)
-% plots the boundary in color 'color' with linewidth 'width'
-%
+function nrbplot (nurbs, subd, filename, varargin)
+% 
 % NRBPLOT: Plot a NURBS curve or surface, or the boundary of a NURBS volume.
 % 
 % Calling Sequence:
@@ -49,9 +48,9 @@ function nrbplot_mod (color, width, nurbs, subd, varargin)
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 nargs = nargin;
-if nargs < 4
+if nargs < 2
   error ('Need a NURBS to plot and the number of subdivisions!');
-elseif rem(nargs+2,2)
+elseif rem(nargs+1,2)
   error ('Param value pairs expected')
 end
 
@@ -60,34 +59,34 @@ light='off';
 cmap='summer';
 
 % Recover Param/Value pairs from argument list
-for i=1:2:nargs-4
-  Param = varargin{i};
-  Value = varargin{i+1};
-  if (~ischar (Param))
-    error ('Parameter must be a string')
-  elseif size(Param,1)~=1
-    error ('Parameter must be a non-empty single row string.')
-  end
-  switch lower (Param)
-  case 'light'
-    light = lower (Value);
-    if (~ischar (light))
-      error ('light must be a string.')
-    elseif ~(strcmp(light,'off') | strcmp(light,'on'))
-      error ('light must be off | on')
-    end
-  case 'colormap'
-    if ischar (Value)
-      cmap = lower(Value);
-    elseif size (Value, 2) ~= 3
-      error ('colormap must be a string or have exactly three columns.')
-    else
-      cmap=Value;
-    end
-  otherwise
-    error ('Unknown parameter: %s', Param)
-  end
-end
+%for i=1:2:nargs-1
+%  Param = varargin{i};
+%  Value = varargin{i+1};
+%  if (~ischar (Param))
+%    error ('Parameter must be a string')
+%  elseif size(Param,1)~=1
+%    error ('Parameter must be a non-empty single row string.')
+%  end
+%  switch lower (Param)
+%  case 'light'
+%    light = lower (Value);
+%    if (~ischar (light))
+%      error ('light must be a string.')
+%    elseif ~(strcmp(light,'off') | strcmp(light,'on'))
+%      error ('light must be off | on')
+%    end
+%  case 'colormap'
+%    if ischar (Value)
+%      cmap = lower(Value);
+%    elseif size (Value, 2) ~= 3
+%      error ('colormap must be a string or have exactly three columns.')
+%    else
+%      cmap=Value;
+%    end
+%  otherwise
+%    error ('Unknown parameter: %s', Param)
+%  end
+%end
 
 colormap (cmap);
 
@@ -138,9 +137,8 @@ else
     grid on;
   else
     % 2D curve
-################################################################################
-% modified code here	 
-    plot (p(1,:), p(2,:), 'color', color, 'linewidth', width);
+    plot (p(1,:), p(2,:));
+    write_dat(filename, p(1,:), p(2,:));
   end
 end
 axis equal;

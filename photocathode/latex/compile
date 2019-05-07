@@ -3,9 +3,9 @@ pdflatex photocathode
 # bibtex photocathode
 # pdflatex photocathode
 # pdflatex photocathode
-rm photocathode.toc
-rm photocathode.log
-rm photocathode.blg
-rm photocathode.bbl
-rm photocathode.aux
-rm photocathode.out
+# rm photocathode.toc
+# rm photocathode.log
+# rm photocathode.blg
+# rm photocathode.bbl
+# rm photocathode.aux
+# rm photocathode.out
