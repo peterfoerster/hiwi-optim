@@ -1,2 +1,2 @@
-# hiwi-optim
+# iga-optim
 
