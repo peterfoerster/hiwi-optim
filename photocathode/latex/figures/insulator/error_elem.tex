@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+\begin{axis}[
+  enlargelimits=false,
+  colormap/YlOrRd,
+  % point meta min = 0,
+  % point meta max = 2e6,
+  colorbar,
+  colorbar style={y unit=V/m},
+  x unit=m,
+  y unit=m]
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_1.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_2.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_3.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_4.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_5.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_6.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_7.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_8.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_9.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_10.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_11.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_12.dat};
+
+\addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{figures/insulator/error_elem/error_elem_13.dat};
+
+\end{axis}
+\end{tikzpicture}

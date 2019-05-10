@@ -15,7 +15,7 @@ function [problem_data, method_data] = init_potential (geometry_file, voltage)
   % degree-1
   method_data.regularity = [4 4];
   % to be determined by convergence study
-  method_data.nsub       = [16 16];
+  method_data.nsub       = [2 2];
   % degree+1
   method_data.nquad      = [6 6];
 end

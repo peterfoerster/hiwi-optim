@@ -6,16 +6,16 @@ pkg load geopdes;
 geometry_file = 'photocathode_insulator';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
-nsub = 5;
-for iptc=1:length(geometry)
- for ibnd=1:length(geometry(iptc).boundary)
-  hold on;
-  filename = ['boundaries' num2str(iptc) num2str(ibnd) '.dat'];
-  nrbplot_mod(geometry(iptc).boundary(ibnd).nurbs, nsub, filename);
-  hold off;
- end
-end
-return
+% nsub = 5;
+% for iptc=1:length(geometry)
+%  for ibnd=1:length(geometry(iptc).boundary)
+%   hold on;
+%   filename = ['boundaries' num2str(iptc) num2str(ibnd) '.dat'];
+%   nrbplot_mod(geometry(iptc).boundary(ibnd).nurbs, nsub, filename);
+%   hold off;
+%  end
+% end
+% return
 
 % width = 4;
 % options.numbers = 1;
@@ -32,7 +32,7 @@ voltage = -60e3;
 % figure;
 nsub_x = method_data.nsub(1);
 nsub_y = method_data.nsub(2);
-nsub_x = nsub_y = 16;
+% nsub_x = nsub_y = 16;
 plot_potential (nsub_x, nsub_y, u, space, geometry);
 % figure;
 % plot_gradient (nsub_x, nsub_y, u, space, geometry);
