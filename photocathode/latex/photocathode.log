@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.3)  10 MAY 2019 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.3)  11 MAY 2019 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,22 +653,22 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 its.code.tex) (./mathrm.sty) (./mat-vec.sty) (./photocathode.aux)
 \openout1 = `photocathode.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -678,9 +678,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
 
 (./photocathode.out) (./photocathode.out)
 \@outlinefile=\write4
@@ -721,7 +721,84 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
-(./tex/insulator.tex (./figures/insulator/geometry.tex) [1
+(./tex/insulator.tex (./figures/insulator/geometry.tex
+PGFPlots: reading {figures/insulator/geometry/geometry_1.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_2.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_3.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_4.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_5.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_6.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_7.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_8.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_9.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_10.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_11.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_12.dat}
+PGFPlots: reading {figures/insulator/geometry/geometry_13.dat}
+Missing character: There is no / in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+PGFPlots: reading {figures/insulator/boundary/boundaries11.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries12.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries13.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries14.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries21.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries22.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries23.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries24.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries31.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries32.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries33.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries34.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries41.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries42.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries43.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries44.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries51.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries52.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries53.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries54.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries61.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries62.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries63.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries64.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries71.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries72.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries73.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries74.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries81.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries82.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries83.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries84.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries91.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries92.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries93.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries94.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries101.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries102.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries103.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries104.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries111.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries112.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries113.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries114.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries121.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries122.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries123.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries124.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries131.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries132.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries133.dat}
+PGFPlots: reading {figures/insulator/boundary/boundaries134.dat}
+) [1
 
 {/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}pdfTeX w
 arning (ext4): destination with the same identifier (name{figure.1}) has been a
@@ -729,7 +806,7 @@ lready used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.18 
+l.19 
      ] (./figures/insulator/potential.tex
 PGFPlots: reading {figures/insulator/potential/potential_1.dat}
 PGFPlots: reading {figures/insulator/potential/potential_2.dat}
@@ -764,7 +841,13 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.33 \end{center}
+l.34 \end{center}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.34 \end{center}
                  ] (./figures/insulator/convergence_potential.tex
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
 e=log unsupported (yet).
@@ -782,13 +865,8 @@ PGFPlots: reading {figures/insulator/convergence/convergence_ref=5_degree=4.dat
 }
 PGFPlots: reading {figures/insulator/convergence/convergence_ref=5_degree=4.dat
 }
-) [3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.44 
-     ] (./figures/insulator/convergence_gradient.tex
+)
+(./figures/insulator/convergence_gradient.tex
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
 e=log unsupported (yet).
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: ymod
@@ -805,46 +883,66 @@ PGFPlots: reading {figures/insulator/convergence/convergence_ref=5_degree=4.dat
 }
 PGFPlots: reading {figures/insulator/convergence/convergence_ref=5_degree=4.dat
 }
-)
-(./figures/insulator/error_elem.tex
-PGFPlots: reading {figures/insulator/error_elem/error_elem_1.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_2.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_3.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_4.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_5.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_6.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_7.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_8.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_9.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_10.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_11.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_12.dat}
-PGFPlots: reading {figures/insulator/error_elem/error_elem_13.dat}
-) [4pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
+) [3pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.57 \end{center}
+l.64 
+     ] (./figures/insulator/error_elem_nsub=1.tex
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_1.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_2.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_3.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_4.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_5.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_6.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_7.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_8.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_9.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_10.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_11.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_12.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=1/error_elem_13.dat}
+)
+(./figures/insulator/error_elem_nsub=16.tex
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_1.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_2.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_3.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_4.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_5.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_6.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_7.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_8.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_9.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_10.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_11.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_12.dat}
+PGFPlots: reading {figures/insulator/error_elem_nsub=16/error_elem_13.dat}
+) [4pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.81 \end{center}
                  pdfTeX warning (ext4): destination with the same identifier (n
-ame{figure.5}) has been already used, duplicate ignored
+ame{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.57 \end{center}
+l.81 \end{center}
                  ]) [5pdfTeX warning (ext4): destination with the same identifi
-er (name{figure.6}) has been already used, duplicate ignored
+er (name{figure.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.36 \clearpage
+l.38 \clearpage
                ] (./photocathode.bbl) [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
  (./photocathode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 
 
  *File List*
@@ -937,35 +1035,42 @@ figures/insulator/potential.tex
 figures/insulator/gradient.tex
 figures/insulator/convergence_potential.tex
 figures/insulator/convergence_gradient.tex
-figures/insulator/error_elem.tex
+figures/insulator/error_elem_nsub=1.tex
+figures/insulator/error_elem_nsub=16.tex
 photocathode.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
 (rerunfilecheck)             Checksum: 2F80423964F7D00687F6FB46170DD9DF;172.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 31649 strings out of 492641
- 820432 string characters out of 6131787
- 2107006 words of memory out of 5000000
- 34992 multiletter control sequences out of 15000+600000
+ 31887 strings out of 492641
+ 827626 string characters out of 6131787
+ 2620618 words of memory out of 5000000
+ 35089 multiletter control sequences out of 15000+600000
  8754 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,19n,136p,730b,2630s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,19n,136p,730b,2659s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb>
-Output written on photocathode.pdf (6 pages, 297071 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on photocathode.pdf (6 pages, 415245 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 601 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 607 words of extra memory for PDF output out of 10000 (max. 10000000)
 

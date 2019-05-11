@@ -12,9 +12,10 @@ According to the technical drawings patch $10$ as well as parts of patches $7$ a
 \end{center}
 
 \section{Electrostatic Potential and Electric Field}
+\label{sec:potential_field}
 The solution for the electrostatic potential is shown in fig.~\ref{fig:potential}. Fig.~\ref{fig:electric_field} depicts the absolute value of the electric field.
-Both of the solutions were computed with $p=5$ as the degree of the basis functions and $nsub=16$ as the number of elements that each knot vector is uniformly split into.
-On the boundary of patches $5$ and $6$ the solution seems to depend on the boundary. Also the sharp corners on the left boundary of patch $11$ seem to lead to a similiar behavior. Choosing $nsub$ larger may resolve these issues.
+Both of the solutions were computed with $p=5$ as the degree of the basis functions and $n_\mathrm{sub}=16$ as the number of elements that each knot vector is uniformly split into.
+On the boundary of patches $5$ and $6$ the solution seems to depend on the boundary. Also the sharp corners on the left boundary of patch $11$ seem to lead to a similiar behavior. Choosing $n_\mathrm{sub}$ larger may resolve these issues.
 
 \begin{center}
 \begin{figure}[H]
@@ -33,25 +34,48 @@ On the boundary of patches $5$ and $6$ the solution seems to depend on the bound
 \end{center}
 
 \section{Convergence Study}
-The convergence studies investigate the accuracy of the solution while increasing the number of elements per patch. (Akin to $h$-refinement in classical FEA) Since no analytic solution exists a reference with $p=5$ and $nsub=16$ was chosen arbitrarily. The relative errors are then computed in respect to this solution.
-The degrees of the basis functions are given in the legend, as well as theoretical limits for the convergence rates. They are given by $p+1$ in the case of the $L_2$-norm (electrostatic potential) and $p$ in the case of the $H_1$-norm (electric field). As seen in fig.~\ref{fig:convergence_potential} and fig.~\ref{fig:convergence_gradient} we observe convergence at consistent rates.
+The convergence studies investigate the accuracy of the solution while increasing the number of elements per patch. (Akin to $h$-refinement in classical FEA) Since no analytic solution exists a reference with $p=5$ and $n_\mathrm{sub}=16$ was chosen arbitrarily. The relative errors are then computed in respect to this solution.
+
+The errors are computed as
+\begin{align}
+  e_{L^2} = \frac{\| \varphi_\mathrm{it} \|_{L^2} - \| \varphi_\mathrm{ref} \|_{L^2}}{\| \varphi_\mathrm{ref} \|_{L^2}}\\
+  \mathrm{and}\\
+  e_{H^1} = \frac{\| \varphi_\mathrm{it} \|_{H^1} - \| \varphi_\mathrm{ref} \|_{H^1}}{\| \varphi_\mathrm{ref} \|_{H^1}}
+\end{align}
+where
+\begin{align}
+  \| \varphi \|_{H^1} = \| \varphi \|_{L^2} + \| \nabla\varphi \|_{L^2}.
+\end{align}
+The integrals associated with the $L^2$-norm are evaluated using a quadrature rule defined on each element of a given patch.
+
+The degrees of the basis functions are given in the legend, as well as theoretical limits for the convergence rates. They are given by $p+1$ in the case of the $L^2$-norm (electrostatic potential) and $p$ in the case of the $H^1$-norm (electric field). As seen in fig.~\ref{fig:convergence_potential} and fig.~\ref{fig:convergence_gradient} we observe convergence.
 
 \begin{figure}[H]
   \input{figures/insulator/convergence_potential}
-  \caption{Convergence of $L_2$-norm.}
+  \caption{Convergence of $L^2$-norm.}
   \label{fig:convergence_potential}
 \end{figure}
 
 \begin{figure}[H]
   \input{figures/insulator/convergence_gradient}
-  \caption{Convergence of $H_1$-norm.}
+  \caption{Convergence of $H^1$-norm.}
   \label{fig:convergence_gradient}
 \end{figure}
 
+Lastly the strange behavior observed in sec.~\ref{sec:potential_field} was investigated by displaying the error on every individual element of the mesh. In the case of fig.~\ref{fig:error_elem_nsub=1} $n_\mathrm{sub}=1$ and $p=2$ were used and for fig.~\ref{fig:error_elem_nsub=16} we chose $n_\mathrm{sub}=16$. The reference remained the same as before for both plots. The figures also indicate convergence for the elements in question,  along with giving and idea of the magnitude of the absolute error on these.
+
 \begin{center}
 \begin{figure}[H]
-  \input{figures/insulator/error_elem}
+  \input{figures/insulator/error_elem_nsub=1}
   \caption{Absolute error of the electric field on every element.}
-  \label{fig:error_elem}
+  \label{fig:error_elem_nsub=1}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/insulator/error_elem_nsub=16}
+  \caption{Absolute error of the electric field on every element.}
+  \label{fig:error_elem_nsub=16}
 \end{figure}
 \end{center}

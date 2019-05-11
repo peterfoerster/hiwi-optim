@@ -6,7 +6,7 @@ pkg load geopdes;
 geometry_file = 'photocathode_insulator';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
-% nsub = 5;
+nsub = 5;
 % for iptc=1:length(geometry)
 %  for ibnd=1:length(geometry(iptc).boundary)
 %   hold on;
@@ -17,12 +17,12 @@ geometry_file = 'photocathode_insulator';
 % end
 % return
 
-% width = 4;
-% options.numbers = 1;
-% options.boundary = 1;
-% figure;
-% plot_geometry (geometry, nsub, width, options, boundaries);
-
+width = 4;
+options.numbers = 1;
+options.boundary = 1;
+figure;
+plot_geometry (geometry, nsub, width, options, boundaries);
+return
 %% solve for the potential
 voltage = -60e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
