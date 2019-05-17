@@ -1,7 +1,7 @@
 pkg load geopdes;
-degree_ref = 5;
+degree_ref = 2;
 degree = 2;
-N_it = 4;
+N_it = 6;
 geometry_file = 'photocathode_insulator';
 
 voltage = -60e3;
@@ -13,7 +13,7 @@ method_data.regularity = [degree_ref-1 degree_ref-1];
 method_data.nsub = [2^N_it 2^N_it];
 method_data.nquad = [degree_ref+1 degree_ref+1];
 tic;
-[geometry, msh_ref, space_ref, u] = mp_solve_laplace_mod (problem_data, method_data);
+[geometry, msh_ref, space_ref, u_ref] = mp_solve_laplace_mod (problem_data, method_data);
 fprintf('time elapsed for reference solution:%d\n', toc);
 
 % convergence study
@@ -27,10 +27,11 @@ for iit=0:0
   [geometry, msh_conv, space_conv, u_conv] = mp_solve_laplace_mod (problem_data, method_data);
   fprintf('time elapsed for field solution:%d\n', toc);
   tic;
-  mp_sp_h1_error_ref (space_ref, msh_ref, u_ref, u_conv, space_conv, geometry);
+  filename = [geometry_file '_N_it=' num2str(N_it) '_degree=' num2str(degree) '_nsub=' num2str(2^iit) '_nquad=' num2str(method_data.nquad(1))];
+  mkdir(filename);
+  mp_sp_h1_error_ref (space_ref, msh_ref, u_ref, u_conv, space_conv, geometry, filename);
   fprintf('time elapsed for norm computation:%d\n', toc);
 end
-
 % signal that the program is finished
 x = linspace(1, 20, 8000);
 Y = sin(2*pi*440*x);
