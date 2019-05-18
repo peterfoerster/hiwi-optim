@@ -1,0 +1,17 @@
+<?xml version="1.0"?> 
+<VTKFile type="StructuredGrid" version="0.1"> 
+<StructuredGrid WholeExtent="0 2 0 2 0 0"> 
+<Piece Extent="0 2 0 2 0 0"> 
+<CellData>
+<DataArray type="Float32" Name="err_h1" format="ascii" NumberOfComponents="1"> 
+452.548 334.203 855.165 513.879 
+</DataArray> 
+</CellData> 
+<Points> 
+<DataArray type="Float32" NumberOfComponents="3"> 
+-0.05 0.0125 0 -0.05 0.015625 0 -0.05 0.01875 0 -0.02125 0.0125 0 -0.02125 0.0171875 0 -0.02125 0.021875 0 0.0075 0.0125 0 0.0075 0.01875 0 0.0075 0.025 0 
+</DataArray>
+</Points> 
+</Piece> 
+</StructuredGrid> 
+</VTKFile> 

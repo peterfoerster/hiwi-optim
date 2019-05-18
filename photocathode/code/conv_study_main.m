@@ -1,22 +1,28 @@
-clear all; close all; clc;
 pkg load geopdes;
 
-% degree = 2;
-% N_it = 4;
-% nquad_offset = 0;
-% conv_study_sol (degree, N_it, nquad_offset);
-% return
+% select functions
+compute_solution = 1;
+compute_error = 0;
+plot_error = 0;
 
-degree_ref = 2;
-nsub_ref = 8;
-nquad_offset_ref = 0;
+% choose parameters for iterative solution
 degree = 1;
 N_it = 3;
 nquad_offset = 0;
 
-conv_study_err (degree_ref, nsub_ref, nquad_offset_ref, degree, N_it, nquad_offset);
+% choose reference parameters for error computation
+degree_ref = 3;
+nsub_ref = 2;
+nquad_offset_ref = 0;
 
-% signal that the program is finished
-x = linspace(1, 20, 8000);
-Y = sin(2*pi*440*x);
-sound(Y);
+if (compute_solution)
+  conv_study_sol (degree, N_it, nquad_offset);
+end
+
+if (compute_error)
+  conv_study_err (degree_ref, nsub_ref, nquad_offset_ref, degree, N_it, nquad_offset);
+end
+
+if (plot_error)
+  plot_conv_study (degree_ref, nsub_ref, nquad_offset_ref, degree, N_it, nquad_offset);
+end
