@@ -1,8 +1,8 @@
 pkg load geopdes;
 
 % select functions
-compute_solution = 1;
-compute_error = 0;
+compute_solution = 0;
+compute_error = 1;
 plot_error = 0;
 
 % choose parameters for iterative solution
@@ -11,8 +11,8 @@ N_it = 3;
 nquad_offset = 0;
 
 % choose reference parameters for error computation
-degree_ref = 3;
-nsub_ref = 2;
+degree_ref = 1;
+nsub_ref = 16;
 nquad_offset_ref = 0;
 
 if (compute_solution)

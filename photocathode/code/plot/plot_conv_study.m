@@ -1,6 +1,6 @@
 function [] = plot_conv_study (degree_ref, nsub_ref, nquad_offset_ref, degree, N_it, nquad_offset)
   geometry_file = 'photocathode_insulator';
-  filename = [geometry_file '_degree_ref=' num2str(degree_ref) '_nsub_ref=' num2str(nsub_ref) '_nquad_offset_ref=' num2str(nquad_offset_ref) '_degree=' num2str(degree) '_N_it=' num2str(N_it) '_nquad=' num2str(nquad_offset)];
+  filename = [geometry_file '_degree_ref=' num2str(degree_ref) '_nsub_ref=' num2str(nsub_ref) '_nquad_offset_ref=' num2str(nquad_offset_ref) '_degree=' num2str(degree) '_N_it=' num2str(N_it) '_nquad=' num2str(nquad_offset) '.mat'];
   % 'normh1_ref', 'normh1', 'norml2_ref', 'norml2'
   load(filename);
 

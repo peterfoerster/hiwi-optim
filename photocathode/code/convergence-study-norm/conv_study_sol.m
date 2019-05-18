@@ -19,7 +19,7 @@ for iit=0:N_it
   [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
   fprintf('time elapsed for field solution:%d\n', toc);
   tic;
-  filename = [geometry_file '_degree=' num2str(degree) '_nsub=' num2str(2^iit) '_nquad_offset=' num2str(nquad_offset)];
+  filename = [geometry_file '_degree=' num2str(degree) '_nsub=' num2str(2^iit) '_nquad_offset=' num2str(nquad_offset) '.mat'];
   save(filename, 'u');
 end
 end

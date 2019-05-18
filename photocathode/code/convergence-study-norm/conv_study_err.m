@@ -22,7 +22,7 @@ npatch = numel (geometry);
 msh_ref = cell (1, npatch);
 sp_ref = cell (1, npatch);
 
-filename = [geometry_file '_degree=' num2str(degree_ref(1)) '_nsub=' num2str(nsub_ref(1)) '_nquad_offset=' num2str(nquad_offset_ref)];
+filename = [geometry_file '_degree=' num2str(degree_ref(1)) '_nsub=' num2str(nsub_ref(1)) '_nquad_offset=' num2str(nquad_offset_ref) '.mat'];
 load (filename);
 u_ref = u;
 
@@ -41,7 +41,7 @@ clear sp_ref;
 for iit=0:N_it
   fprintf('\niteration with nsub = %d\n', 2^iit);
   nsub = [2^iit 2^iit];
-  filename = [geometry_file '_degree=' num2str(degree(1)) '_nsub=' num2str(2^iit) '_nquad_offset=' num2str(nquad_offset)];
+  filename = [geometry_file '_degree=' num2str(degree(1)) '_nsub=' num2str(2^iit) '_nquad_offset=' num2str(nquad_offset) '.mat'];
   load(filename);
 
   regularity = degree-1;
@@ -64,13 +64,13 @@ for iit=0:N_it
 
   % compute norms and create error elem files simultaneously
   tic;
-  filename = [geometry_file '_degree_ref=' num2str(degree_ref(1)) '_nsub_ref=' num2str(nsub_ref(1)) '_nquad_offset_ref=' num2str(nquad_offset_ref(1)) '_degree=' num2str(degree(1)) '_nsub=' num2str(2^iit) '_nquad=' num2str(nquad(1))];
+  filename = [geometry_file '_degree_ref=' num2str(degree_ref(1)) '_nsub_ref=' num2str(nsub_ref(1)) '_nquad_offset_ref=' num2str(nquad_offset_ref(1)) '_degree=' num2str(degree(1)) '_nsub=' num2str(2^iit) '_nquad_offset=' num2str(nquad_offset)];
   mkdir(filename);
   [normh1_ref(iit+1), normh1(iit+1), norml2_ref(iit+1), norml2(iit+1)] = mp_sp_h1_norm (space_ref, msh_ref, u_ref, u, space, geometry, filename);
   fprintf('time elapsed for norm computation:%d\n', toc);
 end
 
 % save norms and info
-filename = [geometry_file '_degree_ref=' num2str(degree_ref(1)) '_nsub_ref=' num2str(nsub_ref(1)) '_nquad_offset_ref=' num2str(nquad_offset_ref(1)) '_degree=' num2str(degree(1)) '_N_it=' num2str(N_it) '_nquad=' num2str(nquad_offset)];
+filename = [geometry_file '_degree_ref=' num2str(degree_ref(1)) '_nsub_ref=' num2str(nsub_ref(1)) '_nquad_offset_ref=' num2str(nquad_offset_ref(1)) '_degree=' num2str(degree(1)) '_N_it=' num2str(N_it) '_nquad=' num2str(nquad_offset) '.mat'];
 save(filename, 'normh1_ref', 'normh1', 'norml2_ref', 'norml2');
 end
