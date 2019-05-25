@@ -1,18 +1,27 @@
 clear all; close all; clc;
 pkg load geopdes;
-pkg load statistics;
 
+track = 'centeraxis';
+r_prm = [0 0];
+N_grid = 4;
+folder = 'maps';
 N_it = 6;
+degree = 2;
+nsub = 32;
+voltage = 90e3;
+
 geometry_file = 'gun_half_long';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
+dx = dy = 0.03*2^(-N_grid);
+dz = 0.1*2^(-N_grid);
+h = sqrt(dy^2 + sqrt(dx^2 + dz^2));
 
 % convergence study
 for iit=0:N_it
   % variable parameters
   H_max = 2^(-iit);
 
-  % create fieldmap for astra
-  mapname = 'DC-3D-h=0.22897';
+  mapname = [folder '/DC-3D-degree=' num2str(degree) '-nsub=' num2str(nsub) '-h=' num2str(h)];
 
   % particle distribution
   inputfilename = 'electrongun.ini';
@@ -20,8 +29,8 @@ for iit=0:N_it
   % if (iit==0)
   %   nrbkntplot(cathode);
   % end
-  % x==2, y==3, z==1
-  r_3D = nrbeval(cathode, {0.7, 0.7});
+  % x==2, y==3, z==1 from plot
+  r_3D = nrbeval(cathode, {r_prm(1), r_prm(2)});
   r = [r_3D(2) r_3D(3) r_3D(1)];
   N_probe = 1;
   N_prt = 0;
@@ -42,17 +51,13 @@ for iit=0:N_it
   tic;
   [status, output] = system(['./Astra ' filename]);
   fprintf('\nperformed tracking in: %d s\n', toc);
-  trackname = ['track_int_study-h=0.22897-H=' num2str(H_max) '.txt'];
+  trackname = [track '-degree=' num2str(degree) '-nsub=' num2str(nsub) '-h=' num2str(h) '-H=' num2str(H_max) '.txt'];
   [err, msg] = rename ('electrongun.track.001', trackname);
   delete('electrongun.Log.001');
-  delete('NORRAN');
+  % delete('NORRAN');
 
-  % plot particle tracks
-  hold on;
-  r_track = plot_track (trackname, 1);
-  size(r_track)
-  hold off;
-  view(3);
+  r = plot_track (trackname, 1e4);
+  size(r)
 end
 
 % signal that the program is finished

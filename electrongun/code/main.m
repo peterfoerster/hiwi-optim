@@ -1,5 +1,4 @@
 
-return
 %% plot grid and geometry
 % options.numbers = 0;
 % options.boundary = 0;

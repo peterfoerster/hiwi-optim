@@ -8,9 +8,10 @@ p_y = data(:,9);
 plot(z, p_z);
 xlabel('z in [m]');
 ylabel('p_z in [MeV/c]');
+write_dat ('momentum.dat', z(1:150:end), p_z(1:150:end));
 
-figure;
-plot(z, p_x, z, p_y);
-xlabel('z in [m]');
-ylabel('p in [eV/c]');
-legend('p_x', 'p_y');
+% figure;
+% plot(z, p_x, z, p_y);
+% xlabel('z in [m]');
+% ylabel('p in [eV/c]');
+% legend('p_x', 'p_y');
