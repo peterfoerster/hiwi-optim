@@ -6,4 +6,5 @@ function [r] = plot_track (filename, N_t)
   ylabel('x in [mm]');
   zlabel('y in [mm]');
   view(3);
+  r = [r(:,2)*1e-3 r(:,3)*1e-3 r(:,1)];
 end

@@ -22,9 +22,9 @@ function [] = create_astrainput (filename, inputfilename, cathode_start, H_max, 
   % space charge
     fprintf(fid, '\n&CHARGE\n');
     % normal space charge
-    fprintf(fid, '  LSPCH = True\n');
+    % fprintf(fid, '  LSPCH = True\n');
     % 3D space charge
-    % fprintf(fid, '  LSPCH3D=True\n');
+    fprintf(fid, '  LSPCH3D=True\n');
     % curved cathode for space charge, only works in 2D
     % fprintf(fid, '  L_Curved_Cathode = True\n');
     % fprintf(fid, '  Cathode_Contour = ''cathode.dat''\n');

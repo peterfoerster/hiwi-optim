@@ -1,4 +1,4 @@
-function [cathode_start, x, y, z, E] = create_fieldmap_3D (filename, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage, dx, dy, dz)
+function [cathode_start, x, y, z, E] = create_fieldmap_3D (filename, geometry, boundaries, interfaces, boundary_interfaces, ptcs, voltage, degree, nsub, dx, dy, dz)
   % determine boundaries of domain
   cathode_top = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,1}, 0, geometry(1).rdim);
   cathode_start = geo_nurbs (geometry(1).nurbs, geometry(1).dnurbs, geometry(1).dnurbs2, {0,0}, 0, geometry(1).rdim);
@@ -9,7 +9,7 @@ function [cathode_start, x, y, z, E] = create_fieldmap_3D (filename, geometry, b
   % longitudinal components
   z = cathode_start(1):dz:beamtube_end(1);
 
-  [problem_data, method_data] = init_potential (voltage);
+  [problem_data, method_data] = init_potential (voltage, degree, nsub);
   [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data, geometry, boundaries, interfaces, boundary_interfaces);
 
   [E, Nx, Ny, Nz] = compute_fieldmap_3D (geometry, ptcs, space, u, x, y, z);
