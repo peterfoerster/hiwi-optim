@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+
+\begin{loglogaxis}[
+  xlabel={$H$},
+  ylabel={relative error},
+  legend entries={$h=0.0808$, $H^{2}$, $h=0.1143$, $H^{2}$, $h=0.16173$, $H^{2}$},
+  legend pos=outer north east
+  ]
+
+  \addplot [color=brewerred] table[x, y]{figures/tracking/int-onaxis/onaxis-h=0.0808_err.dat};
+
+  \addplot [color=brewergrey] table[x, y]{figures/tracking/int-onaxis/onaxis-h=0.0808_errH.dat};
+
+  \addplot [color=brewerblue] table[x, y]{figures/tracking/int-onaxis/onaxis-h=0.1143_err.dat};
+
+  \addplot [color=brewergrey] table[x, y]{figures/tracking/int-onaxis/onaxis-h=0.1143_errH.dat};
+
+  \addplot [color=brewergreen] table[x, y]{figures/tracking/int-onaxis/onaxis-h=0.16173_err.dat};
+
+  \addplot [color=brewergrey] table[x, y]{figures/tracking/int-onaxis/onaxis-h=0.16173_errH.dat};
+
+\end{loglogaxis}
+\end{tikzpicture}

@@ -1,9 +1,9 @@
-function [r] = plot_tracks (filename, N_probe)
+function [r] = plot_tracks (filename, N_probe, N_t)
   data = dlmread(filename);
   r = data(:,3:5);
   hold on;
   for iprt=1:N_probe
-    scatter3(r(iprt:N_probe*300:end,1), r(iprt:N_probe*300:end,2), r(iprt:N_probe*300:end,3));
+    scatter3(r(iprt:(N_probe-1)*N_t:end,1), r(iprt:(N_probe-1)*N_t:end,2), r(iprt:(N_probe-1)*N_t:end,3));
   end
   hold off;
   xlabel('z in [m]');

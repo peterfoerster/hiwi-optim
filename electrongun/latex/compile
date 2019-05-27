@@ -3,9 +3,9 @@ pdflatex electrongun
 # bibtex electrongun
 # pdflatex electrongun
 # pdflatex electrongun
-rm electrongun.toc
-rm electrongun.log
-rm electrongun.blg
-rm electrongun.bbl
-rm electrongun.aux
-rm electrongun.out
+# rm electrongun.toc
+# rm electrongun.log
+# rm electrongun.blg
+# rm electrongun.bbl
+# rm electrongun.aux
+# rm electrongun.out

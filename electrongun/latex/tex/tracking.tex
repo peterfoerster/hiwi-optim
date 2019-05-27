@@ -1,48 +1,105 @@
 \section{Tracking}
 \begin{itemize}
-  \item new implementation for fieldmap computation: hand over $\Delta_{x,y,z}$ and compute $h$ as the diagonal of the cuboid
-  \item implementation creates entire 3D fieldmap
-  \item convergence study for time integrator uses same fieldmap throughout
-  \item integrator uses different number of steps in each simulation, thus only approximation of error possible
+  \item integrator uses different number of steps in each simulation (due to adaptivity), thus only approximation of error possible
 \end{itemize}
 
-\begin{center}
-\begin{figure}[p]
-  \input{figures/tracking/grid_convergence}
-  \caption{convergence of particle trajectory while refining the grid}
-\end{figure}
-\end{center}
+The convergence study for the fieldmap is based on the size of the hexahedra used by ASTRA for the interpolation. $h$ is chosen as the main diagonal of the cuboids. The study is performed for different starting points of the probe particle, centeraxis indicates the starting position $(0, 0, 0)$, offaxis stands for $(0.3, 0.7, 0)$ and onaxis represents $(0, 0.5, 0)$ where all the coordinates are chosen in the parametric domain.
+Furthermore a second study with another IGA solution after knot refinement was performed.
 
 \begin{center}
-\begin{figure}[p]
-  \input{figures/tracking/grid_track}
-  \caption{particle trajectories during grid refinement, $h$ in [m]}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[p]
-  \input{figures/tracking/int_convergence}
-  \caption{convergence of particle trajectory while decreasing the time step size}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[p]
-  \input{figures/tracking/int_track}
-    \caption{particle trajectories during integrator study, H in [ns]}
+\begin{figure}[H]
+  \input{figures/tracking/grid_convergence_nsub=8}
+  \caption{convergence of fieldmap with $n_\mathrm{sub}=8$}
+  \label{fig:grid_8}
 \end{figure}
 \end{center}
 
 \begin{center}
 \begin{figure}[H]
-  \input{figures/tracking/momentum}
-    \caption{longitudinal momentum of particle during simulation}
+  \input{figures/tracking/grid_convergence_nsub=32}
+  \caption{convergence of fieldmap with $n_\mathrm{sub}=32$}
+  \label{fig:grid_32}
 \end{figure}
 \end{center}
 
+The results in fig.~\ref{fig:grid_8} and fig.~\ref{fig:grid_32} show similar convergence behavior for either IGA solution. Furthermore the convergence rate appears much lower for off center probe particles although there is no large difference between different off center starting points.
+
+The convergence study for the time integrator was again performed for the different starting points and also for field maps based on grids of varying size.
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/int_convergence_centeraxis}
+  \caption{convergence of time integrator for centeraxis case}
+  \label{fig:int_center}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/int_convergence_onaxis}
+  \caption{convergence of time intergrator for onaxis case}
+  \label{fig:int_on}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/int_convergence_offaxis}
+  \caption{convergence of time integrator for offaxis case}
+  \label{fig:int_off}
+\end{figure}
+\end{center}
+\begin{center}
+
+The results in fig.~\ref{fig:int_center}, fig.~\ref{fig:int_on} and fig.~\ref{fig:int_center} show similar results compared with the grid convergence study. For the probe particle starting on the center axis the convergence rate appears to be higher then in the other cases, however the rates seem to be independent from the fieldmap for off center axis particles.
+
+\begin{figure}[H]
+  \input{figures/tracking/momentum}
+  \caption{longitudinal momentum of probe particle during simulation}
+  \label{fig:momentum}
+\end{figure}
+\end{center}
+
+Fig.~\ref{fig:momentum} shows the longitudinal momentum component of an on axis particle during simulation.
+
 \begin{itemize}
   \item emission is handled on my side, either uniformly or normally distributed particles
-  \item both types depend on multiple parameters: total charge $Q$, number of particles $N_{prt}$, position of probe particles and also bounds for uniform or $\mu, \sigma$ for normal distribution
+  \item both types depend on multiple parameters: total charge $Q$, number of particles $N_{prt}$, number of probe particles
   \item emission is performed based on the rotated 2D cathode
 \end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/tracks_normal}
+  \caption{trajectories of probe particles for normal distribution without space charge}
+  \label{fig:normal}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/tracks_normal_spch}
+  \caption{trajectories of probe particles for normal distribution with space charge}
+  \label{fig:normal_spch}
+\end{figure}
+\end{center}
+
+Fig.~\ref{fig:normal} and fig.~\ref{fig:normal_spch} show the tracking results for 10 probe particles with a total number of 100 normally distributed particles once without and once with space charge effects included. The inclusion of space charge leads to vastly different behavior. It should be noted that there appears to be a bug in the indexing scheme of the output files, since the particle trajectories seem to jump during the first few steps.
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/tracks_uniform}
+  \caption{trajectories of probe particles for uniform distribution without space charge}
+  \label{fig:uniform}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/tracking/tracks_uniform_spch}
+  \caption{trajectories of probe particles for uniform distribution with space charge}
+  \label{fig:uniform_spch}
+\end{figure}
+\end{center}
+
+Fig.~\ref{fig:uniform} and fig.~\ref{fig:uniform_spch} show the tracking results for 10 probe particles with a total number of 100 uniformly distributed particles once without and once with space charge effects included. The inclusion of space charge again leads to different behavior, however the differences are not as large as before.

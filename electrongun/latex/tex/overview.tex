@@ -1,8 +1,8 @@
 \section{Overview}
 \begin{itemize}
-  \item geometry is unchanged from Artem's version
   \item all compuations use the full beamtube (1.5 m)
   \item plots of the electrostatic potential and electric field exist as well as convergence studies
+  \item still need to rerun the convergence study as implemented for the photocathode
 \end{itemize}
 
 \begin{center}
@@ -13,16 +13,16 @@
 \end{center}
 
 \begin{center}
-\begin{figure}[p]
+\begin{figure}[H]
   \input{figures/overview/potential}
-  \caption{electrostatic potential with degree $p=2$ and nsub=8}
+  \caption{electrostatic potential with degree $p=2$ and $n_\mathrm{sub}=8$}
 \end{figure}
 \end{center}
 
 \begin{center}
-\begin{figure}[p]
+\begin{figure}[H]
   \input{figures/overview/gradient}
-  \caption{absolute value of electric field with $p=2$ and nsub=8}
+  \caption{absolute value of electric field with $p=2$ and $n_\mathrm{sub}=8$}
 \end{figure}
 \end{center}
 
@@ -30,5 +30,5 @@
   % move to the left
   \hspace{-2.5cm}
   \input{figures/overview/convergence_study}
-  \caption{reference uses $p=3$ and nsub=64, relative error uses maximum potential/field value}
+  \caption{reference uses $p=3$ and $n_\mathrm{sub}=64$, relative error uses maximum potential/field value, deprecated version}
 \end{figure}

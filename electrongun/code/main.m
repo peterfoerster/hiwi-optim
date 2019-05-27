@@ -32,5 +32,10 @@ delete('electrongun.Log.001');
 
 % plot particle tracks
 figure;
-plot_tracks (trackname, N_probe);
+plot_tracks (trackname, N_probe, 200);
 % view(2);view(0,0);
+
+% signal that the program is finished
+t = linspace(1, 20, 8000);
+Y = sin(2*pi*440*t);
+sound(Y);

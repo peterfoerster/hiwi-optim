@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+
+\begin{loglogaxis}[
+  xlabel={$h$},
+  ylabel={relative error},
+  legend entries={centeraxis, $h^{5}$, offaxis, $h^{3}$, onaxis, $h^{3}$},
+  legend pos=outer north east
+  ]
+
+  \addplot [color=brewerred] table[x, y]{figures/tracking/grid-centeraxis/centeraxis-degree=2-nsub32_err.dat};
+
+  \addplot [color=brewergrey] table[x, y]{figures/tracking/grid-centeraxis/centeraxis-degree=2-nsub32_errh.dat};
+
+  \addplot [color=brewerblue] table[x, y]{figures/tracking/grid-offaxis/offaxis-degree=2-nsub32_err.dat};
+
+  \addplot [color=brewergrey] table[x, y]{figures/tracking/grid-offaxis/offaxis-degree=2-nsub32_errh.dat};
+
+  \addplot [color=brewergreen] table[x, y]{figures/tracking/grid-onaxis/onaxis-degree=2-nsub32_err.dat};
+
+  \addplot [color=brewergrey] table[x, y]{figures/tracking/grid-onaxis/onaxis-degree=2-nsub32_errh.dat};
+
+\end{loglogaxis}
+\end{tikzpicture}
