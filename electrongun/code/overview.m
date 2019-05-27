@@ -5,7 +5,7 @@ pkg load geopdes;
 % short, long
 geometry_file = 'gun_half_short';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
-
+return
 nsub = 5;
 % for iptc=1:length(geometry)
 %  for ibnd=1:length(geometry(iptc).boundary)
