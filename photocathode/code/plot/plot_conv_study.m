@@ -1,8 +1,8 @@
 function [] = plot_conv_study (degree_ref, nsub_ref, nquad_offset_ref, degree, N_it, nquad_offset)
   geometry_file = 'photocathode_insulator';
-  filename = [geometry_file '_degree_ref=' num2str(degree_ref) '_nsub_ref=' num2str(nsub_ref) '_nquad_offset_ref=' num2str(nquad_offset_ref) '_degree=' num2str(degree) '_N_it=' num2str(N_it) '_nquad=' num2str(nquad_offset) '.mat'];
+  filename = [geometry_file '_degree_ref=' num2str(degree_ref) '_nsub_ref=' num2str(nsub_ref) '_nquad_offset_ref=' num2str(nquad_offset_ref) '_degree=' num2str(degree) '_N_it=' num2str(N_it) '_nquad=' num2str(nquad_offset)];
   % 'normh1_ref', 'normh1', 'norml2_ref', 'norml2'
-  load(filename);
+  load([filename '.mat']);
 
   h = 1./2.^(0:N_it);
   h_l2 = h.^(degree+1);
@@ -17,10 +17,10 @@ function [] = plot_conv_study (degree_ref, nsub_ref, nquad_offset_ref, degree, N
   figure;
   loglog(h, errh1, h, h_h1*errh1(1));
   title('relative error in H_1 norm');
-end
 
-% output for latex
-% fid = fopen(filename, 'w');
-% fprintf(fid, 'h  errl2  errh1  h_l2  h_h1\n');
-% fclose(fid);
-% dlmwrite(filename, [h' errl2' errh1' h_l2'*errl2(1)' h_h1'*errh1(1)], 'delimiter', '  ', 'append', 'on');
+  % output for latex
+  fid = fopen([filename '.dat'], 'w');
+  fprintf(fid, 'h  errl2  errh1  h_l2  h_h1\n');
+  fclose(fid);
+  dlmwrite([filename '.dat'], [h' errl2' errh1' h_l2'*errl2(1)' h_h1'*errh1(1)], 'delimiter', '  ', 'append', 'on');
+end

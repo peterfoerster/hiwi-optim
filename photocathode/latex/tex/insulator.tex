@@ -1,5 +1,7 @@
 \section{Geometry}
-The current geometry was derived from the technical drawings in \cite{thesis}. Some simplifications were made especially regarding the inner part of the electrode, such that the geometry can be modeled as being rotationally symmetric. The relative permittivity of the insulator was retrieved from a CST model to be $9.4$.
+The current geometry was derived from the technical drawings in \cite{thesis}. Some simplifications were made especially regarding the inner part of the electrode, such that the geometry may be modeled as being rotationally symmetric. The dimensions of the electrode, puck, puck elevator, vacuum chamber and insulator were derived from Figure A.1, A.2, A.3, A.4 and A.6 in \cite{thesis} respectively. The geometry of the vacuum chamber was also simplified to reduce the computational domain and the reduced insulator geometry is in part based on the drawing in Figure 5.7 of the thesis.
+The boundary conditions were retrieved from Table 5.1 in \cite{thesis} and the relative permittivity of the insulator was taken from an existing CST model to be $9.4$.
+
 The geometry is depicted in fig.~\ref{fig:geometry}. The numbers refer to the individual patches in the context of IGA. The patch boundaries are indicated by the black lines. The red lines represent homogeneous Dirichlet boundary conditions, the blue lines inhomogeneous Dirichlet boundary conditions with a value of $-60 \mathrm{kV}$ and the green lines indicate homogeneous Neumann boundaries.
 According to the technical drawings patch $10$ as well as parts of patches $7$ and $8$ should consist of insulator material. In the case of patch $10$ this is already included in the model and it could also be added in the other cases.
 
@@ -17,24 +19,24 @@ The solution for the electrostatic potential is shown in fig.~\ref{fig:potential
 Both of the solutions were computed with $p=5$ as the degree of the basis functions and $n_\mathrm{sub}=16$ as the number of elements that each knot vector is uniformly split into.
 On the boundary of patches $5$ and $6$ the solution seems to depend on the boundary. Also the sharp corners on the left boundary of patch $11$ seem to lead to a similiar behavior. Choosing $n_\mathrm{sub}$ larger may resolve these issues.
 
-\begin{center}
-\begin{figure}[H]
-  \input{figures/insulator/potential}
-  \caption{Electrostatic potential.}
-  \label{fig:potential}
-\end{figure}
-\end{center}
+% \begin{center}
+% \begin{figure}[H]
+%   \input{figures/insulator/potential}
+%   \caption{Electrostatic potential.}
+%   \label{fig:potential}
+% \end{figure}
+% \end{center}
 
-\begin{center}
-\begin{figure}[H]
-  \input{figures/insulator/gradient}
-  \caption{Absolute value of the electric field.}
-  \label{fig:electric_field}
-\end{figure}
-\end{center}
+% \begin{center}
+% \begin{figure}[H]
+%   \input{figures/insulator/gradient}
+%   \caption{Absolute value of the electric field.}
+%   \label{fig:electric_field}
+% \end{figure}
+% \end{center}
 
 \section{Convergence Study}
-The convergence studies investigate the accuracy of the solution while increasing the number of elements per patch. (Akin to $h$-refinement in classical FEA) Since no analytic solution exists a reference with $p=5$ and $n_\mathrm{sub}=16$ was chosen arbitrarily. The relative errors are then computed in respect to this solution.
+The convergence studies investigate the accuracy of the solution while increasing the number of elements per patch. (Akin to $h$-refinement in classical FEA)
 
 The errors are computed as
 \begin{align}
@@ -51,31 +53,55 @@ The integrals associated with the $L^2$-norm are evaluated using a quadrature ru
 The degrees of the basis functions are given in the legend, as well as theoretical limits for the convergence rates. They are given by $p+1$ in the case of the $L^2$-norm (electrostatic potential) and $p$ in the case of the $H^1$-norm (electric field). As seen in fig.~\ref{fig:convergence_potential} and fig.~\ref{fig:convergence_gradient} we observe convergence.
 
 \begin{figure}[H]
-  \input{figures/insulator/convergence_potential}
-  \caption{Convergence of $L^2$-norm.}
-  \label{fig:convergence_potential}
+  \begin{center}
+    \begin{subfigure}{0.4\textwidth}
+      \input{figures/insulator/convergence_potential}
+      \caption{Convergence of $L^2$-norm.}
+      \label{fig:convergence_potential}
+    \end{subfigure}
+    \qquad \qquad
+    \begin{subfigure}{0.4\textwidth}
+      \input{figures/insulator/convergence_potential_offset}
+      \caption{Convergence of $L^2$-norm with 4 extra quadrature points for the iterative solution.}
+      \label{fig:convergence_potential_offset}
+    \end{subfigure}
+  \end{center}
 \end{figure}
 
 \begin{figure}[H]
-  \input{figures/insulator/convergence_gradient}
-  \caption{Convergence of $H^1$-norm.}
-  \label{fig:convergence_gradient}
+  \begin{center}
+    \begin{subfigure}{0.4\textwidth}
+      \input{figures/insulator/convergence_gradient}
+      \caption{Convergence of $H^1$-norm.}
+      \label{fig:convergence_gradient}
+    \end{subfigure}
+    \qquad \qquad
+    \begin{subfigure}{0.4\textwidth}
+      \input{figures/insulator/convergence_gradient_offset}
+      \caption{Convergence of $H^1$-norm with 4 extra quadrature points for the iterative solution.}
+      \label{fig:convergence_gradient_offset}
+    \end{subfigure}
+  \end{center}
 \end{figure}
 
-Lastly the strange behavior observed in sec.~\ref{sec:potential_field} was investigated by displaying the error on every individual element of the mesh. In the case of fig.~\ref{fig:error_elem_nsub=1} $n_\mathrm{sub}=1$ and $p=2$ were used and for fig.~\ref{fig:error_elem_nsub=16} we chose $n_\mathrm{sub}=16$. The reference remained the same as before for both plots. The figures also indicate convergence for the elements in question,  along with giving and idea of the magnitude of the absolute error on these.
+% Lastly the strange behavior observed in sec.~\ref{sec:potential_field} was investigated by displaying the error on every individual element of the mesh. In the case of fig.~\ref{fig:error_elem_nsub=1} $n_\mathrm{sub}=1$ and $p=2$ were used and for fig.~\ref{fig:error_elem_nsub=16} we chose $n_\mathrm{sub}=16$. The reference remained the same as before for both plots. The figures also indicate convergence for the elements in question,  along with giving and idea of the magnitude of the absolute error on these.
+
+Plot of the absolute error on each element along with a logarithmic scale.
 
 \begin{center}
 \begin{figure}[H]
-  \input{figures/insulator/error_elem_nsub=1}
+  \includegraphics[width=\textwidth]{figures/insulator/error_elem}
+  % \input{figures/insulator/error_elem_nsub=1}
   \caption{Absolute error of the electric field on every element.}
   \label{fig:error_elem_nsub=1}
 \end{figure}
 \end{center}
 
-\begin{center}
-\begin{figure}[H]
-  \input{figures/insulator/error_elem_nsub=16}
-  \caption{Absolute error of the electric field on every element.}
-  \label{fig:error_elem_nsub=16}
-\end{figure}
-\end{center}
+% does not work per cell but per grid point, thus use paraview export
+% \begin{center}
+% \begin{figure}[H]
+%   \input{figures/insulator/error_elem_nsub=16}
+%   \caption{Absolute error of the electric field on every element.}
+%   \label{fig:error_elem_nsub=16}
+% \end{figure}
+% \end{center}

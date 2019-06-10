@@ -2,18 +2,18 @@ pkg load geopdes;
 
 % select functions
 compute_solution = 0;
-compute_error = 1;
-plot_error = 0;
+compute_error = 0;
+plot_error = 1;
 
 % choose parameters for iterative solution
-degree = 1;
-N_it = 3;
-nquad_offset = 0;
+degree = 3;
+N_it = 8;
+nquad_offset = 4;
 
 % choose reference parameters for error computation
-degree_ref = 1;
-nsub_ref = 16;
-nquad_offset_ref = 0;
+degree_ref = 4;
+nsub_ref = 256;
+nquad_offset_ref = 4;
 
 if (compute_solution)
   conv_study_sol (degree, N_it, nquad_offset);
