@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.3)  10 JUN 2019 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.3)  10 JUN 2019 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -827,14 +827,36 @@ PGFPlots: reading {figures/insulator/boundary/boundaries134.dat}
 ) [1
 
 {/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `fig:potential' on page 2 undefined on input line 18.
-
-
-LaTeX Warning: Reference `fig:electric_field' on page 2 undefined on input line
- 18.
-
-[2] (./figures/insulator/convergence_potential.tex
+(./figures/insulator/potential.tex
+PGFPlots: reading {figures/insulator/potential/potential_1.dat}
+PGFPlots: reading {figures/insulator/potential/potential_2.dat}
+PGFPlots: reading {figures/insulator/potential/potential_3.dat}
+PGFPlots: reading {figures/insulator/potential/potential_4.dat}
+PGFPlots: reading {figures/insulator/potential/potential_5.dat}
+PGFPlots: reading {figures/insulator/potential/potential_6.dat}
+PGFPlots: reading {figures/insulator/potential/potential_7.dat}
+PGFPlots: reading {figures/insulator/potential/potential_8.dat}
+PGFPlots: reading {figures/insulator/potential/potential_9.dat}
+PGFPlots: reading {figures/insulator/potential/potential_10.dat}
+PGFPlots: reading {figures/insulator/potential/potential_11.dat}
+PGFPlots: reading {figures/insulator/potential/potential_12.dat}
+PGFPlots: reading {figures/insulator/potential/potential_13.dat}
+) (./figures/insulator/gradient.tex
+PGFPlots: reading {figures/insulator/gradient/gradient_1.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_2.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_3.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_4.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_5.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_6.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_7.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_8.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_9.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_10.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_11.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_12.dat}
+PGFPlots: reading {figures/insulator/gradient/gradient_13.dat}
+) [2]
+(./figures/insulator/convergence_potential.tex
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
 e=log unsupported (yet).
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: ymod
@@ -851,43 +873,7 @@ PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
 PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-)
-Overfull \hbox (39.97621pt too wide) in paragraph at lines 22--59
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--59
-
- []
-
-(./figures/insulator/convergence_potential_offset.tex
-Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
-e=log unsupported (yet).
-Package pgfplots info on input line 7: Using 'lua backend=false' for axis: ymod
-e=log unsupported (yet).
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=4.dat}
-)
-Overfull \hbox (39.97621pt too wide) in paragraph at lines 22--65
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--65
-
- []
-
+) [3]
 (./figures/insulator/convergence_gradient.tex
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
 e=log unsupported (yet).
@@ -906,56 +892,24 @@ ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
 PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
 )
-Overfull \hbox (39.97621pt too wide) in paragraph at lines 22--75
-[][]
- []
+
+LaTeX Warning: Reference `fig:error_elem' on page 4 undefined on input line 70.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--75
-
- []
-
-(./figures/insulator/convergence_gradient_offset.tex
-Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
-e=log unsupported (yet).
-Package pgfplots info on input line 7: Using 'lua backend=false' for axis: ymod
-e=log unsupported (yet).
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=4.dat}
-PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
-ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=4.dat}
-)
-Overfull \hbox (39.97621pt too wide) in paragraph at lines 22--81
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--81
-
- []
-
-<figures/insulator/error_elem.pdf, id=103, 1186.4325pt x 791.95876pt>
+<figures/insulator/error_elem.pdf, id=224, 1186.4325pt x 791.95876pt>
 File: figures/insulator/error_elem.pdf Graphic file (type pdf)
 <use figures/insulator/error_elem.pdf>
-Package pdftex.def Info: figures/insulator/error_elem.pdf  used on input line 9
-3.
+Package pdftex.def Info: figures/insulator/error_elem.pdf  used on input line 7
+5.
 (pdftex.def)             Requested size: 345.0pt x 230.29054pt.
-[3]) [4 <./figures/insulator/error_elem.pdf>] (./photocathode.bbl) [5
+[4]) [5 <./figures/insulator/error_elem.pdf>] (./photocathode.bbl) [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 
 (./photocathode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 
 
  *File List*
@@ -1047,49 +1001,50 @@ epstopdf-base.sty    2016/05/15 v2.6 Base part for package epstopdf
 epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 tex/insulator.tex
 figures/insulator/geometry.tex
+figures/insulator/potential.tex
+figures/insulator/gradient.tex
 figures/insulator/convergence_potential.tex
-figures/insulator/convergence_potential_offset.tex
 figures/insulator/convergence_gradient.tex
-figures/insulator/convergence_gradient_offset.tex
 figures/insulator/error_elem.pdf
 photocathode.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
 (rerunfilecheck)             Checksum: 2F80423964F7D00687F6FB46170DD9DF;172.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 30000 strings out of 492641
- 757148 string characters out of 6131787
- 1802637 words of memory out of 5000000
- 33273 multiletter control sequences out of 15000+600000
- 10199 words of font info for 37 fonts, out of 8000000 for 9000
+ 32892 strings out of 492641
+ 845418 string characters out of 6131787
+ 1821619 words of memory out of 5000000
+ 36118 multiletter control sequences out of 15000+600000
+ 9062 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,21n,136p,730b,2679s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,19n,136p,730b,2679s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on photocathode.pdf (5 pages, 3039060 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on photocathode.pdf (6 pages, 3097567 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 297 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 600 words of extra memory for PDF output out of 10000 (max. 10000000)
 
