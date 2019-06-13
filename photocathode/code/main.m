@@ -6,7 +6,7 @@ pkg load geopdes;
 geometry_file = 'photocathode_insulator';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
-nsub = 5;
+% nsub = 5;
 % for iptc=1:length(geometry)
 %  for ibnd=1:length(geometry(iptc).boundary)
 %   hold on;
@@ -17,23 +17,25 @@ nsub = 5;
 % end
 % return
 
-width = 4;
-options.numbers = 1;
-options.boundary = 1;
-figure;
-plot_geometry (geometry, nsub, width, options, boundaries);
-return
-%% solve for the potential
+% width = 4;
+% options.numbers = 1;
+% options.boundary = 1;
+% figure;
+% plot_geometry (geometry, nsub, width, options, boundaries);
+% return
+% %% solve for the potential
 voltage = -60e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
 [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
 
 %% plot the potential and the absolute value of the gradient
 % figure;
-nsub_x = method_data.nsub(1);
-nsub_y = method_data.nsub(2);
+% nsub_x = method_data.nsub(1);
+% nsub_y = method_data.nsub(2);
 % nsub_x = nsub_y = 16;
-plot_potential (nsub_x, nsub_y, u, space, geometry);
+sp_to_vtk (u, space, geometry, method_data.nsub, 'potential_new', 'u', 'value');
+sp_to_vtk (u, space, geometry, method_data.nsub, 'gradient_new', 'u', 'gradient');
+% plot_potential (nsub_x, nsub_y, u, space, geometry);
 % figure;
 % plot_gradient (nsub_x, nsub_y, u, space, geometry);
 

@@ -1,0 +1,18 @@
+<?xml version="1.0"?> 
+<VTKFile type="Collection" version="0.1"> 
+<Collection> 
+<DataSet part="1" file="gradient_1.vts"/> 
+<DataSet part="2" file="gradient_2.vts"/> 
+<DataSet part="3" file="gradient_3.vts"/> 
+<DataSet part="4" file="gradient_4.vts"/> 
+<DataSet part="5" file="gradient_5.vts"/> 
+<DataSet part="6" file="gradient_6.vts"/> 
+<DataSet part="7" file="gradient_7.vts"/> 
+<DataSet part="8" file="gradient_8.vts"/> 
+<DataSet part="9" file="gradient_9.vts"/> 
+<DataSet part="10" file="gradient_10.vts"/> 
+<DataSet part="11" file="gradient_11.vts"/> 
+<DataSet part="12" file="gradient_12.vts"/> 
+<DataSet part="13" file="gradient_13.vts"/> 
+</Collection>
+</VTKFile> 
