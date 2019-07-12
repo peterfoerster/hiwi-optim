@@ -26,15 +26,20 @@ geometry_file = 'photocathode_insulator';
 % %% solve for the potential
 voltage = -60e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
+tic;
 [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
+fprintf('\ntime elapsed for solution %d', toc);
+
+iptc = 8;
+sp_eval(u(space.gnum{iptc}), space.sp_patch{iptc}, geometry(iptc), {1 1}, 'gradient')
 
 %% plot the potential and the absolute value of the gradient
 % figure;
 % nsub_x = method_data.nsub(1);
 % nsub_y = method_data.nsub(2);
 % nsub_x = nsub_y = 16;
-sp_to_vtk (u, space, geometry, method_data.nsub, 'potential_new', 'u', 'value');
-sp_to_vtk (u, space, geometry, method_data.nsub, 'gradient_new', 'u', 'gradient');
+% sp_to_vtk (u, space, geometry, method_data.nsub, 'potential_new', 'u', 'value');
+% sp_to_vtk (u, space, geometry, method_data.nsub, 'gradient_new', 'u', 'gradient');
 % plot_potential (nsub_x, nsub_y, u, space, geometry);
 % figure;
 % plot_gradient (nsub_x, nsub_y, u, space, geometry);

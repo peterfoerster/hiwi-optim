@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.3)  10 JUN 2019 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.11.3)  15 JUN 2019 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,39 +824,36 @@ PGFPlots: reading {figures/insulator/boundary/boundaries131.dat}
 PGFPlots: reading {figures/insulator/boundary/boundaries132.dat}
 PGFPlots: reading {figures/insulator/boundary/boundaries133.dat}
 PGFPlots: reading {figures/insulator/boundary/boundaries134.dat}
-) [1
+)
+<figures/insulator/geometry.png, id=76, 1398.22375pt x 826.08624pt>
+File: figures/insulator/geometry.png Graphic file (type png)
+<use figures/insulator/geometry.png>
+Package pdftex.def Info: figures/insulator/geometry.png  used on input line 18.
+
+(pdftex.def)             Requested size: 345.0pt x 203.82356pt.
+ [1
 
 {/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./figures/insulator/potential.tex
-PGFPlots: reading {figures/insulator/potential/potential_1.dat}
-PGFPlots: reading {figures/insulator/potential/potential_2.dat}
-PGFPlots: reading {figures/insulator/potential/potential_3.dat}
-PGFPlots: reading {figures/insulator/potential/potential_4.dat}
-PGFPlots: reading {figures/insulator/potential/potential_5.dat}
-PGFPlots: reading {figures/insulator/potential/potential_6.dat}
-PGFPlots: reading {figures/insulator/potential/potential_7.dat}
-PGFPlots: reading {figures/insulator/potential/potential_8.dat}
-PGFPlots: reading {figures/insulator/potential/potential_9.dat}
-PGFPlots: reading {figures/insulator/potential/potential_10.dat}
-PGFPlots: reading {figures/insulator/potential/potential_11.dat}
-PGFPlots: reading {figures/insulator/potential/potential_12.dat}
-PGFPlots: reading {figures/insulator/potential/potential_13.dat}
-) (./figures/insulator/gradient.tex
-PGFPlots: reading {figures/insulator/gradient/gradient_1.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_2.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_3.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_4.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_5.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_6.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_7.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_8.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_9.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_10.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_11.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_12.dat}
-PGFPlots: reading {figures/insulator/gradient/gradient_13.dat}
-) [2]
-(./figures/insulator/convergence_potential.tex
+<figures/insulator/potential.png, id=97, 2404.985pt x 1583.9175pt>
+File: figures/insulator/potential.png Graphic file (type png)
+<use figures/insulator/potential.png>
+Package pdftex.def Info: figures/insulator/potential.png  used on input line 33
+.
+(pdftex.def)             Requested size: 345.0pt x 227.20905pt.
+ [2 <./figures/insulator/geometry.png>]
+<figures/insulator/gradient.png, id=106, 2404.985pt x 1583.9175pt>
+File: figures/insulator/gradient.png Graphic file (type png)
+<use figures/insulator/gradient.png>
+Package pdftex.def Info: figures/insulator/gradient.png  used on input line 42.
+
+(pdftex.def)             Requested size: 345.0pt x 227.20905pt.
+<figures/insulator/electric_field.png, id=107, 1254.6875pt x 534.99875pt>
+File: figures/insulator/electric_field.png Graphic file (type png)
+<use figures/insulator/electric_field.png>
+Package pdftex.def Info: figures/insulator/electric_field.png  used on input li
+ne 51.
+(pdftex.def)             Requested size: 345.0pt x 147.10469pt.
+ (./figures/insulator/convergence_potential.tex
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
 e=log unsupported (yet).
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: ymod
@@ -873,7 +870,8 @@ PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
 PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-) [3]
+) [3 <./figures/insulator/potential.png (PNG copy)>] [4 <./figures/insulator/gr
+adient.png (PNG copy)> <./figures/insulator/electric_field.png>]
 (./figures/insulator/convergence_gradient.tex
 Package pgfplots info on input line 7: Using 'lua backend=false' for axis: xmod
 e=log unsupported (yet).
@@ -891,14 +889,14 @@ PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
 PGFPlots: reading {figures/insulator/convergence/photocathode_insulator_degree_
 ref=4_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-)
-<figures/insulator/error_elem.pdf, id=225, 1186.4325pt x 791.95876pt>
-File: figures/insulator/error_elem.pdf Graphic file (type pdf)
-<use figures/insulator/error_elem.pdf>
-Package pdftex.def Info: figures/insulator/error_elem.pdf  used on input line 7
-5.
-(pdftex.def)             Requested size: 345.0pt x 230.29054pt.
- [4]) [5 <./figures/insulator/error_elem.pdf>] (./photocathode.bbl) [6
+) [5]
+<figures/insulator/error_elem.png, id=132, 2404.985pt x 1583.9175pt>
+File: figures/insulator/error_elem.png Graphic file (type png)
+<use figures/insulator/error_elem.png>
+Package pdftex.def Info: figures/insulator/error_elem.png  used on input line 9
+4.
+(pdftex.def)             Requested size: 345.0pt x 227.20905pt.
+) [6 <./figures/insulator/error_elem.png (PNG copy)>] (./photocathode.bbl) [7
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
@@ -996,11 +994,13 @@ epstopdf-base.sty    2016/05/15 v2.6 Base part for package epstopdf
 epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 tex/insulator.tex
 figures/insulator/geometry.tex
-figures/insulator/potential.tex
-figures/insulator/gradient.tex
+figures/insulator/geometry.png
+figures/insulator/potential.png
+figures/insulator/gradient.png
+figures/insulator/electric_field.png
 figures/insulator/convergence_potential.tex
 figures/insulator/convergence_gradient.tex
-figures/insulator/error_elem.pdf
+figures/insulator/error_elem.png
 photocathode.bbl
  ***********
 
@@ -1010,10 +1010,10 @@ Package rerunfilecheck Info: File `photocathode.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 32883 strings out of 492641
- 845171 string characters out of 6131787
- 1821041 words of memory out of 5000000
- 36110 multiletter control sequences out of 15000+600000
+ 29966 strings out of 492641
+ 755738 string characters out of 6131787
+ 1790347 words of memory out of 5000000
+ 33247 multiletter control sequences out of 15000+600000
  8754 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,19n,136p,730b,2679s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1029,10 +1029,10 @@ sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on photocathode.pdf (6 pages, 3088752 bytes).
+Output written on photocathode.pdf (7 pages, 1075066 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 600 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 244 words of extra memory for PDF output out of 10000 (max. 10000000)
 

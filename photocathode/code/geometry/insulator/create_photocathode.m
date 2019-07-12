@@ -35,7 +35,7 @@ for icrv=1:length(ptcs)
   nrbkntplot(ptcs(icrv));
 end
 hold off;
-
+return
 write_geometryfile (ptcs, filename);
 
 % vacuumchamber is missing information
