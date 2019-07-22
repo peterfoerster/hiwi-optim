@@ -66,23 +66,29 @@ p1 = [0 16e-3];
 p2 = nrbeval(vacuumchamber(12), 0);
 vacuumchamber(13) = nrbline(p1, p2);
 
-% bottom back vertical
-p1 = [0 0];
+p1 = nrbeval(cathode_boundary(22), 0);
 p2 = nrbeval(vacuumchamber(13), 0);
+p1 = [p2(1) p1(2)];
 vacuumchamber(14) = nrbline(p1, p2);
 
-% bottom back horizontal
-p1 = nrbeval(vacuumchamber(14), 0);
-p2 = nrbeval(cathode_boundary(21), 0);
+% bottom back vertical
+p1 = [0 0];
+p2 = nrbeval(vacuumchamber(14), 0);
 vacuumchamber(15) = nrbline(p1, p2);
 
-p1 = nrbeval(vacuumchamber(15), 1);
-p2 = nrbeval(cathode_boundary(1), 0);
+% bottom back horizontal
+p1 = nrbeval(vacuumchamber(15), 0);
+p2 = nrbeval(cathode_boundary(22), 1);
 p2 = [p2(1) 0];
 vacuumchamber(16) = nrbline(p1, p2);
 
-% bottom front horizontal
 p1 = nrbeval(vacuumchamber(16), 1);
-p2 = nrbeval(vacuumchamber(1), 0);
+p2 = nrbeval(cathode_boundary(1), 0);
+p2 = [p2(1) 0];
 vacuumchamber(17) = nrbline(p1, p2);
+
+% bottom front horizontal
+p1 = nrbeval(vacuumchamber(17), 1);
+p2 = nrbeval(vacuumchamber(1), 0);
+vacuumchamber(18) = nrbline(p1, p2);
 end

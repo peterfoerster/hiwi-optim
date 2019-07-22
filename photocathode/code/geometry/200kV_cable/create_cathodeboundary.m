@@ -103,7 +103,15 @@ function [cathode_boundary] = create_cathodeboundary ()
   p2 = nrbeval(cathode_boundary(19), 1);
   cathode_boundary(20) = nrbline(p1, p2);
 
-  p1 = [75e-3 0];
+  p1 = [75e-3 10e-3];
   p2 = nrbeval(cathode_boundary(20), 0);
   cathode_boundary(21) = nrbline(p1, p2);
+
+  p1 = [0 10e-3];
+  p2 = nrbeval(cathode_boundary(21), 0);
+  cathode_boundary(22) = nrbline(p1, p2);
+
+  p1 = [75e-3 0];
+  p2 = nrbeval(cathode_boundary(21), 0);
+  cathode_boundary(23) = nrbline(p1, p2);
 end

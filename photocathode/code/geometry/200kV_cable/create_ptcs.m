@@ -8,9 +8,9 @@ function [ptcs] = create_ptcs (cathode_boundary, vacuumchamber, vacuumchamber_in
   ptcs(7) = nrbcoons(vacuumchamber_inside(7), vacuumchamber_inside(6), cathode_boundary(7), vacuumchamber(7));
   ptcs(8) = nrbcoons(vacuumchamber_inside(9), vacuumchamber_inside(7), vacuumchamber_inside(8), vacuumchamber(8));
   ptcs(9) = nrbcoons(vacuumchamber_inside(11), vacuumchamber_inside(8), vacuumchamber_inside(10), cathode_boundary(8));
-  ptcs(10) = nrbcoons(vacuumchamber_inside(12), nrbreverse(vacuumchamber_inside(9)), vacuumchamber(9), vacuumchamber_inside(10));
+  ptcs(10) = nrbcoons(vacuumchamber_inside(12), nrbreverse(vacuumchamber_inside(9)), nrbdegelev(vacuumchamber(9), 1), vacuumchamber_inside(10));
   ptcs(11) = nrbcoons(cathode_boundary(10), vacuumchamber_inside(11), vacuumchamber_inside(13), cathode_boundary(9));
-  ptcs(12) = nrbcoons(vacuumchamber_inside(14), vacuumchamber_inside(12), vacuumchamber(10), vacuumchamber_inside(13));
+  ptcs(12) = nrbcoons(vacuumchamber_inside(14), vacuumchamber_inside(12), nrbdegelev(vacuumchamber(10), 1), vacuumchamber_inside(13));
   ptcs(13) = nrbcoons(vacuumchamber_inside(15), vacuumchamber_inside(14), vacuumchamber(11), cathode_boundary(11));
   ptcs(14) = nrbcoons(vacuumchamber_inside(16), vacuumchamber_inside(15), vacuumchamber(12), vacuumchamber_inside(21));
   ptcs(15) = nrbcoons(vacuumchamber_inside(19), vacuumchamber_inside(16), vacuumchamber(13), vacuumchamber_inside(18));
@@ -20,4 +20,5 @@ function [ptcs] = create_ptcs (cathode_boundary, vacuumchamber, vacuumchamber_in
   ptcs(19) = nrbcoons(cathode_boundary(20), cathode_boundary(13), vacuumchamber_inside(22), vacuumchamber_inside(23));
   ptcs(20) = nrbcoons(cathode_boundary(18), vacuumchamber_inside(23), cathode_boundary(19), nrbreverse(vacuumchamber_inside(24)));
   ptcs(21) = nrbcoons(vacuumchamber_inside(24), cathode_boundary(16), cathode_boundary(14), cathode_boundary(17));
+  ptcs(22) = nrbcoons(vacuumchamber(16), cathode_boundary(22), vacuumchamber(15), cathode_boundary(23));
 end

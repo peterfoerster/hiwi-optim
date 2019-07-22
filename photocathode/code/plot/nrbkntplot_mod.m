@@ -2,15 +2,15 @@ function nrbkntplot_mod (nsub, color, width, nurbs)
 % plots the boundary in color 'color' with linewidth 'width'
 %
 % NRBKNTPLOT: Plot a NURBS entity with the knots subdivision.
-% 
+%
 % Calling Sequence:
-% 
+%
 %   nrbkntplot(nurbs)
-% 
+%
 % INPUT:
-% 
+%
 %   nurbs: NURBS curve, surface or volume, see nrbmak.
-% 
+%
 % Example:
 %
 %   Plot the test surface with its knot vector
@@ -18,7 +18,7 @@ function nrbkntplot_mod (nsub, color, width, nurbs)
 %   nrbkntplot(nrbtestsrf)
 %
 % See also:
-% 
+%
 %   nrbctrlplot
 %
 %    Copyright (C) 2011, 2012 Rafael Vazquez
@@ -66,12 +66,12 @@ if (iscell (nurbs.knots))
       plot3 (squeeze(p1(1,ii,:)), squeeze(p1(2,ii,:)), squeeze(p1(3,ii,:)),'k');
     end
     for ii = 1:numel(knt2)
-      plot3 (squeeze(p2(1,:,ii)), squeeze(p2(2,:,ii)), squeeze(p2(3,:,ii)),'k'); 
+      plot3 (squeeze(p2(1,:,ii)), squeeze(p2(2,:,ii)), squeeze(p2(3,:,ii)),'k');
     end
   else
     % plain surface
     for ii = 1:numel(knt1)
-      plot (squeeze(p1(1,ii,:)), squeeze (p1(2,ii,:)),'k'); 
+      plot (squeeze(p1(1,ii,:)), squeeze (p1(2,ii,:)),'k');
     end
     for ii = 1:numel(knt2)
       plot (p2(1,:,ii),p2(2,:,ii),'k');
@@ -92,8 +92,8 @@ if (iscell (nurbs.knots))
 else % plot a NURBS curve
 %  nsub = 1000;
 ################################################################################
-% modified code here  
-  nrbplot_mod (color, width, nurbs, nsub);
+% modified code here
+  nrbplot_mod_old (color, width, nurbs, nsub);
   hold on;
 
   % And do not plot the knots
@@ -101,9 +101,9 @@ else % plot a NURBS curve
 %   p = nrbeval (nurbs, unique (nurbs.knots(order:end-order+1)));
 %
 %   if (any (nurbs.coefs(3,:))) % plot a 3D curve
-%     plot3 (p(1,:), p(2,:), p(3,:), 'rx'); 
+%     plot3 (p(1,:), p(2,:), p(3,:), 'rx');
 %   else                     % plot a 2D curve
-%     plot (p(1,:), p(2,:), 'rx'); 
+%     plot (p(1,:), p(2,:), 'rx');
 %   end
 
 end
