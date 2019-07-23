@@ -2,7 +2,7 @@
 pkg load nurbs;
 % clear all; clf; clc;
 
-filename = 'photocathode_200kV.txt';
+filename = 'photocathode_200kV';
 
 cathode_boundary = create_cathodeboundary();
 
@@ -28,7 +28,7 @@ vacuumchamber_inside = divide_vacuumchamber (cathode_boundary, vacuumchamber);
 % end
 % hold off;
 
-% cathode_inside = divide_cathode (cathode_boundary);
+cathode_inside = divide_cathode (cathode_boundary);
 %
 % hold on;
 % for icrv=1:length(cathode_inside)
@@ -36,14 +36,16 @@ vacuumchamber_inside = divide_vacuumchamber (cathode_boundary, vacuumchamber);
 % end
 % hold off;
 %
-% ptcs_inside = create_ptcs_inside (cathode_boundary, cathode_inside);
-%
-% hold on;
-% for icrv=1:length(ptcs_inside)
-%   nrbkntplot(ptcs_inside(icrv));
-% end
-% hold off;
-%
+ptcs_inside = create_ptcs_inside (cathode_boundary, cathode_inside);
+
+hold on;
+for icrv=1:length(ptcs_inside)
+  nrbkntplot(ptcs_inside(icrv));
+end
+hold off;
+
+write_geometryfile (ptcs_inside, [filename '_inside.txt']);
+return
 % [lift_inside] = divide_lift (cathode_boundary, vacuumchamber);
 %
 % hold on;
@@ -60,7 +62,7 @@ vacuumchamber_inside = divide_vacuumchamber (cathode_boundary, vacuumchamber);
 % end
 % hold off;
 
-ptcs = create_ptcs (cathode_boundary, vacuumchamber, vacuumchamber_inside);
+% ptcs = create_ptcs (cathode_boundary, vacuumchamber, vacuumchamber_inside);
 
 % hold on;
 % for icrv=1:length(ptcs)
@@ -70,4 +72,4 @@ ptcs = create_ptcs (cathode_boundary, vacuumchamber, vacuumchamber_inside);
 % end
 % hold off;
 
-write_geometryfile (ptcs, filename);
+write_geometryfile (ptcs, [filename '.txt']);
