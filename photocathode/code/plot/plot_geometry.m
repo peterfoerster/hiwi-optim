@@ -1,7 +1,7 @@
 function [] = plot_geometry (geometry, nsub, width, options, boundaries)
   for iptc=1:length(geometry)
     % color option is obsolete for surface plot
-    nrbkntplot_mod(nsub, 'b', width, geometry(iptc).nurbs);
+    nrbkntplot_mod(nsub, 'b', width, geometry(iptc).nurbs, iptc);
     hold on;
     if (options.numbers)
       x = geo_nurbs (geometry(iptc).nurbs, geometry(iptc).dnurbs, geometry(iptc).dnurbs2, {0.5,0.5}, 0, geometry(iptc).rdim);

@@ -1,4 +1,4 @@
-function nrbkntplot_mod (nsub, color, width, nurbs)
+function nrbkntplot_mod (nsub, color, width, nurbs, iptc)
 % plots the boundary in color 'color' with linewidth 'width'
 %
 % NRBKNTPLOT: Plot a NURBS entity with the knots subdivision.
@@ -51,7 +51,7 @@ hold_flag = ishold;
 if (iscell (nurbs.knots))
  if (size (nurbs.knots,2) == 2) % plot a NURBS surface
 %   nsub = 100;
-   nrbplot (nurbs, [nsub nsub], 'light', light, 'colormap', cmap);
+   nrbplot_surf (nurbs, [nsub nsub], iptc, 'light', light, 'colormap', cmap);
    hold on
 
    % And plot the knots

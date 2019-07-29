@@ -1,0 +1,198 @@
+\begin{tikzpicture}
+  /tikz/font=\normalfont\tiny
+\begin{axis}[
+  axis equal,
+  try min ticks=4,
+  max space between ticks=1000pt,
+  enlargelimits=true,
+  colormap/Greens,
+  point meta min = 0,
+  point meta max = 2,
+  x unit=m,
+  y unit=m,
+  legend pos=outer north east]
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_1.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_2.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_3.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_4.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_5.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_6.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_7.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_8.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_9.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_10.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_11.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_12.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_13.dat};
+
+  \addplot[surf, shader=interp, colormap/Reds, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_13.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_14.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_15.dat};
+
+  \addplot[surf, shader=interp, colormap/Reds, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_16.dat};
+
+  \addplot[surf, shader=interp, colormap/Reds, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_17.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_18.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_19.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_20.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_21.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_22.dat};
+
+  % add patch indices
+  \addplot[only marks, point meta=explicit symbolic, color=black, nodes near coords] coordinates{
+  (0.28,-0.01) [(1)]
+  (0.28,-0.005) [(2)]
+  (0.28,0.005) [(3)]
+  (0.28,0.015) [(4)]
+  (0.28,0.045) [(5)]
+  (0.24,0.075) [(6)]
+  (0.15,0.075) [(7)]
+  (0.085,0.075) [(8)]
+  (0.1,0.05) [(9)]
+  (0.05,0.065) [(10)]
+  (0.1,0.04) [(11)]
+  (0.05,0.045) [(12)]
+  (0.05,0.03) [(13)]
+  (0.03,0.0175) [(14)]
+  (0.0075,0.0075) [(15)]
+  (0.04,0.007) [(16)]
+  (0.0075,0.0025) [(17)]
+  (0.075,0.017) [(18)]
+  (0.115,0.017) [(19)]
+  (0.135,0.015) [(20)]
+  (0.155,0.025) [(21)]
+  (0.035,-0.005) [(22)]
+  };
+
+  % add patch boundaries
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries11.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries12.dat};
+  \addplot[color=black] table{figures/200kV/boundary/boundaries13.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries14.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries21.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries22.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries23.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries24.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries31.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries32.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries33.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries34.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries41.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries42.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries43.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries44.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries51.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries52.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries53.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries54.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries61.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries62.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries63.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries64.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries71.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries72.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries73.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries74.dat};
+
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries81.dat};
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries82.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries83.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries84.dat};
+
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries91.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries92.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries93.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries94.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries101.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries102.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries103.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries104.dat};
+
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries111.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries112.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries113.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries114.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries121.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries122.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries123.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries124.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries131.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries132.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries133.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries134.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries141.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries142.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries143.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries144.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries151.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries152.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries153.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries154.dat};
+
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries161.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries162.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries163.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries164.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries171.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries172.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries173.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries174.dat};
+
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries181.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries182.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries183.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries184.dat};
+
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries191.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries192.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries193.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries194.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries201.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries202.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries203.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries204.dat};
+
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries211.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries212.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries213.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries214.dat};
+
+  \addplot[color=brewerred] table{figures/200kV/boundary/boundaries221.dat};
+  \addplot[color=brewerblue] table{figures/200kV/boundary/boundaries222.dat};
+  \addplot[color=black] table{figures/200kV/boundary/boundaries223.dat};
+  \addplot[color=brewergrey] table{figures/200kV/boundary/boundaries224.dat};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,70 @@
+\subsection{Geometry}
+The $200$ kV geometry was derived from version one of the CST model. Some simplifications were made such that the geometry may be considered rotationally symmetric. The dimensions of the electrode, puck, puck elevator, vacuum chamber and insulator were derived from the model as depicted in fig.~\ref{fig:cst_geometry_yz}. The boundary conditions remained the same, except for the increase in voltage, when compared to the $60$ kV variant and the relative permittivity of the insulator was taken from the model to be $9.4$.
+
+The geometry is depicted in fig.~\ref{fig:200kV_geometry}. The numbers refer to the individual patches in the context of IGA. The patch boundaries are indicated by grey lines. The red lines represent homogeneous Dirichlet boundary conditions, the blue lines inhomogeneous Dirichlet boundary conditions with a value of $-200$ kV and the black lines indicate homogeneous Neumann boundaries.
+The patches containing insulator material are colored in red.
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/v1_cutx}
+  \caption{$y$-$z$ view of the CST model for $x=0$.}
+  \label{fig:cst_geometry_yz}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/200kV/geometry}
+  \caption{200 kV Photocathode geometry and boundary conditions.}
+  \label{fig:200kV_geometry}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/v1_cuty}
+  \caption{$x$-$z$ view of the CST model for $y=0$.}
+  \label{fig:cst_geometry_xz}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \input{figures/200kV/geometry_electrode}
+  \caption{Geometry of the electrode and puck lift.}
+  \label{fig:geometry_electrode}
+\end{figure}
+\end{center}
+
+One of the constraints for the later optimization will be the weight of the electrode and thus its volume. Since we consider the geometry to be rotationally symmetric it suffices to compute the surface of the electrode patches using numerical quadrature. For this purpose the inside of the geometry was discretised as two seperate multipatch domains. The outer part models nearly all of the electrode, however it does not properly take into account the two holes that can be seen in fig.~\ref{fig:cst_geometry_xz}. Furthermore the puck lift was not modeled with great accuracy thus we still need to find a way to properly estimate the entire volume of the electrode.
+The two multipatch geometries are displayed together in fig.~\ref{fig:geometry_electrode} with the electrode patches colored in green and the lift patches colored in blue.
+The surface area of the electrode comes out to be $A_e = 2305.8\ \mathrm{mm}^2$ and the area of the lift is $A_l = 2377.5\ \mathrm{mm}^2$. The weight of the entire construction follows as $m = 2\pi(A_e+A_l)\rho$ with $\rho = 7.99 \frac{\mathrm{g}}{\mathrm{mm}^3}$. (This is clearly wrong, how do I correctly compute the volume? The correct way should be $\int_0^{2\pi} A(r)r\ d\varphi$, but how would I go about this approach since r is not constant?)
+
+\subsection{Electrostatic Potential and Electric Field}
+The solution for the electrostatic potential is shown in fig.~\ref{fig:200kV_potential}. Fig.~\ref{fig:200kV_electric_field} depicts the absolute value of the electric field.
+Both of the solutions were computed with $p=4$ as the degree of the basis functions and $n_\mathrm{sub}=128$ as the number of elements that each knot vector is uniformly split into.
+It is evident that there exist parts of the domain where the magnitude exceeds the limit of $10 \frac{\mathrm{MV}}{\mathrm{m}}$. There are also very high gradients visible at the triple points however these also coincide with sharp corners so numerical issues might play a role. (Again perform a convergence study and investigate the absolute error per patch?)
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/potential}
+  \caption{Electrostatic potential.}
+  \label{fig:200kV_potential}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/gradient}
+  \caption{Absolute value of the electric field.}
+  \label{fig:200kV_electric_field}
+\end{figure}
+\end{center}
+
+\subsection{Optimization}
+The aim of the optimization will be to minimize the maximal field amplitudes. For practicality we will only look at the critical points of the geometry, i.~e.~the curvatures of the outer electrode and the triple points and average the field strengths over a given number of sample points. The lower part of the geometry will remain fixed so only the electrode boundaries of patches 5, 6, 7, 8, 9 and 11 from fig.~\ref{fig:200kV_geometry} and their respective control points will be the DoFs. Another thing that might be considered is varying the length of the entire electrode. Aside from the fixed part of the geometry we also need to consider the volume constraint as stated previously.
+
+\subsection{Astra}
+In the future we may also optimize the electrode boundary next to the puck, i.~e.~patches 2, 3 and 4 to obtain optimal particle trajectories. The cost function will be computed using Astra. (Perform all the tests for Astra also for the final Photocathode geometry?)
+The desired total bunch charge is $10$ pC with a beam current of $(20-100)\ \mu\mathrm{A}$, whereas a typical value would be $100$ fC. The bunch length is around $5$ ps with a normalized transversal emittance of $e_{x,y} \leq 1\ \mathrm{mm\ mrad}$. The desired energy resolution is $\frac{\Delta E}{E} \leq 10^{-4}$.
+The tracking will be performed using individual bunches from a pulsed laser. The emission model may be derived from \cite{wagner}.
