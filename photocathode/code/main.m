@@ -2,7 +2,7 @@ clear all; close all; clc;
 pkg load geopdes;
 
 %% plot the geometry
-geometry_file = 'photocathode_200kV_inside';
+geometry_file = 'photocathode_200kV';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 nsub = 8;
 
@@ -15,12 +15,12 @@ nsub = 8;
 %  end
 % end
 
-width = 4;
-options.numbers = 1;
-options.boundary = 0;
-figure;
-plot_geometry (geometry, nsub, width, options, boundaries);
-return
+% width = 4;
+% options.numbers = 1;
+% options.boundary = 1;
+% figure;
+% plot_geometry (geometry, nsub, width, options, boundaries);
+
 %% solve for the potential
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
@@ -30,15 +30,15 @@ fprintf('\ntime elapsed for solution %d', toc);
 
 %% plot the potential and the absolute value of the gradient
 % figure;
-nsub_x = method_data.nsub(1);
-nsub_y = method_data.nsub(2);
+% nsub_x = method_data.nsub(1);
+% nsub_y = method_data.nsub(2);
 % plot_potential (nsub_x, nsub_y, u, space, geometry);
 % figure;
 % modify this for geometry .dat files
-plot_gradient (nsub_x, nsub_y, u, space, geometry);
+% plot_gradient (nsub_x, nsub_y, u, space, geometry);
 
 % sp_to_vtk (u, space, geometry, method_data.nsub, 'potential', 'u', 'value');
-% sp_to_vtk (u, space, geometry, method_data.nsub, 'gradient', 'u', 'gradient');
+sp_to_vtk (u, space, geometry, method_data.nsub, 'test_gradient', '|E|', 'gradient');
 
 %% convergence study (with absolute error)
 % degree = 2;

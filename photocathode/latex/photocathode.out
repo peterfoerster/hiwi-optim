@@ -1,9 +1,6 @@
-\BOOKMARK [1][-]{section.1}{60 kV Geometry}{}% 1
+\BOOKMARK [1][-]{section.1}{200 kV Geometry}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Geometry}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{Electrostatic Potential and Electric Field}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Convergence Study}{section.1}% 4
-\BOOKMARK [1][-]{section.2}{200 kV Geometry}{}% 5
-\BOOKMARK [2][-]{subsection.2.1}{Geometry}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.2}{Electrostatic Potential and Electric Field}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.3}{Optimization}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.4}{Astra}{section.2}% 9
+\BOOKMARK [2][-]{subsection.1.3}{Optimization}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Volume Constraint}{subsection.1.3}% 5
+\BOOKMARK [2][-]{subsection.1.4}{Astra}{section.1}% 6

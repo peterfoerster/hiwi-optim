@@ -11,11 +11,11 @@ function [problem_data, method_data] = init_potential (geometry_file, voltage)
   problem_data.g = @(x,y,ib) nm_bc (ib, x, y);
   problem_data.h = @(x,y,ib) drl_bc (ib, x, y, voltage);
 
-  method_data.degree     = [4 4];
+  method_data.degree     = [2 2];
   % degree-1
-  method_data.regularity = [3 3];
+  method_data.regularity = method_data.degree - 1;
   % to be determined by convergence study
   method_data.nsub       = [8 8];
   % degree+1
-  method_data.nquad      = [5 5];
+  method_data.nquad      = method_data.degree + 1;
 end

@@ -1,13 +1,17 @@
 \begin{tikzpicture}
 
 \begin{axis}[
+   scale only axis = true,
+   width = 0.9\textwidth,
+   axis equal,
+   try min ticks=4,
+   max space between ticks=1000pt,
   enlargelimits=true,
   colormap/YlOrRd,
   point meta min = 0,
   point meta max = 5,
   x unit=m,
-  y unit=m,
-  legend pos=outer north east]
+  y unit=m]
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/60kV/geometry/geometry_1.dat};
 
@@ -35,7 +39,7 @@
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/60kV/geometry/geometry_13.dat};
 
-  /tikz/font=\normalfont\tiny
+  % /tikz/font=\normalfont\tiny
   % add patch indices
   \addplot[only marks, point meta=explicit symbolic, color=black, nodes near coords] coordinates{
   (0.14,-0.001) [(1)]

@@ -1,6 +1,7 @@
 \begin{tikzpicture}
-  /tikz/font=\normalfont\tiny
 \begin{axis}[
+   scale only axis = true,
+   width = 0.9\textwidth,
   axis equal,
   try min ticks=4,
   max space between ticks=1000pt,
@@ -9,8 +10,7 @@
   point meta min = 0,
   point meta max = 2,
   x unit=m,
-  y unit=m,
-  legend pos=outer north east]
+  y unit=m]
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/geometry_1.dat};
 

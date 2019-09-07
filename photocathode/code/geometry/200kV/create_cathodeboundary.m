@@ -42,76 +42,87 @@ function [cathode_boundary] = create_cathodeboundary ()
   center = [113e-3 55e-3];
   sang = pi/2;
   eang = pi;
-  cathode_boundary(8) = nrbcirc(radius, center, sang, eang);
-  cathode_boundary(8) = nrbreverse(cathode_boundary(8));
+  cathode_boundary(10) = nrbcirc(radius, center, sang, eang);
+  cathode_boundary(10) = nrbreverse(cathode_boundary(10));
 
   sang = pi;
   eang = 3*pi/2;
-  cathode_boundary(9) = nrbcirc(radius, center, sang, eang);
-  cathode_boundary(9) = nrbreverse(cathode_boundary(9));
+  cathode_boundary(11) = nrbcirc(radius, center, sang, eang);
+  cathode_boundary(11) = nrbreverse(cathode_boundary(11));
 
   % top diagonal
-  p1 = nrbeval(cathode_boundary(8), 1);
+  p1 = nrbeval(cathode_boundary(10), 1);
+  p2 = nrbeval(cathode_boundary(6), 0);
+  a  = (p2(2)-p1(2))/(p2(1)-p1(1));
+  b  = p1(2) - a*p1(1);
+  f = @(x) a*x + b;
+
+  p1 = [181.5e-3 f(181.5e-3)];
   p2 = nrbeval(cathode_boundary(6), 0);
   cathode_boundary(7) = nrbline(p1, p2);
 
+  p1 = nrbeval(cathode_boundary(10), 1);
+  p2 = [146.5e-3 f(146.5e-3)];
+  cathode_boundary(9) = nrbline(p1, p2);
+
+  % holes
+  p1 = nrbeval(cathode_boundary(9), 1);
+  p2 = nrbeval(cathode_boundary(7), 0);
+  cathode_boundary(8) = nrbline(p1, p2);
+
   % insulator connection
   p1 = [100e-3 45e-3];
-  p2 = nrbeval(cathode_boundary(9), 0);
-  cathode_boundary(10) = nrbline(p1, p2);
-
-  p1 = [100e-3 35e-3];
-  p2 = nrbeval(cathode_boundary(10), 0);
-  cathode_boundary(11) = nrbline(p1, p2);
-
-  p1 = nrbeval(cathode_boundary(11), 0);
-  p2 = [110e-3 35e-3];
+  p2 = nrbeval(cathode_boundary(11), 0);
   cathode_boundary(12) = nrbline(p1, p2);
 
-  p1 = nrbeval(cathode_boundary(12), 1);
-  p2 = [130e-3 35e-3];
+  p1 = [100e-3 35e-3];
+  p2 = nrbeval(cathode_boundary(12), 0);
   cathode_boundary(13) = nrbline(p1, p2);
 
-  p1 = nrbeval(cathode_boundary(13), 1);
-  p2 = [130e-3 45e-3];
+  p1 = nrbeval(cathode_boundary(13), 0);
+  p2 = [110e-3 35e-3];
   cathode_boundary(14) = nrbline(p1, p2);
 
-  % connection to electrode
-  p1 = nrbeval(cathode_boundary(10), 1);
-  p2 = nrbeval(cathode_boundary(14), 1);
+  p1 = nrbeval(cathode_boundary(14), 1);
+  p2 = [130e-3 35e-3];
   cathode_boundary(15) = nrbline(p1, p2);
 
-  % connection to lift
   p1 = nrbeval(cathode_boundary(15), 1);
-  p2 = [185e-3 45e-3];
+  p2 = [130e-3 45e-3];
   cathode_boundary(16) = nrbline(p1, p2);
 
-  p1 = [185e-3 20e-3];
+  % connection to electrode
+  p1 = nrbeval(cathode_boundary(12), 1);
   p2 = nrbeval(cathode_boundary(16), 1);
   cathode_boundary(17) = nrbline(p1, p2);
 
-  % cable connection
-  p1 = [125e-3 20e-3];
-  p2 = nrbeval(cathode_boundary(17), 0);
+  % connection to lift
+  p1 = nrbeval(cathode_boundary(17), 1);
+  p2 = [185e-3 45e-3];
   cathode_boundary(18) = nrbline(p1, p2);
 
-  p1 = nrbeval(cathode_boundary(18), 0);
-  p2 = [125e-3 21e-3];
+  p1 = [185e-3 20e-3];
+  p2 = nrbeval(cathode_boundary(18), 1);
   cathode_boundary(19) = nrbline(p1, p2);
 
-  p1 = [75e-3 21e-3];
-  p2 = nrbeval(cathode_boundary(19), 1);
+  % cable connection
+  p1 = [125e-3 20e-3];
+  p2 = nrbeval(cathode_boundary(19), 0);
   cathode_boundary(20) = nrbline(p1, p2);
 
-  p1 = [75e-3 10e-3];
-  p2 = nrbeval(cathode_boundary(20), 0);
+  p1 = nrbeval(cathode_boundary(20), 0);
+  p2 = [125e-3 21e-3];
   cathode_boundary(21) = nrbline(p1, p2);
 
-  p1 = [0 10e-3];
-  p2 = nrbeval(cathode_boundary(21), 0);
+  p1 = [75e-3 21e-3];
+  p2 = nrbeval(cathode_boundary(21), 1);
   cathode_boundary(22) = nrbline(p1, p2);
 
-  p1 = [75e-3 0];
-  p2 = nrbeval(cathode_boundary(21), 0);
+  p1 = [75e-3 10e-3];
+  p2 = nrbeval(cathode_boundary(22), 0);
   cathode_boundary(23) = nrbline(p1, p2);
+
+  p1 = [75e-3 0];
+  p2 = nrbeval(cathode_boundary(23), 0);
+  cathode_boundary(24) = nrbline(p1, p2);
 end
