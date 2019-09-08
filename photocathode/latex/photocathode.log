@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  6 SEP 2019 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  7 SEP 2019 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -224,6 +224,13 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -711,22 +718,22 @@ File: tikzlibrarycalc.code.tex 2019/02/02 v3.1.1 (3.1.1)
 its.code.tex) (./mathrm.sty) (./mat-vec.sty) (./photocathode.aux)
 \openout1 = `photocathode.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 33.
+Package hyperref Info: Link coloring OFF on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -736,9 +743,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
 
 (./photocathode.out) (./photocathode.out)
 \@outlinefile=\write4
@@ -781,11 +788,19 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
-(./photocathode.toc)
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./photocathode.toc)
 \tf@toc=\write5
 \openout5 = `photocathode.toc'.
 
- (./tex/200kV.tex
+(./tex/200kV.tex
 <figures/200kV/v1_cutx.png, id=39, 1200.485pt x 479.7925pt>
 File: figures/200kV/v1_cutx.png Graphic file (type png)
 <use figures/200kV/v1_cutx.png>
@@ -815,6 +830,8 @@ PGFPlots: reading {figures/200kV/geometry/geometry_19.dat}
 PGFPlots: reading {figures/200kV/geometry/geometry_20.dat}
 PGFPlots: reading {figures/200kV/geometry/geometry_21.dat}
 PGFPlots: reading {figures/200kV/geometry/geometry_22.dat}
+PGFPlots: reading {figures/200kV/geometry/geometry_23.dat}
+PGFPlots: reading {figures/200kV/geometry/geometry_24.dat}
 PGFPlots: reading {figures/200kV/boundary/boundaries11.dat}
 PGFPlots: reading {figures/200kV/boundary/boundaries12.dat}
 PGFPlots: reading {figures/200kV/boundary/boundaries13.dat}
@@ -903,17 +920,25 @@ PGFPlots: reading {figures/200kV/boundary/boundaries221.dat}
 PGFPlots: reading {figures/200kV/boundary/boundaries222.dat}
 PGFPlots: reading {figures/200kV/boundary/boundaries223.dat}
 PGFPlots: reading {figures/200kV/boundary/boundaries224.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries231.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries232.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries233.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries234.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries241.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries242.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries243.dat}
+PGFPlots: reading {figures/200kV/boundary/boundaries244.dat}
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 198--18
+Underfull \hbox (badness 10000) in paragraph at lines 215--18
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--18
+Underfull \hbox (badness 10000) in paragraph at lines 215--18
 
  []
 
@@ -921,132 +946,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--18
 
 {/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figu
 res/200kV/v1_cutx.png>]
-<figures/200kV/v1_cuty.png, id=146, 521.95pt x 328.22626pt>
+<figures/200kV/v1_cuty.png, id=154, 521.95pt x 328.22626pt>
 File: figures/200kV/v1_cuty.png Graphic file (type png)
 <use figures/200kV/v1_cuty.png>
 Package pdftex.def Info: figures/200kV/v1_cuty.png  used on input line 25.
 (pdftex.def)             Requested size: 452.9679pt x 284.84836pt.
- [2] (./figures/200kV/geometry_electrode.tex
-Missing character: There is no / in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_1.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_2.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_3.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_4.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_5.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_6.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_7.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_8.dat}
-PGFPlots: reading {figures/200kV/geometry_electrode/geometry_9.dat}
-PGFPlots: reading {figures/200kV/geometry_lift/geometry_1.dat}
-PGFPlots: reading {figures/200kV/geometry_lift/geometry_2.dat}
-PGFPlots: reading {figures/200kV/geometry_lift/geometry_3.dat}
-PGFPlots: reading {figures/200kV/geometry_lift/geometry_4.dat}
-PGFPlots: reading {figures/200kV/geometry_lift/geometry_5.dat}
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries11.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries12.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries13.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries14.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries21.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries22.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries23.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries24.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries31.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries32.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries33.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries34.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries41.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries42.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries43.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries44.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries51.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries52.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries53.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries54.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries61.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries62.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries63.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries64.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries71.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries72.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries73.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries74.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries81.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries82.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries83.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries84.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries91.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries92.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries93.dat}
-PGFPlots: reading {figures/200kV/boundary_electrode/boundaries94.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries11.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries12.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries13.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries14.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries21.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries22.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries23.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries24.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries31.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries32.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries33.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries34.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries41.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries42.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries43.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries44.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries51.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries52.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries53.dat}
-PGFPlots: reading {figures/200kV/boundary_lift/boundaries54.dat}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-) [3 <./figures/200kV/v1_cuty.png>]
-<figures/200kV/potential.png, id=222, 4809.97pt x 2099.845pt>
+ [2]
+<figures/200kV/potential.png, id=161, 4809.97pt x 2099.845pt>
 File: figures/200kV/potential.png Graphic file (type png)
 <use figures/200kV/potential.png>
-Package pdftex.def Info: figures/200kV/potential.png  used on input line 46.
+Package pdftex.def Info: figures/200kV/potential.png  used on input line 38.
 (pdftex.def)             Requested size: 452.9679pt x 197.72508pt.
-<figures/200kV/gradient.png, id=223, 4809.97pt x 2099.845pt>
+ [3 <./figures/200kV/v1_cuty.png>]
+<figures/200kV/gradient.png, id=170, 4809.97pt x 2099.845pt>
 File: figures/200kV/gradient.png Graphic file (type png)
 <use figures/200kV/gradient.png>
-Package pdftex.def Info: figures/200kV/gradient.png  used on input line 54.
+Package pdftex.def Info: figures/200kV/gradient.png  used on input line 46.
 (pdftex.def)             Requested size: 452.9679pt x 197.72508pt.
  [4 <./figures/200kV/potential.png (PNG copy)> <./figures/200kV/gradient.png (P
-NG copy)>]) [5] (./photocathode.bbl) [6
+NG copy)>])
+[5] (./photocathode.bbl) [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
-
-(./photocathode.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+ (./photocathode.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 
 
  *File List*
@@ -1095,6 +1020,7 @@ rerunfilecheck.sty    2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
   amsgen.sty    1999/11/30 v2.0 generic functions
   amsbsy.sty    1999/11/29 v1.2d Bold Symbols
   amsopn.sty    2016/03/08 v2.02 operator names
+amsfonts.sty    2013/01/14 v3.01 Basic AMSFonts support
    float.sty    2001/11/08 v1.3d Float enhancements (AL)
 subcaption.sty    2018/05/01 v1.1-162 Sub-captions (AR)
  caption.sty    2018/10/06 v3.3-154 Customizing captions (AR)
@@ -1140,29 +1066,30 @@ supp-pdf.mkii
 epstopdf-base.sty    2016/05/15 v2.6 Base part for package epstopdf
   grfext.sty    2016/05/16 v1.2 Manage graphics extensions (HO)
 epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+    umsa.fd    2013/01/14 v3.01 AMS symbols A
+    umsb.fd    2013/01/14 v3.01 AMS symbols B
 tex/200kV.tex
 figures/200kV/v1_cutx.png
 figures/200kV/geometry.tex
 figures/200kV/v1_cuty.png
-figures/200kV/geometry_electrode.tex
 figures/200kV/potential.png
 figures/200kV/gradient.png
 photocathode.bbl
  ***********
 
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
 (rerunfilecheck)             Checksum: 9187A0BAA48B8DA001172D0D2FF8BB27;389.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 30980 strings out of 492615
- 774351 string characters out of 6131390
- 1630354 words of memory out of 5000000
- 34169 multiletter control sequences out of 15000+600000
- 9369 words of font info for 34 fonts, out of 8000000 for 9000
+ 31003 strings out of 492615
+ 771690 string characters out of 6131390
+ 1716360 words of memory out of 5000000
+ 34161 multiletter control sequences out of 15000+600000
+ 12468 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,11n,136p,742b,3025s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,11n,136p,742b,3024s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1173,13 +1100,12 @@ t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
 public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on photocathode.pdf (6 pages, 902024 bytes).
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on photocathode.pdf (6 pages, 871422 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 247 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  25 named destinations out of 1000 (max. 500000)
- 599 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 

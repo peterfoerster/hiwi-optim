@@ -88,15 +88,15 @@ elseif (ndim == 2)
     % fclose(fid);
 
     % write to .dat file
-    fprintf(['creating geometry_' num2str(iptc) '.dat\n']);
-    fid = fopen(['geometry_' num2str(iptc) '.dat'], 'w');
-    fprintf(fid, 'x y c\n');
-    for icol=1:size(X,2)
-    % version to write geometry
-    dlmwrite(fid, [X(:,icol) Y(:,icol) ones(size(X,1))], 'delimiter', '  ', 'append', 'on');
-    fprintf(fid, '\n');
-    end
-    fclose(fid);
+    % fprintf(['creating geometry_' num2str(iptc) '.dat\n']);
+    % fid = fopen(['geometry_' num2str(iptc) '.dat'], 'w');
+    % fprintf(fid, 'x y c\n');
+    % for icol=1:size(X,2)
+    % % version to write geometry
+    % dlmwrite(fid, [X(:,icol) Y(:,icol) ones(size(X,1))], 'delimiter', '  ', 'append', 'on');
+    % fprintf(fid, '\n');
+    % end
+    % fclose(fid);
 
   elseif (rdim == 3)
     [X, Y, Z]  = deal (squeeze(F(1,:,:)), squeeze(F(2,:,:)), squeeze(F(3,:,:)));

@@ -93,7 +93,7 @@ else % plot a NURBS curve
 %  nsub = 1000;
 ################################################################################
 % modified code here
-  nrbplot_mod_old (color, width, nurbs, nsub);
+  nrbplot_mod_color (color, width, nurbs, nsub);
   hold on;
 
   % And do not plot the knots

@@ -28,14 +28,6 @@ The patches containing insulator material are colored in red.
 \end{figure}
 \end{center}
 
-\begin{center}
-\begin{figure}[H]
-  \input{figures/200kV/geometry_electrode}
-  \caption{Geometry of the electrode and puck lift.}
-  \label{fig:geometry_electrode}
-\end{figure}
-\end{center}
-
 \subsection{Electrostatic Potential and Electric Field}
 The solution for the electrostatic potential is shown in fig.~\ref{fig:200kV_potential}. Fig.~\ref{fig:200kV_electric_field} depicts the absolute value of the electric field.
 Both of the solutions were computed with $p=4$ as the degree of the basis functions and $n_\mathrm{sub}=128$ as the number of elements that each knot vector is uniformly split into.
@@ -67,7 +59,7 @@ For the discretization we have
 \begin{align}
    V_{\mathrm{ptc}} = \int_V r\ \drm r\ \drm \varphi\ \drm z \approx \sum_{i=1}^n \wbf_{z_i} (\Wbf_x(z_i) \Wbf_y(z_i))
 \end{align}
-where we discretized $z$ with $n$ quadrature points. 
+where we discretized $z$ with $n$ quadrature points.
 We still need to consider the holes inside the electrode and the correct lift geometry. The holes are computed by considering a cylinder with its height as a function of $z$. The curvature in $x$ and $y$ is disregarded, since it is the same for both coordinates. We can therefore determine the value by discretizing $V_{h} = \int_V \drm x\ \drm y\ \drm z$.
 Lastly the puck lift is made up mostly of vacuum. Its shape can be decomposed into two cylinders and two cylinder parts, which can be computed by the same approach used for the holes.
 

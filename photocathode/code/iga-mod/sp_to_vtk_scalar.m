@@ -4,13 +4,13 @@
 %  sp_to_vtk (u, space, geometry, pts, filename, fieldname, [options], [lambda_lame, mu_lame])
 %
 % INPUT:
-%     
+%
 %     u:           vector of dof weights
 %     space:       object representing the space of discrete functions (see sp_scalar)
 %     geometry:    geometry structure (see geo_load)
 %     npts:        number of points along each parametric direction where to evaluate
 %     pts:         cell array with the coordinates along each parametric direction of the points where to evaluate
-%     filename:    name of the output file. 
+%     filename:    name of the output file.
 %     fieldnames:  how to name the saved variables in the vtk file
 %     options:     cell array with the fields to plot
 %                   accepted options are 'value' (default), 'gradient',
@@ -20,8 +20,8 @@
 %
 % OUTPUT:
 %
-%    none    
-% 
+%    none
+%
 % Copyright (C) 2009, 2010 Carlo de Falco
 % Copyright (C) 2011, 2012, 2015 Rafael Vazquez
 %
@@ -38,7 +38,7 @@
 %    You should have received a copy of the GNU General Public License
 %    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-function sp_to_vtk (u, space, geometry, npts, filename, fieldname, varargin)
+function sp_to_vtk_scalar (u, space, geometry, npts, filename, fieldname, varargin)
 
   [eu, F] = sp_eval (u, space, geometry, npts, varargin{:});
 

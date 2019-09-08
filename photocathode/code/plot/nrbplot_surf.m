@@ -103,17 +103,17 @@ if (iscell (nurbs.knots))
                        linspace(knt{2}(order(2)),knt{2}(end-order(2)+1),subd(2))});
 
 % write to .dat file
-% X = squeeze(p(1,:,:));
-% Y = squeeze(p(2,:,:));
-% fprintf(['creating geometry_' num2str(iptc) '.dat\n']);
-% fid = fopen(['geometry_' num2str(iptc) '.dat'], 'w');
-% fprintf(fid, 'x y c\n');
-% for icol=1:size(X,2)
-% % version to write geometry
-% dlmwrite(fid, [X(:,icol) Y(:,icol) ones(size(X,1))], 'delimiter', '  ', 'append', 'on');
-% fprintf(fid, '\n');
-% end
-% fclose(fid);
+   % X = squeeze(p(1,:,:));
+   % Y = squeeze(p(2,:,:));
+   % fprintf(['creating geometry_' num2str(iptc) '.dat\n']);
+   % fid = fopen(['geometry_' num2str(iptc) '.dat'], 'w');
+   % fprintf(fid, 'x y c\n');
+   % for icol=1:size(X,2)
+   %    % version to write geometry
+   %    dlmwrite(fid, [X(:,icol) Y(:,icol) ones(size(X,1))], 'delimiter', '  ', 'append', 'on');
+   %    fprintf(fid, '\n');
+   % end
+   % fclose(fid);
 
   if (strcmp (light,'on'))
     % light surface

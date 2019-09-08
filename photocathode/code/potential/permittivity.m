@@ -1,11 +1,10 @@
 function [c_diff] = permittivity (ip, x, y, geometry_file)
   switch (ip)
-  % 10 insulator, kink
-    case {13}
+    case {15}
       c_diff = 9.4 * 8.854e-12*ones(size(x));
-    case {16}
+    case {18}
       c_diff = 9.4 * 8.854e-12*ones(size(x));
-    case {17}
+    case {19}
       c_diff = 9.4 * 8.854e-12*ones(size(x));
     % case {7}
     %   ic = (y < 35e-3);
