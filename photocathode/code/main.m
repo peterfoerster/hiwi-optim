@@ -27,7 +27,7 @@ voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
 tic;
 [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
-fprintf('\ntime elapsed for solution %d', toc);
+fprintf('\ntime elapsed for solution %d min', toc/60);
 
 %% plot the potential and the absolute value of the gradient
 % figure;
