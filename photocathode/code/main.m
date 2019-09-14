@@ -5,7 +5,15 @@ pkg load geopdes;
 geometry_file = 'photocathode_200kV';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
-% nsub = 8;
+nsub = 8;
+ptcs = [6 7 8 9 12 13];
+bnds = [3 3 3 3  2  2];
+for iptc=1:length(ptcs)
+   hold on;
+   nrbctrlplot(geometry(ptcs(iptc)).boundary(bnds(iptc)).nurbs);
+   hold off;
+end
+return
 % for iptc=1:length(geometry)
 %  for ibnd=1:length(geometry(iptc).boundary)
 %   hold on;
@@ -15,13 +23,13 @@ geometry_file = 'photocathode_200kV';
 %  end
 % end
 
-% width = 4;
-% options.numbers = 1;
-% options.boundary = 1;
-% figure;
+width = 4;
+options.numbers = 1;
+options.boundary = 1;
+figure;
 %% manually choose to produce .dat in "nrbplot_surf"
-% plot_geometry (geometry, nsub, width, options, boundaries);
-
+plot_geometry (geometry, nsub, width, options, boundaries);
+return
 %% solve for the potential
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
