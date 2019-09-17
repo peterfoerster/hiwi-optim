@@ -28,44 +28,98 @@ The patches containing insulator material are colored in red.
 \end{figure}
 \end{center}
 
-\subsection{Electrostatic Potential and Electric Field}
-The solution for the electrostatic potential is shown in fig.~\ref{fig:200kV_potential}. Fig.~\ref{fig:200kV_electric_field} depicts the absolute value of the electric field.
-Both of the solutions were computed with $p=4$ as the degree of the basis functions and $n_\mathrm{sub}=128$ as the number of elements that each knot vector is uniformly split into.
+\subsection{Electric Field}
+The solution for the electric field is shown in fig.~\ref{fig:200kV_electric_field}.
+It was computed with $p=4$ as the degree of the basis functions and $n_\mathrm{sub}=128$ as the number of elements that each knot vector is uniformly split into.
 It is evident that there exist parts of the domain where the magnitude exceeds the limit of $10 \frac{\mathrm{MV}}{\mathrm{m}}$. There are also very high gradients visible at the triple points however these also coincide with sharp corners so numerical issues might play a role. (Again perform a convergence study and investigate the absolute error per patch?)
 
 \begin{center}
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{figures/200kV/potential}
-  \caption{Electrostatic potential.}
-  \label{fig:200kV_potential}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[H]
-  \includegraphics[width=\textwidth]{figures/200kV/gradient}
+  \includegraphics[width=\textwidth]{figures/200kV/gradient_degree=4_nsub=128}
   \caption{Absolute value of the electric field.}
   \label{fig:200kV_electric_field}
 \end{figure}
 \end{center}
 
+Additionally solutions with different degree and $n_\mathrm{sub}$ were performed to estimate the reliability of the results.
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/gradient_degree=3_nsub=128}
+  \caption{Absolute value of the electric field with $p=3$ and $n_\mathrm{sub}=128$.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/gradient_degree=2_nsub=128}
+  \caption{Absolute value of the electric field with $p=2$ and $n_\mathrm{sub}=128$.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/gradient_degree=2_nsub=8}
+  \caption{Absolute value of the electric field with $p=2$ and $n_\mathrm{sub}=8$.}
+\end{figure}
+\end{center}
+
 \subsection{Optimization}
-The aim of the optimization will be to minimize the maximal field amplitudes. For practicality we will only look at the critical points of the geometry, i.~e.~the curvatures of the outer electrode and the triple points and average the field strengths over a given number of sample points. The lower part of the geometry will remain fixed so only the electrode boundaries of patches 5, 6, 7, 8, 9 and 11 from fig.~\ref{fig:200kV_geometry} and their respective control points will be the DoFs. Another thing that might be considered is varying the length of the entire electrode. Aside from the fixed part of the geometry we also need to consider the volume constraint as stated previously.
+The aim of the optimization will be to minimize the maximal field amplitudes. For practicality we will only look at the critical points of the geometry, i.~e.~the curvatures of the outer electrode and the triple points and average the field strengths over a given number of sample points. The lower part of the geometry will remain fixed so only the electrode boundaries of patches 6, 7, 8, 9, 12 and 13 from fig.~\ref{fig:200kV_geometry} and their respective control points will be the DoFs. Another thing that might be considered is varying the length of the entire electrode. Aside from the fixed part of the geometry we also need to consider a volume constraint.
 
 \subsubsection{Volume Constraint}
 One of the constraints for the later optimization will be the weight of the electrode and thus its volume.
 We first compute the volume of the patches by taking into account the rotational symmetry and discretizing $V_{\mathrm{ptc}} = \int_V r\ \drm r\ \drm \varphi\ \drm z$ via numerical quadrature. We can then obtain the volume of the electrode by subtracting $V_{\mathrm{ptc}}$ from the cylinder formed by the vacuumchamber.
-For the discretization we have
-\begin{align}
-   V_{\mathrm{ptc}} = \int_V r\ \drm r\ \drm \varphi\ \drm z \approx \sum_{i=1}^n \wbf_{z_i} (\Wbf_x(z_i) \Wbf_y(z_i))
-\end{align}
-where we discretized $z$ with $n$ quadrature points.
-We still need to consider the holes inside the electrode and the correct lift geometry. The holes are computed by considering a cylinder with its height as a function of $z$. The curvature in $x$ and $y$ is disregarded, since it is the same for both coordinates. We can therefore determine the value by discretizing $V_{h} = \int_V \drm x\ \drm y\ \drm z$.
-Lastly the puck lift is made up mostly of vacuum. Its shape can be decomposed into two cylinders and two cylinder parts, which can be computed by the same approach used for the holes.
+We still need to consider the holes inside the electrode, visible in \ref{fig:cst_geometry_xz}, and the correct lift geometry. The holes are computed by considering a cylinder with its height as a function of $z$. The curvature in $x$ and $y$ is disregarded, since it is the same for both coordinates. We can therefore determine the value by discretizing $V_{h} = \int_V \drm x\ \drm y\ \drm z$.
+The puck lift is made up mostly of vacuum. Its shape can be decomposed into two cylinders and two cylinder parts, which can be computed by the same approach used for the holes.
+Lastly the white part below patch 22 already belongs to the cable and should therefor not be counted towards the volume of the electrode.
+The physical constraint is set at $625\ \mathrm{cm}^3$ and the volume of the current geometry is computed as $612.4\ \mathrm{cm}^3$.
 
-$\rho = 7.99 \frac{\mathrm{g}}{\mathrm{mm}^3}$
+\subsubsection{Cost Function}
+\begin{itemize}
+   \item evaluate electric field in quadrature nodes and compute average
+   \item currently only considers patch 12
+   \item might need to include more patches or choose completely different?
+\end{itemize}
+
+\subsubsection{Additional Constraints}
+\begin{itemize}
+   \item upper and lower bounds are set for the control points, see fig.~\ref{fig:bounds}
+   \item probably need to choose them differently
+   \item need to change the implementation of the control point movement, if more range should be given for patches 12 and 13
+   \item should we require $C^1$ or $C^2$ continuity between the nurbs?
+\end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/bounds}
+  \caption{Upper and lower bounds along with control points of the nurbs to be optimized.}
+  \label{fig:bounds}
+\end{figure}
+\end{center}
+
+\subsubsection{Results}
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/gradient_optim_run0}
+  \caption{Optimization results after 10 iterations without bounds on the control point movement.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{figures/200kV/gradient_optim_run1}
+  \caption{Optimization results after 10 iterations including bounds on the control point movement.}
+\end{figure}
+\end{center}
+
+\begin{itemize}
+   \item every iteration takes around 30 min
+   \item algorithm terminated after 10 iterations
+   \item currently using sqp from Octave, possibly switch to Matlab or different algorithm?
+\end{itemize}
 
 \subsection{Astra}
-In the future we may also optimize the electrode boundary next to the puck, i.~e.~patches 2, 3 and 4 to obtain optimal particle trajectories. The cost function will be computed using Astra. (Perform all the tests for Astra also for the final Photocathode geometry?)
+In the future we may also optimize the electrode boundary next to the puck, i.~e.~patches 3, 4 and 5 to obtain optimal particle trajectories. The cost function will be computed using Astra. (Perform all the tests for Astra also for the final Photocathode geometry?)
 The desired total bunch charge is $10$ pC with a beam current of $(20-100)\ \mu\mathrm{A}$, whereas a typical value would be $100$ fC. The bunch length is around $5$ ps with a normalized transversal emittance of $e_{x,y} \leq 1\ \mathrm{mm\ mrad}$. The desired energy resolution is $\frac{\Delta E}{E} \leq 10^{-4}$.
 The tracking will be performed using individual bunches from a pulsed laser. The emission model may be derived from \cite{wagner}.
