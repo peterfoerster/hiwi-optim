@@ -1,6 +1,4 @@
-% INPUT:    x: DOFs from optimization
-
-function [iptcs, ibnds] = move_geo_ctrl (filename, N_inc, x)
+function [ptcs] = compute_ptcs (N_inc, x)
 cathode_boundary     = create_cathodeboundary();
 vacuumchamber        = create_vacuumchamber (cathode_boundary);
 vacuumchamber_inside = divide_vacuumchamber (cathode_boundary, vacuumchamber);
@@ -25,6 +23,4 @@ end
 iptcs = [6 7 8 9 12 13];
 ibnds = [3 3 3 3  2  2];
 ptcs = create_ptcs_move (ptcs, iptcs, ibnds, x, N_inc);
-keyboard
-write_geometryfile (ptcs, [filename '.txt']);
 end

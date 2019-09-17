@@ -76,7 +76,6 @@ function [ptcs] = create_ptcs_move (ptcs, iptcs, ibnds, x, N_inc)
                   bnds(2)         = nrbmodp(bnds(2), [0 x(ix) 0], 1);
                end
             end
-            %continue here
          case{12}
             bnds = nrbextract(ptcs(iptcs(ii)));
             for ictrl=1:(N_inc+2)
@@ -118,5 +117,6 @@ function [ptcs] = create_ptcs_move (ptcs, iptcs, ibnds, x, N_inc)
       end%switch
       ptcs(iptcs(ii)) = nrbcoons(bnds(3), bnds(4), bnds(1), bnds(2));
    end%for
+   % account for patch 10
    ptcs(10) = nrbcoons(bnd_b(3), bnd_r(4), bnd_r(1), bnd_r(2));
 end%function
