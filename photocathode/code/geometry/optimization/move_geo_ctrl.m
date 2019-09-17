@@ -25,6 +25,6 @@ end
 iptcs = [6 7 8 9 12 13];
 ibnds = [3 3 3 3  2  2];
 ptcs = create_ptcs_move (ptcs, iptcs, ibnds, x, N_inc);
-keyboard
+
 write_geometryfile (ptcs, [filename '.txt']);
 end
