@@ -93,6 +93,7 @@ function [lb, ub, ptcs] = compute_bounds (N_inc, N_ctrl, x)
    bnds          = nrbextract(ptcs(12));
    ub(8*N_inc+7) = bnds(2).coefs(1,(N_inc+2)) / bnds(2).coefs(4,(N_inc+2));
    % y-component
+   bnds          = nrbextract(ptcs(13));
    lb(8*N_inc+8) = bnds(2).coefs(2,(N_inc+1)) / bnds(2).coefs(4,(N_inc+1));
    bnds          = nrbextract(ptcs(12));
    ub(8*N_inc+8) = bnds(2).coefs(2,2) / bnds(2).coefs(4,2);
