@@ -381,7 +381,7 @@ function [x, obj, info, iter, nf, lambda] = sqp_mod (x0, objf, cef, cif, lb, ub,
   # report (iter, qp_iter, alpha, __sqp_nfun__, obj);
 
   while (++iter < iter_max)
-     fprintf('\nStarting iteration no.%d\n', iter);
+     fprintf('\nstarting iteration no.%d\n', iter);
      tic;
 
     ## Check convergence.  This is just a simple check on the first
@@ -519,7 +519,7 @@ function [x, obj, info, iter, nf, lambda] = sqp_mod (x0, objf, cef, cif, lb, ub,
     A = A_new;
 
     # report (iter, qp_iter, alpha, __sqp_nfun__, obj);
-    fprintf('\nElapsed time for iteration is %d seconds\n', toc);
+    fprintf('\nelapsed time for iteration: %d min\n', toc/60);
   endwhile
 
   ## Check if we've spent too many iterations without converging.

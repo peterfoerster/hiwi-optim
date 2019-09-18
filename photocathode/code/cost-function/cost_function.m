@@ -8,5 +8,10 @@ function [obj] = cost_function (x)
    [problem_data, method_data] = init_potential (geometry_file, voltage);
    [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
 
-   [obj] = computeE_avg (u(space.gnum{12}), msh.msh_patch{12}, space.sp_patch{12}, geometry(12));
+   iptcs = [6 7 8 9 12 13];
+   obj = 0;
+   for ii=1:length(iptcs)
+      obj = obj + computeE_avg (u(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)));
+   end
+   obj = obj/length(iptcs);
 end

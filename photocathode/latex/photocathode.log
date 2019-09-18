@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  17 SEP 2019 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  18 SEP 2019 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -800,168 +800,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `photocathode.toc'.
 
-(./tex/60kV.tex (./figures/60kV/geometry.tex
-PGFPlots: reading {figures/60kV/geometry/geometry_1.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_2.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_3.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_4.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_5.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_6.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_7.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_8.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_9.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_10.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_11.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_12.dat}
-PGFPlots: reading {figures/60kV/geometry/geometry_13.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries11.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries12.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries13.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries14.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries21.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries22.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries23.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries24.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries31.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries32.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries33.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries34.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries41.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries42.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries43.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries44.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries51.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries52.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries53.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries54.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries61.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries62.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries63.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries64.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries71.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries72.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries73.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries74.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries81.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries82.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries83.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries84.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries91.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries92.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries93.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries94.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries101.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries102.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries103.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries104.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries111.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries112.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries113.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries114.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries121.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries122.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries123.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries124.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries131.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries132.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries133.dat}
-PGFPlots: reading {figures/60kV/boundary/boundaries134.dat}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-) [1
-
-{/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/60kV/geometry.png, id=144, 1398.22375pt x 826.08624pt>
-File: figures/60kV/geometry.png Graphic file (type png)
-<use figures/60kV/geometry.png>
-Package pdftex.def Info: figures/60kV/geometry.png  used on input line 18.
-(pdftex.def)             Requested size: 452.9679pt x 267.61769pt.
- [2]
-<figures/60kV/potential.png, id=155, 2404.985pt x 1583.9175pt>
-File: figures/60kV/potential.png Graphic file (type png)
-<use figures/60kV/potential.png>
-Package pdftex.def Info: figures/60kV/potential.png  used on input line 34.
-(pdftex.def)             Requested size: 452.9679pt x 298.31308pt.
- [3 <./figures/60kV/geometry.png>]
-<figures/60kV/gradient.png, id=166, 2404.985pt x 1583.9175pt>
-File: figures/60kV/gradient.png Graphic file (type png)
-<use figures/60kV/gradient.png>
-Package pdftex.def Info: figures/60kV/gradient.png  used on input line 42.
-(pdftex.def)             Requested size: 452.9679pt x 298.31308pt.
-[4 <./figures/60kV/potential.png (PNG copy)>]
-<figures/60kV/electric_field.png, id=171, 1254.6875pt x 534.99875pt>
-File: figures/60kV/electric_field.png Graphic file (type png)
-<use figures/60kV/electric_field.png>
-Package pdftex.def Info: figures/60kV/electric_field.png  used on input line 50
-.
-(pdftex.def)             Requested size: 452.9679pt x 193.14635pt.
-<figures/60kV/electric_field_wende.png, id=172, 1368.11125pt x 595.22375pt>
-File: figures/60kV/electric_field_wende.png Graphic file (type png)
-<use figures/60kV/electric_field_wende.png>
-Package pdftex.def Info: figures/60kV/electric_field_wende.png  used on input l
-ine 58.
-(pdftex.def)             Requested size: 452.9679pt x 197.06929pt.
- [5 <./figures/60kV/gradient.png (PNG copy)> <./figures/60kV/electric_field.png
->]
-(./figures/60kV/convergence_potential.tex
-Package pgfplots info on input line 11: Using 'lua backend=false' for axis: xmo
-de=log unsupported (yet).
-Package pgfplots info on input line 11: Using 'lua backend=false' for axis: ymo
-de=log unsupported (yet).
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-) [6 <./figures/60kV/electric_field_wende.png>] (./figures/60kV/convergence_gra
-dient.tex
-Package pgfplots info on input line 11: Using 'lua backend=false' for axis: xmo
-de=log unsupported (yet).
-Package pgfplots info on input line 11: Using 'lua backend=false' for axis: ymo
-de=log unsupported (yet).
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=1_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=128_nquad_offset_ref=4_degree=2_N_it=7_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-PGFPlots: reading {figures/60kV/convergence/photocathode_insulator_degree_ref=4
-_nsub_ref=256_nquad_offset_ref=4_degree=3_N_it=8_nquad=0.dat}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-) [7]
-<figures/60kV/error_elem.png, id=199, 2404.985pt x 1583.9175pt>
-File: figures/60kV/error_elem.png Graphic file (type png)
-<use figures/60kV/error_elem.png>
-Package pdftex.def Info: figures/60kV/error_elem.png  used on input line 100.
-(pdftex.def)             Requested size: 452.9679pt x 298.31308pt.
- [8]) (./tex/200kV.tex
-<figures/200kV/v1_cutx.png, id=207, 1200.485pt x 479.7925pt>
+(./tex/200kV.tex
+<figures/200kV/v1_cutx.png, id=54, 1200.485pt x 479.7925pt>
 File: figures/200kV/v1_cutx.png Graphic file (type png)
 <use figures/200kV/v1_cutx.png>
 Package pdftex.def Info: figures/200kV/v1_cutx.png  used on input line 9.
 (pdftex.def)             Requested size: 452.9679pt x 181.03453pt.
-
-[9 <./figures/60kV/error_elem.png (PNG copy)>] (./figures/200kV/geometry.tex
+ (./figures/200kV/geometry.tex
 PGFPlots: reading {figures/200kV/geometry/geometry_1.dat}
 PGFPlots: reading {figures/200kV/geometry/geometry_2.dat}
 PGFPlots: reading {figures/200kV/geometry/geometry_3.dat}
@@ -1097,69 +942,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--18
 
  []
 
-[10 <./figures/200kV/v1_cutx.png>]
-<figures/200kV/v1_cuty.png, id=318, 521.95pt x 328.22626pt>
+[1
+
+{/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figu
+res/200kV/v1_cutx.png>]
+<figures/200kV/v1_cuty.png, id=169, 521.95pt x 328.22626pt>
 File: figures/200kV/v1_cuty.png Graphic file (type png)
 <use figures/200kV/v1_cuty.png>
 Package pdftex.def Info: figures/200kV/v1_cuty.png  used on input line 25.
 (pdftex.def)             Requested size: 452.9679pt x 284.84836pt.
-<figures/200kV/gradient_degree=4_nsub=128.png, id=320, 4866.18pt x 2099.845pt>
+ [2]
+<figures/200kV/gradient_degree=4_nsub=128.png, id=175, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=4_nsub=128.png Graphic file (type png)
 <use figures/200kV/gradient_degree=4_nsub=128.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=4_nsub=128.png  used on 
 input line 38.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [11 <./figures/200kV/v1_cuty.png>]
-<figures/200kV/gradient_degree=3_nsub=128.png, id=327, 4866.18pt x 2099.845pt>
+ [3 <./figures/200kV/v1_cuty.png> <./figures/200kV/gradient_degree=4_nsub=128.p
+ng (PNG copy)>]
+<figures/200kV/gradient_degree=3_nsub=128.png, id=183, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=3_nsub=128.png Graphic file (type png)
 <use figures/200kV/gradient_degree=3_nsub=128.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=3_nsub=128.png  used on 
 input line 48.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=128.png, id=328, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=128.png, id=184, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=128.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=128.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=128.png  used on 
 input line 55.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [12 <./figures/200kV/gradient_degree=4_nsub=128.png (PNG copy)> <./figures/200
-kV/gradient_degree=3_nsub=128.png (PNG copy)>]
-<figures/200kV/gradient_degree=2_nsub=8.png, id=334, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=64.png, id=185, 4866.18pt x 2099.845pt>
+File: figures/200kV/gradient_degree=2_nsub=64.png Graphic file (type png)
+<use figures/200kV/gradient_degree=2_nsub=64.png>
+Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=64.png  used on i
+nput line 62.
+(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
+ [4 <./figures/200kV/gradient_degree=3_nsub=128.png (PNG copy)> <./figures/200k
+V/gradient_degree=2_nsub=128.png (PNG copy)>]
+<figures/200kV/gradient_degree=2_nsub=32.png, id=193, 4866.18pt x 2099.845pt>
+File: figures/200kV/gradient_degree=2_nsub=32.png Graphic file (type png)
+<use figures/200kV/gradient_degree=2_nsub=32.png>
+Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=32.png  used on i
+nput line 69.
+(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
+<figures/200kV/gradient_degree=2_nsub=16.png, id=194, 4866.18pt x 2099.845pt>
+File: figures/200kV/gradient_degree=2_nsub=16.png Graphic file (type png)
+<use figures/200kV/gradient_degree=2_nsub=16.png>
+Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=16.png  used on i
+nput line 76.
+(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
+ [5 <./figures/200kV/gradient_degree=2_nsub=64.png (PNG copy)> <./figures/200kV
+/gradient_degree=2_nsub=32.png (PNG copy)>]
+<figures/200kV/gradient_degree=2_nsub=8.png, id=201, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=8.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=8.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=8.png  used on in
-put line 62.
+put line 83.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [13 <./figures/200kV/gradient_degree=2_nsub=128.png (PNG copy)> <./figures/200
-kV/gradient_degree=2_nsub=8.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
+ [6 <./figures/200kV/gradient_degree=2_nsub=16.png (PNG copy)> <./figures/200kV
+/gradient_degree=2_nsub=8.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
-<figures/200kV/bounds.png, id=346, 578.16pt x 433.62pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+<figures/200kV/bounds.png, id=211, 578.16pt x 433.62pt>
 File: figures/200kV/bounds.png Graphic file (type png)
 <use figures/200kV/bounds.png>
-Package pdftex.def Info: figures/200kV/bounds.png  used on input line 95.
+Package pdftex.def Info: figures/200kV/bounds.png  used on input line 116.
 (pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
- [14]
-<figures/200kV/gradient_optim_run0.png, id=352, 4866.18pt x 2099.845pt>
+
+[7]
+<figures/200kV/gradient_optim_run0.png, id=220, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_optim_run0.png Graphic file (type png)
 <use figures/200kV/gradient_optim_run0.png>
 Package pdftex.def Info: figures/200kV/gradient_optim_run0.png  used on input l
-ine 104.
+ine 125.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_optim_run1.png, id=353, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_optim_run1.png, id=221, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_optim_run1.png Graphic file (type png)
 <use figures/200kV/gradient_optim_run1.png>
 Package pdftex.def Info: figures/200kV/gradient_optim_run1.png  used on input l
-ine 111.
+ine 132.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [15 <./figures/200kV/bounds.png> <./figures/200kV/gradient_optim_run0.png (PNG
- copy)>])
-[16 <./figures/200kV/gradient_optim_run1.png (PNG copy)>] (./photocathode.bbl)
-[17
+ [8 <./figures/200kV/bounds.png> <./figures/200kV/gradient_optim_run0.png (PNG 
+copy)>]) [9 <./figures/200kV/gradient_optim_run1.png (PNG copy)>]
+(./photocathode.bbl) [10
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
@@ -1262,16 +1133,6 @@ epstopdf-base.sty    2016/05/15 v2.6 Base part for package epstopdf
 epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
     umsa.fd    2013/01/14 v3.01 AMS symbols A
     umsb.fd    2013/01/14 v3.01 AMS symbols B
-tex/60kV.tex
-figures/60kV/geometry.tex
-figures/60kV/geometry.png
-figures/60kV/potential.png
-figures/60kV/gradient.png
-figures/60kV/electric_field.png
-figures/60kV/electric_field_wende.png
-figures/60kV/convergence_potential.tex
-figures/60kV/convergence_gradient.tex
-figures/60kV/error_elem.png
 tex/200kV.tex
 figures/200kV/v1_cutx.png
 figures/200kV/geometry.tex
@@ -1279,6 +1140,9 @@ figures/200kV/v1_cuty.png
 figures/200kV/gradient_degree=4_nsub=128.png
 figures/200kV/gradient_degree=3_nsub=128.png
 figures/200kV/gradient_degree=2_nsub=128.png
+figures/200kV/gradient_degree=2_nsub=64.png
+figures/200kV/gradient_degree=2_nsub=32.png
+figures/200kV/gradient_degree=2_nsub=16.png
 figures/200kV/gradient_degree=2_nsub=8.png
   omscmr.fd    2014/09/29 v2.5h Standard LaTeX font definitions
 figures/200kV/bounds.png
@@ -1289,17 +1153,20 @@ photocathode.bbl
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
-(rerunfilecheck)             Checksum: 346DAB62623FF2181BADD1F844231F15;847.
+(rerunfilecheck)             Checksum: 2C446B249AAE6EA42E9B0BCFEF749A83;580.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 31351 strings out of 492615
- 782404 string characters out of 6131390
- 1817389 words of memory out of 5000000
- 34443 multiletter control sequences out of 15000+600000
+ 31081 strings out of 492615
+ 774251 string characters out of 6131390
+ 1716620 words of memory out of 5000000
+ 34216 multiletter control sequences out of 15000+600000
  11849 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,19n,136p,730b,3004s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,11n,136p,730b,3024s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1307,15 +1174,14 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
->
-Output written on photocathode.pdf (17 pages, 3227941 bytes).
+public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb>
+Output written on photocathode.pdf (10 pages, 2578592 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
- 59 named destinations out of 1000 (max. 500000)
- 724 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 495 words of extra memory for PDF output out of 10000 (max. 10000000)
 
