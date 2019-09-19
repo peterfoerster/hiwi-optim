@@ -25,7 +25,8 @@ opt.min_objective = @cost_function;
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@volume_constraint_nlopt};
-opt.maxtime       = 4*60*60;
+% set lower maxtime, almost no change after around 100 evaluations
+opt.maxtime       = 2*60*60;
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
 % opt.local_optimizer.ftol_rel  = sqrt(eps);
