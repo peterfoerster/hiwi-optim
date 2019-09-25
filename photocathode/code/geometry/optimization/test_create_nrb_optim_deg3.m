@@ -27,7 +27,7 @@ figure;
 % leaves odd number of knots and we need multiple of odd number of knots
 ctrl = [crv13.coefs(:,1:end) crv12.coefs(:,2:end) crv9.coefs(:,1:2:end) crv8.coefs(:,1:2:end) crv7.coefs(:,1:2:end) crv6.coefs(:,2:end)];
 % initial guess for knots, seems to fit in this case, why?
-knts = [0 0 0 0 3/10 3/10 4/10 4/10 6/10 6/10 8/10 8/10 9/10 9/10 1 1 1 1];
+knts = [0 0 0 0 3/10 4/10 6/10 8/10 9/10 1 1 1 1];
 nrb = nrbmak(ctrl, knts);
 for ii=1:50
    pt13 = nrbinverse_mod(nrb, nrbeval(crv13,1));

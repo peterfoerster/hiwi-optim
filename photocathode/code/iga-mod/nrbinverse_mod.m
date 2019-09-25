@@ -1,5 +1,3 @@
-% OUTPUT CHANGED: if the iteration does not converge returns NaN(2,1)
-
 function u = nrbinverse_mod (nrb, x, varargin)
 %
 % NRBINVERSE: compute parametric point starting from physical point by
@@ -124,10 +122,7 @@ function u = nrbinverse_mod (nrb, x, varargin)
   u = u_new;
 
   if (~convergence)
-%    fprintf ('Newton scheme reached the maximum number of iterations (%i) without converging.\n', options.MaxIter);
-################################################################################
-% MODIFIED HERE
-	 % u = NaN(2,1);
+   % fprintf ('Newton scheme reached the maximum number of iterations (%i) without converging.\n', options.MaxIter);
   end
 
 

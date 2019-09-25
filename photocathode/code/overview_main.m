@@ -2,7 +2,8 @@ clear all; close all; clc;
 pkg load geopdes;
 
 %% plot the geometry
-geometry_file = 'photocathode_200kV_optim_run4';
+geometry_file = 'photocathode_200kV_v3';
+% geometry_file = 'photocathode_200kV_optim_run4';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
 % nsub = 8;
@@ -23,11 +24,12 @@ geometry_file = 'photocathode_200kV_optim_run4';
 %  end
 % end
 
+% nsub = 8;
 % width = 4;
 % options.numbers = 1;
 % options.boundary = 1;
 % figure;
-% %% manually choose to produce .dat in "nrbplot_surf"
+%% manually choose to produce .dat in "nrbplot_surf"
 % plot_geometry (geometry, nsub, width, options, boundaries);
 
 %% solve for the potential
@@ -47,7 +49,7 @@ fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 % plot_gradient (nsub_x, nsub_y, u, space, geometry);
 
 % sp_to_vtk (u, space, geometry, method_data.nsub, 'potential', 'u', 'value');
-sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_optim_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub)], '|E|', 'gradient');
+sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_v3_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], '|E|', 'gradient');
 
 %% convergence study (with absolute error)
 % degree = 2;

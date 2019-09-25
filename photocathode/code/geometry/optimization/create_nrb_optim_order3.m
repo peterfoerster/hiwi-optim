@@ -1,5 +1,3 @@
-clear all; close all; clc
-
 N_inc = 1;
 N_ctrl = 12*N_inc+8;
 x_ini = zeros(N_ctrl,1);
@@ -59,13 +57,13 @@ hold off;
 % hold on;
 % nrbctrlplot(nrb);
 % hold off;
-
+return
 % test movement
-nrb = nrbmodp(nrb, [0 -0.01 0]', [3 5 7]);
+nrb = nrbmodp(nrb, [0 0.05 0]', [3 5 7]);
 hold on;
 nrbctrlplot(nrb);
 hold off;
-return
+
 % test knot insertion to split into multiple nurbs
 for ii=2:nrb.order
    nrb = nrbkntins(nrb, [pt13 pt12 pt9 pt8 pt7]);

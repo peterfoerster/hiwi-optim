@@ -37,14 +37,14 @@ vacuumchamber_inside = divide_vacuumchamber (cathode_boundary, vacuumchamber);
 
 ptcs = create_ptcs (cathode_boundary, vacuumchamber, vacuumchamber_inside);
 
-% hold on;
-% for iptc=1:length(ptcs)
-%   nrbkntplot(ptcs(iptc));
-%   x = nrbeval(ptcs(iptc), {0.5,0.5});
-%   text(x(1), x(2), num2str(iptc));
-% end
-% hold off;
-
+hold on;
+for iptc=1:length(ptcs)
+  nrbkntplot(ptcs(iptc));
+  x = nrbeval(ptcs(iptc), {0.5,0.5});
+  text(x(1), x(2), num2str(iptc));
+end
+hold off;
+return
 write_geometryfile (ptcs, [filename '.txt']);
 
 % deprecated

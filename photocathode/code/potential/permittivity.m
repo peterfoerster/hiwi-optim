@@ -1,4 +1,5 @@
 function [c_diff] = permittivity (ip, x, y, geometry_file)
+if (strcmp(geometry_file, 'photocathode_200kV'))
   switch (ip)
     case {15}
       c_diff = 9.4 * 8.854e-12*ones(size(x));
@@ -6,13 +7,23 @@ function [c_diff] = permittivity (ip, x, y, geometry_file)
       c_diff = 9.4 * 8.854e-12*ones(size(x));
     case {19}
       c_diff = 9.4 * 8.854e-12*ones(size(x));
-    % case {7}
-    %   ic = (y < 35e-3);
-    %   c_diff = 8.854e-12 * (ones(size(x)) + 8.4*ic);
-    % case {8}
-    %   ic = (y > 25e-3);
-    %   c_diff = 8.854e-12 * (ones(size(x)) + 8.4*ic);
     otherwise
       c_diff = 8.854e-12*ones(size(x));
   end%switch
+elseif (strcmp(geometry_file, 'photocathode_200kV_v3'))
+   switch (ip)
+     case {28}
+       c_diff = 9.4 * 8.854e-12*ones(size(x));
+     case {29}
+       c_diff = 9.4 * 8.854e-12*ones(size(x));
+     case {33}
+       c_diff = 9.4 * 8.854e-12*ones(size(x));
+     case {34}
+       c_diff = 9.4 * 8.854e-12*ones(size(x));
+     otherwise
+       c_diff = 8.854e-12*ones(size(x));
+   end%switch
+else
+   error('unknown geometry file');
+end%if
 end
