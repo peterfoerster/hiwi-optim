@@ -1,6 +1,6 @@
 clear all; close all; clc;
 
-geometry_file = 'photocathode_200kV';
+geometry_file = 'photocathode_200kV_v3';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 degree = [2 2];
 nsub   = [8 8];
@@ -22,9 +22,10 @@ msh = msh_multipatch (msh, boundaries);
 
 V_vac            = computeV_vac (geometry);
 V_ptc            = computeV_cyl_mp (msh);
-V_hole           = computeV_hole (geometry, np);
-[V_full ,V_lift] = computeV_lift (np);
+V_hole           = computeV_hole_v1 (geometry, np);
+V_lift           = computeV_lift (geometry);
 [V_cable]        = computeV_cable (geometry);
+[V_con]  = computeV_connector (geometry);
 
-V_tot = V_vac - V_ptc - 2*V_hole - V_full + V_lift - V_cable;
+V_tot = V_vac - V_ptc - V_con - 2*V_hole - V_lift - V_cable;
 V_tot*1e6

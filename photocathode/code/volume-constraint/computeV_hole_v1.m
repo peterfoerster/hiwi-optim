@@ -1,12 +1,12 @@
 function [V] = computeV_hole_v1 (geometry, np)
 % physical coordinates in beam direction
-z_s = nrbeval(geometry(8).nurbs, [0 0]);
-z_e = nrbeval(geometry(8).nurbs, [1 0]);
+z_s = nrbeval(geometry(17).nurbs, [0 0]);
+z_e = nrbeval(geometry(17).nurbs, [1 0]);
 r   = (z_e(1) - z_s(1))/2;
 Iz  = [-r r];
 
 % inner radius of electrode
-y_i = nrbeval(geometry(24).nurbs, [0.5 1]);
+y_i = nrbeval(geometry(39).nurbs, [0.5 1]);
 
 [qp, qw] = grule(np);
 qp_n     = 1/2*(qp+1);
@@ -16,7 +16,7 @@ qp_z     = diff(Iz)/2*(qp+1) + Iz(1);
 
 V = 0;
 for iz=1:length(qp_z)
-  y  = nrbeval(geometry(8).nurbs, [qp_n(iz) 0]);
+  y  = nrbeval(geometry(17).nurbs, [qp_n(iz) 0]);
   Iy = [y_i(2) y(2)];
   x  = sqrt(r^2 - qp_z(iz)^2);
   Ix = [0 x];
