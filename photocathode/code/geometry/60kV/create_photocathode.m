@@ -37,5 +37,3 @@ end
 hold off;
 return
 write_geometryfile (ptcs, filename);
-
-% vacuumchamber is missing information
