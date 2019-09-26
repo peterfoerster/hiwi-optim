@@ -44,8 +44,6 @@ function A = op_gradu_gradv_mp_mod (spu, spv, msh, coeff, patch_list)
     if (nargin < 4 || isempty (coeff))
       [rs, cs, vs] = op_gradu_gradv_tp (spu.sp_patch{iptc}, spv.sp_patch{iptc}, msh.msh_patch{iptc});
     else
-      % modified here
-      ##########################################################################
       [rs, cs, vs] = op_gradu_gradv_tp_mod (spu.sp_patch{iptc}, spv.sp_patch{iptc}, msh.msh_patch{iptc}, coeff, iptc);
     end
     rows(ncounter+(1:numel (rs))) = spv.gnum{iptc}(rs);

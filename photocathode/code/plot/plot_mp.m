@@ -6,4 +6,5 @@ function [] = plot_mp (filename)
       nrbkntplot(geometry(iptc).nurbs);
       hold off;
    end
+   view(2);
 end

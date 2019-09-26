@@ -15,4 +15,4 @@ rule          = msh_gauss_nodes (nquad);
 msh           = msh_cartesian (zeta, qn, qw, geometry);
 
 % [A] = computeS_ptc (msh)
-V = computeV_cyl_ptc (msh)
+[V] = computeV_cyl_ptc (msh)

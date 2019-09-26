@@ -1,11 +1,6 @@
 clear all; close all; clc;
-N_inc = 2;
-% total number of DOFs
-N_ctrl = 12*N_inc+8;
+N_ctrl = 12;
 x = zeros(N_ctrl,1);
 
-% x(5) = 0.01;
-% [h] = volume_constraint_v1(x)
-% return
 [h] = volume_constraint(x)
 [fc] = volume_constraint_nlopt(x)

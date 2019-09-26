@@ -381,8 +381,8 @@ function [x, obj, info, iter, nf, lambda] = sqp_mod (x0, objf, cef, cif, lb, ub,
   # report (iter, qp_iter, alpha, __sqp_nfun__, obj);
 
   while (++iter < iter_max)
-     fprintf('\nstarting iteration no.%d\n', iter);
-     tic;
+    fprintf('\nstarting iteration no.%d\n', iter);
+    tic;
 
     ## Check convergence.  This is just a simple check on the first
     ## order necessary conditions.

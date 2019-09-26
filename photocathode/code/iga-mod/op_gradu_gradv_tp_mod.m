@@ -46,8 +46,6 @@ function varargout = op_gradu_gradv_tp_mod (space1, space2, msh, coeff, iptc)
       for idim = 1:msh.rdim
         x{idim} = reshape (msh_col.geo_map(idim,:,:), msh_col.nqn, msh_col.nel);
       end
-      % modified here
-      ##########################################################################
       coeffs = coeff (x{:}, iptc);
     else
       coeffs = ones (msh_col.nqn, msh_col.nel);

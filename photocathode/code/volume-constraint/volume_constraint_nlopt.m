@@ -1,12 +1,10 @@
 function [fc] = volume_constraint_nlopt(x)
-   geometry_file = 'photocathode_200kV_optim';
-   N_inc = (length(x)-8)/12;
-   [iptcs, ibnds] = move_geo_ctrl (geometry_file, N_inc, x);
+   geometry_file = 'photocathode_200kV_v3';
    [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
    degree = [2 2];
-   nsub   = [8 8];
-   np     = 20;
+   nsub   = [2 2];
+   np     = 32;
 
    regularity = degree-1;
    nquad      = degree+1;
@@ -22,13 +20,7 @@ function [fc] = volume_constraint_nlopt(x)
    end
    msh = msh_multipatch (msh, boundaries);
 
-   V_vac            = computeV_vac (geometry);
-   V_ptc            = computeV_cyl_mp (msh);
-   V_hole           = computeV_hole (geometry, np);
-   [V_full ,V_lift] = computeV_lift (np);
-   [V_cable]        = computeV_cable (geometry);
-
-   V_tot = V_vac - V_ptc - 2*V_hole - V_full + V_lift - V_cable;
-   V_tot = V_tot*1e6;
+   V_tot = computeV_total (geometry, msh, np);
+   % 625 cm^3 as maximum volume
    fc = V_tot - 625;
 end
