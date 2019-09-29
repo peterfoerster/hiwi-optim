@@ -1,5 +1,6 @@
-function [fc] = volume_constraint_nlopt(x)
-   geometry_file = 'photocathode_200kV_v3';
+function [fc] = volume_constraint_nlopt(x, order)
+   geometry_file = ['photocathode_200kV_optim_order=' num2str(order)];
+   create_photocathode_optim (geometry_file, x, order);
    [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
    degree = [2 2];

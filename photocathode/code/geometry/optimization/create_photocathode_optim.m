@@ -1,4 +1,4 @@
-function [ptcs] = create_photocathode_optim (filename, x, order)
+function [] = create_photocathode_optim (filename, x, order)
    electrode_boundary   = create_electrodeboundary_v3();
    vacuumchamber        = create_vacuumchamber_v3 (electrode_boundary);
    vacuumchamber_inside = divide_vacuumchamber_v3 (electrode_boundary, vacuumchamber);

@@ -1,87 +1,118 @@
-function [] = plot_bounds (N_inc, x, y, lb, ub)
-   for ictrl=1:(N_inc+1)
-      ix = 2*ictrl-1;
+function [] = plot_bounds (lb, ub, filename, order)
+   [geometry] = plot_ctrl_optim (filename);
+
+   % 21
+   bnds = nrbextract(geometry(21).nurbs);
+   pts1  = bnds(1).coefs(1:2,:) ./ bnds(1).coefs(4,:);
+   pts2  = bnds(2).coefs(1:2,:) ./ bnds(2).coefs(4,:);
+   for ictrl=2:(order-1)
+      ix = 2*ictrl - 3;
       hold on;
-      plot([lb(ix)+x(ictrl) x(ictrl)], [y(ictrl) y(ictrl)], 'marker', '>', 'color', 'k');
-      plot([x(ictrl) ub(ix)+x(ictrl)], [y(ictrl) y(ictrl)], 'marker', '<', 'color', 'k');
-      plot([x(ictrl) x(ictrl)], [lb(ix+1)+y(ictrl) y(ictrl)], 'marker', '^', 'color', 'k');
-      plot([x(ictrl) x(ictrl)], [y(ictrl) ub(ix+1)+y(ictrl)], 'marker', 'v', 'color', 'k');
+      plot([pts2(1,ictrl)+lb(ix) pts2(1,ictrl)], [pts2(2,ictrl) pts2(2,ictrl)], 'marker', '>', 'color', 'k');
+      plot([pts2(1,ictrl) pts2(1,ictrl)+ub(ix)], [pts2(2,ictrl) pts2(2,ictrl)], 'marker', '<', 'color', 'k');
+      plot([pts2(1,ictrl) pts2(1,ictrl)], [pts2(2,ictrl)+lb(ix+1) pts2(2,ictrl)], 'marker', '^', 'color', 'k');
+      plot([pts2(1,ictrl) pts2(1,ictrl)], [pts2(2,ictrl) pts2(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
       hold off;
    end
 
-   % boundary 7/8
-   ix    = 2*N_inc+3;
-   ictrl = N_inc+2;
+   % 20
+   bnds = nrbextract(geometry(20).nurbs);
+   pts1  = bnds(1).coefs(1:2,:) ./ bnds(1).coefs(4,:);
+   pts2  = bnds(2).coefs(1:2,:) ./ bnds(2).coefs(4,:);
+   for ictrl=2:(order-1)
+      ioff = 2*order - 4;
+      ix = ioff + 2*ictrl - 3;
+      hold on;
+      plot([pts2(1,ictrl)+lb(ix) pts2(1,ictrl)], [pts2(2,ictrl) pts2(2,ictrl)], 'marker', '>', 'color', 'k');
+      plot([pts2(1,ictrl) pts2(1,ictrl)+ub(ix)], [pts2(2,ictrl) pts2(2,ictrl)], 'marker', '<', 'color', 'k');
+      plot([pts2(1,ictrl) pts2(1,ictrl)], [pts2(2,ictrl)+lb(ix+1) pts2(2,ictrl)], 'marker', '^', 'color', 'k');
+      plot([pts2(1,ictrl) pts2(1,ictrl)], [pts2(2,ictrl) pts2(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+      hold off;
+   end
+
+   % 19
+   bnds = nrbextract(geometry(19).nurbs);
+   pts3  = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   for ictrl=2:(order-1)
+      ioff = 4*order - 8;
+      ix = ioff + 2*ictrl - 3;
+      hold on;
+      plot([pts3(1,ictrl)+lb(ix) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '>', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)+ub(ix)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '<', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix+1) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+      hold off;
+   end
+
+   % 18
+   bnds = nrbextract(geometry(18).nurbs);
+   pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   ioff = 6*order - 12;
+   if (order > 3)
+      for ictrl=2:(order-2)
+         ix   = ioff + 2*ictrl - 3;
+         hold on;
+         plot([pts3(1,ictrl)+lb(ix) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '>', 'color', 'k');
+         plot([pts3(1,ictrl) pts3(1,ictrl)+ub(ix)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '<', 'color', 'k');
+         plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix+1) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+         plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+         hold off;
+      end
+   end
+   % hole
+   ictrl  = order-1;
+   ix     = ioff + 2*ictrl - 3;
    hold on;
-   plot([x(ictrl) x(ictrl)], [lb(ix)+y(ictrl) y(ictrl)], 'marker', '^', 'color', 'k');
-   plot([x(ictrl) x(ictrl)], [y(ictrl) ub(ix)+y(ictrl)], 'marker', 'v', 'color', 'k');
+   plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+   plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix)], 'marker', 'v', 'color', 'k');
    hold off;
 
-   for ictrl=2:(N_inc+1)
-      ic  = N_inc+1;
-      ix1 = 2*N_inc+3;
-      ix2 = 2*ictrl-3;
+   % 17
+   bnds  = nrbextract(geometry(17).nurbs);
+   pts3  = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   for ictrl=2:(order-1)
+      ioff = 8*order - 17;
+      ix   = ioff + ictrl - 1;
       hold on;
-      plot([lb(ix1+ix2)+x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '>', 'color', 'k');
-      plot([x(ic+ictrl) ub(ix1+ix2)+x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '<', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [lb(ix1+ix2+1)+y(ic+ictrl) y(ic+ictrl)], 'marker', '^', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) ub(ix1+ix2+1)+y(ic+ictrl)], 'marker', 'v', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix)], 'marker', 'v', 'color', 'k');
       hold off;
    end
 
-   % boundary 8/9
-   ix    = 4*N_inc+4;
-   ictrl = 2*N_inc+3;
+   % 16
+   bnds  = nrbextract(geometry(16).nurbs);
+   pts3  = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   % hole
+   ictrl  = 2;
+   ioff   = 9*order - 19;
+   ix     = ioff + ictrl - 1;
    hold on;
-   plot([x(ictrl) x(ictrl)], [lb(ix)+y(ictrl) y(ictrl)], 'marker', '^', 'color', 'k');
-   plot([x(ictrl) x(ictrl)], [y(ictrl) ub(ix)+y(ictrl)], 'marker', 'v', 'color', 'k');
+   plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+   plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix)], 'marker', 'v', 'color', 'k');
    hold off;
-
-   for ictrl=2:(N_inc+1)
-      ic  = 2*N_inc+2;
-      ix1 = 4*N_inc+4;
-      ix2 = 2*ictrl-3;
-      hold on;
-      plot([lb(ix1+ix2)+x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '>', 'color', 'k');
-      plot([x(ic+ictrl) ub(ix1+ix2)+x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '<', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [lb(ix1+ix2+1)+y(ic+ictrl) y(ic+ictrl)], 'marker', '^', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) ub(ix1+ix2+1)+y(ic+ictrl)], 'marker', 'v', 'color', 'k');
-      hold off;
+   if (order > 3)
+      for ictrl=3:(order-1)
+         ix = ioff + 2*ictrl - 4;
+         hold on;
+         plot([pts3(1,ictrl)+lb(ix) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '>', 'color', 'k');
+         plot([pts3(1,ictrl) pts3(1,ictrl)+ub(ix)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '<', 'color', 'k');
+         plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix+1) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+         plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+         hold off;
+      end
    end
 
-   for ictrl=1:(N_inc+1)
-      ic  = 3*N_inc+3;
-      ix1 = 6*N_inc+5;
-      ix2 = 2*ictrl-2;
+   % 15
+   bnds  = nrbextract(geometry(15).nurbs);
+   pts3  = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   for ictrl=2:(order-1)
+      ioff = 11*order - 24;
+      ix   = ioff + 2*ictrl - 3;
       hold on;
-      plot([lb(ix1+ix2)+x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '>', 'color', 'k');
-      plot([x(ic+ictrl) ub(ix1+ix2)+x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '<', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [lb(ix1+ix2+1)+y(ic+ictrl) y(ic+ictrl)], 'marker', '^', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) ub(ix1+ix2+1)+y(ic+ictrl)], 'marker', 'v', 'color', 'k');
-      hold off;
-   end
-
-   for ictrl=1:(N_inc+1)
-      ic  = 4*N_inc+4;
-      ix1 = 8*N_inc+7;
-      ix2 = 2*ictrl-2;
-      hold on;
-      plot([lb(ix1+ix2)+x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '>', 'color', 'k');
-      plot([x(ic+ictrl) ub(ix1+ix2)+x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '<', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [lb(ix1+ix2+1)+y(ic+ictrl) y(ic+ictrl)], 'marker', '^', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) ub(ix1+ix2+1)+y(ic+ictrl)], 'marker', 'v', 'color', 'k');
-      hold off;
-   end
-
-   for ictrl=2:(N_inc+1)
-      ic  = 5*N_inc+4;
-      ix1 = 10*N_inc+9;
-      ix2 = 2*ictrl-4;
-      hold on;
-      plot([lb(ix1+ix2)+x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '>', 'color', 'k');
-      plot([x(ic+ictrl) ub(ix1+ix2)+x(ic+ictrl)], [y(ic+ictrl) y(ic+ictrl)], 'marker', '<', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [lb(ix1+ix2+1)+y(ic+ictrl) y(ic+ictrl)], 'marker', '^', 'color', 'k');
-      plot([x(ic+ictrl) x(ic+ictrl)], [y(ic+ictrl) ub(ix1+ix2+1)+y(ic+ictrl)], 'marker', 'v', 'color', 'k');
+      plot([pts3(1,ictrl)+lb(ix) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '>', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)+ub(ix)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '<', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix+1) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
       hold off;
    end
 end

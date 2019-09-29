@@ -30,7 +30,7 @@ function [nrb_optim, knts] = create_nrb_optim (ptcs, order)
       knts_new = [zeros(1,3) pt(21) pt(20) pt(19) pt(18) pt(17) pt(16) ones(1,3)];
       err      = (knts(4:end-3)-knts_new(4:end-3))./knts_new(4:end-3);
       if (err < 1e-3)
-         fprintf('\nconverged in %d iterations\n', ii);
+         % fprintf('\nconverged in %d iterations\n', ii);
          break;
       end
       nrb_optim = nrbmak(ctrl, knts_new);

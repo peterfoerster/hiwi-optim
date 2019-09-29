@@ -1,20 +1,17 @@
 clear all; close all; clc;
 pkg load geopdes;
 
-N_inc = 1;
-% total number of DOFs
-N_ctrl = 12*N_inc+8;
-x_ini = zeros(N_ctrl,1);
+order  = 3;
+N_ctrl = 13*(order-2) - 2;
+x_ini  = zeros(N_ctrl,1);
 
-[lb, ub, ptcs] = compute_bounds (N_inc, N_ctrl, x_ini);
-[x, y] = compute_ctrl_coords (N_inc, ptcs);
-[lb, ub] = compute_bounds_diff (N_inc, x, y, lb, ub);
+[lb, ub] = compute_bounds (x_ini, order, N_ctrl);
 
 maxiter = 10;
-[x_opt, obj, info, iter, nf, lambda] = sqp_mod (x_ini, @cost_function, [], @volume_constraint, lb, ub, maxiter);
+[x_opt, obj, info, iter, nf, lambda] = sqp_mod (x_ini, @(x )cost_function(x, order), [], @(x) volume_constraint(x, order), lb, ub, maxiter);
 % [x_opt, obj, info, iter, nf, lambda] = sqp (x_ini, @cost_function, [], @volume_constraint, lb, ub, maxiter, tol);
 
-save(['result_optim_N_inc=' num2str(N_inc) '.mat'], 'x_opt', 'obj', 'info', 'iter', 'nf', 'lambda');
+save(['result_optim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'info', 'iter', 'nf', 'lambda');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

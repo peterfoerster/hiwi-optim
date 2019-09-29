@@ -1,15 +1,9 @@
-clear all; close all; clc;
+clear all; clf; clc;
 
-N_inc  = 1;
-N_ctrl = 12*N_inc+8;
-x_ini = zeros(N_ctrl,1);
+filename = 'photocathode_200kV_optim_order=3';
+order  = 3;
+N_ctrl = 13*(order-2) - 2;
+x      = zeros(N_ctrl,1);
 
-[lb, ub, ptcs] = compute_bounds (N_inc, N_ctrl, x_ini);
-
-plot_ctrl_optim (ptcs);
-return
-[x, y] = compute_ctrl_coords (N_inc, ptcs);
-
-[lb, ub] = compute_bounds_diff (N_inc, x, y, lb, ub);
-
-plot_bounds (N_inc, x, y, lb, ub);
+[lb, ub] = compute_bounds (filename, x, order, N_ctrl);
+plot_bounds(lb, ub, filename, order);
