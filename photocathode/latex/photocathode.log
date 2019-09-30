@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  29 SEP 2019 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  30 SEP 2019 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -801,7 +801,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `photocathode.toc'.
 
 (./tex/200kV.tex
-<figures/200kV/v1_cutx.png, id=54, 1200.485pt x 479.7925pt>
+<figures/200kV/v1_cutx.png, id=59, 1200.485pt x 479.7925pt>
 File: figures/200kV/v1_cutx.png Graphic file (type png)
 <use figures/200kV/v1_cutx.png>
 Package pdftex.def Info: figures/200kV/v1_cutx.png  used on input line 9.
@@ -809,7 +809,13 @@ Package pdftex.def Info: figures/200kV/v1_cutx.png  used on input line 9.
  [1
 
 {/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figu
-res/200kV/v1_cutx.png>] (./figures/200kV/geometry_v3.tex
+res/200kV/v1_cutx.png>]
+<figures/200kV/v1_cuty.png, id=74, 521.95pt x 328.22626pt>
+File: figures/200kV/v1_cuty.png Graphic file (type png)
+<use figures/200kV/v1_cuty.png>
+Package pdftex.def Info: figures/200kV/v1_cuty.png  used on input line 17.
+(pdftex.def)             Requested size: 452.9679pt x 284.84836pt.
+ (./figures/200kV/geometry_v3.tex
 PGFPlots: reading {figures/200kV/geometry/v3/geometry1.dat}
 PGFPlots: reading {figures/200kV/geometry/v3/geometry2.dat}
 PGFPlots: reading {figures/200kV/geometry/v3/geometry3.dat}
@@ -1011,100 +1017,66 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 335--26
+Underfull \hbox (badness 10000) in paragraph at lines 335--34
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--26
+Underfull \hbox (badness 10000) in paragraph at lines 335--34
 
  []
 
-<figures/200kV/v1_cuty.png, id=230, 521.95pt x 328.22626pt>
-File: figures/200kV/v1_cuty.png Graphic file (type png)
-<use figures/200kV/v1_cuty.png>
-Package pdftex.def Info: figures/200kV/v1_cuty.png  used on input line 33.
-(pdftex.def)             Requested size: 452.9679pt x 284.84836pt.
-[2]
-<figures/200kV/gradient_degree=4_nsub=128.png, id=237, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=4_nsub=128.png Graphic file (type png)
-<use figures/200kV/gradient_degree=4_nsub=128.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=4_nsub=128.png  used on 
-input line 46.
+[2 <./figures/200kV/v1_cuty.png>]
+<figures/200kV/degree=3_nsub=128.png, id=242, 4866.18pt x 2099.845pt>
+File: figures/200kV/degree=3_nsub=128.png Graphic file (type png)
+<use figures/200kV/degree=3_nsub=128.png>
+Package pdftex.def Info: figures/200kV/degree=3_nsub=128.png  used on input lin
+e 46.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [3 <./figures/200kV/v1_cuty.png> <./figures/200kV/gradient_degree=4_nsub=128.p
-ng (PNG copy)>]
-<figures/200kV/gradient_degree=3_nsub=128.png, id=245, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=3_nsub=128.png Graphic file (type png)
-<use figures/200kV/gradient_degree=3_nsub=128.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=3_nsub=128.png  used on 
-input line 56.
+ [3]
+<figures/200kV/degree=2_nsub=128.png, id=249, 4866.18pt x 2099.845pt>
+File: figures/200kV/degree=2_nsub=128.png Graphic file (type png)
+<use figures/200kV/degree=2_nsub=128.png>
+Package pdftex.def Info: figures/200kV/degree=2_nsub=128.png  used on input lin
+e 56.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=128.png, id=246, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=2_nsub=128.png Graphic file (type png)
-<use figures/200kV/gradient_degree=2_nsub=128.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=128.png  used on 
-input line 63.
+<figures/200kV/degree=2_nsub=64.png, id=250, 4866.18pt x 2099.845pt>
+File: figures/200kV/degree=2_nsub=64.png Graphic file (type png)
+<use figures/200kV/degree=2_nsub=64.png>
+Package pdftex.def Info: figures/200kV/degree=2_nsub=64.png  used on input line
+ 63.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=64.png, id=247, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=2_nsub=64.png Graphic file (type png)
-<use figures/200kV/gradient_degree=2_nsub=64.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=64.png  used on i
-nput line 70.
+ [4 <./figures/200kV/degree=3_nsub=128.png (PNG copy)> <./figures/200kV/degree=
+2_nsub=128.png (PNG copy)>]
+<figures/200kV/degree=2_nsub=32.png, id=256, 4866.18pt x 2099.845pt>
+File: figures/200kV/degree=2_nsub=32.png Graphic file (type png)
+<use figures/200kV/degree=2_nsub=32.png>
+Package pdftex.def Info: figures/200kV/degree=2_nsub=32.png  used on input line
+ 70.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [4 <./figures/200kV/gradient_degree=3_nsub=128.png (PNG copy)> <./figures/200k
-V/gradient_degree=2_nsub=128.png (PNG copy)>]
-<figures/200kV/gradient_degree=2_nsub=32.png, id=254, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=2_nsub=32.png Graphic file (type png)
-<use figures/200kV/gradient_degree=2_nsub=32.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=32.png  used on i
-nput line 77.
-(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=16.png, id=255, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=2_nsub=16.png Graphic file (type png)
-<use figures/200kV/gradient_degree=2_nsub=16.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=16.png  used on i
-nput line 84.
-(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [5 <./figures/200kV/gradient_degree=2_nsub=64.png (PNG copy)> <./figures/200kV
-/gradient_degree=2_nsub=32.png (PNG copy)>]
-<figures/200kV/gradient_degree=2_nsub=8.png, id=262, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_degree=2_nsub=8.png Graphic file (type png)
-<use figures/200kV/gradient_degree=2_nsub=8.png>
-Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=8.png  used on in
-put line 91.
-(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [6 <./figures/200kV/gradient_degree=2_nsub=16.png (PNG copy)> <./figures/200kV
-/gradient_degree=2_nsub=8.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ [5 <./figures/200kV/degree=2_nsub=64.png (PNG copy)> <./figures/200kV/degree=2
+_nsub=32.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-<figures/200kV/bounds.png, id=272, 578.16pt x 433.62pt>
-File: figures/200kV/bounds.png Graphic file (type png)
-<use figures/200kV/bounds.png>
-Package pdftex.def Info: figures/200kV/bounds.png  used on input line 124.
-(pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
- [7]
-<figures/200kV/gradient_optim_run0.png, id=281, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_optim_run0.png Graphic file (type png)
-<use figures/200kV/gradient_optim_run0.png>
-Package pdftex.def Info: figures/200kV/gradient_optim_run0.png  used on input l
-ine 133.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+<figures/200kV/bobyqa_run6_newgeometry.png, id=266, 4866.18pt x 2099.845pt>
+File: figures/200kV/bobyqa_run6_newgeometry.png Graphic file (type png)
+<use figures/200kV/bobyqa_run6_newgeometry.png>
+Package pdftex.def Info: figures/200kV/bobyqa_run6_newgeometry.png  used on inp
+ut line 118.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_optim_run1.png, id=282, 4866.18pt x 2099.845pt>
-File: figures/200kV/gradient_optim_run1.png Graphic file (type png)
-<use figures/200kV/gradient_optim_run1.png>
-Package pdftex.def Info: figures/200kV/gradient_optim_run1.png  used on input l
-ine 140.
+<figures/200kV/bobyqa_run7_newcostfunction.png, id=267, 4866.18pt x 2099.845pt>
+
+File: figures/200kV/bobyqa_run7_newcostfunction.png Graphic file (type png)
+<use figures/200kV/bobyqa_run7_newcostfunction.png>
+Package pdftex.def Info: figures/200kV/bobyqa_run7_newcostfunction.png  used on
+ input line 125.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [8 <./figures/200kV/bounds.png> <./figures/200kV/gradient_optim_run0.png (PNG 
-copy)>]) [9 <./figures/200kV/gradient_optim_run1.png (PNG copy)>] (./photocatho
-de.bbl) [10
+ [6 <./figures/200kV/bobyqa_run6_newgeometry.png (PNG copy)>]) [7 <./figures/20
+0kV/bobyqa_run7_newcostfunction.png (PNG copy)>] (./photocathode.bbl) [8
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
@@ -1210,32 +1182,28 @@ epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
     umsb.fd    2013/01/14 v3.01 AMS symbols B
 tex/200kV.tex
 figures/200kV/v1_cutx.png
-figures/200kV/geometry_v3.tex
 figures/200kV/v1_cuty.png
-figures/200kV/gradient_degree=4_nsub=128.png
-figures/200kV/gradient_degree=3_nsub=128.png
-figures/200kV/gradient_degree=2_nsub=128.png
-figures/200kV/gradient_degree=2_nsub=64.png
-figures/200kV/gradient_degree=2_nsub=32.png
-figures/200kV/gradient_degree=2_nsub=16.png
-figures/200kV/gradient_degree=2_nsub=8.png
+figures/200kV/geometry_v3.tex
+figures/200kV/degree=3_nsub=128.png
+figures/200kV/degree=2_nsub=128.png
+figures/200kV/degree=2_nsub=64.png
+figures/200kV/degree=2_nsub=32.png
   omscmr.fd    2014/09/29 v2.5h Standard LaTeX font definitions
-figures/200kV/bounds.png
-figures/200kV/gradient_optim_run0.png
-figures/200kV/gradient_optim_run1.png
+figures/200kV/bobyqa_run6_newgeometry.png
+figures/200kV/bobyqa_run7_newcostfunction.png
 photocathode.bbl
  ***********
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
-(rerunfilecheck)             Checksum: 2C446B249AAE6EA42E9B0BCFEF749A83;580.
+(rerunfilecheck)             Checksum: 01491556D9A3BCB5184D50444535C0B9;645.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 31359 strings out of 492615
- 781752 string characters out of 6131390
- 2166102 words of memory out of 5000000
- 34342 multiletter control sequences out of 15000+600000
+ 31329 strings out of 492615
+ 780646 string characters out of 6131390
+ 2167051 words of memory out of 5000000
+ 34322 multiletter control sequences out of 15000+600000
  11849 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,11n,136p,730b,3024s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1250,10 +1218,10 @@ public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb>
-Output written on photocathode.pdf (10 pages, 2611678 bytes).
+Output written on photocathode.pdf (8 pages, 1749627 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 705 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 693 words of extra memory for PDF output out of 10000 (max. 10000000)
 

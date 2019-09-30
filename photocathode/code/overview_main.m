@@ -1,8 +1,8 @@
 clear all; close all; clc;
 pkg load geopdes;
 
-geometry_file = 'photocathode_200kV_v3';
-% geometry_file = 'photocathode_200kV_optim_run4';
+% geometry_file = 'photocathode_200kV_v3';
+geometry_file = 'photocathode_200kV_optim_order=3_run6';
 
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
@@ -13,7 +13,7 @@ geometry_file = 'photocathode_200kV_v3';
 % plot geometry
 % plot_geometry (geometry, boundaries);
 
-%% solve for the potential
+% solve for the potential
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
 tic;
@@ -26,7 +26,7 @@ fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 % view(2);
 
 % write .vtk files
-sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_v3_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], '|E|', 'gradient');
+sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_optim_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], '|E|', 'gradient');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);
