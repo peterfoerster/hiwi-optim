@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  18 SEP 2019 14:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.30)  29 SEP 2019 23:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -806,236 +806,311 @@ File: figures/200kV/v1_cutx.png Graphic file (type png)
 <use figures/200kV/v1_cutx.png>
 Package pdftex.def Info: figures/200kV/v1_cutx.png  used on input line 9.
 (pdftex.def)             Requested size: 452.9679pt x 181.03453pt.
- (./figures/200kV/geometry.tex
-PGFPlots: reading {figures/200kV/geometry/geometry_1.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_2.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_3.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_4.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_5.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_6.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_7.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_8.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_9.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_10.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_11.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_12.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_13.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_13.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_14.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_15.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_16.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_17.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_18.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_19.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_20.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_21.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_22.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_23.dat}
-PGFPlots: reading {figures/200kV/geometry/geometry_24.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries11.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries12.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries13.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries14.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries21.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries22.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries23.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries24.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries31.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries32.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries33.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries34.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries41.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries42.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries43.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries44.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries51.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries52.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries53.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries54.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries61.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries62.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries63.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries64.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries71.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries72.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries73.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries74.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries81.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries82.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries83.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries84.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries91.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries92.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries93.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries94.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries101.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries102.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries103.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries104.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries111.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries112.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries113.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries114.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries121.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries122.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries123.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries124.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries131.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries132.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries133.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries134.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries141.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries142.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries143.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries144.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries151.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries152.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries153.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries154.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries161.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries162.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries163.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries164.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries171.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries172.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries173.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries174.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries181.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries182.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries183.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries184.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries191.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries192.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries193.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries194.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries201.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries202.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries203.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries204.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries211.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries212.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries213.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries214.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries221.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries222.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries223.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries224.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries231.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries232.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries233.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries234.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries241.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries242.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries243.dat}
-PGFPlots: reading {figures/200kV/boundary/boundaries244.dat}
+ [1
+
+{/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figu
+res/200kV/v1_cutx.png>] (./figures/200kV/geometry_v3.tex
+PGFPlots: reading {figures/200kV/geometry/v3/geometry1.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry2.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry3.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry4.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry5.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry6.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry7.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry8.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry9.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry10.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry11.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry12.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry13.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry13.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry14.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry15.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry16.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry17.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry18.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry19.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry20.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry21.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry22.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry23.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry24.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry25.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry26.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry27.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry28.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry29.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry30.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry31.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry32.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry33.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry34.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry35.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry36.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry37.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry38.dat}
+PGFPlots: reading {figures/200kV/geometry/v3/geometry39.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries11.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries12.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries13.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries14.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries21.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries22.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries23.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries24.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries31.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries32.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries33.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries34.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries41.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries42.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries43.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries44.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries51.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries52.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries53.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries54.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries61.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries62.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries63.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries64.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries71.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries72.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries73.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries74.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries81.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries82.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries83.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries84.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries91.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries92.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries93.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries94.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries101.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries102.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries103.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries104.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries111.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries112.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries113.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries114.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries121.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries122.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries123.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries124.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries131.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries132.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries133.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries134.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries141.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries142.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries143.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries144.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries151.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries152.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries153.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries154.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries161.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries162.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries163.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries164.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries171.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries172.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries173.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries174.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries181.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries182.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries183.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries184.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries191.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries192.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries193.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries194.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries201.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries202.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries203.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries204.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries211.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries212.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries213.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries214.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries221.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries222.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries223.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries224.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries231.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries232.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries233.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries234.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries241.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries242.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries243.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries244.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries251.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries252.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries253.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries254.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries261.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries262.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries263.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries264.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries271.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries272.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries273.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries274.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries281.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries282.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries283.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries284.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries291.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries292.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries293.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries294.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries301.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries302.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries303.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries304.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries311.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries312.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries313.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries314.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries321.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries322.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries323.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries324.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries331.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries332.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries333.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries334.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries341.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries342.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries343.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries344.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries351.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries352.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries353.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries354.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries361.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries362.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries363.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries364.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries371.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries372.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries373.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries374.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries381.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries382.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries383.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries384.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries391.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries392.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries393.dat}
+PGFPlots: reading {figures/200kV/boundary/v3/boundaries394.dat}
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 215--18
+Underfull \hbox (badness 10000) in paragraph at lines 335--26
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--18
+Underfull \hbox (badness 10000) in paragraph at lines 335--26
 
  []
 
-[1
-
-{/home/peter/.texlive2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figu
-res/200kV/v1_cutx.png>]
-<figures/200kV/v1_cuty.png, id=169, 521.95pt x 328.22626pt>
+<figures/200kV/v1_cuty.png, id=230, 521.95pt x 328.22626pt>
 File: figures/200kV/v1_cuty.png Graphic file (type png)
 <use figures/200kV/v1_cuty.png>
-Package pdftex.def Info: figures/200kV/v1_cuty.png  used on input line 25.
+Package pdftex.def Info: figures/200kV/v1_cuty.png  used on input line 33.
 (pdftex.def)             Requested size: 452.9679pt x 284.84836pt.
- [2]
-<figures/200kV/gradient_degree=4_nsub=128.png, id=175, 4866.18pt x 2099.845pt>
+[2]
+<figures/200kV/gradient_degree=4_nsub=128.png, id=237, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=4_nsub=128.png Graphic file (type png)
 <use figures/200kV/gradient_degree=4_nsub=128.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=4_nsub=128.png  used on 
-input line 38.
+input line 46.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
  [3 <./figures/200kV/v1_cuty.png> <./figures/200kV/gradient_degree=4_nsub=128.p
 ng (PNG copy)>]
-<figures/200kV/gradient_degree=3_nsub=128.png, id=183, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=3_nsub=128.png, id=245, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=3_nsub=128.png Graphic file (type png)
 <use figures/200kV/gradient_degree=3_nsub=128.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=3_nsub=128.png  used on 
-input line 48.
+input line 56.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=128.png, id=184, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=128.png, id=246, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=128.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=128.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=128.png  used on 
-input line 55.
+input line 63.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=64.png, id=185, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=64.png, id=247, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=64.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=64.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=64.png  used on i
-nput line 62.
+nput line 70.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
  [4 <./figures/200kV/gradient_degree=3_nsub=128.png (PNG copy)> <./figures/200k
 V/gradient_degree=2_nsub=128.png (PNG copy)>]
-<figures/200kV/gradient_degree=2_nsub=32.png, id=193, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=32.png, id=254, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=32.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=32.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=32.png  used on i
-nput line 69.
+nput line 77.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_degree=2_nsub=16.png, id=194, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=16.png, id=255, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=16.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=16.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=16.png  used on i
-nput line 76.
+nput line 84.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
  [5 <./figures/200kV/gradient_degree=2_nsub=64.png (PNG copy)> <./figures/200kV
 /gradient_degree=2_nsub=32.png (PNG copy)>]
-<figures/200kV/gradient_degree=2_nsub=8.png, id=201, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_degree=2_nsub=8.png, id=262, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_degree=2_nsub=8.png Graphic file (type png)
 <use figures/200kV/gradient_degree=2_nsub=8.png>
 Package pdftex.def Info: figures/200kV/gradient_degree=2_nsub=8.png  used on in
-put line 83.
+put line 91.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
  [6 <./figures/200kV/gradient_degree=2_nsub=16.png (PNG copy)> <./figures/200kV
 /gradient_degree=2_nsub=8.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
-<figures/200kV/bounds.png, id=211, 578.16pt x 433.62pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
+<figures/200kV/bounds.png, id=272, 578.16pt x 433.62pt>
 File: figures/200kV/bounds.png Graphic file (type png)
 <use figures/200kV/bounds.png>
-Package pdftex.def Info: figures/200kV/bounds.png  used on input line 116.
+Package pdftex.def Info: figures/200kV/bounds.png  used on input line 124.
 (pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
-
-[7]
-<figures/200kV/gradient_optim_run0.png, id=220, 4866.18pt x 2099.845pt>
+ [7]
+<figures/200kV/gradient_optim_run0.png, id=281, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_optim_run0.png Graphic file (type png)
 <use figures/200kV/gradient_optim_run0.png>
 Package pdftex.def Info: figures/200kV/gradient_optim_run0.png  used on input l
-ine 125.
+ine 133.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
-<figures/200kV/gradient_optim_run1.png, id=221, 4866.18pt x 2099.845pt>
+<figures/200kV/gradient_optim_run1.png, id=282, 4866.18pt x 2099.845pt>
 File: figures/200kV/gradient_optim_run1.png Graphic file (type png)
 <use figures/200kV/gradient_optim_run1.png>
 Package pdftex.def Info: figures/200kV/gradient_optim_run1.png  used on input l
-ine 132.
+ine 140.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
  [8 <./figures/200kV/bounds.png> <./figures/200kV/gradient_optim_run0.png (PNG 
-copy)>]) [9 <./figures/200kV/gradient_optim_run1.png (PNG copy)>]
-(./photocathode.bbl) [10
+copy)>]) [9 <./figures/200kV/gradient_optim_run1.png (PNG copy)>] (./photocatho
+de.bbl) [10
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
- (./photocathode.aux)
+
+(./photocathode.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 
 
@@ -1135,7 +1210,7 @@ epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
     umsb.fd    2013/01/14 v3.01 AMS symbols B
 tex/200kV.tex
 figures/200kV/v1_cutx.png
-figures/200kV/geometry.tex
+figures/200kV/geometry_v3.tex
 figures/200kV/v1_cuty.png
 figures/200kV/gradient_degree=4_nsub=128.png
 figures/200kV/gradient_degree=3_nsub=128.png
@@ -1154,16 +1229,13 @@ photocathode.bbl
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
 (rerunfilecheck)             Checksum: 2C446B249AAE6EA42E9B0BCFEF749A83;580.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 31081 strings out of 492615
- 774251 string characters out of 6131390
- 1716620 words of memory out of 5000000
- 34216 multiletter control sequences out of 15000+600000
+ 31359 strings out of 492615
+ 781752 string characters out of 6131390
+ 2166102 words of memory out of 5000000
+ 34342 multiletter control sequences out of 15000+600000
  11849 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,11n,136p,730b,3024s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1178,10 +1250,10 @@ public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb>
-Output written on photocathode.pdf (10 pages, 2578592 bytes).
+Output written on photocathode.pdf (10 pages, 2611678 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
- 39 named destinations out of 1000 (max. 500000)
- 495 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 705 words of extra memory for PDF output out of 10000 (max. 10000000)
 
