@@ -22,10 +22,10 @@ opt.min_objective = @(x) cost_function(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint_nlopt(x, order)};
-opt.maxtime       = 2*60*60;
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-% opt.local_optimizer.ftol_rel  = 1e-4;
+opt.local_optimizer.ftol_rel  = 1e-6;
+opt.local_optimizer.maxeval   = 100;
 
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
 
