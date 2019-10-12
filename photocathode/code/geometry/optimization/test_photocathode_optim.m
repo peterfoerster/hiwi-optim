@@ -2,7 +2,7 @@ clear all; clf; clc;
 pkg load geopdes;
 
 filename = 'photocathode_200kV_optim_order=4';
-order  = 4;
+order  = 3;
 N_ctrl = 13*(order-2) - 2;
 x      = zeros(N_ctrl,1);
 

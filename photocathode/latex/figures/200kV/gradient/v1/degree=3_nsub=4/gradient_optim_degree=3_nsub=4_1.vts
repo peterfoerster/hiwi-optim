@@ -1,0 +1,16 @@
+<?xml version="1.0"?> 
+<VTKFile type="StructuredGrid" version="0.1"> 
+<StructuredGrid WholeExtent="0 3 0 3 0 0"> 
+<Piece Extent="0 3 0 3 0 0"> 
+<PointData>
+<DataArray type="Float32" Name="|E|" format="ascii" NumberOfComponents="3"> 
+1.27273e+06 8.9407e-07 0 1.42756e+06 1.08111 0 757372 0.0417831 0 547526 0 0 1.26963e+06 1.8999e-07 0 1.42763e+06 28103 0 757337 11704.9 0 547563 0 0 1.26029e+06 -2.23517e-07 0 1.42783e+06 56478.5 0 757239 23420.6 0 547685 0 0 1.24451e+06 -1.19209e-06 0 1.42814e+06 85397.3 0 757096 35158.3 0 547923 0 0 </DataArray> 
+</PointData> 
+<Points> 
+<DataArray type="Float32" NumberOfComponents="3"> 
+0.19 0 0 0.251 0 0 0.312 0 0 0.373 0 0 0.19 0.00166667 0 0.251 0.00166667 0 0.312 0.00166667 0 0.373 0.00166667 0 0.19 0.00333333 0 0.251 0.00333333 0 0.312 0.00333333 0 0.373 0.00333333 0 0.19 0.005 0 0.251 0.005 0 0.312 0.005 0 0.373 0.005 0 
+</DataArray>
+</Points> 
+</Piece> 
+</StructuredGrid> 
+</VTKFile> 
