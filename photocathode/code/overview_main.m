@@ -11,8 +11,8 @@ geometry_file = 'photocathode_200kV_v1';
 % write_geometry (geometry);
 
 % plot geometry
-% plot_geometry (geometry, boundaries);
-
+plot_geometry (geometry, boundaries);
+return
 % solve for the potential
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);

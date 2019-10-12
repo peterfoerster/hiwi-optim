@@ -5,17 +5,17 @@ clf;
 
 filename = 'photocathode_200kV_v1';
 
-cathode_boundary = create_cathodeboundary_v1();
+electrode_boundary = create_electrodeboundary_v1();
 
 % hold on;
-% for icrv=1:length(cathode_boundary)
-%  nrbplot(cathode_boundary(icrv), 20);
-%  x = nrbeval(cathode_boundary(icrv), 0.5);
+% for icrv=1:length(electrode_boundary)
+%  nrbplot(electrode_boundary(icrv), 20);
+%  x = nrbeval(electrode_boundary(icrv), 0.5);
 %  text(x(1), x(2), num2str(icrv));
 % end
 % hold off;
 
-vacuumchamber = create_vacuumchamber_v1 (cathode_boundary);
+vacuumchamber = create_vacuumchamber_v1 (electrode_boundary);
 
 % hold on;
 % for icrv=1:length(vacuumchamber)
@@ -25,7 +25,7 @@ vacuumchamber = create_vacuumchamber_v1 (cathode_boundary);
 % end
 % hold off;
 
-vacuumchamber_inside = divide_vacuumchamber_v1 (cathode_boundary, vacuumchamber);
+vacuumchamber_inside = divide_vacuumchamber_v1 (electrode_boundary, vacuumchamber);
 
 % hold on;
 % for icrv=1:length(vacuumchamber_inside)
@@ -35,7 +35,7 @@ vacuumchamber_inside = divide_vacuumchamber_v1 (cathode_boundary, vacuumchamber)
 % end
 % hold off;
 
-ptcs = create_ptcs_v1 (cathode_boundary, vacuumchamber, vacuumchamber_inside);
+ptcs = create_ptcs_v1 (electrode_boundary, vacuumchamber, vacuumchamber_inside);
 
 hold on;
 for iptc=1:length(ptcs)
