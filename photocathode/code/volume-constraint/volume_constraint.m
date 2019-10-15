@@ -1,4 +1,4 @@
-function [h] = volume_constraint(x, order)
+function [fc] = volume_constraint(x, order)
    geometry_file = ['photocathode_200kV_optim_order=' num2str(order)];
    create_photocathode_optim (geometry_file, x, order);
    [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
@@ -23,5 +23,5 @@ function [h] = volume_constraint(x, order)
 
    V_tot = computeV_total (geometry, msh, np);
    % 625 cm^3 as maximum volume
-   h = 625 - V_tot;
+   fc = V_tot - 625;
 end
