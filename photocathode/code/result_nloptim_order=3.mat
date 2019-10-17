@@ -1,0 +1,26 @@
+# Created by Octave 4.4.1, Thu Oct 17 20:35:36 2019 CEST <peter@peter-ubuntu>
+# name: x_opt
+# type: matrix
+# rows: 9
+# columns: 1
+ 0.0074250000000003714
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+
+
+# name: obj
+# type: scalar
+4154222.1794808707
+
+
+# name: retcode
+# type: scalar
+5
+
+
