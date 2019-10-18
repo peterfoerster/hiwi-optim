@@ -24,8 +24,8 @@ opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-opt.maxeval   = 3;
-opt.maxtime   = 2*60;
+opt.maxeval   = 100;
+opt.maxtime   = 3*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);

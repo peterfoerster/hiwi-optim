@@ -1,8 +1,8 @@
 clear all; close all; clc;
 pkg load geopdes;
 
-geometry_file = 'photocathode_200kV_v1';
-% geometry_file = 'photocathode_200kV_optim_order=3_run6';
+% geometry_file = 'photocathode_200kV_v1';
+geometry_file = 'photocathode_200kV_optim_order=3_run8_newcostfunction_newconstraint';
 
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
