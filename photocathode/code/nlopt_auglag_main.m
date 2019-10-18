@@ -8,20 +8,21 @@ x_ini  = zeros(N_ctrl,1);
 [lb, ub] = compute_bounds (x_ini, order, N_ctrl);
 
 % global:
-% solo: ISRES
+% Lagrangian: CRS, DIRECT, MLSL, AGS, ESCH
 % local:
-% solo: COBYLA
+% Lagrangian: BOBYQA, Sbplx
 
 % nlopt interface
-opt.algorithm     = NLOPT_GN_ISRES;
+opt.algorithm     = NLOPT_AUGLAG;
 opt.n             = N_ctrl;
 opt.min_objective = @(x) cost_function_max(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
-opt.maxeval       = 100;
-opt.maxtime       = 6*60*60;
+opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
+opt.maxeval   = 100;
+opt.maxtime   = 3*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
