@@ -20,8 +20,8 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
-opt.maxeval       = 100;
-opt.maxtime       = 6*60*60;
+opt.maxeval       = 2000;
+opt.maxtime       = 36*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);

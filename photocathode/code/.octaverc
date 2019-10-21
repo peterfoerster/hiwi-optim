@@ -10,7 +10,7 @@ addpath('/home/peter/iga-optim/photocathode/code/plot', '-begin');
 
 addpath('/home/peter/iga-optim/photocathode/code/potential', '-begin');
 
-addpath('/home/peter/iga-optim/photocathode/code/results/optimization/bobyqa:/home/peter/iga-optim/photocathode/code/results/optimization/sqp', '-begin');
+addpath('/home/peter/iga-optim/photocathode/code/results/optimization/bobyqa:/home/peter/iga-optim/photocathode/code/results/optimization/cobyla:/home/peter/iga-optim/photocathode/code/results/optimization/sqp', '-begin');
 
 addpath('/home/peter/iga-optim/photocathode/code/util', '-begin');
 
