@@ -29,7 +29,7 @@ function [nrb_optim, knts] = create_nrb_optim (ptcs, order)
       pt(6) = nrbinverse_mod(nrb_optim, nrbeval(crv(6),1));
       knts_new = [zeros(1,3) pt(11) pt(10) pt(9) pt(8) pt(7) pt(6) ones(1,3)];
       err      = (knts(4:end-3)-knts_new(4:end-3))./knts_new(4:end-3);
-      if (err < 1e-3)
+      if (err < 1e-4)
          % fprintf('\nconverged in %d iterations\n', ii);
          break;
       end

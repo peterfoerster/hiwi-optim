@@ -17,5 +17,7 @@ x        = zeros(N_ctrl,1);
 % % order=5
 % x(23) = 0.005;
 
+tic;
 create_photocathode_optim (filename, x, order);
+fprintf('\ntime elapsed for creation: %d min\n', toc/60);
 plot_mp(filename);
