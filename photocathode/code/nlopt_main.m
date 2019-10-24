@@ -13,15 +13,15 @@ x_ini  = zeros(N_ctrl,1);
 % solo: COBYLA
 
 % nlopt interface
-opt.algorithm     = NLOPT_GN_ISRES;
+opt.algorithm     = NLOPT_LN_COBYLA;
 opt.n             = N_ctrl;
 opt.min_objective = @(x) cost_function_max(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
-opt.maxeval       = 2000;
-opt.maxtime       = 36*60*60;
+opt.maxeval       = 500;
+opt.maxtime       = 25*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
