@@ -13,21 +13,27 @@ x_ini  = zeros(N_ctrl,1);
 % solo: COBYLA
 
 % nlopt interface
-opt.algorithm     = NLOPT_LN_COBYLA;
+% opt.algorithm     = NLOPT_LN_COBYLA;
+% opt.maxeval       = 250;
+% opt.maxtime       = 24*60*60;
+
+% opt.algorithm     = NLOPT_GN_ISRES;
+% opt.population    = ;
+% opt.maxeval       = ;
+% opt.maxtime       = 7*24*60*60;
+
 opt.n             = N_ctrl;
 opt.min_objective = @(x) cost_function_max(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
-opt.maxeval       = 500;
-opt.maxtime       = 25*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
 fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
 
-save(['result_nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');
+save(['result_% opt.maxeval       = 3000;nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);
