@@ -7,7 +7,7 @@ function [geometry] = plot_ctrl_optim (filename)
    for ii=1:length(iptcs)
       hold on;
       bnds = nrbextract(geometry(iptcs(ii)).nurbs);
-      nrbctrlplot(bnds(ibnds(ii)));
+      nrbctrlplot_dat(bnds(ibnds(ii)), ['nurbs_' num2str(iptcs(ii)) '_' num2str(ibnds(ii))]);
       hold off;
    end
 end
