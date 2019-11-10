@@ -2,7 +2,7 @@ addpath('/home/peter/iga-optim/photocathode/code/cost-function', '-begin');
 
 addpath('/home/peter/iga-optim/photocathode/code/ctrl-constraint', '-begin');
 
-addpath('/home/peter/iga-optim/photocathode/code/geometry/200kV/v0:/home/peter/iga-optim/photocathode/code/geometry/200kV/v1:/home/peter/iga-optim/photocathode/code/geometry/200kV/v3:/home/peter/iga-optim/photocathode/code/geometry/optimization', '-begin');
+addpath('/home/peter/iga-optim/photocathode/code/geometry/200kV/v0:/home/peter/iga-optim/photocathode/code/geometry/200kV/v1:/home/peter/iga-optim/photocathode/code/geometry/200kV/v3:/home/peter/iga-optim/photocathode/code/geometry/200kV/v4:/home/peter/iga-optim/photocathode/code/geometry/optimization', '-begin');
 
 addpath('/home/peter/iga-optim/photocathode/code/iga-mod', '-begin');
 

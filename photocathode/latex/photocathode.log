@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.22)  6 NOV 2019 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.22)  10 NOV 2019 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -805,17 +805,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout5 = `photocathode.toc'.
 
 (./tex/200kV.tex
-<figures/200kV/png/v1_cutx.png, id=59, 722.7pt x 479.7925pt>
+<figures/200kV/png/v1_cutx.png, id=60, 722.7pt x 479.7925pt>
 File: figures/200kV/png/v1_cutx.png Graphic file (type png)
 <use figures/200kV/png/v1_cutx.png>
-Package pdftex.def Info: figures/200kV/png/v1_cutx.png  used on input line 10.
+Package pdftex.def Info: figures/200kV/png/v1_cutx.png  used on input line 14.
 (pdftex.def)             Requested size: 203.83417pt x 135.32199pt.
-<figures/200kV/png/v1_cuty.png, id=60, 469.755pt x 328.22626pt>
+<figures/200kV/png/v1_cuty.png, id=61, 469.755pt x 328.22626pt>
 File: figures/200kV/png/v1_cuty.png Graphic file (type png)
 <use figures/200kV/png/v1_cuty.png>
-Package pdftex.def Info: figures/200kV/png/v1_cuty.png  used on input line 15.
+Package pdftex.def Info: figures/200kV/png/v1_cuty.png  used on input line 19.
 (pdftex.def)             Requested size: 203.83417pt x 142.42168pt.
- (./figures/200kV/geometry_v1.tex
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./figures/200kV/geometry_v1.tex
 PGFPlots: reading {figures/200kV/geometry/v1/geometry1.dat}
 PGFPlots: reading {figures/200kV/geometry/v1/geometry2.dat}
 PGFPlots: reading {figures/200kV/geometry/v1/geometry3.dat}
@@ -942,25 +945,23 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 )
-Underfull \hbox (badness 10000) in paragraph at lines 215--25
+Underfull \hbox (badness 10000) in paragraph at lines 215--30
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--25
+Underfull \hbox (badness 10000) in paragraph at lines 215--30
 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/200kV/png/v1_cut
-x.png> <./figures/200kV/png/v1_cuty.png>]
-<figures/200kV/png/order=3.png, id=178, 4866.18pt x 2099.845pt>
+[2 <./figures/200kV/png/v1_cutx.png> <./figures/200kV/png/v1_cuty.png>]
+<figures/200kV/png/order=3.png, id=183, 4866.18pt x 2099.845pt>
 File: figures/200kV/png/order=3.png Graphic file (type png)
 <use figures/200kV/png/order=3.png>
-Package pdftex.def Info: figures/200kV/png/order=3.png  used on input line 37.
+Package pdftex.def Info: figures/200kV/png/order=3.png  used on input line 42.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [2] (./figures/200kV/nurbs.tex
+
+[3 <./figures/200kV/png/order=3.png (PNG copy)>] (./figures/200kV/nurbs.tex
 PGFPlots: reading {figures/200kV/nurbs/nurbs_5_1.dat}
 PGFPlots: reading {figures/200kV/nurbs/nurbs_5_1_coefs.dat}
 PGFPlots: reading {figures/200kV/nurbs/nurbs_5_1_net.dat}
@@ -987,46 +988,55 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 )
-[3 <./figures/200kV/png/order=3.png (PNG copy)>]
-<figures/200kV/png/cobyla_run11.png, id=199, 4866.18pt x 2099.845pt>
+<figures/200kV/png/cobyla_run11.png, id=197, 4866.18pt x 2099.845pt>
 File: figures/200kV/png/cobyla_run11.png Graphic file (type png)
 <use figures/200kV/png/cobyla_run11.png>
 Package pdftex.def Info: figures/200kV/png/cobyla_run11.png  used on input line
- 80.
+ 85.
 (pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [4 <./figures/200kV/png/cobyla_run11.png (PNG copy)>]
-<figures/200kV/cst/efield_orig_mesh.png, id=205, 1136.245pt x 592.2125pt>
+
+[4]
+<figures/200kV/cst/efield_orig_mesh.png, id=206, 1136.245pt x 592.2125pt>
 File: figures/200kV/cst/efield_orig_mesh.png Graphic file (type png)
 <use figures/200kV/cst/efield_orig_mesh.png>
 Package pdftex.def Info: figures/200kV/cst/efield_orig_mesh.png  used on input 
-line 91.
+line 96.
 (pdftex.def)             Requested size: 203.83417pt x 106.2322pt.
-<figures/200kV/cst/efield_mesh.png, id=206, 1196.47pt x 593.21625pt>
+<figures/200kV/cst/efield_mesh.png, id=207, 1196.47pt x 593.21625pt>
 File: figures/200kV/cst/efield_mesh.png Graphic file (type png)
 <use figures/200kV/cst/efield_mesh.png>
 Package pdftex.def Info: figures/200kV/cst/efield_mesh.png  used on input line 
-94.
+99.
 (pdftex.def)             Requested size: 203.83417pt x 101.06267pt.
-<figures/200kV/cst/efield_orig.png, id=207, 1140.26pt x 592.2125pt>
+<figures/200kV/cst/efield_orig.png, id=208, 1140.26pt x 592.2125pt>
 File: figures/200kV/cst/efield_orig.png Graphic file (type png)
 <use figures/200kV/cst/efield_orig.png>
 Package pdftex.def Info: figures/200kV/cst/efield_orig.png  used on input line 
-103.
+108.
 (pdftex.def)             Requested size: 203.83417pt x 105.8617pt.
-<figures/200kV/cst/efield_insulator.png, id=208, 1198.4775pt x 593.21625pt>
+<figures/200kV/cst/efield_insulator.png, id=209, 1198.4775pt x 593.21625pt>
 File: figures/200kV/cst/efield_insulator.png Graphic file (type png)
 <use figures/200kV/cst/efield_insulator.png>
 Package pdftex.def Info: figures/200kV/cst/efield_insulator.png  used on input 
-line 106.
+line 111.
 (pdftex.def)             Requested size: 203.83417pt x 100.89069pt.
-) [5 <./figures/200kV/cst/efield_orig_mesh.png> <./figures/200kV/cst/efield_mes
-h.png> <./figures/200kV/cst/efield_orig.png> <./figures/200kV/cst/efield_insula
-tor.png>] (./photocathode.bbl) [6
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
+ [5 <./figures/200kV/png/cobyla_run11.png (PNG copy)> <./figures/200kV/cst/efie
+ld_orig_mesh.png> <./figures/200kV/cst/efield_mesh.png> <./figures/200kV/cst/ef
+ield_orig.png> <./figures/200kV/cst/efield_insulator.png>]) [6] (./photocathode
+.bbl) [7
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
- (./photocathode.aux)
+
+(./photocathode.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 
 
@@ -1135,22 +1145,29 @@ figures/200kV/cst/efield_orig_mesh.png
 figures/200kV/cst/efield_mesh.png
 figures/200kV/cst/efield_orig.png
 figures/200kV/cst/efield_insulator.png
+  omscmr.fd    2014/09/29 v2.5h Standard LaTeX font definitions
 photocathode.bbl
  ***********
 
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
-Package rerunfilecheck Info: File `photocathode.out' has not changed.
-(rerunfilecheck)             Checksum: 01491556D9A3BCB5184D50444535C0B9;645.
+
+Package rerunfilecheck Warning: File `photocathode.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `photocathode.out':
+(rerunfilecheck)             Before: 01491556D9A3BCB5184D50444535C0B9;645
+(rerunfilecheck)             After:  A4B02231D883562F9265D157D65E5225;704.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 31274 strings out of 492609
- 777795 string characters out of 6131461
- 1738063 words of memory out of 5000000
- 34376 multiletter control sequences out of 15000+600000
+ 31293 strings out of 492609
+ 778107 string characters out of 6131461
+ 1732929 words of memory out of 5000000
+ 34390 multiletter control sequences out of 15000+600000
  13394 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,11n,136p,730b,3026s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1166,10 +1183,10 @@ amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on photocathode.pdf (6 pages, 1207588 bytes).
+Output written on photocathode.pdf (7 pages, 1208386 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 285 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 33 named destinations out of 1000 (max. 500000)
  483 words of extra memory for PDF output out of 10000 (max. 10000000)
 
