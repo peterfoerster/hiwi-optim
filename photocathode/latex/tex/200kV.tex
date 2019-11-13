@@ -1,5 +1,5 @@
 \subsection{Geometry}
-The $200$ kV geometry was derived from version one of the CST model. Some simplifications were made such that the geometry may be considered rotationally symmetric. The dimensions of the electrode, puck, puck elevator, vacuum chamber and insulator were derived from the model as depicted in fig.~\ref{fig:cst_geometry_yz}. The boundary conditions remained the same, except for the increase in voltage, when compared to the $60$ kV variant and the relative permittivity of the insulator was taken from the model to be $9.4$.
+The $200$ kV geometry was derived from version one of the CST model. Some simplifications were made such that the geometry may be considered rotationally symmetric. The dimensions of the electrode, puck, puck elevator, vacuum chamber and insulator were derived from the model as depicted in fig.~\ref{fig:cst_geometry_yz}. The boundary conditions remained the same, except for the increase in voltage, when compared to the $60$ kV variant and the relative permittivity of the insulator was taken from the $60$ kV model to be $9.4$.
 
 The geometry is depicted in fig.~\ref{fig:200kV_geometry_v1}. The numbers refer to the individual patches in the context of IGA. The patch boundaries are indicated by grey lines. The red lines represent homogeneous Dirichlet boundary conditions, the blue lines inhomogeneous Dirichlet boundary conditions with a value of $-200$ kV and the black lines indicate homogeneous Neumann boundaries.
 The patches containing insulator material are colored in red and the blue patch indicates the part of the electrode boundary where the holes would be positioned.
@@ -20,14 +20,14 @@ We also observe triple points within the computational domain. These are defined
       \caption{$x$-$z$ view for $y=0$.}
       \label{fig:cst_geometry_xz}
    \end{subfigure}
-   \caption{CST model.}
+   \caption{CST model. For the computation of the electric scalar potential the holes seen in the right figure are neglected to obtain axisymmetry.}
 \end{figure}
 \end{center}
 
 \begin{center}
 \begin{figure}[H]
   \input{figures/200kV/geometry_v1}
-  \caption{200 kV Photocathode geometry and boundary conditions.}
+  \caption{200 kV Photocathode geometry and boundary conditions. The blue lines indicate homogeneous Dirichlet conditions, the red lines represent inhomogeneous Dirichlet boundary conditions with a value of $-200$ kV and the black lines indicate homogeneous Neumann boundaries. The lower boundary of the orange patch is used to compute the volume of the holes for the volume constraint. The grey patches indicate insulator material with a relative permittivity of $9.4$.}
   \label{fig:200kV_geometry_v1}
 \end{figure}
 \end{center}
@@ -69,7 +69,7 @@ As an additional constraint we require $C^1$ continuity of the section that is o
 \begin{center}
 \begin{figure}[H]
   \input{figures/200kV/nurbs}
-  \caption{$C^1$ continuous nurbs that is to be optimized including control points.}
+  \caption{$C^1$ continuous nurbs that is to be optimized including the variable control points which represent the DoFs.}
   \label{fig:nurbs}
 \end{figure}
 \end{center}
@@ -117,6 +117,7 @@ In order to compare the results with the original geometry and simulation the op
 \subsection{Questions}
 \begin{itemize}
    \item should we consider the field strength in the insulator
+   \item what is the relative permittivity of the insulator
    \item which part of the geometry should be optimized and why
    \item are the holes open during operation, should we consider them during optimization (3D simulation)
    \item what material does the dielectric strength of 10 MV/m refer to

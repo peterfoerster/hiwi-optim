@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 \begin{axis}[
-   scale only axis = true,
-   width = 0.9\textwidth,
+  scale only axis = true,
+  width = 0.8\textwidth,
   axis equal,
   try min ticks=4,
   max space between ticks=1000pt,
@@ -10,7 +10,8 @@
   point meta min = 0,
   point meta max = 2,
   x unit=m,
-  y unit=m]
+  y unit=m,
+  every axis/.append style={very thick}]
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry1.dat};
 
@@ -26,7 +27,7 @@
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry7.dat};
 
-  \addplot[surf, shader=interp, colormap/Blues, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry8.dat};
+  \addplot[surf, shader=interp, colormap/Oranges, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry8.dat};
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry9.dat};
 
@@ -40,7 +41,7 @@
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry13.dat};
 
-  \addplot[surf, shader=interp, colormap/Reds, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry14.dat};
+  \addplot[surf, shader=interp, colormap/Greys, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry14.dat};
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry15.dat};
 
@@ -48,9 +49,9 @@
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry17.dat};
 
-  \addplot[surf, shader=interp, colormap/Reds, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry18.dat};
+  \addplot[surf, shader=interp, colormap/Greys, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry18.dat};
 
-  \addplot[surf, shader=interp, colormap/Reds, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry19.dat};
+  \addplot[surf, shader=interp, colormap/Greys, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry19.dat};
 
   \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{figures/200kV/geometry/v1/geometry20.dat};
 
