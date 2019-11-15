@@ -42,7 +42,7 @@ function varargout = op_gradu_gradv_tp_mod (space1, space2, msh, coeff, iptc)
     sp1_col = sp_evaluate_col (space1, msh_col, 'value', false, 'gradient', true);
     sp2_col = sp_evaluate_col (space2, msh_col, 'value', false, 'gradient', true);
 
-    if (nargin == 4)
+    if (nargin == 5)
       for idim = 1:msh.rdim
         x{idim} = reshape (msh_col.geo_map(idim,:,:), msh_col.nqn, msh_col.nel);
       end

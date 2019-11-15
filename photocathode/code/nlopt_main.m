@@ -13,9 +13,9 @@ x_ini  = zeros(N_ctrl,1);
 % solo: COBYLA
 
 % nlopt interface
-% opt.algorithm     = NLOPT_LN_COBYLA;
-% opt.maxeval       = 250;
-% opt.maxtime       = 24*60*60;
+opt.algorithm     = NLOPT_LN_COBYLA;
+opt.maxeval       = 250;
+opt.maxtime       = 24*60*60;
 
 % opt.algorithm     = NLOPT_GN_ISRES;
 % opt.population    = ;
@@ -33,7 +33,7 @@ tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
 fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
 
-save(['result_% opt.maxeval       = 3000;nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');
+save(['result_nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

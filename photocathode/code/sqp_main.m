@@ -9,7 +9,6 @@ x_ini  = zeros(N_ctrl,1);
 
 maxiter = 10;
 [x_opt, obj, info, iter, nf, lambda] = sqp_mod (x_ini, @(x )cost_function(x, order), [], @(x) volume_constraint(x, order), lb, ub, maxiter);
-% [x_opt, obj, info, iter, nf, lambda] = sqp (x_ini, @cost_function, [], @volume_constraint, lb, ub, maxiter, tol);
 
 save(['result_optim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'info', 'iter', 'nf', 'lambda');
 

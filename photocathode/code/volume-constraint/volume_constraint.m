@@ -21,7 +21,8 @@ function [fc] = volume_constraint(x, order)
    end
    msh = msh_multipatch (msh, boundaries);
 
-   V_tot = computeV_total (geometry, msh, np);
+   % V_tot = computeV_total (geometry, msh, np);
+   V_tot = computeV_total_mod (geometry, msh, np);
    % 625 cm^3 as maximum volume
    fc = V_tot - 625;
 end

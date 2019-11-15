@@ -91,7 +91,6 @@ end
 msh = msh_multipatch (msh, boundaries);
 space = sp_multipatch (sp, msh, interfaces, boundary_interfaces);
 clear sp
-
 % Compute and assemble the matrices
 stiff_mat = op_gradu_gradv_mp_mod (space, space, msh, c_diff);
 rhs = op_f_v_mp (space, msh, f);

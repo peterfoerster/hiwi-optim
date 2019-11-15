@@ -19,6 +19,7 @@ return
 % solve for the potential
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
+
 tic;
 [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
 fprintf('\ntime elapsed for solution: %d min\n', toc/60);

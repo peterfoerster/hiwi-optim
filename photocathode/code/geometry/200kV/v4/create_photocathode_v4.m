@@ -36,12 +36,12 @@ vacuumchamber_inside = divide_vacuumchamber_v4 (electrode_boundary, vacuumchambe
 
 ptcs = create_ptcs_v4 (electrode_boundary, vacuumchamber, vacuumchamber_inside);
 
-hold on;
-for iptc=1:length(ptcs)
-  nrbkntplot(ptcs(iptc));
-  x = nrbeval(ptcs(iptc), {0.5,0.5});
-  text(x(1), x(2), num2str(iptc));
-end
-hold off;
+% hold on;
+% for iptc=1:length(ptcs)
+%   nrbkntplot(ptcs(iptc));
+%   x = nrbeval(ptcs(iptc), {0.5,0.5});
+%   text(x(1), x(2), num2str(iptc));
+% end
+% hold off;
 
 write_geometryfile_v4 (ptcs, [filename '.txt']);

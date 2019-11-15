@@ -34,7 +34,17 @@ function [c_diff] = permittivity (ip, x, y, geometry_file)
          otherwise
             c_diff = 8.854e-12*ones(size(x));
       end%switch
+   elseif (strcmp(geometry_file, 'photocathode_200kV_v4'))
+      switch (ip)
+         case {14}
+            c_diff = 9.4 * 8.854e-12*ones(size(x));
+         case {20}
+            c_diff = 9.4 * 8.854e-12*ones(size(x));
+         otherwise
+            c_diff = 8.854e-12*ones(size(x));
+      end%switch
    else
-      error('unknown geometry file');
+      % test function handle for permittivity for more smooth solution
+      c_diff = 8.854e-12*ones(size(x));
    end%if
 end
