@@ -45,6 +45,13 @@ function [c_diff] = permittivity (ip, x, y, geometry_file)
       end%switch
    else
       % test function handle for permittivity for more smooth solution
-      c_diff = 8.854e-12*ones(size(x));
+      switch (ip)
+         case {14}
+            c_diff = 9.4 * 8.854e-12*ones(size(x));
+         case {20}
+            c_diff = 9.4 * 8.854e-12*ones(size(x));
+         otherwise
+            c_diff = 8.854e-12*ones(size(x));
+      end%switch
    end%if
 end
