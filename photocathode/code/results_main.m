@@ -2,7 +2,7 @@ clear all; close all; clc;
 pkg load geopdes;
 
 % obj, x_opt
-filename = 'result_nloptim_order=3_run11';
+filename = 'result_nloptim_order=3_run12_newgeometry_noholes';
 load([filename '.mat']);
 order    = 3;
 N_ctrl   = 11*(order-2) - 2;

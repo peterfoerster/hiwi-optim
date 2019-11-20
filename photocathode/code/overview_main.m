@@ -1,14 +1,14 @@
 clear all; close all; clc;
 pkg load geopdes;
 
-geometry_file = 'photocathode_200kV_optim_order=3';
-% geometry_file = 'photocathode_200kV_optim_order=3_run11';
+% geometry_file = 'photocathode_200kV_optim_order=3';
+geometry_file = 'photocathode_200kV_optim_order=3_run13_newpermittivity';
 
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
 % write .iges files
-write_iges (['photocathode_200kV_optim'], geometry);
-return
+% write_iges (['photocathode_200kV_optim'], geometry);
+
 % write .dat files
 % write_boundary (geometry);
 % write_geometry (geometry);
