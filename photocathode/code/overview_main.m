@@ -1,8 +1,8 @@
-clear all; close all; clc;
+close all; clc;
 pkg load geopdes;
 
+geometry_file = 'photocathode_200kV_v5';
 % geometry_file = 'photocathode_200kV_optim_order=3';
-geometry_file = 'photocathode_200kV_optim_order=3_run13_newpermittivity';
 
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
@@ -14,8 +14,8 @@ geometry_file = 'photocathode_200kV_optim_order=3_run13_newpermittivity';
 % write_geometry (geometry);
 
 % plot geometry
-% plot_geometry (geometry, boundaries);
-
+plot_geometry (geometry, boundaries);
+return
 % solve for the potential
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);
