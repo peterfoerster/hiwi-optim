@@ -67,27 +67,31 @@ function [vacuumchamber] = create_vacuumchamber_v5 (electrode_boundary)
    p2 = nrbeval(vacuumchamber(12), 0);
    vacuumchamber(13) = nrbline(p1, p2);
 
-   % bottom back vertical
-   p1 = [0 0];
-   p2 = nrbeval(electrode_boundary(23), 1);
-   p2 = [0 p2(2)];
+   p1 = nrbeval(electrode_boundary(23), 1);
+   p2 = nrbeval(vacuumchamber(13), 0);
+   p1 = [0 p1(2)];
    vacuumchamber(14) = nrbline(p1, p2);
 
-   % bottom back horizontal
-   p1 = nrbeval(vacuumchamber(14), 0);
-   p2 = [6e-3 0];
+   % bottom back vertical
+   p1 = [0 0];
+   p2 = nrbeval(vacuumchamber(14), 0);
    vacuumchamber(15) = nrbline(p1, p2);
 
-   p1 = nrbeval(vacuumchamber(15), 1);
-   p2 = [16e-3 0];
+   % bottom back horizontal
+   p1 = nrbeval(vacuumchamber(15), 0);
+   p2 = [6e-3 0];
    vacuumchamber(16) = nrbline(p1, p2);
 
    p1 = nrbeval(vacuumchamber(16), 1);
-   p2 = nrbeval(electrode_boundary(23), 0);
+   p2 = [16e-3 0];
    vacuumchamber(17) = nrbline(p1, p2);
+
+   p1 = nrbeval(vacuumchamber(17), 1);
+   p2 = nrbeval(electrode_boundary(23), 0);
+   vacuumchamber(18) = nrbline(p1, p2);
 
    % bottom front horizontal
    p1 = nrbeval(electrode_boundary(1), 0);
    p2 = nrbeval(vacuumchamber(1), 0);
-   vacuumchamber(18) = nrbline(p1, p2);
+   vacuumchamber(19) = nrbline(p1, p2);
 end

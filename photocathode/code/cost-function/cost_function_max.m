@@ -7,7 +7,7 @@ function [obj] = cost_function_max (x, order)
    [problem_data, method_data] = init_potential (geometry_file, voltage);
    [geometry, msh, space, u]   = mp_solve_laplace_mod (problem_data, method_data);
 
-   iptcs = [6 7 8 9 10 11];
+   iptcs = [5 6 7 8 9];
    obj = 0;
    for ii=1:length(iptcs)
       obj = obj + computeE_max (u(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)));

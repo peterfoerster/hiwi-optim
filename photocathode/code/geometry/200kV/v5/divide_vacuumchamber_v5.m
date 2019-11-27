@@ -70,57 +70,61 @@ function [vacuumchamber_inside] = divide_vacuumchamber_v5 (electrode_boundary, v
    p2 = nrbeval(electrode_boundary(22), 1);
    vacuumchamber_inside(16) = nrbline(p1, p2);
 
-   p1 = nrbeval(vacuumchamber(14), 1);
+   p1 = nrbeval(vacuumchamber(15), 1);
    p2 = nrbeval(vacuumchamber_inside(14), 1);
    p2 = [p2(1) p1(2)];
    vacuumchamber_inside(17) = nrbline(p1, p2);
 
    p1 = nrbeval(vacuumchamber_inside(17), 1);
-   p2 = nrbeval(vacuumchamber_inside(15), 1);
-   p2 = [p2(1) p1(2)];
+   p2 = nrbeval(vacuumchamber_inside(14), 1);
    vacuumchamber_inside(18) = nrbline(p1, p2);
 
-   p1 = nrbeval(vacuumchamber_inside(18), 1);
+   p1 = nrbeval(vacuumchamber_inside(17), 1);
    p2 = nrbeval(vacuumchamber_inside(15), 1);
+   p2 = [p2(1) p1(2)];
    vacuumchamber_inside(19) = nrbline(p1, p2);
 
-   p1 = nrbeval(vacuumchamber_inside(18), 1);
-   p2 = nrbeval(electrode_boundary(23), 1);
+   p1 = nrbeval(vacuumchamber_inside(19), 1);
+   p2 = nrbeval(vacuumchamber_inside(15), 1);
    vacuumchamber_inside(20) = nrbline(p1, p2);
 
-   % cable
-   p1 = nrbeval(vacuumchamber(15), 1);
-   p2 = nrbeval(vacuumchamber_inside(17), 1);
+   p1 = nrbeval(vacuumchamber_inside(19), 1);
+   p2 = nrbeval(electrode_boundary(23), 1);
    vacuumchamber_inside(21) = nrbline(p1, p2);
 
+   % cable
    p1 = nrbeval(vacuumchamber(16), 1);
-   p2 = nrbeval(vacuumchamber_inside(18), 1);
+   p2 = nrbeval(vacuumchamber_inside(17), 1);
    vacuumchamber_inside(22) = nrbline(p1, p2);
+
+   p1 = nrbeval(vacuumchamber(17), 1);
+   p2 = nrbeval(vacuumchamber_inside(19), 1);
+   vacuumchamber_inside(23) = nrbline(p1, p2);
 
    % between insulators
    p1 = nrbeval(vacuumchamber(13), 1);
    p2 = nrbeval(vacuumchamber_inside(15), 1);
-   vacuumchamber_inside(23) = nrbline(p1, p2);
+   vacuumchamber_inside(24) = nrbline(p1, p2);
 
    p1 = nrbeval(vacuumchamber_inside(15), 1);
    p2 = nrbeval(electrode_boundary(12), 0);
-   vacuumchamber_inside(24) = nrbline(p1, p2);
+   vacuumchamber_inside(25) = nrbline(p1, p2);
 
    p1 = nrbeval(electrode_boundary(22), 1);
    p2 = nrbeval(electrode_boundary(12), 1);
-   vacuumchamber_inside(25) = nrbline(p1, p2);
+   vacuumchamber_inside(26) = nrbline(p1, p2);
 
    % cable
    p1 = nrbeval(electrode_boundary(21), 1);
    p2 = nrbeval(electrode_boundary(13), 1);
-   vacuumchamber_inside(26) = nrbline(p1, p2);
+   vacuumchamber_inside(27) = nrbline(p1, p2);
 
    % lift
    p1 = nrbeval(electrode_boundary(20), 1);
    p2 = nrbeval(electrode_boundary(18), 1);
-   vacuumchamber_inside(27) = nrbline(p1, p2);
+   vacuumchamber_inside(28) = nrbline(p1, p2);
 
    p1 = nrbeval(electrode_boundary(13), 1);
    p2 = nrbeval(electrode_boundary(17), 1);
-   vacuumchamber_inside(28) = nrbline(p1, p2);
+   vacuumchamber_inside(29) = nrbline(p1, p2);
 end

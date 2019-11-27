@@ -7,13 +7,6 @@ function [] = create_photocathode_optim (filename, x, order)
    [nrb_optim, knts] = create_nrb_optim (ptcs, order);
    nrb_optim         = move_ctrl_optim (nrb_optim, x, order);
    crv               = cut_nrb_optim (nrb_optim, order, knts);
-
-   for icrv=5:9
-      hold on;
-      nrbctrlplot(crv(icrv));
-      hold off;
-   end
-   keyboard
-   ptcs              = create_ptcs_optim (ptcs, x, order, crv);
+   ptcs              = create_ptcs_optim (ptcs, order, crv);
    write_geometryfile_v5 (ptcs, [filename '.txt']);
 end

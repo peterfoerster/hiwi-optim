@@ -1,7 +1,7 @@
 clear all; close all; clc;
 order    = 3;
-N_ctrl   = 11*(order-2) - 2;
-x        = zeros(N_ctrl,1);
+N_ctrl   = 5*(order-2);
+x        = zeros(2*N_ctrl,1);
 
 % test individual control points
 % x(3)  = -0.005;
