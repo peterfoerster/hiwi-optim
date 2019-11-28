@@ -2,10 +2,10 @@ clear all; close all; clc;
 pkg load geopdes;
 
 order  = 3;
-N_ctrl = 11*(order-2) - 2;
-x_ini  = zeros(N_ctrl,1);
+N_ctrl = 4*(order-2);
+x_ini  = zeros(2*N_ctrl,1);
 
-[lb, ub] = compute_bounds (x_ini, order, N_ctrl);
+[lb, ub] = compute_bounds (x_ini, order, 2*N_ctrl);
 
 % global:
 % solo: ISRES
