@@ -15,14 +15,13 @@ x_ini  = zeros(2*N_ctrl,1);
 % nlopt interface
 opt.algorithm     = NLOPT_LN_COBYLA;
 opt.maxeval       = 250;
-opt.maxtime       = 24*60*60;
+opt.maxtime       = 15*60*60;
 
 % opt.algorithm     = NLOPT_GN_ISRES;
 % opt.population    = ;
 % opt.maxeval       = ;
 % opt.maxtime       = 7*24*60*60;
 
-opt.n             = N_ctrl;
 opt.min_objective = @(x) cost_function_max(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;

@@ -12,14 +12,13 @@ x_ini  = zeros(2*N_ctrl,1);
 
 % nlopt interface
 opt.algorithm     = NLOPT_AUGLAG;
-opt.n             = 2*N_ctrl;
 opt.min_objective = @(x) cost_function_max(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-opt.maxeval   = 250;
+opt.maxeval   = 10;
 opt.maxtime   = 15*60*60;
 
 tic;
