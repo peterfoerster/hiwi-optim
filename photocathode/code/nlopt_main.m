@@ -1,7 +1,7 @@
 clear all; close all; clc;
 pkg load geopdes;
 
-order  = 3;
+order  = 4;
 N_ctrl = 4*(order-2);
 x_ini  = zeros(2*N_ctrl,1);
 
@@ -14,8 +14,8 @@ x_ini  = zeros(2*N_ctrl,1);
 
 % nlopt interface
 opt.algorithm     = NLOPT_LN_COBYLA;
-opt.maxeval       = 250;
-opt.maxtime       = 15*60*60;
+opt.maxeval       = 500;
+opt.maxtime       = 36*60*60;
 
 % opt.algorithm     = NLOPT_GN_ISRES;
 % opt.population    = ;
