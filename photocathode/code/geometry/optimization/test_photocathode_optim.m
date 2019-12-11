@@ -1,7 +1,7 @@
 pkg load geopdes;
 clf;
 
-order    = 3;
+order    = 7;
 filename = ['photocathode_200kV_optim_order=' num2str(order)];
 N_ctrl   = 4*(order-2);
 x        = zeros(2*N_ctrl,1);
@@ -16,6 +16,8 @@ x        = zeros(2*N_ctrl,1);
 % x(20) = 0.005;
 % order=5
 % x(30) = 0.005;
+% order=7
+% x(40) = 0.005;
 
 tic;
 create_photocathode_optim (filename, x, order);

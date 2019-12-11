@@ -1,7 +1,7 @@
-clear all; close all; clc;
+% clear all; close all; clc;
 pkg load geopdes;
 
-order  = 3;
+order  = 7;
 N_ctrl = 4*(order-2);
 x_ini  = zeros(2*N_ctrl,1);
 
@@ -19,7 +19,7 @@ opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, o
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
 opt.maxeval   = 10;
-opt.maxtime   = 15*60*60;
+opt.maxtime   = 36*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);

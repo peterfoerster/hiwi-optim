@@ -5,7 +5,7 @@ pkg load geopdes;
 filename = 'result_nloptim_order=3_run12_newgeometry_noholes';
 load([filename '.mat']);
 order    = 3;
-N_ctrl   = 5*(order-2);
+N_ctrl   = 4*(order-2);
 x        = zeros(2*N_ctrl,1);
 
 % volume constraint
