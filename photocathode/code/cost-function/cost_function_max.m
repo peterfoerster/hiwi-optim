@@ -13,4 +13,6 @@ function [obj] = cost_function_max (x, order)
       obj = obj + computeE_max (u(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)));
    end
    obj = obj/length(iptcs);
+   % save x_opt
+   save(['result_nloptim_order=' num2str(order) '.mat'], 'x');
 end

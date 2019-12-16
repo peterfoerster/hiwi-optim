@@ -1,7 +1,7 @@
-% clear all; close all; clc;
+clear all; close all; clc;
 pkg load geopdes;
 
-order  = 7;
+order  = 3;
 N_ctrl = 4*(order-2);
 x_ini  = zeros(2*N_ctrl,1);
 
@@ -12,21 +12,20 @@ x_ini  = zeros(2*N_ctrl,1);
 
 % nlopt interface
 opt.algorithm     = NLOPT_AUGLAG;
+opt.n             = 2*N_ctrl;
 opt.min_objective = @(x) cost_function_max(x, order);
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-opt.maxeval   = 10;
-opt.maxtime   = 36*60*60;
+opt.maxeval = 150;
+opt.maxtime = 36*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
 fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
-
-save(['result_nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');
-
+return
 % signal that the program is finished
 x = linspace(1, 20, 8000);
 Y = sin(2*pi*440*x);
