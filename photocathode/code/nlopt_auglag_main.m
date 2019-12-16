@@ -19,7 +19,7 @@ opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-opt.maxeval = 150;
+opt.maxeval = 300;
 opt.maxtime = 36*60*60;
 
 tic;
