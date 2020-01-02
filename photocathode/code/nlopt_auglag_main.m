@@ -19,7 +19,7 @@ opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-% +300 per degree
+% base with order 3 needs 150 and +300 per degree
 opt.maxeval = 750;
 opt.maxtime = 48*60*60;
 

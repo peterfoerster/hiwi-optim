@@ -2,7 +2,7 @@ close all; clc;
 pkg load geopdes;
 
 % geometry_file = 'photocathode_200kV_v5';
-geometry_file = 'photocathode_200kV_optim_order=3_run16';
+geometry_file = 'photocathode_200kV_optim_order=5_run20';
 
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
