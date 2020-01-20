@@ -1,7 +1,6 @@
 function [plate] = create_plate ()
-   % variable plate center?
-   p1 = [2 2];
-   p2 = [2 3];
+   p1 = [3 2];
+   p2 = [3 3];
    plate(1) = nrbline(p1, p2);
 
    p1 = [0 3];

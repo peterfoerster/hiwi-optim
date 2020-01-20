@@ -1,4 +1,3 @@
-% single patch for mechanical problem not needed
 function [] = write_geometryfile (ptcs, filename)
    [interfaces, boundaries] = nrbmultipatch (ptcs);
    boundaries = [];

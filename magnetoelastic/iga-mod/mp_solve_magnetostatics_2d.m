@@ -1,6 +1,6 @@
-% MP_SOLVE_MAGNETOSTATICS_2D: solve the magnetstatic problem in a multipatch geometry.
+% MP_SOLVE_MAGNETOSTATICS_2D: solve the 2d magnetostatic problem in a multipatch geometry.
 %
-% Example to solve the problem
+% Function to solve the problem
 %
 %          curl ( nu(x) curl (u)) = f    in Omega
 %                           du/dn = g    on Gamma_N, check correct boundary condition
@@ -8,18 +8,13 @@
 %
 % where the domain \Omega is formed by several patches of the form F((0,1)^n).
 %
-% USAGE:
-%
-%  [geometry, msh, space, u] =
-%          mp_solve_magnetostatics_2d (problem_data, method_data)
-%
 % INPUT:
 %
 %  problem_data: a structure with data of the problem. It contains the fields:
 %    - geo_name:     name of the file containing the geometry
 %    - nmnn_sides:   sides with Neumann boundary condition (may be empty)
 %    - drchlt_sides: sides with Dirichlet boundary condition
-%    - nu:           magnetic reluctivity as cell array (diagonal components of material tensor)
+%    - nu:           magnetic reluctivity as cell array of fuction handles (diagonal components of material tensor)
 %    - f:            source term, one dimensional
 %    - g:            function for Neumann condition (if nmnn_sides is not empty)
 %    - h:            function for Dirichlet boundary condition
@@ -76,11 +71,11 @@ end
 msh = msh_multipatch (msh, boundaries);
 space = sp_multipatch (sp, msh, interfaces, boundary_interfaces);
 clear sp
+
 % Compute and assemble the matrices
-keyboard;
-stiff_mat = op_gradu_gradv_mp_aniso (space, space, msh, nu);
+stiff_mat = op_gradu_gradv_mp_mstatic (space, space, msh, nu);
 rhs = op_f_v_mp_mod (space, msh, f);
-return
+
 % Apply Neumann boundary conditions
 Nbnd = cumsum ([0, boundaries.nsides]);
 for iref = nmnn_sides
@@ -98,7 +93,7 @@ u(drchlt_dofs) = u_drchlt;
 int_dofs = setdiff (1:space.ndof, drchlt_dofs);
 rhs(int_dofs) = rhs(int_dofs) - stiff_mat(int_dofs, drchlt_dofs)*u_drchlt;
 
-% Solve the linear system
+% Solve the linear system, do we know enough about the system's structure to choose specific solver?
 u(int_dofs) = stiff_mat(int_dofs, int_dofs) \ rhs(int_dofs);
 
 end

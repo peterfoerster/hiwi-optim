@@ -1,7 +1,7 @@
 function [outer_boundary] = create_outerboundary (plate)
-   p1 = [4 0];
+   p1 = [5 0];
    p2 = nrbeval(plate(1), 0);
-   p2 = [4 p2(2)];
+   p2 = [5 p2(2)];
    outer_boundary(1) = nrbline(p1, p2);
 
    p1 = nrbeval(outer_boundary(1), 1);
@@ -10,7 +10,7 @@ function [outer_boundary] = create_outerboundary (plate)
    outer_boundary(2) = nrbline(p1, p2);
 
    p1 = nrbeval(outer_boundary(2), 1);
-   p2 = [4 6];
+   p2 = [5 6];
    outer_boundary(3) = nrbline(p1, p2);
 
    p1 = nrbeval(plate(1), 1);
