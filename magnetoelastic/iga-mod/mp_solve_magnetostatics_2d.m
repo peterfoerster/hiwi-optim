@@ -3,7 +3,7 @@
 % Function to solve the problem
 %
 %          curl ( nu(x) curl (u)) = f    in Omega
-%                           du/dn = g    on Gamma_N, check correct boundary condition
+%                           du/dn = g    on Gamma_N
 %                               u = h    on Gamma_D
 %
 % where the domain \Omega is formed by several patches of the form F((0,1)^n).
@@ -93,7 +93,7 @@ u(drchlt_dofs) = u_drchlt;
 int_dofs = setdiff (1:space.ndof, drchlt_dofs);
 rhs(int_dofs) = rhs(int_dofs) - stiff_mat(int_dofs, drchlt_dofs)*u_drchlt;
 
-% Solve the linear system, do we know enough about the system's structure to choose specific solver?
+% Solve the linear system
 u(int_dofs) = stiff_mat(int_dofs, int_dofs) \ rhs(int_dofs);
 
 end

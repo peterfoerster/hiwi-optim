@@ -6,17 +6,12 @@
 %     npts:        number of points along each parametric direction where to evaluate
 %     filename:    name of the output file.
 %     fieldnames:  how to name the saved variables in the vtk file
-%     options:     cell array with the fields to plot
-%                   accepted options are 'value' (default), 'gradient',
-%                   and for vectors also 'curl', 'divergence', 'stress'
-%     lambda_lame: function handle to the first Lame coefficient (only needed to compute 'stress')
-%     mu_lame:     function handle for the second Lame coefficient (only needed to compute 'stress')
 %
 % OUTPUT:
 %
 %    none
 
-function sp_to_vtk_mp_curl2d (u, space, geometry, npts, filename, fieldname, varargin)
+function sp_to_vtk_mp_curl2d (u, space, geometry, npts, filename, fieldname)
 
   str1 = cat (2,'<?xml version="1.0"?> \n', ...
 '<VTKFile type="Collection" version="0.1"> \n', ...
@@ -49,10 +44,10 @@ function sp_to_vtk_mp_curl2d (u, space, geometry, npts, filename, fieldname, var
     fprintf (fid, str2, iptc, filename_patch_without_path);
     if (isempty (space.dofs_ornt))
       sp_to_vtk_curl2d (u(space.gnum{iptc}), space.sp_patch{iptc}, geometry(iptc), npts, ...
-                           filename_patch, fieldname, varargin{:})
+                           filename_patch, fieldname)
     else
       sp_to_vtk (u(space.gnum{iptc}) .* space.dofs_ornt{iptc}', space.sp_patch{iptc}, geometry(iptc), npts, ...
-                           filename_patch, fieldname, varargin{:})
+                           filename_patch, fieldname)
     end
   end
   fprintf (fid, str3);

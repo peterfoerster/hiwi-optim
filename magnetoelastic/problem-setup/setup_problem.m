@@ -3,14 +3,17 @@ function [problem_data, method_data] = setup_problem (geometry_file)
    problem_data.nmnn_sides   = [];
    problem_data.drchlt_sides = [1];
 
-   % diagonal components of reluctivity tensor as cell array of function handles
-   problem_data.nu = {@(x,y,iptc) compute_nu11(x, y, iptc), @(x,y,iptc) compute_nu22(x, y, iptc)};
+   % diagonal components of reluctivity tensor in order, as cell array of function handles
+   nu11 = 1/3.77e-6;
+   nu22 = 1/1.012e-6;
+   problem_data.nu = {@(x,y,iptc) compute_nu(x, y, iptc, nu11), @(x,y,iptc) compute_nu(x, y, iptc, nu22)};
 
    % coils defined via rectangles with homogeneous current density
    coils.bll = [0.5 3.5];
    coils.bur = [2.5 4];
    coils.tll = [0.5 4.5];
    coils.tur = [2.5 5];
+   % 100 windings with 5 Ampere each
    coils.current = 100*5;
    problem_data.f = @(x,y,iptc) compute_source(x, y, iptc, coils);
 
