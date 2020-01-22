@@ -37,42 +37,15 @@ function varargout = op_gradu_gradv_mstatic (spu, spv, msh, coeff)
       nu11 = reshape (coeff{1}(:,iel), [1,msh.nqn,1,1]);
       nu22 = reshape (coeff{2}(:,iel), [1,msh.nqn,1,1]);
 
-      % nu11*u_2*v_2 + nu22*u_1*v_1
+      % nu11*u_x2*v_x2 + nu22*u_x1*v_x1
       jacdet_gradu11 = bsxfun (@times, jacdet_iel.*nu22, gradu_iel(1,:,:,:));
       jacdet_gradu22 = bsxfun (@times, jacdet_iel.*nu11, gradu_iel(2,:,:,:));
-
-      % original and test
-      % jacdet_gradu = bsxfun (@times, jacdet_iel.*nu11, gradu_iel);
-      % testres = jacdet_gradu - [jacdet_gradu11; jacdet_gradu22];
-      % if (nnz(testres)==0)
-      %    fprintf('\nsuccess\n');
-      % else
-      %    error('failed');
-      % end
 
       tmp11 = bsxfun (@times, jacdet_gradu11, gradv_iel(1,:,:,:));
       tmp22 = bsxfun (@times, jacdet_gradu22, gradv_iel(2,:,:,:));
 
-      % original and test
-      % tmp1 = sum (bsxfun (@times, jacdet_gradu, gradv_iel), 1);
-      % testres = tmp1 - (tmp11 + tmp22);
-      % if (nnz(testres)==0)
-      %    fprintf('\nsuccess\n');
-      % else
-      %    error('failed');
-      % end
-
       % sum over the quadrature nodes and reshape to match the shape function blocks in A
       values(ncounter+(1:spu.nsh(iel)*spv.nsh(iel))) = reshape (sum (tmp11+tmp22, 2), spv.nsh(iel), spu.nsh(iel));
-
-      % original and test
-      % values(ncounter+(1:spu.nsh(iel)*spv.nsh(iel))) = reshape (sum (tmp1, 2), spv.nsh(iel), spu.nsh(iel));
-      % testres = reshape (sum (tmp11+tmp22, 2), spv.nsh(iel), spu.nsh(iel)) - reshape (sum (tmp1, 2), spv.nsh(iel), spu.nsh(iel));
-      % if (nnz(testres)==0)
-      %    fprintf('\nsuccess\n');
-      % else
-      %    error('failed');
-      % end
 
       % compute the corresponding indices of A (shape function blocks)
       [rows_loc, cols_loc] = ndgrid (spv.connectivity(:,iel), spu.connectivity(:,iel));

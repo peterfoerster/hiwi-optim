@@ -3,6 +3,8 @@ function [problem_data, method_data] = setup_problem (geometry_file)
    problem_data.nmnn_sides   = [];
    problem_data.drchlt_sides = [1];
 
+   % add E, nu, G for mechanics (differentiate between nu)
+
    % diagonal components of reluctivity tensor in order, as cell array of function handles
    nu11 = 1/3.77e-6;
    nu22 = 1/1.012e-6;
