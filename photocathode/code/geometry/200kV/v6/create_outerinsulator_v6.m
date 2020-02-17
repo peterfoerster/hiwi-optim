@@ -31,4 +31,12 @@ function [outer_insulator] = create_outerinsulator_v6 ()
    p1 = nrbeval(outer_insulator(7), 1);
    p2 = [252.5e-3 35e-3];
    outer_insulator(8) = nrbline(p1, p2);
+
+   p1 = nrbeval(outer_insulator(8), 0);
+   p2 = nrbeval(outer_insulator(2), 0);
+   outer_insulator(9) = nrbline(p1, p2);
+
+   p1 = nrbeval(outer_insulator(7), 0);
+   p2 = nrbeval(outer_insulator(3), 0);
+   outer_insulator(10) = nrbline(p1, p2);
 end

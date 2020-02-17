@@ -86,7 +86,7 @@ function [electrode] = create_electrode_v6 ()
    p2 = [302e-3 45e-3];
    electrode(13) = nrbline(p1, p2);
 
-   p1 = nrbeval(electrode(12), 0);
+   p1 = nrbeval(electrode(5), 1);
    p2 = nrbeval(electrode(13), 1);
    p1 = [p2(1) p1(2)];
    electrode(14) = nrbline(p1, p2);

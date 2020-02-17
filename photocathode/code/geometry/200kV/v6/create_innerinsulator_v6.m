@@ -37,6 +37,22 @@ function [inner_insulator] = create_innerinsulator_v6 ()
    inner_insulator(9) = nrbline(p1, p2);
 
    p1 = nrbeval(inner_insulator(9), 1);
-   p2 = [302e-3 0];
+   p2 = [264e-3 0];
    inner_insulator(10) = nrbline(p1, p2);
+
+   p1 = nrbeval(inner_insulator(10), 1);
+   p2 = nrbeval(inner_insulator(2), 1);
+   inner_insulator(11) = nrbline(p1, p2);
+
+   p1 = nrbeval(inner_insulator(9), 1);
+   p2 = nrbeval(inner_insulator(3), 1);
+   inner_insulator(12) = nrbline(p1, p2);
+
+   p1 = nrbeval(inner_insulator(8), 1);
+   p2 = nrbeval(inner_insulator(4), 1);
+   inner_insulator(13) = nrbline(p1, p2);
+
+   p1 = nrbeval(inner_insulator(7), 1);
+   p2 = nrbeval(inner_insulator(5), 1);
+   inner_insulator(14) = nrbline(p1, p2);
 end

@@ -18,7 +18,7 @@ geometry_file = 'photocathode_200kV_optim_order=5_run20';
 
 % solve for the potential
 voltage = -200e3;
-[problem_data, method_data] = init_potential (geometry_file, voltage);
+[problem_data, method_data] = setup_problem (geometry_file, voltage);
 
 tic;
 [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
@@ -30,7 +30,7 @@ fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 % view(2);
 
 % write .vtk files
-sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_optim_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], '|E|', 'gradient');
+sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_optim_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

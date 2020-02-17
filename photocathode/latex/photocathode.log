@@ -1,15 +1,60 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.10.22)  13 NOV 2019 12:34
-entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2019.10.22)  17 FEB 2020 19:05
+ restricted system commands enabled.
 **photocathode
 (./photocathode.tex
 LaTeX2e <2018-12-01>
+Lua module: luaotfload-main 2019-05-18 2.97 luaotfload entry point
+Lua module: luaotfload-init 2019-05-18 2.97 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2019-05-18 2.65 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2019-05-18 2.65 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2019-05-18 2.97 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2019-05-18 2.97 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2019-05-18 2.97 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is /home/peter/.texlive2019/texmf-var/l
+uatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2019-05-18.lua” from kpse
+-resolved path “/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader
+-2019-05-18.lua”.
+Lua-only attribute luaotfload@state = 2
+Lua-only attribute luaotfload@noligature = 3
+Lua-only attribute luaotfload@syllabe = 4
+luaotfload | init : Context OpenType loader version “3.108”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2019-05-18 2.97 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2019-05-18 2.97 luaotfload submodule / database
+Lua module: luaotfload-colors 2019-05-18 2.97 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 5
+Lua module: luaotfload-resolvers 2019-05-18 2.97 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is /home/peter/.texlive2019/texmf-var/l
+uatex-cache/generic/names.
+Lua module: luaotfload-features 2019-05-18 2.97 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2019-05-18 2.97 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2019-05-18 2.97 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.057 seconds
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
-)
+luaotfload | db : Font names database loaded from /home/peter/.texlive2019/texmf
+-var/luatex-cache/generic/names/luaotfload-names.luc)
 \c@part=\count80
 \c@section=\count81
 \c@subsection=\count82
@@ -30,12 +75,102 @@ Package: fullpage 1999/02/23 1.1 (PWD)
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2019/06/03 3.32 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2019/06/03 3.32 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 114.
+\l@nohyphenation=\language3
+\l@romansh=\language4
+\l@swissgerman=\language5
+\l@french=\language6
+\l@latin=\language7
+\l@interlingua=\language8
+\l@panjabi=\language9
+\l@gujarati=\language10
+\l@ukrainian=\language11
+\l@slovak=\language12
+\l@telugu=\language13
+\l@assamese=\language14
+\l@thai=\language15
+\l@lithuanian=\language16
+\l@swedish=\language17
+\l@irish=\language18
+\l@bengali=\language19
+\l@farsi=\language20
+\l@finnish=\language21
+\l@afrikaans=\language22
+\l@churchslavonic=\language23
+\l@armenian=\language24
+\l@indonesian=\language25
+\l@polish=\language26
+\l@italian=\language27
+\l@estonian=\language28
+\l@serbianc=\language29
+\l@portuguese=\language30
+\l@danish=\language31
+\l@liturgicallatin=\language32
+\l@hindi=\language33
+\l@kannada=\language34
+\l@classiclatin=\language35
+\l@german-x-2019-04-04=\language36
+\l@welsh=\language37
+\l@ethiopic=\language38
+\l@arabic=\language39
+\l@serbian=\language40
+\l@monogreek=\language41
+\l@turkish=\language42
+\l@icelandic=\language43
+\l@ngerman=\language44
+\l@german=\language45
+\l@piedmontese=\language46
+\l@bokmal=\language47
+\l@kurmanji=\language48
+\l@ukenglish=\language49
+\l@basque=\language50
+\l@malayalam=\language51
+\l@czech=\language52
+\l@russian=\language53
+\l@pali=\language54
+\l@pinyin=\language55
+\l@oriya=\language56
+\l@turkmen=\language57
+\l@esperanto=\language58
+\l@dutch=\language59
+\l@bulgarian=\language60
+\l@mongolian=\language61
+\l@hungarian=\language62
+\l@ibycus=\language63
+\l@uppersorbian=\language64
+\l@friulan=\language65
+\l@latvian=\language66
+\l@galician=\language67
+\l@mongolianlmc=\language68
+\l@greek=\language69
+\l@croatian=\language70
+\l@nynorsk=\language71
+\l@sanskrit=\language72
+\l@spanish=\language73
+\l@coptic=\language74
+\l@belarusian=\language75
+\l@romanian=\language76
+\l@ancientgreek=\language77
+\l@usenglishmax=\language78
+\l@slovenian=\language79
+\l@catalan=\language80
+\l@ngerman-x-2019-04-04=\language81
+\l@tamil=\language82
+\l@marathi=\language83
+\l@occitan=\language84
+\l@georgian=\language85
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
@@ -45,9 +180,9 @@ File: babel.def 2019/06/03 3.32 Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
-)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute6
+))
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -58,14 +193,13 @@ Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
-
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+Package ifluatex Info: LuaTeX detected.
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
@@ -73,15 +207,18 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
+Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
+
+(/usr/share/texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks16
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
-)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -97,7 +234,7 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks17
 )
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
@@ -109,15 +246,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen104
-\Hy@linkcounter=\count90
-\Hy@pagecounter=\count91
+\Hy@linkcounter=\count89
+\Hy@pagecounter=\count90
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count92
+\Hy@SavedSpaceFactor=\count91
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -129,7 +264,7 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count93
+\c@Hy@tempcnt=\count92
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
@@ -137,7 +272,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen105
-\Fld@menulength=\count94
+\Fld@menulength=\count93
 \Field@Width=\dimen106
 \Fld@charsize=\dimen107
 Package hyperref Info: Hyper figures OFF on input line 6380.
@@ -149,21 +284,21 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count95
-\c@Item=\count96
-\c@Hfootnote=\count97
+\Hy@abspage=\count94
+\c@Item=\count95
+\c@Hfootnote=\count96
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hluatex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count98
-\c@bookmark@seq@number=\count99
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2018/11/30 v6.88e Hyperref driver for luaTeX
+\Fld@listcount=\count97
+\c@bookmark@seq@number=\count98
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
+2.
 )
 \Hy@SectionHShift=\skip44
 )
@@ -177,7 +312,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks18
 \ex@=\dimen108
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -187,13 +322,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count100
+\inf@bad=\count99
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count101
-\leftroot@=\count102
+\uproot@=\count100
+\leftroot@=\count101
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count103
-\DOTSCASE@=\count104
+\classnum@=\count102
+\DOTSCASE@=\count103
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
@@ -202,26 +337,26 @@ LaTeX Info: Redefining \cdots on input line 606.
 \big@size=\dimen110
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count105
-\c@MaxMatrixCols=\count106
+\macc@depth=\count104
+\c@MaxMatrixCols=\count105
 \dotsspace@=\muskip11
-\c@parentequation=\count107
-\dspbrk@lvl=\count108
-\tag@help=\toks18
-\row@=\count109
-\column@=\count110
-\maxfields@=\count111
-\andhelp@=\toks19
+\c@parentequation=\count106
+\dspbrk@lvl=\count107
+\tag@help=\toks19
+\row@=\count108
+\column@=\count109
+\maxfields@=\count110
+\andhelp@=\toks20
 \eqnshift@=\dimen111
 \alignsep@=\dimen112
 \tagshift@=\dimen113
 \tagwidth@=\dimen114
 \totwidth@=\dimen115
 \lineht@=\dimen116
-\@envbody=\toks20
+\@envbody=\toks21
 \multlinegap=\skip46
 \multlinetaggap=\skip47
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
@@ -234,10 +369,10 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count112
-\float@exts=\toks22
+\c@float@type=\count111
+\float@exts=\toks23
 \float@box=\box29
-\@float@everytoks=\toks23
+\@float@everytoks=\toks24
 \@floatcapt=\box30
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
@@ -257,19 +392,19 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen122
 \caption@hangindent=\dimen123
 )
-\c@caption@flags=\count113
-\c@ContinuedFloat=\count114
+\c@caption@flags=\count112
+\c@ContinuedFloat=\count113
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count115
-\c@subtable=\count116
+\c@subfigure=\count114
+\c@subtable=\count115
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks24
+\pgfutil@everybye=\toks25
 \pgfutil@tempdima=\dimen124
 \pgfutil@tempdimb=\dimen125
 
@@ -298,10 +433,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: luatex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
 ))
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
@@ -311,12 +446,12 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 Package: pgfsys 2019/05/09 v3.1.3 (3.1.3)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks25
-\pgfkeys@temptoks=\toks26
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks27
+\pgfkeys@tmptoks=\toks28
 ))
 \pgf@x=\dimen128
 \pgf@y=\dimen129
@@ -330,21 +465,21 @@ ex
 \pgf@yd=\dimen137
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count117
-\c@pgf@countb=\count118
-\c@pgf@countc=\count119
-\c@pgf@countd=\count120
-\t@pgf@toka=\toks28
-\t@pgf@tokb=\toks29
-\t@pgf@tokc=\toks30
-\pgf@sys@id@count=\count121
+\c@pgf@counta=\count116
+\c@pgf@countb=\count117
+\c@pgf@countc=\count118
+\c@pgf@countd=\count119
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count120
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2019/05/09 v3.1.3 (3.1.3)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Driver file for pgf: pgfsys-luatex.def
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2019/05/09 v3.1.3 (3.1.3)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2019/05/09 v3.1.3 (3.1.3)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
 f
@@ -353,8 +488,8 @@ File: pgfsys-common-pdf.def 2019/05/09 v3.1.3 (3.1.3)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2019/05/09 v3.1.3 (3.1.3)
-\pgfsyssoftpath@smallbuffer@items=\count122
-\pgfsyssoftpath@bigbuffer@items=\count123
+\pgfsyssoftpath@smallbuffer@items=\count121
+\pgfsyssoftpath@bigbuffer@items=\count122
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -365,7 +500,7 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: luatex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -384,11 +519,11 @@ Package: pgfcore 2019/05/09 v3.1.3 (3.1.3)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen138
-\pgfmath@count=\count124
+\pgfmath@count=\count123
 \pgfmath@box=\box32
-\pgfmath@toks=\toks31
-\pgfmath@stack@operand=\toks32
-\pgfmath@stack@operation=\toks33
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -408,7 +543,7 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count125
+\c@pgfmathroundto@lastzeros=\count124
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
@@ -447,7 +582,7 @@ File: pgfcorescopes.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \pgfpic=\box33
 \pgf@hbox=\box34
 \pgf@layerbox@main=\box35
-\pgf@picture@serial@count=\count126
+\pgf@picture@serial@count=\count125
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
@@ -480,8 +615,8 @@ File: pgfcorearrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \pgf@max=\dimen162
-\pgf@sys@shading@range@num=\count127
-\pgf@shadingcount=\count128
+\pgf@sys@shading@range@num=\count126
+\pgf@shadingcount=\count127
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2019/05/09 v3.1.3 (3.1.3)
@@ -532,8 +667,8 @@ Package: pgffor 2019/05/09 v3.1.3 (3.1.3)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen165
 \pgffor@skip=\dimen166
-\pgffor@stack=\toks34
-\pgffor@toks=\toks35
+\pgffor@stack=\toks35
+\pgffor@toks=\toks36
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2019/05/09 v3.1.3 (3.1.3)
@@ -541,7 +676,7 @@ Package: tikz 2019/05/09 v3.1.3 (3.1.3)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2019/05/09 v3.1.3 (3.1.3)
-\pgf@plot@mark@count=\count129
+\pgf@plot@mark@count=\count128
 \pgfplotmarksize=\dimen167
 )
 \tikz@lastx=\dimen168
@@ -554,18 +689,18 @@ File: pgflibraryplothandlers.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \tikz@figbox@bg=\box39
 \tikz@tempbox=\box40
 \tikz@tempbox@bg=\box41
-\tikztreelevel=\count130
-\tikznumberofchildren=\count131
-\tikznumberofcurrentchild=\count132
-\tikz@fig@count=\count133
+\tikztreelevel=\count129
+\tikznumberofchildren=\count130
+\tikznumberofcurrentchild=\count131
+\tikz@fig@count=\count132
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2019/05/09 v3.1.3 (3.1.3)
-\pgfmatrixcurrentrow=\count134
-\pgfmatrixcurrentcolumn=\count135
-\pgf@matrix@numberofcolumns=\count136
+\pgfmatrixcurrentrow=\count133
+\pgfmatrixcurrentcolumn=\count134
+\pgf@matrix@numberofcolumns=\count135
 )
-\tikz@expandcount=\count137
+\tikz@expandcount=\count136
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -578,12 +713,14 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks36
-\t@pgfplots@tokb=\toks37
-\t@pgfplots@tokc=\toks38
+Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
+\pgfplots@luabackend@table=\catcodetable5
+\t@pgfplots@toka=\toks37
+\t@pgfplots@tokb=\toks38
+\t@pgfplots@tokc=\toks39
 \pgfplots@tmpa=\dimen174
-\c@pgfplots@coordindex=\count138
-\c@pgfplots@scanlineindex=\count139
+\c@pgfplots@coordindex=\count137
+\c@pgfplots@scanlineindex=\count138
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -599,23 +736,31 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 gfsupp_pgflibraryfpu.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
 gfsupp_pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count140
-))
+\c@pgfmathroundto@lastzeros=\count139
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibraryluam
+ath.code.tex)
+Package pgfplots info on input line 275: luamath library shipped with pgf 3.1.3 
+is up-to-date
+)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+Package pgfplots info on input line 82: Found new luatex: initializing lua comma
+nds instead of write18 (shell-escape)
+
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
 tructure.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
 tructureext.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count141
+\c@pgfplotsarray@tmp=\count140
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count142
-\t@pgfplotstable@a=\toks39
+\c@pgfplotstable@counta=\count141
+\t@pgfplotstable@a=\toks40
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
 .code.tex)
@@ -627,10 +772,10 @@ de.tex))
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count143
+\c@pgfplotslibrarysurf@no=\count142
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
-shading.pgfsys-pdftex.def)))
+shading.pgfsys-luatex.def)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
 tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
@@ -659,7 +804,7 @@ e.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen177
 \pgfdecoratedinputsegmentremainingdistance=\dimen178
 \pgf@decorate@distancetomove=\dimen179
-\pgf@decorate@repeatstate=\count144
+\pgf@decorate@repeatstate=\count143
 \pgfdecorationsegmentamplitude=\dimen180
 \pgfdecorationsegmentlength=\dimen181
 )
@@ -673,7 +818,7 @@ decorations.pathmorphing.code.tex))
 zlibrarydecorations.pathreplacing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count145
+\pgfplots@numplots=\count144
 \pgfplots@xmin@reg=\dimen182
 \pgfplots@xmax@reg=\dimen183
 \pgfplots@ymin@reg=\dimen184
@@ -690,8 +835,8 @@ de.tex
 File: pgflibraryplotmarks.code.tex 2019/05/09 v3.1.3 (3.1.3)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-Package: pgfplotstable 2018/03/28 v1.16 Table typesetting and Pretty-printing (
-1.16)
+Package: pgfplotstable 2018/03/28 v1.16 Table typesetting and Pretty-printing (1
+.16)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.code
 .tex
@@ -701,7 +846,7 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen188
 \ar@mcellbox=\box43
 \extrarowheight=\dimen189
-\NC@list=\toks40
+\NC@list=\toks41
 \extratabsurround=\skip48
 \backup@length=\skip49
 \ar@cellbox=\box44
@@ -710,9 +855,9 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 orbrewer.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.gr
 oupplots.code.tex
-\pgfplots@group@current@plot=\count146
-\pgfplots@group@current@row=\count147
-\pgfplots@group@current@column=\count148
+\pgfplots@group@current@plot=\count145
+\pgfplots@group@current@row=\count146
+\pgfplots@group@current@column=\count147
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarycalc.code.tex
@@ -720,7 +865,7 @@ File: tikzlibrarycalc.code.tex 2019/05/09 v3.1.3 (3.1.3)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.un
 its.code.tex) (./mathrm.sty) (./mat-vec.sty) (./photocathode.aux)
-\openout1 = `photocathode.aux'.
+\openout1 = photocathode.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -729,6 +874,8 @@ LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -745,7 +892,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count148
 )
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
@@ -753,44 +900,44 @@ LaTeX Info: Redefining \nameref on input line 34.
 
 (./photocathode.out) (./photocathode.out)
 \@outlinefile=\write4
-\openout4 = `photocathode.out'.
 
+\openout4 = photocathode.out
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count150
+\scratchcounter=\count149
 \scratchdimen=\dimen190
 \scratchbox=\box46
-\nofMPsegments=\count151
-\nofMParguments=\count152
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count153
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count152
 \MPscratchDim=\dimen191
-\MPnumerator=\count154
-\makeMPintoPDFobject=\count155
-\everyMPtoPDFconversion=\toks42
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
 ))
-Package pgfplots notification 'compat/show suggested version=true': document ha
-s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
+Package pgfplots notification 'compat/show suggested version=true': document has
+ been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 39.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -802,48 +949,100 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 39.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./photocathode.toc)
 \tf@toc=\write5
-\openout5 = `photocathode.toc'.
 
+\openout5 = photocathode.toc
 (./tex/200kV.tex
 <figures/200kV/png/v1_cutx.png, id=65, 722.7pt x 479.7925pt>
 File: figures/200kV/png/v1_cutx.png Graphic file (type png)
 <use figures/200kV/png/v1_cutx.png>
-Package pdftex.def Info: figures/200kV/png/v1_cutx.png  used on input line 14.
-(pdftex.def)             Requested size: 203.83417pt x 135.32199pt.
+Package luatex.def Info: figures/200kV/png/v1_cutx.png  used on input line 14.
+(luatex.def)             Requested size: 203.83417pt x 135.32199pt.
 <figures/200kV/png/v1_cuty.png, id=66, 469.755pt x 328.22626pt>
 File: figures/200kV/png/v1_cuty.png Graphic file (type png)
 <use figures/200kV/png/v1_cuty.png>
-Package pdftex.def Info: figures/200kV/png/v1_cuty.png  used on input line 19.
-(pdftex.def)             Requested size: 203.83417pt x 142.42168pt.
+Package luatex.def Info: figures/200kV/png/v1_cuty.png  used on input line 19.
+(luatex.def)             Requested size: 203.83417pt x 142.42168pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./figures/200kV/geometry_v1.tex
+{/home/peter/.texlive2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./fig
+ures/200kV/geometry_v1.tex
+Package pgfplots info on input line 16: Using 'lua backend=false' for plot 0 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry1.dat}
+Package pgfplots info on input line 18: Using 'lua backend=false' for plot 1 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry2.dat}
+Package pgfplots info on input line 20: Using 'lua backend=false' for plot 2 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry3.dat}
+Package pgfplots info on input line 22: Using 'lua backend=false' for plot 3 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry4.dat}
+Package pgfplots info on input line 24: Using 'lua backend=false' for plot 4 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry5.dat}
+Package pgfplots info on input line 26: Using 'lua backend=false' for plot 5 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry6.dat}
+Package pgfplots info on input line 28: Using 'lua backend=false' for plot 6 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry7.dat}
+Package pgfplots info on input line 30: Using 'lua backend=false' for plot 7 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry8.dat}
+Package pgfplots info on input line 32: Using 'lua backend=false' for plot 8 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry9.dat}
+Package pgfplots info on input line 34: Using 'lua backend=false' for plot 9 (ty
+pe 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry10.dat}
+Package pgfplots info on input line 36: Using 'lua backend=false' for plot 10 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry11.dat}
+Package pgfplots info on input line 38: Using 'lua backend=false' for plot 11 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry12.dat}
+Package pgfplots info on input line 40: Using 'lua backend=false' for plot 12 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry13.dat}
+Package pgfplots info on input line 42: Using 'lua backend=false' for plot 13 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry13.dat}
+Package pgfplots info on input line 44: Using 'lua backend=false' for plot 14 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry14.dat}
+Package pgfplots info on input line 46: Using 'lua backend=false' for plot 15 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry15.dat}
+Package pgfplots info on input line 48: Using 'lua backend=false' for plot 16 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry16.dat}
+Package pgfplots info on input line 50: Using 'lua backend=false' for plot 17 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry17.dat}
+Package pgfplots info on input line 52: Using 'lua backend=false' for plot 18 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry18.dat}
+Package pgfplots info on input line 54: Using 'lua backend=false' for plot 19 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry19.dat}
+Package pgfplots info on input line 56: Using 'lua backend=false' for plot 20 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry20.dat}
+Package pgfplots info on input line 58: Using 'lua backend=false' for plot 21 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry21.dat}
+Package pgfplots info on input line 60: Using 'lua backend=false' for plot 22 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry22.dat}
+Package pgfplots info on input line 62: Using 'lua backend=false' for plot 23 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry23.dat}
+Package pgfplots info on input line 64: Using 'lua backend=false' for plot 24 (t
+ype 'mesh'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/geometry/v1/geometry24.dat}
+Package pgfplots info on input line 92: Using 'lua backend=false' for plot 25 (t
+ype 'pgfplothandlerdiscard'): point meta choice does not support LUA.
 PGFPlots: reading {figures/200kV/boundary/v1/boundaries11.dat}
 PGFPlots: reading {figures/200kV/boundary/v1/boundaries12.dat}
 PGFPlots: reading {figures/200kV/boundary/v1/boundaries13.dat}
@@ -940,17 +1139,18 @@ PGFPlots: reading {figures/200kV/boundary/v1/boundaries241.dat}
 PGFPlots: reading {figures/200kV/boundary/v1/boundaries242.dat}
 PGFPlots: reading {figures/200kV/boundary/v1/boundaries243.dat}
 PGFPlots: reading {figures/200kV/boundary/v1/boundaries244.dat}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-) [2 <./figures/200kV/png/v1_cutx.png> <./figures/200kV/png/v1_cuty.png>]
-<figures/200kV/png/order=3.png, id=188, 4866.18pt x 2099.845pt>
+) [2
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+<./figures/200kV/png/v1_cutx.png><./figures/200kV/png/v1_cuty.png>]
+<figures/200kV/png/order=3.png, id=191, 4866.18pt x 2099.845pt>
 File: figures/200kV/png/order=3.png Graphic file (type png)
 <use figures/200kV/png/order=3.png>
-Package pdftex.def Info: figures/200kV/png/order=3.png  used on input line 42.
-(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [3 <./figures/200kV/png/order=3.png (PNG copy)>]
+Package luatex.def Info: figures/200kV/png/order=3.png  used on input line 42.
+(luatex.def)             Requested size: 452.9679pt x 195.45018pt.
+ [3<./figures/200kV/png/order=3.png>]
 (./figures/200kV/nurbs.tex
 PGFPlots: reading {figures/200kV/nurbs/nurbs_5_1.dat}
 PGFPlots: reading {figures/200kV/nurbs/nurbs_5_1_coefs.dat}
@@ -973,61 +1173,51 @@ PGFPlots: reading {figures/200kV/nurbs/nurbs_10_2_net.dat}
 PGFPlots: reading {figures/200kV/nurbs/nurbs_11_2.dat}
 PGFPlots: reading {figures/200kV/nurbs/nurbs_11_2_coefs.dat}
 PGFPlots: reading {figures/200kV/nurbs/nurbs_11_2_net.dat}
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
 )
-<figures/200kV/png/cobyla_run11.png, id=202, 4866.18pt x 2099.845pt>
+<figures/200kV/png/cobyla_run11.png, id=206, 4866.18pt x 2099.845pt>
 File: figures/200kV/png/cobyla_run11.png Graphic file (type png)
 <use figures/200kV/png/cobyla_run11.png>
-Package pdftex.def Info: figures/200kV/png/cobyla_run11.png  used on input line
- 85.
-(pdftex.def)             Requested size: 452.9679pt x 195.45018pt.
- [4]
-<figures/200kV/cst/efield_orig_mesh.png, id=211, 1136.245pt x 592.2125pt>
+Package luatex.def Info: figures/200kV/png/cobyla_run11.png  used on input line 
+85.
+(luatex.def)             Requested size: 452.9679pt x 195.45018pt.
+ [4
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+]
+<figures/200kV/cst/efield_orig_mesh.png, id=216, 1136.245pt x 592.2125pt>
 File: figures/200kV/cst/efield_orig_mesh.png Graphic file (type png)
 <use figures/200kV/cst/efield_orig_mesh.png>
-Package pdftex.def Info: figures/200kV/cst/efield_orig_mesh.png  used on input 
-line 96.
-(pdftex.def)             Requested size: 203.83417pt x 106.2322pt.
-<figures/200kV/cst/efield_mesh_new.png, id=212, 1065.9825pt x 593.21625pt>
+Package luatex.def Info: figures/200kV/cst/efield_orig_mesh.png  used on input l
+ine 96.
+(luatex.def)             Requested size: 203.83417pt x 106.2322pt.
+<figures/200kV/cst/efield_mesh_new.png, id=217, 1065.9825pt x 593.21625pt>
 File: figures/200kV/cst/efield_mesh_new.png Graphic file (type png)
 <use figures/200kV/cst/efield_mesh_new.png>
-Package pdftex.def Info: figures/200kV/cst/efield_mesh_new.png  used on input l
-ine 99.
-(pdftex.def)             Requested size: 203.83417pt x 113.42734pt.
-<figures/200kV/cst/efield_orig.png, id=213, 1140.26pt x 592.2125pt>
+Package luatex.def Info: figures/200kV/cst/efield_mesh_new.png  used on input li
+ne 99.
+(luatex.def)             Requested size: 203.83417pt x 113.42734pt.
+<figures/200kV/cst/efield_orig.png, id=218, 1140.26pt x 592.2125pt>
 File: figures/200kV/cst/efield_orig.png Graphic file (type png)
 <use figures/200kV/cst/efield_orig.png>
-Package pdftex.def Info: figures/200kV/cst/efield_orig.png  used on input line 
-108.
-(pdftex.def)             Requested size: 203.83417pt x 105.8617pt.
-<figures/200kV/cst/efield_insulator_new.png, id=214, 1199.48125pt x 592.2125pt>
-
+Package luatex.def Info: figures/200kV/cst/efield_orig.png  used on input line 1
+08.
+(luatex.def)             Requested size: 203.83417pt x 105.8617pt.
+<figures/200kV/cst/efield_insulator_new.png, id=219, 1199.48125pt x 592.2125pt>
 File: figures/200kV/cst/efield_insulator_new.png Graphic file (type png)
 <use figures/200kV/cst/efield_insulator_new.png>
-Package pdftex.def Info: figures/200kV/cst/efield_insulator_new.png  used on in
-put line 111.
-(pdftex.def)             Requested size: 203.83417pt x 100.62961pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
- [5 <./figures/200kV/png/cobyla_run11.png (PNG copy)> <./figures/200kV/cst/efie
-ld_orig_mesh.png> <./figures/200kV/cst/efield_mesh_new.png> <./figures/200kV/cs
-t/efield_orig.png> <./figures/200kV/cst/efield_insulator_new.png>]) [6] (./phot
-ocathode.bbl) [7
+Package luatex.def Info: figures/200kV/cst/efield_insulator_new.png  used on inp
+ut line 111.
+(luatex.def)             Requested size: 203.83417pt x 100.62961pt.
+ [5<./figures/200kV/png/cobyla_run11.png><./figures/200kV/cst/efield_orig_mesh.p
+ng><./figures/200kV/cst/efield_mesh_new.png><./figures/200kV/cst/efield_orig.png
+><./figures/200kV/cst/efield_insulator_new.png>]) [6] (./photocathode.bbl) [7
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
-
-(./photocathode.aux)
+ (./photocathode.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 
 
@@ -1051,6 +1241,7 @@ ifluatex.sty    2016/05/16 v1.4 Provides the ifluatex switch (HO)
 etexcmds.sty    2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 kvsetkeys.sty    2016/05/16 v1.17 Key value parser (HO)
 kvdefinekeys.sty    2016/05/16 v1.4 Define keys (HO)
+luatex-loader.sty    2016/05/16 v0.6 Lua module loader (HO)
 pdftexcmds.sty    2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
 pdfescape.sty    2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 bigintcalc.sty    2016/05/16 v1.4 Expandable calculations on big integers (HO)
@@ -1070,7 +1261,7 @@ kvoptions.sty    2016/05/16 v3.12 Key value format for package options (HO)
   pd1enc.def    2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 hyperref.cfg    2002/06/06 v1.2 hyperref configuration of TeXLive
      url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
- hpdftex.def    2018/11/30 v6.88e Hyperref driver for pdfTeX
+ hluatex.def    2018/11/30 v6.88e Hyperref driver for luaTeX
 rerunfilecheck.sty    2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
  amsmath.sty    2018/12/01 v2.17b AMS math features
  amstext.sty    2000/06/29 v2.01 AMS text
@@ -1092,7 +1283,7 @@ graphicx.sty    2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 graphics.sty    2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
     trig.sty    2016/01/03 v1.10 sin cos tan (DPC)
 graphics.cfg    2016/06/04 v1.11 sample graphics configuration
-  pdftex.def    2018/01/08 v1.0l Graphics/color driver for pdftex
+  luatex.def    2018/01/08 v1.0l Graphics/color driver for luatex
   pgfsys.sty    2019/05/09 v3.1.3 (3.1.3)
   pgfsys.code.tex
 pgfsyssoftpath.code.tex    2019/05/09 v3.1.3 (3.1.3)
@@ -1110,8 +1301,8 @@ pgfcomp-version-1-18.sty    2019/05/09 v3.1.3 (3.1.3)
   pgffor.code.tex
     tikz.code.tex
 pgfplots.sty    2018/03/28 v1.16 Data Visualization (1.16)
-pgfplotstable.sty    2018/03/28 v1.16 Table typesetting and Pretty-printing (1.
-16)
+pgfplotstable.sty    2018/03/28 v1.16 Table typesetting and Pretty-printing (1.1
+6)
    array.sty    2018/12/30 v2.4k Tabular extension package (FMi)
   mathrm.sty    
  mat-vec.sty    
@@ -1136,7 +1327,6 @@ figures/200kV/cst/efield_orig_mesh.png
 figures/200kV/cst/efield_mesh_new.png
 figures/200kV/cst/efield_orig.png
 figures/200kV/cst/efield_insulator_new.png
-  omscmr.fd    2014/09/29 v2.5h Standard LaTeX font definitions
 photocathode.bbl
  ***********
 
@@ -1144,31 +1334,36 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `photocathode.out' has not changed.
 (rerunfilecheck)             Checksum: A4B02231D883562F9265D157D65E5225;704.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
- ) 
-Here is how much of TeX's memory you used:
- 31292 strings out of 492609
- 778207 string characters out of 6131461
- 1734747 words of memory out of 5000000
- 34389 multiletter control sequences out of 15000+600000
- 13394 words of font info for 52 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 78i,11n,136p,730b,3038s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on photocathode.pdf (7 pages, 1216258 bytes).
-PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 33 named destinations out of 1000 (max. 500000)
- 491 words of extra memory for PDF output out of 10000 (max. 10000000)
+)
+
+Here is how much of LuaTeX's memory you used:
+ 33106 strings out of 494291
+ 100000,1977958 words of node,token memory allocated
+ 505 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 13 attribute, 52 glue_spec
+, 8 attribute_list, 2 write nodes
+   avail lists: 1:2,2:10258,3:2118,4:39,5:207,6:44,7:3226,8:22,9:491,10:12,11:18
+3
+ 35332 multiletter control sequences out of 65536+600000
+ 65 fonts using 4383023 bytes
+ 78i,11n,136p,729b,3080s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texm
+f/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf/fonts/opentype
+/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmro
+man10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></u
+sr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on photocathode.pdf (7 pages, 1180866 bytes).
+
+PDF statistics: 313 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
+ 33 named destinations out of 1000 (max. 131072)
+ 479 words of extra memory for PDF output out of 10000 (max. 100000000)
 

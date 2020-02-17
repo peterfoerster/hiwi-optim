@@ -1,8 +1,8 @@
 #!/bin/bash
-pdflatex photocathode
+lualatex photocathode
 # bibtex photocathode
-# pdflatex photocathode
-# pdflatex photocathode
+# lualatex photocathode
+# lualatex photocathode
 # rm photocathode.toc
 # rm photocathode.log
 # rm photocathode.blg
