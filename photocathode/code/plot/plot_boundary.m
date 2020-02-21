@@ -8,15 +8,20 @@ function [] = plot_boundary (geometry, boundaries)
             for ip=1:length(boundaries(ib).patches)
                nrbplot_color('b', width, geometry(boundaries(ib).patches(ip)).boundary(boundaries(ib).faces(ip)).nurbs, nsub);
             end
-         % vacuumchamber
+         % anode ring
          case{2}
             for ip=1:length(boundaries(ib).patches)
                nrbplot_color('r', width, geometry(boundaries(ib).patches(ip)).boundary(boundaries(ib).faces(ip)).nurbs, nsub);
             end
-         % symmetry
+         % vacuumchamber
          case{3}
             for ip=1:length(boundaries(ib).patches)
                nrbplot_color('k', width, geometry(boundaries(ib).patches(ip)).boundary(boundaries(ib).faces(ip)).nurbs, nsub);
+            end
+         % symmetry
+         case{4}
+            for ip=1:length(boundaries(ib).patches)
+               nrbplot_color('g', width, geometry(boundaries(ib).patches(ip)).boundary(boundaries(ib).faces(ip)).nurbs, nsub);
             end
       end
    end%for

@@ -57,4 +57,12 @@ function [anode_ring] = create_anodering_v6 ()
    p1 = nrbeval(anode_ring(11), 1);
    p2 = [447e-3 20e-3];
    anode_ring(12) = nrbline(p1, p2);
+
+   p1 = nrbeval(anode_ring(11), 1);
+   p2 = nrbeval(anode_ring(3), 1);
+   anode_ring(13) = nrbline(p1, p2);
+
+   p1 = nrbeval(anode_ring(11), 0);
+   p2 = nrbeval(anode_ring(3), 0);
+   anode_ring(14) = nrbline(p1, p2);
 end

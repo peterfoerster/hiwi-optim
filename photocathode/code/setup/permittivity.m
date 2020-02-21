@@ -52,6 +52,13 @@ function [c_diff] = permittivity (ip, x, y, geometry_file)
          otherwise
             c_diff = 8.854e-12*ones(size(x));
       end%switch
+   elseif (strcmp(geometry_file, 'photocathode_200kV_v6'))
+      switch (ip)
+         case {5, 24, 25, 32, 33, 34, 35}
+            c_diff = 9.4 * 8.854e-12*ones(size(x));
+         otherwise
+            c_diff = 8.854e-12*ones(size(x));
+      end%switch
    else
       % optimization
       switch (ip)

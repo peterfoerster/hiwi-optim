@@ -63,9 +63,8 @@ function [domain] = discretize_vacuumchamber_v6 (electrode, anode_ring, inner_in
    p2 = nrbeval(vacuumchamber(8), 0);
    domain(16) = nrbline(p1, p2);
 
-   p1 = nrbeval(electrode(10), 0);
+   p1 = [185e-3 65e-3];
    p2 = nrbeval(vacuumchamber(8), 0);
-   p1 = [190e-3 p1(2)];
    domain(17) = nrbline(p1, p2);
 
    p1 = nrbeval(domain(17), 0);
@@ -78,7 +77,7 @@ function [domain] = discretize_vacuumchamber_v6 (electrode, anode_ring, inner_in
 
    p1 = nrbeval(outer_insulator(4), 1);
    p2 = nrbeval(domain(17), 0);
-   p1 = [p1(1) 80e-3];
+   p1 = [p1(1) 85e-3];
    domain(20) = nrbline(p1, p2);
 
    p1 = nrbeval(domain(20), 0);

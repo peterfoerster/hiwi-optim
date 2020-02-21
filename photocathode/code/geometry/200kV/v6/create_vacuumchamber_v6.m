@@ -48,9 +48,8 @@ function [vacuumchamber] = create_vacuumchamber_v6 (anode_ring, electrode, inner
    p2 = nrbeval(vacuumchamber(9), 0);
    vacuumchamber(10) = nrbline(p1, p2);
 
-   p1 = nrbeval(electrode(10), 1);
+   p1 = [0 85e-3];
    p2 = nrbeval(vacuumchamber(10), 0);
-   p1 = [0 p1(2)];
    vacuumchamber(11) = nrbline(p1, p2);
 
    p1 = nrbeval(outer_insulator(5), 1);
@@ -62,7 +61,7 @@ function [vacuumchamber] = create_vacuumchamber_v6 (anode_ring, electrode, inner
    vacuumchamber(13) = nrbline(p1, p2);
 
    p1 = nrbeval(electrode(1), 0);
-   p2 = nrbeval(anode_ring(8), 0);
+   p2 = nrbeval(anode_ring(8), 1);
    p2 = [p2(1) 0];
    vacuumchamber(14) = nrbline(p1, p2);
 

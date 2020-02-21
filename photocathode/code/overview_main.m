@@ -1,8 +1,8 @@
 close all; clc;
 pkg load geopdes;
 
-% geometry_file = 'photocathode_200kV_v5';
-geometry_file = 'photocathode_200kV_optim_order=5_run20';
+geometry_file = 'photocathode_200kV_v6';
+% geometry_file = 'photocathode_200kV_optim_order=5_run20';
 
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 
@@ -14,11 +14,12 @@ geometry_file = 'photocathode_200kV_optim_order=5_run20';
 % write_geometry (geometry);
 
 % plot geometry
-% plot_geometry (geometry, boundaries);
-
+plot_geometry (geometry, boundaries);
+return
 % solve for the potential
-voltage = -200e3;
-[problem_data, method_data] = setup_problem (geometry_file, voltage);
+v_el = -300e3;
+v_ar = 1e3;
+[problem_data, method_data] = setup_problem (geometry_file, v_el, v_ar);
 
 tic;
 [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
@@ -30,8 +31,8 @@ fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 % view(2);
 
 % write .vtk files
-sp_to_vtk (u, space, geometry, method_data.nsub, ['gradient_optim_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
-
+sp_to_vtk (u, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
+return
 % signal that the program is finished
 x = linspace(1, 20, 8000);
 Y = sin(2*pi*440*x);
