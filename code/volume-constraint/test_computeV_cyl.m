@@ -1,5 +1,3 @@
-clear all; close all; clc;
-
 nurbs = nrbsquare([0 0], 1, 1);
 % nurbs = nrbextrude(nurbs, [0 0 3.48]);
 nrbplot(nurbs, [10 10]);

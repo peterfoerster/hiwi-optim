@@ -1,4 +1,3 @@
-clear all; close all; clc;
 order    = 3;
 N_ctrl   = 5*(order-2);
 x        = zeros(2*N_ctrl,1);

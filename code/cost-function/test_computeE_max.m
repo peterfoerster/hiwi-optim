@@ -1,5 +1,3 @@
-clear all; close all; clc;
-
 geometry_file = 'photocathode_200kV_v1';
 voltage = -200e3;
 [problem_data, method_data] = init_potential (geometry_file, voltage);

@@ -1,5 +1,3 @@
-clear all; close all; clc;
-
 geometry_file = 'photocathode_200kV_v3';
 [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
 degree = [2 2];

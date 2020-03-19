@@ -9,9 +9,11 @@ function [] = write_iges (filename, geometry)
       ext   = [1 0 0];
       nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
       nurbs = nrbextract(nurbs);
-      hold on;
-      nrbkntplot(nurbs(ibnd(ii)));
-      hold off;
+      if (iptc(ii) <= 9)
+         hold on;
+         nrbkntplot(nurbs(ibnd(ii)));
+         hold off;
+      end
       nrb2iges(nurbs(ibnd(ii)), [filename '_' num2str(iptc(ii)) num2str(ibnd(ii)) '.igs']);
    end
 
@@ -23,11 +25,11 @@ function [] = write_iges (filename, geometry)
    ext   = [1 0 0];
    nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
    nurbs = nrbextract(nurbs);
-   hold on;
-   nrbkntplot(nurbs(3));
-   nrbkntplot(nurbs(4));
-   nrbkntplot(nurbs(6));
-   hold off;
+   % hold on;
+   % nrbkntplot(nurbs(3));
+   % nrbkntplot(nurbs(4));
+   % nrbkntplot(nurbs(6));
+   % hold off;
    nrb2iges(nurbs(3), [filename '_vacuumchamber_1' '.igs']);
    nrb2iges(nurbs(4), [filename '_vacuumchamber_2' '.igs']);
    nrb2iges(nurbs(6), [filename '_vacuumchamber_3' '.igs']);

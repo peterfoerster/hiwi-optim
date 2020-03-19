@@ -1,0 +1,11 @@
+#!/bin/bash
+lualatex poster
+# bibtex poster
+# lualatex poster
+# lualatex poster
+rm poster.toc
+rm poster.log
+rm poster.blg
+rm poster.bbl
+rm poster.aux
+rm poster.out

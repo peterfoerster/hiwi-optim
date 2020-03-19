@@ -20,7 +20,8 @@ volume_constraint_optim = volume_constraint(x, order);
 [max_orig]  = cost_function_abs_max (x_ini, order);
 [max_optim] = cost_function_abs_max (x, order);
 
-save([filename '_eval.mat'], 'volume_constraint_orig', 'volume_constraint_optim', 'obj_orig', 'obj_optim', 'max_orig', 'max_optim');
+save([filename '_eval.mat'], 'volume_constraint_orig', 'volume_constraint_optim', ...
+      'obj_orig', 'obj_optim', 'max_orig', 'max_optim');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

@@ -1,4 +1,3 @@
-clf;
 order  = 5;
 N_ctrl = 4*(order-2);
 x      = zeros(2*N_ctrl,1);

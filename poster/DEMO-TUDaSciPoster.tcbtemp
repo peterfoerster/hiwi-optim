@@ -1,9 +1,0 @@
-Die Klasse \cls{tudasciposter} unterstützt die Papierformate A0, A1, A2 und A3. Der Wert wird über die Klassenoption \code{paper} ausgewählt:
-
-\begin{verbatim}
-paper=a0
-\end{verbatim}
-Die Voreinstellung entspricht \code{a0}.
-Die Änderung des Papierformates ist keine Skalierung, da Schriftgrößen nicht direkt skalieren.
-
-Um eine Skalierung eines größeren auf ein kleineres Designs zu erreichen, empfiehlt es sich das Ausgangsformat beim Druck zu skalieren oder ggf. die PDF-Datei mit Paketen wie \pck{pdfpages} oder eine PDF-Drucker umzurechnen.

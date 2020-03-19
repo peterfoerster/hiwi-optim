@@ -1,42 +1,5 @@
 function nrbctrlplot_dat (nurbs, filename)
 
-% NRBCTRLPLOT: Plot a NURBS entity along with its control points.
-%
-% Calling Sequence:
-%
-%   nrbctrlplot (nurbs)
-%
-% INPUT:
-%
-%   nurbs: NURBS curve, surface or volume, see nrbmak.
-%
-% Example:
-%
-%   Plot the test curve and test surface with their control polygon and
-%    control net, respectively
-%
-%   nrbctrlplot(nrbtestcrv)
-%   nrbctrlplot(nrbtestsrf)
-%
-% See also:
-%
-%   nrbkntplot
-%
-%    Copyright (C) 2011, 2012 Rafael Vazquez
-%
-%    This program is free software: you can redistribute it and/or modify
-%    it under the terms of the GNU General Public License as published by
-%    the Free Software Foundation, either version 3 of the License, or
-%    (at your option) any later version.
-
-%    This program is distributed in the hope that it will be useful,
-%    but WITHOUT ANY WARRANTY; without even the implied warranty of
-%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%    GNU General Public License for more details.
-%
-%    You should have received a copy of the GNU General Public License
-%    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 if (nargin < 1)
   error ('nrbctrlplot: Need a NURBS to plot!');
 end
@@ -118,15 +81,3 @@ if (~hold_flag)
 end
 
 end
-
-%!demo
-%! crv = nrbtestcrv;
-%! nrbctrlplot(crv)
-%! title('Test curve')
-%! hold off
-
-%!demo
-%! srf = nrbtestsrf;
-%! nrbctrlplot(srf)
-%! title('Test surface')
-%! hold off

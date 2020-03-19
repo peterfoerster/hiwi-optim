@@ -1,8 +1,8 @@
 % create the 2D photocathode geometry
 pkg load nurbs;
-clear all; clf; clc;
+clf;
 
-filename = 'photocathode_insulator.txt';
+filename = 'photocathode_60kV.txt';
 
 cathode_boundary = create_cathodeboundary();
 

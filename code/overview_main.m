@@ -1,30 +1,24 @@
-close all; clc;
 pkg load geopdes;
 
 geometry_file = 'photocathode_200kV_v5';
-% geometry_file = 'photocathode_200kV_optim_order=5_run20';
+% geometry_file = 'photocathode_200kV_optim_order=3_init';
 
-[geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
+[geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
 % write .iges files
 % write_iges (['photocathode_200kV_optim'], geometry);
 
 % write .dat files
-plot_electrode_dat(geometry_file, geometry)
-return
 % write_boundary (geometry);
 % write_geometry (geometry);
 
 % plot geometry
-plot_geometry (geometry, boundaries);
-return
-% solve for the potential
-v_el = -300e3;
-v_ar = 1e3;
-[problem_data, method_data] = setup_problem (geometry_file, v_el, v_ar);
+% plot_geometry (geometry, boundaries);
 
+% solve electrostatic problem
+[problem_data, method_data] = setup_problem (geometry_file);
 tic;
-[geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
+[geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
 fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 
 % plot absolute value of electric field and write .dat files
@@ -33,7 +27,7 @@ fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 % view(2);
 
 % write .vtk files
-sp_to_vtk (u, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
+sp_to_vtk (phi, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
 return
 % signal that the program is finished
 x = linspace(1, 20, 8000);

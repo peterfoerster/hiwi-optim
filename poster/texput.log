@@ -1,16 +1,16 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.2.22)  16 MAR 2020 10:26
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.3.16)  18 MAR 2020 11:34
  restricted system commands enabled.
-**Example-TUDa-pgfplots.tex
+**photocathode
 
 ! Emergency stop.
-<*> Example-TUDa-pgfplots.tex
-                          
+<*> photocathode
+             
 End of file on the terminal!
 
 
 
 Here is how much of LuaTeX's memory you used:
- 5 strings out of 494291
+ 4 strings out of 494291
  100000,106986 words of node,token memory allocated 236 words of node memory still in use:
    34 glue_spec nodes
    avail lists: 2:12,3:1,4:1,5:1

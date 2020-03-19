@@ -1,0 +1,190 @@
+\begin{tikzpicture}
+
+\begin{axis}[
+   scale only axis = true,
+   width = 0.95\textwidth,
+  axis equal,
+  try min ticks=4,
+  max space between ticks=1000pt,
+  enlargelimits=true,
+  colormap name=tuda,
+  point meta min = 0,
+  point meta max = 2,
+  x unit=m,
+  y unit=m,
+  hide axis]
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry1.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry2.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry3.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry4.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry5.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry6.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry7.dat};
+
+  \addplot[surf, shader=interp, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{fig/geometry/geometry8.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry9.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry10.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry11.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry12.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry13.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry13.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry14.dat};
+
+  \addplot[surf, shader=interp, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{fig/geometry/geometry15.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry16.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry17.dat};
+
+  \addplot[surf, shader=interp, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{fig/geometry/geometry18.dat};
+
+  \addplot[surf, shader=interp, point meta min = 0, point meta max = 1] table[point meta=\thisrow{c}]{fig/geometry/geometry19.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry20.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry21.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry22.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry23.dat};
+
+  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry24.dat};
+
+  % add patch boundaries
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries11.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries12.dat};
+  \addplot[color=black] table{fig/geometry/boundaries13.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries14.dat};
+
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries21.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries22.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries23.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries24.dat};
+
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries31.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries32.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries33.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries34.dat};
+
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries41.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries42.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries43.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries44.dat};
+
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries51.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries52.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries53.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries54.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries61.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries62.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries63.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries64.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries71.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries72.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries73.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries74.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries81.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries82.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries83.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries84.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries91.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries92.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries93.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries94.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries101.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries102.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries103.dat};
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries104.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries111.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries112.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries113.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries114.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries121.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries122.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries123.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries124.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries131.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries132.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries133.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries134.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries141.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries142.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries143.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries144.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries151.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries152.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries153.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries154.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries161.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries162.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries163.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries164.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries171.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries172.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries173.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries174.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries181.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries182.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries183.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries184.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries191.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries192.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries193.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries194.dat};
+
+  \addplot[color=TUDa-9a] table{fig/geometry/boundaries201.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries202.dat};
+  \addplot[color=black] table{fig/geometry/boundaries203.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries204.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries211.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries212.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries213.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries214.dat};
+
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries221.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries222.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries223.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries224.dat};
+
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries231.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries232.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries233.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries234.dat};
+
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries241.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries242.dat};
+  \addplot[color=TUDa-0b] table{fig/geometry/boundaries243.dat};
+  \addplot[color=TUDa-2a] table{fig/geometry/boundaries244.dat};
+
+\end{axis}
+
+\end{tikzpicture}

@@ -7,7 +7,7 @@ function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, de
    method_data.nsub       = nsub_ref;
    method_data.nquad      = degree_ref+1;
    tic;
-   [geometry, msh_ref, space_ref, u_ref] = mp_solve_laplace_mod (problem_data, method_data);
+   [geometry, msh_ref, space_ref, u_ref] = mp_solve_electrostatics (problem_data, method_data);
    fprintf('\ntime elapsed for reference solution:%d min\n', toc/60);
 
    % iterative solution and error computation
@@ -17,7 +17,7 @@ function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, de
       method_data.regularity = degree-1;
       method_data.nsub       = [2^iit 2^iit];
       method_data.nquad      = degree+1;
-      [geometry, msh, space, u] = mp_solve_laplace_mod (problem_data, method_data);
+      [geometry, msh, space, u] = mp_solve_electrostatics (problem_data, method_data);
       tic;
       [errh1(iit+1), errl2(iit+1)] = mp_errh1 (geometry, msh_ref, space_ref, u_ref, space, u);
       fprintf('\ntime elapsed for error computation:%d min\n', toc/60);
