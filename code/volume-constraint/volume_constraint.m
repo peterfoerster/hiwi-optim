@@ -26,4 +26,5 @@ function [fc] = volume_constraint(x, order)
    V_tot = computeV_total_mod (geometry, msh, np);
    % 625 cm^3 as maximum volume
    fc = V_tot - 625;
+   fprintf('\n fc=%d \n', fc);
 end

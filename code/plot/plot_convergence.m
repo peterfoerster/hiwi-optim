@@ -8,13 +8,14 @@ function [] = plot_convergence (degree_ref, nsub_ref, degree, N_it, filename)
    h_l2 = h.^(degree(1)+1);
    h_h1 = h.^degree(1);
 
+   % write with dat1D
    figure(1);
    loglog(h, errl2, h, h_l2*errl2(1));
    legend('computed', 'p+1');
    xlabel('h');
    title('error in L^2 norm');
 
-   figure;
+   figure(2);
    loglog(h, errh1, h, h_h1*errh1(1));
    legend('computed', 'p');
    xlabel('h');

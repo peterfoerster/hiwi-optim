@@ -3,15 +3,14 @@ pkg load geopdes;
 geometry_file = 'photocathode_200kV_v5';
 filename      = 'cvg_v5';
 % specify problem and material data
-voltage = -200e3;
-[problem_data, method_data] = init_potential (geometry_file, voltage);
-degree_ref = [3 3];
-nsub_ref   = [8 8];
-degree     = [2 2];
+[problem_data, method_data] = setup_problem (geometry_file);
 N_it       = 4;
+degree_ref = [3 3];
+nsub_ref   = [2^(N_it-1) 2^(N_it-1)];
+degree     = [2 2];
 
 % compute errors
-compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, degree, N_it, filename);
+% compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, degree, N_it, filename);
 % plot errors
 plot_convergence (degree_ref, nsub_ref, degree, N_it, filename);
 

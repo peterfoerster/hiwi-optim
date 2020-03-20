@@ -12,7 +12,7 @@ addpath('/home/peter/iga-optim/code/iga', '-begin');
 
 addpath('/home/peter/iga-optim/code/plot', '-begin');
 
-addpath('/home/peter/iga-optim/code/results/optimization/bobyqa', '-begin');
+addpath('/home/peter/iga-optim/code/results/convergence:/home/peter/iga-optim/code/results/optimization/bobyqa', '-begin');
 
 addpath('/home/peter/iga-optim/code/setup', '-begin');
 
