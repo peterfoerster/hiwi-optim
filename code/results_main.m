@@ -1,27 +1,26 @@
-clear all; close all; clc;
 pkg load geopdes;
 
-% contains the optimized DoFs in [x]
-filename = 'result_nloptim_order=3_run12_newgeometry_noholes';
+% contains the optized DoFs in [x]
+filename = 'result_nloptim_order=3_run21';
 load([filename '.mat']);
 order  = 3;
 N_ctrl = 4*(order-2);
-x_ini  = zeros(2*N_ctrl,1);
+x_init = zeros(2*N_ctrl,1);
 
 % volume constraint
-volume_constraint_orig  = volume_constraint(x_ini, order);
-volume_constraint_optim = volume_constraint(x, order);
+volume_constraint_init = volume_constraint(x_init, order);
+volume_constraint_opt  = volume_constraint(x, order);
 
 % cost function
-[obj_orig]  = cost_function_max (x_ini, order);
-[obj_optim] = cost_function_max (x, order);
+[obj_init] = cost_function_max (x_init, order);
+[obj_opt]  = cost_function_max (x, order);
 
 % absolute maximum
-[max_orig]  = cost_function_abs_max (x_ini, order);
-[max_optim] = cost_function_abs_max (x, order);
+[max_init] = cost_function_abs_max (x_init, order);
+[max_opt]  = cost_function_abs_max (x, order);
 
-save([filename '_eval.mat'], 'volume_constraint_orig', 'volume_constraint_optim', ...
-      'obj_orig', 'obj_optim', 'max_orig', 'max_optim');
+save([filename '_eval.mat'], 'volume_constraint_init', 'volume_constraint_opt', ...
+      'obj_init', 'obj_opt', 'max_init', 'max_opt');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

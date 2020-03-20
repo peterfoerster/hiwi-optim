@@ -1,16 +1,15 @@
-clear all; close all; clc;
 pkg load geopdes;
 
 order  = 4;
 N_ctrl = 4*(order-2);
-x_ini  = zeros(2*N_ctrl,1);
+x_init = zeros(2*N_ctrl,1);
 
-[lb, ub] = compute_bounds (x_ini, order, 2*N_ctrl);
+[lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);
 
 % global:
-% solo: ISRES
+%  solo: ISRES
 % local:
-% solo: COBYLA
+%  solo: COBYLA
 
 % nlopt interface
 opt.algorithm     = NLOPT_LN_COBYLA;
@@ -29,7 +28,7 @@ opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, o
 opt.verbose       = 1;
 
 tic;
-[x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
+[x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
 fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
 
 save(['result_nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');

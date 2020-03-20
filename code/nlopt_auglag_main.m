@@ -1,14 +1,13 @@
-clear all; close all; clc;
 pkg load geopdes;
 
-order  = 5;
+order  = 3;
 N_ctrl = 4*(order-2);
-x_ini  = zeros(2*N_ctrl,1);
+x_init = zeros(2*N_ctrl,1);
 
-[lb, ub] = compute_bounds (x_ini, order, 2*N_ctrl);
+[lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);
 
 % global: CRS, DIRECT, MLSL, AGS, ESCH
-% local: BOBYQA, Sbplx
+% local:  BOBYQA, Sbplx
 
 % nlopt interface
 opt.algorithm     = NLOPT_AUGLAG;
@@ -19,14 +18,16 @@ opt.upper_bounds  = ub;
 opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-% base with order 3 needs 150 and +300 per degree
-opt.maxeval = 750;
-opt.maxtime = 48*60*60;
+% base with order 3 needs 150 and +300 per order
+opt.local_optimizer.maxeval = 150;
+opt.local_optimizer.maxtime = 15*60*60;
+opt.maxeval = 150;
+opt.maxtime = 15*60*60;
 
 tic;
-[x_opt, obj, retcode] = nlopt_optimize (opt, x_ini);
+[x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
 fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
-return
+
 % signal that the program is finished
 x = linspace(1, 20, 8000);
 Y = sin(2*pi*440*x);

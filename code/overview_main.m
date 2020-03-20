@@ -1,7 +1,7 @@
 pkg load geopdes;
 
-geometry_file = 'photocathode_200kV_v5';
-% geometry_file = 'photocathode_200kV_optim_order=3_init';
+% geometry_file = 'photocathode_200kV_v5';
+geometry_file = 'photocathode_200kV_optim_order=3_init';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
@@ -23,13 +23,8 @@ fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 
 % plot absolute value of electric field and write .dat files
 % vtk_pts = {linspace(0, 1, 8), linspace(0, 1, 8)};
-% plot_gradient_mp (u, space, geometry, vtk_pts, ['gradient_v3_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))]);
+% plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))]);
 % view(2);
-
+return
 % write .vtk files
 sp_to_vtk (phi, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
-return
-% signal that the program is finished
-x = linspace(1, 20, 8000);
-Y = sin(2*pi*440*x);
-sound(Y);

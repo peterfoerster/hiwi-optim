@@ -6,7 +6,7 @@ function [V] = computeV_cyl_ptc (msh)
       r       = msh_col.geo_map;
       r       = squeeze(r(2,:,:));
 
-      V_col = sum (r .* w);
+      V_col = sum(r .* w);
       V     = V + V_col;
    end
    V = 2*pi*sum(V);

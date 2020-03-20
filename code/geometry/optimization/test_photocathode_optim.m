@@ -22,5 +22,3 @@ x        = zeros(2*N_ctrl,1);
 tic;
 create_photocathode_optim (filename, x, order);
 fprintf('\ntime elapsed for creation: %d min\n', toc/60);
-geometry = plot_ctrl_optim(filename);
-% plot_mp(filename);

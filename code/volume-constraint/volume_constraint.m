@@ -9,9 +9,9 @@ function [fc] = volume_constraint(x, order)
 
    regularity = degree-1;
    nquad      = degree+1;
-   npatch     = numel (geometry);
-   msh        = cell (1, npatch);
-   sp         = cell (1, npatch);
+   npatch     = numel(geometry);
+   msh        = cell(1,npatch);
+   sp         = cell(1,npatch);
 
    for iptc=1:npatch
       [knots{iptc}, zeta{iptc}] = kntrefine (geometry(iptc).nurbs.knots, nsub-1, degree, regularity);
