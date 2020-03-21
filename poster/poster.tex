@@ -27,24 +27,26 @@
 \author{Peter Förster$\mathbf{^1}$, Abele Simona$\mathbf{^1}$, Maximilian Herbert$\mathbf{^2}$, Sebastian Schöps$\mathbf{^1}$ and Joachim Enders$\mathbf{^2}$}
 \institute{$\mathbf{^1}$ Institut für Teilchenbeschleunigung und Elektromagnetische Felder, TU Darmstadt, $\mathbf{^2}$ Institut für Kernphysik, TU Darmstadt}
 \footerqrcode{https://www.temf.tu-darmstadt.de}
-\footer{This work is supported by DFG (GRK 2128 \"AccelencE\"), BMBF (05H18RDRB1) and DFG (GSC 233)\\
+\footer{This work is supported by DFG (GRK 2128 'AccelencE'), BMBF (05H18RDRB1) and DFG (GSC 233)\\
 
 Technische Universität Darmstadt, Institute for Accelerator Science and Electromagnetic Fields, Schloßgartenstr. 8, 64289 Darmstadt, Germany\\
 https://www.temf.tu-darmstadt.de}
 
 % temf, temf, ikp
 \footergraphics{
-   \includegraphics[height=\height ]{example-image}
-   \includegraphics[height=\height ]{example-image}
-   \includegraphics[height=\height ]{example-image}
+   \includegraphics[height=\height]{example-image}
+   \includegraphics[height=\height]{example-image}
+   \includegraphics[height=\height]{example-image}
 }
 
-\begin{tcbposter}[poster={columns=2, rows=3, spacing=1cm}]
+\begin{tcbposter}[poster={columns=2, rows=8, spacing=1cm}]
 
-\begin{posterboxenv}[title=Motivation]{column=1, row=1, rowspan=1}
-   Compact DC photo-electron guns meet the demands of high-current applications such as energy recovery linacs. A main design parameter is the electric field gradient, which is limited by the field emission threshold of the electrode material. Optimizing the electrode geometry allows for higher gradients and thus increased gun perfomance.
+\begin{posterboxenv}[title=Motivation]{column=1, row=1, rowspan=3}
+   Compact DC photo-electron guns meet the demands of high-current applications such as energy recovery linacs. A main design parameter is the electric field strength, which is limited by the field emission threshold of the electrode material. Optimizing the electrode geometry allows for higher gradients and thus increased gun perfomance.
    \begin{center}
-      \includegraphics[height=10cm]{fig/electrode.pdf}
+      \includegraphics[width=0.3\textwidth]{fig/electrode_init.png}
+      \qquad
+      \includegraphics[width=0.3\textwidth]{fig/electrode_opt.png}
    \end{center}
    The underlying electrostatic problem is described by Maxwell's equations and the PDE reads
    \begin{align*}
@@ -53,25 +55,57 @@ https://www.temf.tu-darmstadt.de}
    where $\varphi$ is the electrostatic potential, $\varepsilon$ the electric permittivity and $\boldsymbol{\Omega}$ the problem domain.
 \end{posterboxenv}
 
-\begin{posterboxenv}[title=Isogeometric Analysis]{name=iga, row=2, rowspan=2}
-   % \begin{center}
+\begin{posterboxenv}[title=Isogeometric Analysis]{name=iga, row=4, rowspan=5}
+   Isogeometric Analysis employs NURBS basis functions for both the geometry description and as the solution space of the numerical method. This allows to exactly represent curved geometries and at the same time leads to smooth field solutions.
+
+   \begin{center}
       \begin{tikzpicture}[overlay]
-         \draw (0,0) grid (6,9);
-            % \draw[out=45, in=135] (3.5, 4.5) -> (12, 7);
+         \draw[-, ultra thick] (1, 2.5) to (5, 2.5);
+         \draw[-, ultra thick] (5, 2.5) to (5, 6.5);
+         \draw[-, ultra thick] (1, 6.5) to (5, 6.5);
+         \draw[-, ultra thick] (1, 2.5) to (1, 6.5);
+
+         \draw[-, ultra thick] (1, 3.5) to (5, 3.5);
+         \draw[-, ultra thick] (1, 4.5) to (5, 4.5);
+         \draw[-, ultra thick] (1, 5.5) to (5, 5.5);
+         \draw[-, ultra thick] (2, 2.5) to (2, 6.5);
+         \draw[-, ultra thick] (3, 2.5) to (3, 6.5);
+         \draw[-, ultra thick] (4, 2.5) to (4, 6.5);
+
+         % coordinate axes
+         \draw[->, ultra thick] (0, 0) to (1, 0);
+         \node[right] at (1, 0) {$\xi$};
+         \draw[->, ultra thick] (0, 0) to (0, 1);
+         \node[above] at (0, 1) {$\eta$};
+
+         \draw[->, ultra thick] (2.5, 0.5) -- (4, 0.5) node[midway, above] {$\Phi$};
       \end{tikzpicture}
       \hfill
       \input{fig/geometry}
       \begin{tikzpicture}[overlay]
-         \draw[->, ultra thick] (-33.8,5.5) to [out=45, in=160] (-20,8);
+         \draw[->, ultra thick] (-34, 6) to [out=30, in=160] (-22.25, 7.25);
+         \draw[->, ultra thick] (-35.75, 3) to [out=20, in=170] (-22, 4.625);
+         % coordinate axes
+         \draw[->, ultra thick] (-32, 0) to (-31, 0);
+         \node[right] at (-31, 0) {$x$};
+         \draw[->, ultra thick] (-32, 0) to (-32, 1);
+         \node[above] at (-32, 1) {$y$};
       \end{tikzpicture}
-   % \end{center}
+   \end{center}
 
-   introduce nurbs, show 2d geometry with control mesh, mention iga as FEA method with nurbs basis functions
+   The elements of a patch share a single parameter space and are mapped to the physical space via a NURBS mapping $\Phi$.
+   Individual curves can easily be manipulated by moving their control points and multiple curves may be glued together to attain higher continuity at their boundaries.
+
+   \begin{center}
+      \input{fig/nurbs_init}
+   \end{center}
+
+   Using the $C^1$ continuous curve for the optimization guarantees an optimized geometry that is manufacturable.
+
 \end{posterboxenv}
 
 \begin{posterboxenv}[title=Geometry Optimization]{name=geo, column=2, row=1, span=1}
    % \begin{center}
-      % \input{fig/nurbs}
       % \input{fig/nurbs_opt}
    % \end{center}
    state optimization problem, show C1 nurbs that is optimized
