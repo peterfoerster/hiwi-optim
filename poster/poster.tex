@@ -13,6 +13,7 @@
 \usepackage{amsmath}
 
 \usepackage{tikz}
+\usetikzlibrary{arrows}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \pgfplotsset{compat=newest}
@@ -27,7 +28,7 @@
 \author{Peter Förster$\mathbf{^1}$, Abele Simona$\mathbf{^1}$, Maximilian Herbert$\mathbf{^2}$, Sebastian Schöps$\mathbf{^1}$ and Joachim Enders$\mathbf{^2}$}
 \institute{$\mathbf{^1}$ Institut für Teilchenbeschleunigung und Elektromagnetische Felder, TU Darmstadt, $\mathbf{^2}$ Institut für Kernphysik, TU Darmstadt}
 \footerqrcode{https://www.temf.tu-darmstadt.de}
-\footer{This work is supported by DFG (GRK 2128 'AccelencE'), BMBF (05H18RDRB1) and DFG (GSC 233)\\
+\footer{This work is supported by DFG (GRK 2128 ``AccelencE"), BMBF (05H18RDRB1) and DFG (GSC 233)\\
 
 Technische Universität Darmstadt, Institute for Accelerator Science and Electromagnetic Fields, Schloßgartenstr. 8, 64289 Darmstadt, Germany\\
 https://www.temf.tu-darmstadt.de}
@@ -56,7 +57,7 @@ https://www.temf.tu-darmstadt.de}
 \end{posterboxenv}
 
 \begin{posterboxenv}[title=Isogeometric Analysis]{name=iga, row=4, rowspan=5}
-   Isogeometric Analysis employs NURBS basis functions for both the geometry description and as the solution space of the numerical method. This allows to exactly represent curved geometries and at the same time leads to smooth field solutions.
+   Isogeometric Analysis employs NURBS basis functions for both the geometry description and as the solution space of the numerical method. This allows to exactly represent curved geometries and at the same time leads to smooth field solutions.\\
 
    \begin{center}
       \begin{tikzpicture}[overlay]
@@ -73,12 +74,15 @@ https://www.temf.tu-darmstadt.de}
          \draw[-, ultra thick] (4, 2.5) to (4, 6.5);
 
          % coordinate axes
-         \draw[->, ultra thick] (0, 0) to (1, 0);
+         \draw[->, >=latex, ultra thick] (0, 0) to (1, 0);
          \node[right] at (1, 0) {$\xi$};
-         \draw[->, ultra thick] (0, 0) to (0, 1);
+         \draw[->, >=latex, ultra thick] (0, 0) to (0, 1);
          \node[above] at (0, 1) {$\eta$};
 
          \draw[->, ultra thick] (2.5, 0.5) -- (4, 0.5) node[midway, above] {$\Phi$};
+
+         \node at (2.25, 7.5) (o) {$\boldsymbol{\hat{\Omega}}_i$};
+         \draw[-, ultra thick] (o.south) -- (2.5, 6);
       \end{tikzpicture}
       \hfill
       \input{fig/geometry}
@@ -86,14 +90,17 @@ https://www.temf.tu-darmstadt.de}
          \draw[->, ultra thick] (-34, 6) to [out=30, in=160] (-22.25, 7.25);
          \draw[->, ultra thick] (-35.75, 3) to [out=20, in=170] (-22, 4.625);
          % coordinate axes
-         \draw[->, ultra thick] (-32, 0) to (-31, 0);
+         \draw[->, >=latex, ultra thick] (-32, 0) to (-31, 0);
          \node[right] at (-31, 0) {$x$};
-         \draw[->, ultra thick] (-32, 0) to (-32, 1);
+         \draw[->, >=latex, ultra thick] (-32, 0) to (-32, 1);
          \node[above] at (-32, 1) {$y$};
+
+         \node at (-20, 7.5) (o) {$\boldsymbol{\Omega}_i$};
+         \draw[-, ultra thick] (o.west) -- (-21.5, 7);
       \end{tikzpicture}
    \end{center}
 
-   The elements of a patch share a single parameter space and are mapped to the physical space via a NURBS mapping $\Phi$.
+   The elements of a patch share a single parameter space and are mapped to the physical space via a NURBS mapping $\Phi: \boldsymbol{\hat{\Omega}}_i \to \boldsymbol{\Omega}_i$.
    Individual curves can easily be manipulated by moving their control points and multiple curves may be glued together to attain higher continuity at their boundaries.
 
    \begin{center}
@@ -102,18 +109,44 @@ https://www.temf.tu-darmstadt.de}
 
    Using the $C^1$ continuous curve for the optimization guarantees an optimized geometry that is manufacturable.
 
+   \begin{center}
+      \input{fig/E_init}
+   \end{center}
+
 \end{posterboxenv}
 
-\begin{posterboxenv}[title=Geometry Optimization]{name=geo, column=2, row=1, span=1}
-   % \begin{center}
-      % \input{fig/nurbs_opt}
-   % \end{center}
-   state optimization problem, show C1 nurbs that is optimized
+\begin{posterboxenv}[title=Geometry Optimization]{name=geo, column=2, row=1, rowspan=4}
+   The aim of the optimization is to minimize the maximal electric field strength in the vicinity of the electrode. This is accomplished by finding an optimal configuration of the control points under the constraints that the volume of the electrode may not exceed a certain limit and the patches should not become degenerate.
+   The cost function is given by
+   \begin{align*}
+      f(\mathbf{p}) = \frac{1}{|I|} \sum_{i \in I} \max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2,
+   \end{align*}
+   where $\mathbf{p}$ denotes the control point coordinates, $I$ is an index set and $\mathbf{E}$ is the electric field. The domains $\boldsymbol{\Omega}_i$ are approximated by the quadrature nodes. The maxima are averaged to ensure that the field strength is simultaneously minimized on each of the patches.
+   The full optimization formulation then reads
+   \begin{align*}
+      \min_\mathbf{p}& \quad f(\mathbf{p}),\\
+      \mathrm{subject\ to}& \quad \mathbf{h}(\mathbf{p}) \leq \mathbf{0},
+   \end{align*}
+   where $\mathbf{h}$ is made up of constraints on the volume of the electrode and the relative position of the conrol points.
+
+   \begin{center}
+      \input{fig/nurbs_opt}
+   \end{center}
 \end{posterboxenv}
 
 
-\begin{posterboxenv}[title=Results]{name=res, column=2, row=2}
+\begin{posterboxenv}[title=Results]{name=res, column=2, row=5, rowspan=4}
    show field magnitude for starting and optimized geometry (also values?)
+   cst as well?
+
+   \begin{center}
+      \input{fig/E_opt}
+   \end{center}
+
+   \begin{center}
+      \input{fig/E_cst}
+   \end{center}
+
 \end{posterboxenv}
 
 \end{tcbposter}

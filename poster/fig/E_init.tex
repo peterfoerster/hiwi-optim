@@ -1,0 +1,196 @@
+\begin{tikzpicture}
+
+\begin{axis}[
+   scale only axis=true,
+   width=\textwidth,
+   axis equal,
+   try min ticks=4,
+   max space between ticks=1000pt,
+   enlargelimits=true,
+   colormap name=tuda,
+   point meta min=0,
+   point meta max=10e6,
+   colorbar,
+   colorbar style={at={(1, 0.65)}, anchor=north west, height=0.3*\pgfkeysvalueof{/pgfplots/parent axis height}, ytick={0, 0.2e7, 0.4e7, 0.6e7, 0.8e7, 1e7}},
+   hide axis]
+
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_1.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_2.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_3.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_4.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_5.dat};
+
+  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_6.dat};
+
+  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_7.dat};
+
+  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_8.dat};
+
+  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_9.dat};
+
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_10.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_11.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_12.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_13.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_13.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_14.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_15.dat};
+
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_128.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_17.dat};
+
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_18.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_19.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_20.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_21.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_22.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_23.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_24.dat};
+  %
+  % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_25.dat};
+
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary11.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary12.dat};
+  % \addplot[color=black, ultra thick] table{fig/geometry/boundary13.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary14.dat};
+  %
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary21.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary22.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary23.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary24.dat};
+  %
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary31.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary32.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary33.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary34.dat};
+  %
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary41.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary42.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary43.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary44.dat};
+
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary51.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary52.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary53.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary54.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary61.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary62.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary63.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary64.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary71.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary72.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary73.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary74.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary81.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary82.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary83.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary84.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary91.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary92.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary93.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary94.dat};
+
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary101.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary102.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary103.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary104.dat};
+  %
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary111.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary112.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary113.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary114.dat};
+  %
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary121.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary122.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary123.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary124.dat};
+  %
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary131.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary132.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary133.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary134.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary141.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary142.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary143.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary144.dat};
+  %
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary151.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary152.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary153.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary154.dat};
+  %
+  % % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary161.dat};
+  % % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary162.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary163.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary164.dat};
+  %
+  % % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary171.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary172.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary173.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary174.dat};
+  %
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary181.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary182.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary183.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary184.dat};
+  %
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary191.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary192.dat};
+  % \addplot[color=black, ultra thick] table{fig/geometry/boundary193.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary194.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary201.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary202.dat};
+  % \addplot[color=black, ultra thick] table{fig/geometry/boundary203.dat};
+  % \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary204.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary211.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary212.dat};
+  % \addplot[color=black, ultra thick] table{fig/geometry/boundary213.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary214.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary221.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary222.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary223.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary224.dat};
+  %
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary231.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary232.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary233.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary234.dat};
+  %
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary241.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary242.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary243.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary244.dat};
+  %
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary251.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary252.dat};
+  % \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary253.dat};
+  % \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary254.dat};
+
+\end{axis}
+
+\end{tikzpicture}

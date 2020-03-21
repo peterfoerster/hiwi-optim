@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+
+\begin{axis}[
+   % scale only axis=true,
+   width=\textwidth,
+   axis equal,
+   % xmin=0.05,
+   % xmax=0.4,
+   % ymin=0,
+   % ymax=0.13,
+   try min ticks=4,
+   max space between ticks=1000pt,
+   % enlargelimits=true,
+   colormap name=tuda,
+   point meta min=0,
+   point meta max=10e6,
+   colorbar,
+   colorbar style={at={(1, 0.65)}, anchor=north west, height=0.3*\pgfkeysvalueof{/pgfplots/parent axis height}, ytick={0, 0.2e7, 0.4e7, 0.6e7, 0.8e7, 1e7}, ylabel=$\Vert \mathbf{E} \Vert_2$ / $\mathrm{Vm}^{-1}$},
+   hide axis
+   ]
+
+  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128_npts=4/E_degree=3_nsub=128_all.dat};
+
+\end{axis}
+
+\end{tikzpicture}

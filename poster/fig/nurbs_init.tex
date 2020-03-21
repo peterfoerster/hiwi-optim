@@ -1,14 +1,15 @@
 \begin{tikzpicture}
 \begin{axis}[
    scale only axis=true,
-   width = 0.95\textwidth,
+   width=\textwidth,
    axis equal,
    try min ticks=4,
    max space between ticks=1000pt,
    enlargelimits=true,
    x unit=m,
    y unit=m,
-   hide axis]
+   hide axis
+   ]
 
    \addplot[color=black, ultra thick] table {fig/nurbs-init/nurbs_5_1.dat};
    \addplot[color=TUDa-9a, mark=*, only marks, mark size=6] table {fig/nurbs-init/nurbs_5_1_coefs.dat};
@@ -29,5 +30,12 @@
    \addplot[color=black, ultra thick] table {fig/nurbs-init/nurbs_9_2.dat};
    \addplot[color=TUDa-9a, mark=*, only marks, mark size=6] table {fig/nurbs-init/nurbs_9_2_coefs.dat};
    \addplot[color=TUDa-0b, dashed, ultra thick] table {fig/nurbs-init/nurbs_9_2_net.dat};
+
 \end{axis}
+
+   \draw[<->, >=latex', ultra thick] (3, 11) to (33.5, 11);
+   \node at (18.25, 10) {$102$ mm};
+   \draw[<->, >=latex', ultra thick] (2, 14) to (2, 20.5);
+   \node[rotate=90] at (1, 17.25) {$20$ mm};
+
 \end{tikzpicture}

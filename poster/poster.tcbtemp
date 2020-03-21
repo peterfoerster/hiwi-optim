@@ -1,1 +1,11 @@
    show field magnitude for starting and optimized geometry (also values?)
+   cst as well?
+
+   \begin{center}
+      \input{fig/E_opt}
+   \end{center}
+
+   \begin{center}
+      \input{fig/E_cst}
+   \end{center}
+
