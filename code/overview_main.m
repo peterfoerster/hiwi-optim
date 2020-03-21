@@ -1,7 +1,7 @@
 pkg load geopdes;
 
 % geometry_file = 'photocathode_200kV_v5';
-geometry_file = 'photocathode_200kV_optim_order=3_run18';
+geometry_file = 'photocathode_200kV_optim_order=3';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
@@ -9,14 +9,13 @@ geometry_file = 'photocathode_200kV_optim_order=3_run18';
 % write_iges (['photocathode_200kV_optim'], geometry);
 
 % write .dat files
-write_ctrl_opt (geometry);
-return
+% write_ctrl_opt (geometry);
 % write_boundary (geometry);
 % write_geometry (geometry);
 
 % plot geometry
-% plot_geometry (geometry, boundaries);
-
+plot_geometry (geometry, boundaries);
+return
 % solve electrostatic problem
 [problem_data, method_data] = setup_problem (geometry_file);
 tic;

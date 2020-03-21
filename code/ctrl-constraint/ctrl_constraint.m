@@ -9,4 +9,5 @@ function [fc] = ctrl_constraint(x, order, N_ctrl)
 
    % fc <= 0
    fc = -min([min(ctrl_diff_lb) min(ctrl_diff_ub)]);
+   fprintf('\n fc=%d \n', fc);
 end

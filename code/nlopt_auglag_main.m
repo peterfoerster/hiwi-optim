@@ -19,9 +19,9 @@ opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, o
 opt.verbose       = 1;
 opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
 % base with order 3 needs 150 and +300 per order
-opt.local_optimizer.maxeval = 150;
+opt.local_optimizer.maxeval = 24;
 opt.local_optimizer.maxtime = 15*60*60;
-opt.maxeval = 150;
+opt.maxeval = 24;
 opt.maxtime = 15*60*60;
 
 tic;
