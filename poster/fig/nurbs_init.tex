@@ -1,4 +1,10 @@
 \begin{tikzpicture}
+
+   \draw[->, >=latex, ultra thick] (1, 12) to (2, 12);
+   \node[right] at (2, 12) {$x$};
+   \draw[->, >=latex, ultra thick] (1, 12) to (1, 13);
+   \node[above] at (1, 13) {$y$};
+
 \begin{axis}[
    scale only axis=true,
    width=\textwidth,
@@ -8,6 +14,8 @@
    enlargelimits=true,
    x unit=m,
    y unit=m,
+   legend entries={$C^1$-NURBS, Original Control Points, Control Polygon},
+   legend style={at={(0.75, 0.75)}, anchor=north west, draw=none},
    hide axis
    ]
 

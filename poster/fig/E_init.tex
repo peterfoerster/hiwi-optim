@@ -1,5 +1,10 @@
 \begin{tikzpicture}
 
+   \draw[->, >=latex, ultra thick] (4, 18) to (5, 18);
+   \node[right] at (5, 18) {$x$};
+   \draw[->, >=latex, ultra thick] (4, 18) to (4, 19);
+   \node[above] at (4, 19) {$y$};
+
 \begin{axis}[
    scale only axis=true,
    width=\textwidth,
@@ -9,9 +14,9 @@
    enlargelimits=true,
    colormap name=tuda,
    point meta min=0,
-   point meta max=10e6,
+   point meta max=10,
    colorbar,
-   colorbar style={at={(1, 0.65)}, anchor=north west, height=0.3*\pgfkeysvalueof{/pgfplots/parent axis height}, ytick={0, 0.2e7, 0.4e7, 0.6e7, 0.8e7, 1e7}},
+   colorbar style={at={(1, 0.65)}, anchor=north west, height=0.3*\pgfkeysvalueof{/pgfplots/parent axis height}, ytick={0, 2, 4, 6, 8, 10}, ylabel=$\Vert \mathbf{E} \Vert_2$ / $\mathrm{MVm}^{-1}$},
    hide axis]
 
   % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_1.dat};
@@ -24,13 +29,13 @@
   %
   % \addplot[surf, shader=faceted interp] table{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_5.dat};
 
-  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_6.dat};
+  \addplot[surf, shader=faceted interp] table[point meta=1e-6*\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_6.dat};
 
-  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_7.dat};
+  \addplot[surf, shader=faceted interp] table[point meta=1e-6*\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_7.dat};
 
-  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_8.dat};
+  \addplot[surf, shader=faceted interp] table[point meta=1e-6*\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_8.dat};
 
-  \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_9.dat};
+  \addplot[surf, shader=faceted interp] table[point meta=1e-6*\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_9.dat};
 
   % \addplot[surf, shader=faceted interp] table[point meta=\thisrow{c}]{fig/v5_order=3/init_degree=3_nsub=128/E_degree=3_nsub=128_10.dat};
   %

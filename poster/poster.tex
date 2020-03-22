@@ -46,44 +46,24 @@ https://www.temf.tu-darmstadt.de}
    Compact DC photo-electron guns meet the demands of high-current applications such as energy recovery linacs. A main design parameter is the electric field strength, which is limited by the field emission threshold of the electrode material. Optimizing the electrode geometry allows for higher gradients and thus increased gun perfomance.
    \begin{center}
       \includegraphics[width=0.3\textwidth]{fig/electrode_init.png}
-      \qquad
+      \qquad \qquad \qquad
       \includegraphics[width=0.3\textwidth]{fig/electrode_opt.png}
    \end{center}
-   The underlying electrostatic problem is described by Maxwell's equations and the PDE reads
+   The problem is described by Maxwell's equations and the PDE for the electrostatic potential reads
    \begin{align*}
-      \nabla \cdot (\varepsilon \nabla \varphi) = 0 \quad \mathrm{in}\ \boldsymbol{\Omega},
-   \end{align*}
-   where $\varphi$ is the electrostatic potential, $\varepsilon$ the electric permittivity and $\boldsymbol{\Omega}$ the problem domain.
+      \nabla \cdot (\varepsilon \nabla \varphi) &= 0 \phantom{-00 kV} \quad \mathrm{in}\ \boldsymbol{\Omega},\\
+      \varphi &= 0 \phantom{-00 kV} \quad \mathrm{on}\ \boldsymbol{\Gamma}_\mathrm{D_0},\\
+      \varphi &= -200\ \mathrm{kV} \quad \mathrm{on}\ \boldsymbol{\Gamma}_\mathrm{D_1},\\
+      \partial_n \varphi &= 0 \phantom{-00 kV} \quad \mathrm{on}\ \boldsymbol{\Gamma}_\mathrm{N},
+      \end{align*}
+   where $\varphi$ is the electrostatic potential, $\varepsilon$ the electric permittivity, $\boldsymbol{\Omega}$ is the problem domain and the $\boldsymbol{\Gamma}$'s are the boundaries.
 \end{posterboxenv}
 
 \begin{posterboxenv}[title=Isogeometric Analysis]{name=iga, row=4, rowspan=5}
-   Isogeometric Analysis employs NURBS basis functions for both the geometry description and as the solution space of the numerical method. This allows to exactly represent curved geometries and at the same time leads to smooth field solutions.\\
+   Isogeometric Analysis employs NURBS basis functions for both the geometry description and as the solution space of the numerical method. This allows to exactly represent curved geometries and at the same time leads to smooth and accurate field solutions.\\
 
    \begin{center}
-      \begin{tikzpicture}[overlay]
-         \draw[-, ultra thick] (1, 2.5) to (5, 2.5);
-         \draw[-, ultra thick] (5, 2.5) to (5, 6.5);
-         \draw[-, ultra thick] (1, 6.5) to (5, 6.5);
-         \draw[-, ultra thick] (1, 2.5) to (1, 6.5);
-
-         \draw[-, ultra thick] (1, 3.5) to (5, 3.5);
-         \draw[-, ultra thick] (1, 4.5) to (5, 4.5);
-         \draw[-, ultra thick] (1, 5.5) to (5, 5.5);
-         \draw[-, ultra thick] (2, 2.5) to (2, 6.5);
-         \draw[-, ultra thick] (3, 2.5) to (3, 6.5);
-         \draw[-, ultra thick] (4, 2.5) to (4, 6.5);
-
-         % coordinate axes
-         \draw[->, >=latex, ultra thick] (0, 0) to (1, 0);
-         \node[right] at (1, 0) {$\xi$};
-         \draw[->, >=latex, ultra thick] (0, 0) to (0, 1);
-         \node[above] at (0, 1) {$\eta$};
-
-         \draw[->, ultra thick] (2.5, 0.5) -- (4, 0.5) node[midway, above] {$\Phi$};
-
-         \node at (2.25, 7.5) (o) {$\boldsymbol{\hat{\Omega}}_i$};
-         \draw[-, ultra thick] (o.south) -- (2.5, 6);
-      \end{tikzpicture}
+      \input{fig/parameter_space}
       \hfill
       \input{fig/geometry}
       \begin{tikzpicture}[overlay]
@@ -108,11 +88,6 @@ https://www.temf.tu-darmstadt.de}
    \end{center}
 
    Using the $C^1$ continuous curve for the optimization guarantees an optimized geometry that is manufacturable.
-
-   \begin{center}
-      \input{fig/E_init}
-   \end{center}
-
 \end{posterboxenv}
 
 \begin{posterboxenv}[title=Geometry Optimization]{name=geo, column=2, row=1, rowspan=4}
@@ -127,7 +102,7 @@ https://www.temf.tu-darmstadt.de}
       \min_\mathbf{p}& \quad f(\mathbf{p}),\\
       \mathrm{subject\ to}& \quad \mathbf{h}(\mathbf{p}) \leq \mathbf{0},
    \end{align*}
-   where $\mathbf{h}$ is made up of constraints on the volume of the electrode and the relative position of the conrol points.
+   where $\mathbf{h}$ is made up of constraints on the volume of the electrode and the relative position of the control points.
 
    \begin{center}
       \input{fig/nurbs_opt}
@@ -140,11 +115,11 @@ https://www.temf.tu-darmstadt.de}
    cst as well?
 
    \begin{center}
-      \input{fig/E_opt}
+      \input{fig/E_init}
    \end{center}
 
    \begin{center}
-      \input{fig/E_cst}
+      \input{fig/E_opt}
    \end{center}
 
 \end{posterboxenv}

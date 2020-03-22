@@ -11,39 +11,50 @@
    colormap/blackwhite,
    point meta min=0,
    point meta max=1,
+   legend style={at={(0.6125, 0.6125)}, anchor=north west, draw=none, fill=none},
    hide axis]
 
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry1.dat};
+   % switch for correct legend order
+   \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary12.dat};
+   \addlegendentry{$\boldsymbol{\Gamma}_\mathrm{D_0}$};
+   \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary11.dat};
+   \addlegendentry{$\boldsymbol{\Gamma}_\mathrm{D_1}$};
+   \addplot[color=black, ultra thick] table{fig/geometry/boundary13.dat};
+   \addlegendentry{$\boldsymbol{\Gamma}_\mathrm{N}$};
+   \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary14.dat};
+   \addlegendentry{Patch Boundaries};
 
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry2.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry3.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry4.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry5.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry6.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry7.dat};
-
-  \addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{fig/geometry/geometry8.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry9.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry10.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry11.dat};
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry1.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry2.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry3.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry4.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry5.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry6.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry7.dat};
+  %
+  % \addplot[surf, shader=faceted] table[point meta=\thisrow{c}]{fig/geometry/geometry8.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry9.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry10.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry11.dat};
 
   \addplot[surf, shader=interp, colormap name=tuda] table[point meta=\thisrow{c}]{fig/geometry/geometry12.dat};
 
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry13.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry13.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry14.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry15.dat};
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry13.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry13.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry14.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry15.dat};
 
   % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry16.dat};
   %
@@ -51,24 +62,19 @@
 
   \addplot[surf, shader=interp, colormap name=tuda] table[point meta=\thisrow{c}]{fig/geometry/geometry18.dat};
 
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry19.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry20.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry21.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry22.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry23.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry24.dat};
-
-  \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry25.dat};
-
-  \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary11.dat};
-  \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary12.dat};
-  \addplot[color=black, ultra thick] table{fig/geometry/boundary13.dat};
-  \addplot[color=TUDa-0b, ultra thick] table{fig/geometry/boundary14.dat};
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry19.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry20.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry21.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry22.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry23.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry24.dat};
+  %
+  % \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{fig/geometry/geometry25.dat};
 
   \addplot[color=TUDa-2a, ultra thick] table{fig/geometry/boundary21.dat};
   \addplot[color=TUDa-9a, ultra thick] table{fig/geometry/boundary22.dat};

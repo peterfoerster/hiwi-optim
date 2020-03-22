@@ -2,10 +2,10 @@
    cst as well?
 
    \begin{center}
-      \input{fig/E_opt}
+      \input{fig/E_init}
    \end{center}
 
    \begin{center}
-      \input{fig/E_cst}
+      \input{fig/E_opt}
    \end{center}
 
