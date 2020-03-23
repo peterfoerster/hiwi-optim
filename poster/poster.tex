@@ -40,14 +40,14 @@ https://www.temf.tu-darmstadt.de}
    \includegraphics[height=\height]{example-image}
 }
 
-\begin{tcbposter}[poster={columns=2, rows=8, spacing=1cm}]
+\begin{tcbposter}[poster={columns=2, rows=20, spacing=1cm}]
 
-\begin{posterboxenv}[title=Motivation]{column=1, row=1, rowspan=3}
+\begin{posterboxenv}[title=Motivation]{column=1, row=1, rowspan=8}
    Compact DC photo-electron guns meet the demands of high-current applications such as energy recovery linacs. A main design parameter is the electric field strength, which is limited by the field emission threshold of the electrode material. Optimizing the electrode geometry allows for higher gradients and thus increased gun perfomance.
    \begin{center}
-      \includegraphics[width=0.3\textwidth]{fig/electrode_init.png}
+      \includegraphics[width=0.35\textwidth]{fig/electrode_init.png}
       \qquad \qquad \qquad
-      \includegraphics[width=0.3\textwidth]{fig/electrode_opt.png}
+      \includegraphics[width=0.35\textwidth]{fig/electrode_opt.png}
    \end{center}
    The problem is described by Maxwell's equations and the PDE for the electrostatic potential reads
    \begin{align*}
@@ -56,10 +56,10 @@ https://www.temf.tu-darmstadt.de}
       \varphi &= -200\ \mathrm{kV} \quad \mathrm{on}\ \boldsymbol{\Gamma}_\mathrm{D_1},\\
       \partial_n \varphi &= 0 \phantom{-00 kV} \quad \mathrm{on}\ \boldsymbol{\Gamma}_\mathrm{N},
       \end{align*}
-   where $\varphi$ is the electrostatic potential, $\varepsilon$ the electric permittivity, $\boldsymbol{\Omega}$ is the problem domain and the $\boldsymbol{\Gamma}$'s are the boundaries.
+   where $\varphi$ is the electrostatic potential, $\varepsilon$ the electric permittivity, $\boldsymbol{\Omega}$ the problem domain and the $\boldsymbol{\Gamma}$'s are the boundaries.
 \end{posterboxenv}
 
-\begin{posterboxenv}[title=Isogeometric Analysis]{name=iga, row=4, rowspan=5}
+\begin{posterboxenv}[title=Isogeometric Analysis]{name=iga, row=9, rowspan=12}
    Isogeometric Analysis employs NURBS basis functions for both the geometry description and as the solution space of the numerical method. This allows to exactly represent curved geometries and at the same time leads to smooth and accurate field solutions.\\
 
    \begin{center}
@@ -80,24 +80,29 @@ https://www.temf.tu-darmstadt.de}
       \end{tikzpicture}
    \end{center}
 
-   The elements of a patch share a single parameter space and are mapped to the physical space via a NURBS mapping $\Phi: \boldsymbol{\hat{\Omega}}_i \to \boldsymbol{\Omega}_i$.
-   Individual curves can easily be manipulated by moving their control points and multiple curves may be glued together to attain higher continuity at their boundaries.
+   Due to the axisymmetry of the geometry it suffices to consider half of the longitudinal cross-section of the gun.
+   The elements of any patch $i$ share a single parameter space $\boldsymbol{\hat{\Omega}}_i$ and are mapped to the physical space $\boldsymbol{\Omega}_i$ via a NURBS mapping
+   \begin{align*}
+      \Phi\colon \boldsymbol{\hat{\Omega}}_i &\to \boldsymbol{\Omega}_i\\
+      (\eta, \xi) &\mapsto (x, y).
+   \end{align*}
 
    \begin{center}
       \input{fig/nurbs_init}
    \end{center}
 
-   Using the $C^1$ continuous curve for the optimization guarantees an optimized geometry that is manufacturable.
+   Individual curves can easily be manipulated by moving their control points and multiple curves may be glued together to attain higher continuity across their interfaces.
+   Using the above $C^1$-continuous curve for the optimization guarantees an optimized geometry that fulfills manufacturing requirements.
 \end{posterboxenv}
 
-\begin{posterboxenv}[title=Geometry Optimization]{name=geo, column=2, row=1, rowspan=4}
-   The aim of the optimization is to minimize the maximal electric field strength in the vicinity of the electrode. This is accomplished by finding an optimal configuration of the control points under the constraints that the volume of the electrode may not exceed a certain limit and the patches should not become degenerate.
+\begin{posterboxenv}[title=Shape Optimization]{name=geo, column=2, row=1, rowspan=9}
+   The aim of the optimization is to minimize the maximal electric field strength in the vicinity of the electrode. This is accomplished by finding an optimal configuration of the control points under additional geometric constraints.
    The cost function is given by
    \begin{align*}
       f(\mathbf{p}) = \frac{1}{|I|} \sum_{i \in I} \max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2,
    \end{align*}
-   where $\mathbf{p}$ denotes the control point coordinates, $I$ is an index set and $\mathbf{E}$ is the electric field. The domains $\boldsymbol{\Omega}_i$ are approximated by the quadrature nodes. The maxima are averaged to ensure that the field strength is simultaneously minimized on each of the patches.
-   The full optimization formulation then reads
+   where $\mathbf{p}$ is a vector containing the control point coordinates, $I$ is an index set and $\mathbf{E}$ is the electric field. The maxima are averaged to ensure that the field strength is simultaneously minimized across all patches.
+   The full optimization problem then reads
    \begin{align*}
       \min_\mathbf{p}& \quad f(\mathbf{p}),\\
       \mathrm{subject\ to}& \quad \mathbf{h}(\mathbf{p}) \leq \mathbf{0},
@@ -110,18 +115,21 @@ https://www.temf.tu-darmstadt.de}
 \end{posterboxenv}
 
 
-\begin{posterboxenv}[title=Results]{name=res, column=2, row=5, rowspan=4}
-   show field magnitude for starting and optimized geometry (also values?)
-   cst as well?
+\begin{posterboxenv}[title=Results]{name=res, column=2, row=10, rowspan=11}
+   The results show the magnitude of the eletric field in the region of interest. A significant improvement in terms of the maximal value is visible.
+   Originally we had $\max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2 = \mathbf{7.62}\ \mathrm{MVm^{-1}}$ and after optimization we obtained $\max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2 = \mathbf{5.837}\ \mathrm{MVm^{-1}}$.\\
 
    \begin{center}
       \input{fig/E_init}
-   \end{center}
 
-   \begin{center}
       \input{fig/E_opt}
    \end{center}
 
+   The results were further validified using CST EM Studio, which resulted in $\max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2 = $.
+
+   \begin{center}
+      \input{fig/E_cst}
+   \end{center}
 \end{posterboxenv}
 
 \end{tcbposter}

@@ -14,16 +14,35 @@
    enlargelimits=true,
    x unit=m,
    y unit=m,
-   legend entries={$C^1$-NURBS, Original Control Points, Optimized Control Points, Control Polygon},
+   legend entries={Optimized $C^1$-NURBS, Original Control Points, Optimized Control Points, Associated Points, Control Polygon},
    legend style={at={(0.75, 0.75)}, anchor=north west, draw=none},
    hide axis
    ]
 
+   % switch for correct legend order
    \addplot[color=black, ultra thick] table {fig/nurbs-opt/nurbs_5_1.dat};
    \addplot[color=TUDa-2a, mark=*, only marks, mark size=6] table {fig/nurbs-init/nurbs_5_1_coefs.dat};
    \addplot[color=TUDa-9a, mark=*, only marks, mark size=6] table {fig/nurbs-opt/nurbs_5_1_coefs.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_5_1_coefs1.dat};
    \addplot[color=TUDa-0b, dashed, ultra thick] table {fig/nurbs-opt/nurbs_5_1_net.dat};
 
+   % control point
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_6_3_coefs1.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_6_3_coefs2.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_6_3_coefs3.dat};
+
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_7_3_coefs1.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_7_3_coefs2.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_7_3_coefs3.dat};
+
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_8_3_coefs1.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_8_3_coefs2.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_8_3_coefs3.dat};
+
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_9_2_coefs1.dat};
+   \addplot[color=TUDa-0d, dotted, ultra thick] table {fig/nurbs-move/nurbs_9_2_coefs2.dat};
+
+   % nurbs
    \addplot[color=black, ultra thick] table {fig/nurbs-opt/nurbs_6_3.dat};
    \addplot[color=TUDa-2a, mark=*, only marks, mark size=6] table {fig/nurbs-init/nurbs_6_3_coefs.dat};
    \addplot[color=TUDa-9a, mark=*, only marks, mark size=6] table {fig/nurbs-opt/nurbs_6_3_coefs.dat};

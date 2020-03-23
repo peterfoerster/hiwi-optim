@@ -1,11 +1,14 @@
-   show field magnitude for starting and optimized geometry (also values?)
-   cst as well?
+   The results show the magnitude of the eletric field in the region of interest. A significant improvement in terms of the maximal value is visible.
+   Originally we had $\max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2 = \mathbf{7.62}\ \mathrm{MVm^{-1}}$ and after optimization we obtained $\max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2 = \mathbf{5.837}\ \mathrm{MVm^{-1}}$.\\
 
    \begin{center}
       \input{fig/E_init}
-   \end{center}
 
-   \begin{center}
       \input{fig/E_opt}
    \end{center}
 
+   The results were further validified using CST EM Studio, which resulted in $\max_{\mathbf{x} \in \boldsymbol{\Omega}_i} \Vert \mathbf{E}(\mathbf{x}) \Vert_2 = $.
+
+   \begin{center}
+      \input{fig/E_cst}
+   \end{center}

@@ -1,9 +1,9 @@
 \begin{tikzpicture}
 
-   \draw[->, >=latex, ultra thick] (4, 18) to (5, 18);
-   \node[right] at (5, 18) {$x$};
-   \draw[->, >=latex, ultra thick] (4, 18) to (4, 19);
-   \node[above] at (4, 19) {$y$};
+   \draw[->, >=latex, ultra thick] (2, 12) to (3, 12);
+   \node[right] at (3, 12) {$x$};
+   \draw[->, >=latex, ultra thick] (2, 12) to (2, 13);
+   \node[above] at (2, 13) {$y$};
 
 \begin{axis}[
    scale only axis=true,
@@ -15,8 +15,8 @@
    colormap name=tuda,
    point meta min=0,
    point meta max=10,
-   colorbar,
-   colorbar style={at={(1, 0.65)}, anchor=north west, height=0.3*\pgfkeysvalueof{/pgfplots/parent axis height}, ytick={0, 2, 4, 6, 8, 10}, ylabel=$\Vert \mathbf{E} \Vert_2$ / $\mathrm{MVm}^{-1}$},
+   % colorbar,
+   % colorbar style={at={(1, 0.65)}, anchor=north west, height=0.3*\pgfkeysvalueof{/pgfplots/parent axis height}, ytick={0, 2, 4, 6, 8, 10}, ylabel=$\Vert \mathbf{E} \Vert_2$ / $\mathrm{MVm}^{-1}$},
    hide axis
    ]
 
