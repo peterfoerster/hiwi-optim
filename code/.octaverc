@@ -6,7 +6,7 @@ addpath('/home/peter/iga-optim/code/cost-function', '-begin');
 
 addpath('/home/peter/iga-optim/code/ctrl-constraint', '-begin');
 
-addpath('/home/peter/iga-optim/code/geometry/60kV:/home/peter/iga-optim/code/geometry/200kV/v5:/home/peter/iga-optim/code/geometry/200kV/v6:/home/peter/iga-optim/code/geometry/optimization', '-begin');
+addpath('/home/peter/iga-optim/code/geometry/v5:/home/peter/iga-optim/code/geometry/v6:/home/peter/iga-optim/code/geometry/optimization', '-begin');
 
 addpath('/home/peter/iga-optim/code/iga', '-begin');
 

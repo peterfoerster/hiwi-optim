@@ -1,0 +1,122 @@
+\subsection{Geometry}
+The two latest geometries are depicted in fig.~\ref{fig:geometry_v5} and fig.~\ref{fig:geometry_v6}. The numbers refer to the individual patches in the context of IGA. The patch boundaries are indicated by grey lines.
+
+We also observe triple points within the computational domain. These are defined by material boundaries between air/vacuum, steel and the insulator.
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/geometry_v5}
+      \caption{Version 5.}
+      \label{fig:geometry_v5}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/geometry_v6}
+      \caption{Version 6.}
+      \label{fig:geometry_v6}
+   \end{subfigure}
+   % \caption{.}
+\end{figure}
+\end{center}
+
+% \begin{center}
+%    \begin{figure}[p]
+%       \input{fig/geometry}
+%    \end{figure}
+% \end{center}
+%
+% \begin{center}
+%    \begin{figure}[p]
+%       \input{fig/anodering_init}
+%    \end{figure}
+% \end{center}
+
+\subsection{Electric Field}
+The solution for the electric field are shown in fig.~\ref{fig:200kV_v6} and fig.~\ref{fig:300kV_v6}.
+It was computed with $p=2$ as the degree of the basis functions and $n_\mathrm{sub}=16$ as the number of elements that each knot vector is uniformly split into.
+It is evident that there exist parts of the domain where the magnitude of the electric field is close to the limit of $10 \frac{\mathrm{MV}}{\mathrm{m}}$. There are also very high gradients visible at the triple points, however these also coincide with sharp corners so numerical issues might play a role.
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/200kV_v6}
+      \caption{200kV.}
+      \label{fig:200kV_v6}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/300kV_v6}
+      \caption{300kV.}
+      \label{fig:300kV_v6}
+   \end{subfigure}
+\end{figure}
+\end{center}
+
+\subsection{Optimization}
+The aim of the optimization is to minimize the maximal field amplitudes. For practicality we will only look at the critical points of the geometry, i.~e.~the curvatures of the upper electrode and their respective control points are the DoFs. Aside from geometrical constraints we also consider a volume constraint.
+
+\subsubsection{Cost Function}
+
+\subsubsection{Volume Constraint}
+
+\subsubsection{Additional Constraints}
+As an additional constraint we require $C^1$ continuity of the section that is optimized. The starting nurbs is depicted in fig.~\ref{fig:nurbs}. Furthermore the control points, which represent the DoFs, are constrained to stay inside their respective patch boundaries and in the correct order.
+
+\begin{center}
+\begin{figure}[H]
+   % \input{}
+   \caption{$C^1$ continuous nurbs that is to be optimized including the variable control points which represent the DoFs.}
+   \label{fig:nurbs}
+\end{figure}
+\end{center}
+
+\subsubsection{NLopt}
+For the optimization we used implementations of BOBYQA and COBYLA as given by the NLopt libary.
+
+\subsubsection{Results}
+
+\begin{center}
+\begin{figure}[H]
+   % \includegraphics[width=\textwidth]{}
+   \caption{Optimization result using BOBYQA.}
+   \label{fig:results}
+\end{figure}
+\end{center}
+
+In order to compare the results with the original geometry and simulation the optimized geometry was also imported and simulated in CST. The results indicate a clear improvement from the optimized geometry over the original one. This is in agreement with the numerical improvement observed in the context of IGA.
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      % \includegraphics[width=\textwidth]{}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      % \includegraphics[width=\textwidth]{}
+   \end{subfigure}
+   \caption{Mesh of original and optimized geometry in CST.}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      % \includegraphics[width=\textwidth]{}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      % \includegraphics[width=\textwidth]{}
+   \end{subfigure}
+   \caption{Results of original and optimized geometry in CST.}
+\end{figure}
+\end{center}
+
+\subsection{Questions}
+\begin{itemize}
+   \item new maximal volume for electrode?
+   \item volume constraint for anode ring?
+   \item make size of patch 1/11 also a parameter?
+   \item how much is inner insulator or already PEC?
+\end{itemize}
+
+\subsection{Astra}
+In the future we may also optimize the electrode boundary next to the puck, i.~e.~patches 3, 4 and 5 to obtain optimal particle trajectories. The cost function will be computed using Astra.
+The desired total bunch charge is $10$ pC with a beam current of $(20-100)\ \mu\mathrm{A}$, whereas a typical value would be $100$ fC. The bunch length is around $5$ ps with a normalized transversal emittance of $e_{x,y} \leq 1\ \mathrm{mm\: mrad}$. The desired energy resolution is $\frac{\Delta E}{E} \leq 10^{-4}$.
+The tracking will be performed using individual bunches from a pulsed laser. The emission model may be derived from \cite{wagner}.

@@ -1,11 +1,11 @@
 #!/bin/bash
-lualatex photocathode
-# bibtex photocathode
-# lualatex photocathode
-# lualatex photocathode
-# rm photocathode.toc
-# rm photocathode.log
-# rm photocathode.blg
-# rm photocathode.bbl
-# rm photocathode.aux
-# rm photocathode.out
+lualatex doc
+# bibtex doc
+# lualatex doc
+# lualatex doc
+# rm doc.toc
+# rm doc.log
+# rm doc.blg
+# rm doc.bbl
+# rm doc.aux
+# rm doc.out

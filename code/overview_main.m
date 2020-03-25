@@ -1,20 +1,20 @@
 pkg load geopdes;
 
-geometry_file = 'photocathode_200kV_v6';
+geometry_file = 'geometry_v6';
 % geometry_file = 'photocathode_200kV_optim_order=3_run18';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
 % write .iges files
-% write_iges (['photocathode_200kV_optim'], geometry);
+% write_iges (['v6_optim'], geometry);
 
 % write .dat files
-% write_ctrl_opt (geometry);
+write_ctrl_opt (geometry);
 % write_boundary (geometry);
 % write_geometry (geometry);
 
 % plot geometry
-plot_geometry (geometry, boundaries);
+% plot_geometry (geometry, boundaries);
 return
 % solve electrostatic problem
 [problem_data, method_data] = setup_problem (geometry_file);
@@ -23,8 +23,9 @@ tic;
 fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 
 % plot absolute value of electric field and write .dat files
-vtk_pts = {linspace(0, 1, 8), linspace(0, 1, 8)};
-plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))]);
+npts = 8;
+vtk_pts = {linspace(0, 1, npts), linspace(0, 1, npts)};
+plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);
 view(2);
 return
 % write .vtk files

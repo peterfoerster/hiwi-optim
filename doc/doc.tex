@@ -1,0 +1,50 @@
+\documentclass[ngerman, accentcolor=9b, marginpar=false, pdfa=false]{tudapub}
+
+% default
+\usepackage[main=english, ngerman]{babel}
+\usepackage[babel]{csquotes}
+\usepackage{biblatex}
+\addbibresource{biblio}
+\usepackage{hologo}
+
+% additional
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{units}
+\usepgfplotslibrary{groupplots}
+\usepackage{tuda-pgfplots}
+
+% math font, option 2
+\usepackage[scaled=.98,sups,osf]{XCharter}% lining figures in math, osf in text
+\usepackage[scaled=1.04,varqu,varl]{inconsolata}% inconsolata typewriter
+\usepackage[type1]{cabin}% sans serif
+\usepackage[libertine,vvarbb,scaled=1.05]{newtxmath}
+\usepackage[cal=boondoxo]{mathalfa}
+\linespread{1.04}
+
+\begin{document}
+
+\title{Shape Optimization of a Photo Gun}
+% \author{}
+% \date{}
+% \titleimage{%includegraphics
+%    \color{black!30}\rule{\width}{\height}}
+% \addTitleBoxLogo{example-image}
+% \maketitle
+
+% \begin{abstract}[english]
+% \end{abstract}
+% \tableofcontents
+
+\section{Shape Optimization of a Photo Gun}
+\input{tex/doc}
+
+\printbibliography
+
+\end{document}

@@ -1,7 +1,28 @@
 function [] = write_iges (filename, geometry)
-   % write to .igs file
-   iptc = [1 2 3 4 5 6 7 8 9 9 12 12 12 12 14 16 16 17 17 17 18 18 18 18 21 22 22 23 23 23 24 25 25 25];
-   ibnd = [3 3 3 3 3 5 5 5 4 5  3  4  5  6  6  5  6  4  5  6  3  4  5  6  4  5  6  3  4  5  4  3  4  6];
+   display = 1;
+   % electrode
+   iptc = [6 7 8 9 10 14 15 16 17 18 19 19 24 28 29 29 29 30 31 31 32];
+   ibnd = [5 5 5 5  5  5  3  3  3  6  6  3  6  4  5  4  6  6  6  3  6];
+
+   % outer insulator
+   % iptc = [24 24 25 25 25 24];
+   % ibnd = [ 4  5  5  3  6  6];
+
+   % inner insulator
+   % iptc = [32 35 35 34 33 32];
+   % ibnd = [ 4  3  6  6  6  6];
+
+   % anode ring insulator
+   % iptc = [5 5 5 5];
+   % ibnd = [4 5 3 6];
+
+   % anode ring
+   % iptc = [5 3 4 7 8 9 10 13];
+   % ibnd = [3 6 6 4 4 4  4  1];
+
+   % vacuumchamber
+   % iptc = [1 1 5 11 11 11 12 13 15 16 17 20 21 21 23 25 26 35];
+   % ibnd = [4 6 4  5  4  6  6  6  5  6  6  6  6  3  3  3  3  3];
 
    for ii=1:length(iptc)
       nurbs = geometry(iptc(ii)).nurbs;
@@ -9,28 +30,11 @@ function [] = write_iges (filename, geometry)
       ext   = [1 0 0];
       nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
       nurbs = nrbextract(nurbs);
-      if (iptc(ii) <= 9)
+      if (display)
          hold on;
          nrbkntplot(nurbs(ibnd(ii)));
          hold off;
       end
-      nrb2iges(nurbs(ibnd(ii)), [filename '_' num2str(iptc(ii)) num2str(ibnd(ii)) '.igs']);
+      % nrb2iges(nurbs(ibnd(ii)), [filename '_' num2str(iptc(ii)) num2str(ibnd(ii)) '.igs']);
    end
-
-   % vacuumchamber
-   p11 = nrbeval(geometry(19).nurbs, [0 0]);
-   p22 = nrbeval(geometry(5).nurbs, [1 1]);
-   nurbs = nrb4surf(p11, [p22(1) p11(1)], [p11(1) p22(2)], p22);
-   pnt   = [0 0 0];
-   ext   = [1 0 0];
-   nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
-   nurbs = nrbextract(nurbs);
-   % hold on;
-   % nrbkntplot(nurbs(3));
-   % nrbkntplot(nurbs(4));
-   % nrbkntplot(nurbs(6));
-   % hold off;
-   nrb2iges(nurbs(3), [filename '_vacuumchamber_1' '.igs']);
-   nrb2iges(nurbs(4), [filename '_vacuumchamber_2' '.igs']);
-   nrb2iges(nurbs(6), [filename '_vacuumchamber_3' '.igs']);
 end
