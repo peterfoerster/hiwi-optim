@@ -6,17 +6,17 @@ addpath('/home/peter/iga-optim/code/cost-function', '-begin');
 
 addpath('/home/peter/iga-optim/code/ctrl-constraint', '-begin');
 
-addpath('/home/peter/iga-optim/code/geometry/v5:/home/peter/iga-optim/code/geometry/v6:/home/peter/iga-optim/code/geometry/optimization', '-begin');
+addpath('/home/peter/iga-optim/code/geometry/v5:/home/peter/iga-optim/code/geometry/v6:/home/peter/iga-optim/code/geometry/optimization/v5', '-begin');
 
 addpath('/home/peter/iga-optim/code/iga', '-begin');
 
 addpath('/home/peter/iga-optim/code/plot', '-begin');
 
-addpath('/home/peter/iga-optim/code/results/convergence:/home/peter/iga-optim/code/results/optimization/bobyqa', '-begin');
+addpath('/home/peter/iga-optim/code/results/convergence:/home/peter/iga-optim/code/results/optimization/cobyla', '-begin');
 
 addpath('/home/peter/iga-optim/code/setup', '-begin');
 
-addpath('/home/peter/iga-optim/code/volume-constraint', '-begin');
+addpath('/home/peter/iga-optim/code/volume-constraint/v5', '-begin');
 
 addpath('/home/peter/iga-optim/code/write', '-begin');
 

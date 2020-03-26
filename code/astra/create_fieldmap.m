@@ -1,13 +1,7 @@
-function [cathode_start, x, y, z, E] = create_fieldmap (filename, dx, dy, dz, geometry, space, phi)
-   rho   = nrbeval(geometry(6).nurbs, [0 1]);
-   z_max = nrbeval(geometry(1).nurbs, [1 0]);
-   % transversal dimensions
-   x = 0:dx:rho;
-   y = 0:dy:rho;
-   % longitudinal dimension
-   z = 0:dz:z_max;
-
+function [E] = create_fieldmap (filename, x, y, z, geometry, space, phi)
+   tic;
    [E, Nx, Ny, Nz] = compute_fieldmap (geometry, space, phi, x, y, z);
+   fprintf('\nfieldmap computation %d min\n', toc/60)
 
    % axisymmetry
    x = [-flip(x(2:end)) x];
@@ -16,5 +10,7 @@ function [cathode_start, x, y, z, E] = create_fieldmap (filename, dx, dy, dz, ge
    Ny = 2*Ny-1;
 
    % E-field in MV/m for Astra
+   tic;
    write_fieldmap (filename, Nx, x, Ny, y, Nz, z, E*1e-6);
+   fprintf('\nfile creation %d min\n', toc/60);
 end

@@ -1,37 +1,30 @@
 pkg load geopdes;
 
-order  = 4;
+order  = 3;
 N_ctrl = 4*(order-2);
 x_init = zeros(2*N_ctrl,1);
 
 [lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);
 
-% global:
-%  solo: ISRES
-% local:
-%  solo: COBYLA
+cst_func  = @(x) cost_function_max(x, order);
+vol_cstr  = @(x) volume_constraint(x, order);
+ctrl_cstr = @(x) ctrl_constraint(x, order, N_ctrl);
 
-% nlopt interface
+% local: {COBYLA, BOBYQA, Sbplx} global: {AGS, ISRES}
 opt.algorithm     = NLOPT_LN_COBYLA;
-opt.maxeval       = 500;
-opt.maxtime       = 36*60*60;
-
-% opt.algorithm     = NLOPT_GN_ISRES;
-% opt.population    = ;
-% opt.maxeval       = ;
-% opt.maxtime       = 7*24*60*60;
-
-opt.min_objective = @(x) cost_function_max(x, order);
+opt.min_objective = cst_func;
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
-opt.fc            = {@(x) volume_constraint(x, order), @(x) ctrl_constraint(x, order, N_ctrl)};
+opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
+opt.maxeval       = 150;
+opt.maxtime       = 15*60*60;
+% opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
+% base with order 3 needs 150 and +300 per order
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
 fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
-
-save(['result_nloptim_order=' num2str(order) '.mat'], 'x_opt', 'obj', 'retcode');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);
