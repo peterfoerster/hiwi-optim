@@ -16,9 +16,9 @@ function [] = write_astrainput (filename, generatorname, z_min, H_max, H_min, z_
    fprintf(fid, '  ZSTART = %d\n', z_min);
    fprintf(fid, '  ZSTOP = %d\n', z_max);
    % for optimization?
-   % fprintf(fid, '  Zemit = %d\n', N_out);
+   fprintf(fid, '  EmitS = True\n');
    fprintf(fid, '  TrackS = True\n');
-   % fprintf(fid, '  RefS = True\n');
+   fprintf(fid, '  RefS = True\n');
    fprintf(fid, '/\n');
 
    % space charge

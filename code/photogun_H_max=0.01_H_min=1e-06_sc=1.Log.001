@@ -6,7 +6,7 @@
  RUN     =           1,
  LOOP    = F,
  NLOOP   =           0,
- DISTRIBUTION    = I_part=10_Q=0.0001.in                                                                                             
+ DISTRIBUTION    = I_part=100_Q=0.0001.in                                                                                            
                                      ,
  N_RED   =           1,
  XOFF    =  0.000000000000000E+000,
@@ -34,7 +34,7 @@
  CHECK_REF_PART  = T,
  L_RM_BACK       = F,
  LMONITOR        = F,
- H_MAX   =   1.00000000000000     ,
+ H_MAX   =  1.000000000000000E-002,
  H_MIN   =  1.000000000000000E-006,
  DEBUNCH =  0.000000000000000E+000,
  MAX_STEP        =      100000,
@@ -56,8 +56,8 @@
  LSUB_ROT        = F,
  LSUB_COR        = F,
  LSUB_COUP       = F,
- REFS    = F,
- EMITS   = F,
+ REFS    = T,
+ EMITS   = T,
  C_EMITS = F,
  C99_EMITS       = F,
  TR_EMITS        = F,
@@ -95,8 +95,8 @@
  LSUB_LARMOR     = F,
  CROSS_START     =  0.000000000000000E+000,
  CROSS_END       =  0.000000000000000E+000,
- REFS    = F,
- EMITS   = F,
+ REFS    = T,
+ EMITS   = T,
  C_EMITS = F,
  C99_EMITS       = F,
  TR_EMITS        = F,
@@ -975,7 +975,7 @@
  /
  &CHARGE
  LOOP    = F,
- LSPCH   = F,
+ LSPCH   = T,
  LSPCH3D = F,
  LSPCH3DMG       = F,
  L2D_3D  = F,
@@ -4992,6 +4992,6 @@
  /
  End of Input deck
 
-     execution started:   26. 3.2020     22:03
-     execution finished:  26. 3.2020     22:03
-     execution time:  0.02 sec                         
+     execution started:   27. 3.2020     15:10
+     execution finished:  27. 3.2020     15:14
+     execution time:  3 min 54.44 sec                  

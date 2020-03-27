@@ -1,0 +1,5 @@
+&INPUT
+  FNAME = 'I_part=100_Q=0.0001.in'
+  Ipart = 100
+  Probe = True  Cathode = True  Q_total = 0.0001
+/

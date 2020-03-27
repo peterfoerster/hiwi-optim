@@ -112,10 +112,20 @@ In order to compare the results with the original geometry and simulation the op
 \begin{itemize}
    \item new maximal volume for electrode?
    \item volume constraint for anode ring?
-   \item make size of patch 1/11 also a parameter?
-   \item how much is inner insulator or already PEC?
+   \item make size of patch 1/11 also a parameter? (shorter connector)
+   \item how much is inner insulator or already PEC?\\
 
-   \item let constraint for Lagrangian return Inf or rather make all similar magnitude?
+   \item let constraint for Lagrangian return Inf or rather make all similar
+   magnitude? (vector for ctrl-constraint)\\
+
+   \item fieldmap convergence (fixed $H_\mathrm{max}$, field from optimization)
+   \item laser spot 4 mm (rms beam size)?
+   \item how many probe particles?
+   \item time integrator convergence (fixed fieldmap, $H_\mathrm{max}=H_\mathrm{min}$)
+   \item 3D space charge or 2D cylindrical grid? (tracking always in 3D)
+   \item space charge convergence (number of grid cells, number of particles)\\
+
+   \item cost function, rms beam size (individual trajectories)
 \end{itemize}
 
 \subsection{Astra}

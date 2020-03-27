@@ -23,23 +23,36 @@ fieldmapname = ['DC-3D-degree=' num2str(method_data.degree(1)) '_nsub=' num2str(
 create_fieldmap (fieldmapname, x, y, z, geometry, space, phi);
 
 % create inputfile for astra
-I_part = 10;
+% further ones get appended
+I_part  = 100;
+N_probe = 16;
 % in [nC]
 Q = 100e-6;
 generatorname = ['I_part=' num2str(I_part) '_Q=' num2str(Q) '.in'];
 write_generatorinput (generatorname, I_part, Q, z_min);
+[status, output] = system(['./generator generator_' generatorname]);
+% plot input distribution
+plot_generator (generatorname, geometry, z_min);
 
 % in [ns]
-H_max = 1;
+H_max = 1e-2;
 H_min = 1e-6;
-options.spacecharge = 0;
-filename = ['photogun_H_max=' num2str(H_max) '_H_min=' num2str(H_min) '_sc=' num2str(options.spacecharge) '.in'];
-write_astrainput (filename, generatorname, z_min, H_max, H_min, z_max, fieldmapname, options);
-return
+options.spacecharge = 1;
+filename = ['photogun_H_max=' num2str(H_max) '_H_min=' num2str(H_min) '_sc=' num2str(options.spacecharge)];
+write_astrainput ([filename '.in'], generatorname, z_min, H_max, H_min, z_max, fieldmapname, options);
 tic;
-[status, output] = system(['./Astra ' filename]);
-fprintf('\nperformed tracking in: %d s\n', toc);
-trackname = ['track_Q=' num2str(Q) '_N_prt=' num2str(N_prt) '_N_probe=' num2str(N_probe) '_distro=' distro '_spacecharge=' num2str(options.spacecharge) '.txt'];
+[status, output] = system(['./Astra ' filename '.in']);
+fprintf('\ntracking %d min\n', toc/60);
+return
+
+% rms beam size?
+plot_astra ([filename '.track.001'], geometry, N_probe);
+[status, output] = system(['./lineplot ' filename]);
+[status, output] = system(['./fieldplot ' filename]);
+return
+
+trackname = ['track_Q=' num2str(Q) '_N_prt=' num2str(N_prt) '_N_probe=' num2str(N_probe) ...
+             '_distro=' distro '_spacecharge=' num2str(options.spacecharge) '.txt'];
 [err, msg] = rename ('electrongun.track.001', trackname);
 delete('electrongun.Log.001');
 

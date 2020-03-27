@@ -8,7 +8,8 @@ function [] = write_generatorinput (filename, I_part, Q, z_min)
    fprintf(fid, '  Probe = True');
    fprintf(fid, '  Cathode = True');
    fprintf(fid, '  Q_total = %d\n', Q);
-   fprintf(fid, '  Ref_zpos = %d\n', z_min);
+   % clashes with Zoff
+   % fprintf(fid, '  Ref_zpos = %d\n', z_min);
    % photo emission for optimization?
    % fprintf(fid, '  Dist_z = ');
    % fprintf(fid, '  Dist_pz = ');
