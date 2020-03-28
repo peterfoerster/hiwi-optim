@@ -1,7 +1,7 @@
 pkg load geopdes;
 
-geometry_file = 'geometry_v6';
-% geometry_file = 'photocathode_200kV_optim_order=3_run22';
+% geometry_file = 'geometry_v6';
+geometry_file = 'photocathode_200kV_optim_order=3_run23';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 

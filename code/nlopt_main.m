@@ -17,10 +17,10 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
+% base with order 3 needs 150 and +300 per order
 opt.maxeval       = 150;
 opt.maxtime       = 15*60*60;
 % opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
-% base with order 3 needs 150 and +300 per order
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
