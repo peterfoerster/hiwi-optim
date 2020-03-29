@@ -1,5 +1,5 @@
 \subsection{Geometry}
-The two latest geometries are depicted in fig.~\ref{fig:geometry_v5} and fig.~\ref{fig:geometry_v6}. The numbers refer to the individual patches in the context of IGA. The patch boundaries are indicated by grey lines.
+The two latest geometries are depicted in fig.~\ref{fig:geometry_v5} and fig.~\ref{fig:geometry_v6}. The patch boundaries and boundary conditions are indicated by the colored lines.
 
 We also observe triple points within the computational domain. These are defined by material boundaries between air/vacuum, steel and the insulator.
 
@@ -32,8 +32,8 @@ We also observe triple points within the computational domain. These are defined
 % \end{center}
 
 \subsection{Electric Field}
-The solution for the electric field are shown in fig.~\ref{fig:200kV_v6} and fig.~\ref{fig:300kV_v6}.
-It was computed with $p=2$ as the degree of the basis functions and $n_\mathrm{sub}=16$ as the number of elements that each knot vector is uniformly split into.
+The solutions of the electric field for version 6 are shown in fig.~\ref{fig:200kV_v6} and fig.~\ref{fig:300kV_v6}.
+They were computed with $p=2$ as the degree of the basis functions and $n_\mathrm{sub}=16$ as the number of elements that each knot vector is uniformly split into.
 It is evident that there exist parts of the domain where the magnitude of the electric field is close to the limit of $10 \frac{\mathrm{MV}}{\mathrm{m}}$. There are also very high gradients visible at the triple points, however these also coincide with sharp corners so numerical issues might play a role.
 
 \begin{center}
@@ -52,83 +52,50 @@ It is evident that there exist parts of the domain where the magnitude of the el
 \end{center}
 
 \subsection{Optimization}
-The aim of the optimization is to minimize the maximal field amplitudes. For practicality we will only look at the critical points of the geometry, i.~e.~the curvatures of the upper electrode and their respective control points are the DoFs. Aside from geometrical constraints we also consider a volume constraint.
-
-\subsubsection{Cost Function}
-
-\subsubsection{Volume Constraint}
-
-\subsubsection{Additional Constraints}
-As an additional constraint we require $C^1$ continuity of the section that is optimized. The starting nurbs is depicted in fig.~\ref{fig:nurbs}. Furthermore the control points, which represent the DoFs, are constrained to stay inside their respective patch boundaries and in the correct order.
-
-\begin{center}
-\begin{figure}[H]
-   % \input{}
-   \caption{$C^1$ continuous nurbs that is to be optimized including the variable control points which represent the DoFs.}
-   \label{fig:nurbs}
-\end{figure}
-\end{center}
-
-\subsubsection{NLopt}
-For the optimization we used implementations of BOBYQA and COBYLA as given by the NLopt libary.
-
-\subsubsection{Results}
-
-\begin{center}
-\begin{figure}[H]
-   % \includegraphics[width=\textwidth]{}
-   \caption{Optimization result using BOBYQA.}
-   \label{fig:results}
-\end{figure}
-\end{center}
-
-In order to compare the results with the original geometry and simulation the optimized geometry was also imported and simulated in CST. The results indicate a clear improvement from the optimized geometry over the original one. This is in agreement with the numerical improvement observed in the context of IGA.
+The aim of the previous optimization was to minimize the maximal field amplitudes. The results are shown in fig.~\ref{fig:v5_opt}.
 
 \begin{center}
 \begin{figure}[H]
    \begin{subfigure}{0.45\textwidth}
-      % \includegraphics[width=\textwidth]{}
+      \includegraphics[width=\textwidth]{fig/v5_init}
+      \caption{Version 5 initial solution.}
+      \label{fig:v5_init}
    \end{subfigure}
    \begin{subfigure}{0.45\textwidth}
-      % \includegraphics[width=\textwidth]{}
+      \includegraphics[width=\textwidth]{fig/v5_opt}
+      \caption{Version 5 Optimization Result.}
+      \label{fig:v5_opt}
    \end{subfigure}
-   \caption{Mesh of original and optimized geometry in CST.}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      % \includegraphics[width=\textwidth]{}
-   \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      % \includegraphics[width=\textwidth]{}
-   \end{subfigure}
-   \caption{Results of original and optimized geometry in CST.}
 \end{figure}
 \end{center}
 
 \subsection{Questions}
 \begin{itemize}
-   \item new maximal volume for electrode?
-   \item volume constraint for anode ring?
-   \item make size of patch 1/11 also a parameter? (shorter connector)
-   \item how much is inner insulator or already PEC?\\
+   \item \textbf{Geometry}: How much of patches 32,33,34,35 is insulator material or where does the metal start?\\
 
-   \item let constraint for Lagrangian return Inf or rather make all similar
-   magnitude? (vector for ctrl-constraint)\\
+   \item \textbf{Optimization}: Also make size of patch 1/11 a parameter?
+   \item Is there a new maximal volume for electrode? (Otherwise we need to change the starting shape, since its volume is too large.)
+   \item Is there a volume constraint for the anode ring?
+   \item Optimize different parts of the geometry individually? (Couple by enforcing $C^1$ continuity at the curves interface.)
+   \item Patches 8,9,10,14 for beam parameters, since 6,7 fixed? (Also anode ring.)\\
 
-   \item fieldmap convergence (fixed $H_\mathrm{max}$, field from optimization)
-   \item laser spot 4 mm (rms beam size)?
-   \item how many probe particles?
-   \item time integrator convergence (fixed fieldmap, $H_\mathrm{max}=H_\mathrm{min}$)
-   \item 3D space charge or 2D cylindrical grid? (tracking always in 3D)
-   \item space charge convergence (number of grid cells, number of particles)\\
+   \item \textbf{Astra}: Investigate fieldmap convergence. (Use fixed $H_\mathrm{max}$, field solution as in optimization, compare particle trajectories.) (Use specific norm?) (Only consider particles in cross-section?)
+   \item Investigate time integrator convergence (fixed fieldmap, $H_\mathrm{max}=H_\mathrm{min}$.)
 
-   \item cost function, rms beam size (individual trajectories)
+   \item Use bunch length of 5 ps. (Uniform distribution?)
+   \item Use laser spot size of 4 $\mathrm{mm}^2$. (Gaussian distribution with (2-5) $\sigma$ width of $2/\sqrt{\pi}$?)
+   \item Other parameters: total charge 100 fC.
+
+   \item Investigate convergence for number of probe particles and number of grid cells for 2D space charge. (Tracking is always 3D but 2D space charge computation respects mirror charges and should model the problem better?)
+
+   \item \textbf{Cost Function} Use rms beam size, or individual trajectories (their minima). Other criteria?
+
+   \item \textbf{General}: Let the constraint function return Inf in Lagrangian formulation or rather make all constraints be of similar magnitude? (Different solution: Use a vector for the ctrl-constraint.)\\
 \end{itemize}
 
 \subsection{Astra}
-In the future we may also optimize the electrode boundary next to the puck, i.~e.~patches 3, 4 and 5 to obtain optimal particle trajectories. The cost function will be computed using Astra.
-The desired total bunch charge is $10$ pC with a beam current of $(20-100)\ \mu\mathrm{A}$, whereas a typical value would be $100$ fC. The bunch length is around $5$ ps with a normalized transversal emittance of $e_{x,y} \leq 1\ \mathrm{mm\: mrad}$. The desired energy resolution is $\frac{\Delta E}{E} \leq 10^{-4}$.
-The tracking will be performed using individual bunches from a pulsed laser. The emission model may be derived from \cite{wagner}.
+   \begin{center}
+      \begin{figure}[H]
+         \includegraphics[width=\textwidth]{fig/astra}
+      \end{figure}
+   \end{center}

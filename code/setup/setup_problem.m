@@ -8,7 +8,7 @@ function [problem_data, method_data] = setup_problem (geometry_file)
    epsilon_r = 9.4;
    problem_data.epsilon = @(x,y,ip) epsilon(ip, x, y, epsilon_r, geometry_file);
 
-   v_el = -300e3;
+   v_el = -200e3;
    v_ar = 0;
    % v_ar = 1e3;
    problem_data.f = @(x,y) zeros(size(x));
