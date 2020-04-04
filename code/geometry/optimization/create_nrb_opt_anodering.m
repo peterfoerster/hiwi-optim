@@ -1,4 +1,4 @@
-function [nrb_opt, knts] = create_nrb_opt_upperelectrode (ptcs, order)
+function [nrb_opt, knts] = create_nrb_opt_anodering (ptcs, order)
    bnds    = nrbextract(ptcs(2));
    crv(2)  = bnds(2);
    bnds    = nrbextract(ptcs(3));

@@ -71,16 +71,16 @@ The aim of the previous optimization was to minimize the maximal field amplitude
 
 \subsection{Questions}
 \begin{itemize}
-   \item \textbf{Geometry}: How much of patches 32,33,34,35 is insulator material or where does the metal start?\\
+   % \item \textbf{Geometry}: How much of patches 32,33,34,35 is insulator material or where does the metal start?\\
 
-   \item \textbf{Optimization}: Also make size of patch 1/11 a parameter?
+   \item \textbf{Optimization}: Also make size of patch 1,11 a parameter? (Anode voltage as well?)
    \item Is there a new maximal volume for electrode? (Otherwise we need to change the starting shape, since its volume is too large.)
    \item Is there a volume constraint for the anode ring?
    \item Optimize different parts of the geometry individually? (Couple by enforcing $C^1$ continuity at the curves interface.)
    \item Patches 8,9,10,14 for beam parameters, since 6,7 fixed? (Also anode ring.)\\
 
    \item \textbf{Astra}: Investigate fieldmap convergence. (Use fixed $H_\mathrm{max}$, field solution as in optimization, compare particle trajectories.) (Use specific norm?) (Only consider particles in cross-section?)
-   \item Investigate time integrator convergence (fixed fieldmap, $H_\mathrm{max}=H_\mathrm{min}$.)
+   \item Investigate time integrator convergence. (Use fixed fieldmap, $H_\mathrm{max}=H_\mathrm{min}$.)
 
    \item Use bunch length of 5 ps. (Uniform distribution?)
    \item Use laser spot size of 4 $\mathrm{mm}^2$. (Gaussian distribution with (2-5) $\sigma$ width of $2/\sqrt{\pi}$?)

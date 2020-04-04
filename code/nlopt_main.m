@@ -1,7 +1,7 @@
 pkg load geopdes;
 
 order  = 3;
-N_ctrl = 4*(order-2);
+N_ctrl = 5*(order-2);
 x_init = zeros(2*N_ctrl,1);
 
 [lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);
@@ -24,7 +24,7 @@ opt.maxtime       = 15*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
-fprintf('\ntime elapsed for optimization: %d min\n', toc/60);
+fprintf('\n time elapsed for optimization: %d min \n', toc/60);
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

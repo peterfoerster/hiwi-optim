@@ -1,12 +1,12 @@
 function [] = write_ctrl_opt (geometry)
    nsub  = 8;
    % upper electrode
-   % iptcs = [14 15 16 17 18 19];
-   % ibnds = [ 3  1  1  1  4  4];
+   iptcs = [14 15 16 17 18 19];
+   ibnds = [ 3  1  1  1  4  4];
 
    % front electrode
-   iptcs = [7 8 9 10 14 15];
-   ibnds = [3 3 3  3  3  1];
+   % iptcs = [7 8 9 10 14 15];
+   % ibnds = [3 3 3  3  3  1];
 
    % anode ring
    % iptcs = [2 3 4 7 8 9 10 13 12];
@@ -15,8 +15,8 @@ function [] = write_ctrl_opt (geometry)
    for ii=1:length(iptcs)
       hold on;
       bnds = nrbextract(geometry(iptcs(ii)).nurbs);
-      nrbctrlplot_dat(bnds(ibnds(ii)), nsub, ['nurbs_' num2str(iptcs(ii)) '_' num2str(ibnds(ii))]);
-      % nrbkntplot(bnds(ibnds(ii)));
+      % nrbctrlplot_dat(bnds(ibnds(ii)), nsub, ['nurbs_' num2str(iptcs(ii)) '_' num2str(ibnds(ii))]);
+      nrbctrlplot(bnds(ibnds(ii)));
       hold off;
    end
 end

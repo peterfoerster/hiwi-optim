@@ -1,8 +1,7 @@
 function [fc] = volume_constraint(x, order)
-   % geometry_file = ['optim_v6_order=' num2str(order)];
-   % create_photocathode_optim (geometry_file, x, order);
-   geometry_file = 'photocathode_200kV_v6_electrode';
-   [geometry, boundaries, interfaces, ~, boundary_interfaces] = mp_geo_load ([geometry_file '.txt']);
+   geometry_file = ['v6_opt_order=' num2str(order)];
+   create_geometry_opt (geometry_file, x, order);
+   [geometry, boundaries] = mp_geo_load ('electrode_v6.txt');
 
    degree = [2 2];
    nsub   = [2^2 2^2];

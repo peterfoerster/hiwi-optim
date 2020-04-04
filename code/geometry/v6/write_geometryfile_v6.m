@@ -27,5 +27,12 @@ function [] = write_geometryfile_v6 (ptcs_vac, ptcs_el, filename)
    [interfaces, boundaries] = nrbmultipatch (ptcs_el);
    boundaries = [];
 
+   boundaries(1).patches = [1 2 3 4 5 5 6 6 3 2 1 1];
+   boundaries(1).faces   = [4 4 2 4 2 3 3 1 1 3 3 1];
+
+   for ibnd=1:length(boundaries)
+      boundaries(ibnd).nsides = length(boundaries(ibnd).patches);
+   end
+
    nrbexport (ptcs_el, interfaces, boundaries, 'electrode_v6.txt');
 end

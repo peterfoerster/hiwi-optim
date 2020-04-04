@@ -30,10 +30,6 @@ function [nrb_opt, knts] = create_nrb_opt_upperelectrode (ptcs, order)
    knts = [zeros(1,order) repmat(pt(19), 1, order-2) repmat(pt(18), 1, order-2) ...
            repmat(pt(17), 1, order-2) repmat(pt(16), 1, order-2) repmat(pt(15), 1, order-2) ones(1,order)];
    nrb_opt = nrbmak(ctrl, knts);
-
-   % hold on;
-   % nrbctrlplot(nrb_opt);
-   % hold off;
 end
 
 % only needed for precomputation once

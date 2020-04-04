@@ -1,12 +1,11 @@
-order  = 5;
-N_ctrl = 4*(order-2);
-x      = zeros(2*N_ctrl,1);
+pkg load geopdes;
+clf;
 
-% positive differences are inside the correct domain
-% only use minimal difference as constraint function
-% test individual control points
-x(1) = -0.005;
+order    = 3;
+N_ctrl   = 5*(order-2);
+x        = zeros(2*N_ctrl,1);
 
 tic;
+% positive differences are inside the allowed domain
 fc = ctrl_constraint(x, order, N_ctrl)
-fprintf('\ntime elapsed for solution: %d min\n', toc/60);
+fprintf('\n control constraint %d min \n', toc/60);
