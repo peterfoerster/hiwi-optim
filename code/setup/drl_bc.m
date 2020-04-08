@@ -3,7 +3,7 @@ function [h] = drl_bc (ib, x, y, v_el, v_ar)
       % electrode
       case {1}
          h = v_el*ones(size(x));
-      % vacuum chamber/anode ring
+      % anode ring
       case {2}
          h = v_ar*ones(size(x));
       % vacuum chamber

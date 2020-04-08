@@ -1,9 +1,9 @@
 pkg load geopdes;
 clf;
 
-order    = 3;
-N_ctrl   = 5*(order-2);
-x        = zeros(2*N_ctrl,1);
+order  = 3;
+N_ctrl = 5*(order-2);
+x      = zeros(2*N_ctrl,1);
 
 tic;
 % positive differences are inside the allowed domain

@@ -1,0 +1,13 @@
+&INPUT
+  FNAME = 'Ipart=8192_Q_total=0.0001_sig_clock=0.03.in'
+  Ipart = 8192
+  Probe = True
+  Cathode = True
+  Q_total = 0.0001
+  Dist_z = uniform
+  sig_clock = 0.03
+  Dist_x = gauss
+  sig_x = 0.4
+  Dist_y = gauss
+  sig_y = 0.4
+/

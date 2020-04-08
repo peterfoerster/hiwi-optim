@@ -1,4 +1,9 @@
-function [] = write_astrainput (filename, generatorname, z_min, H_max, H_min, z_max, fieldmapname, options)
+function [] = write_astrainput (filename, generatorname, fieldmapname, H, sc, Nrad, Cell_var, Nlong_in, geometry)
+   z_min = nrbeval(geometry(6).nurbs, [1 0]);
+   z_min = z_min(1);
+   z_max = nrbeval(geometry(1).nurbs, [0 1]);
+   z_max = z_max(1);
+
    fid = fopen (filename, 'w');
 
    % newrun
@@ -7,27 +12,27 @@ function [] = write_astrainput (filename, generatorname, z_min, H_max, H_min, z_
    fprintf(fid, '  Zoff = %d\n', z_min);
    fprintf(fid, '  Z_min = %d\n', z_min);
    fprintf(fid, '  Z_Cathode = %d\n', z_min);
-   fprintf(fid, '  H_max = %d\n', H_max);
-   fprintf(fid, '  H_min = %d\n', H_min);
+   fprintf(fid, '  H_max = %d\n', H);
+   fprintf(fid, '  H_min = %d\n', H);
    fprintf(fid, '/\n');
 
    % output
    fprintf(fid, '\n&OUTPUT\n');
    fprintf(fid, '  ZSTART = %d\n', z_min);
    fprintf(fid, '  ZSTOP = %d\n', z_max);
-   % for optimization?
    fprintf(fid, '  EmitS = True\n');
    fprintf(fid, '  TrackS = True\n');
    fprintf(fid, '  RefS = True\n');
    fprintf(fid, '/\n');
 
    % space charge
-   if (options.spacecharge)
+   if (sc)
       fprintf(fid, '\n&CHARGE\n');
-      % normal space charge
       fprintf(fid, '  LSPCH = True\n');
-      % 3D space charge
-      % fprintf(fid, '  LSPCH3D=True\n');
+      % cylindrical grid
+      fprintf(fid, '  Nrad = %d\n', Nrad);
+      fprintf(fid, '  Cell_var = %d\n', Cell_var);
+      fprintf(fid, '  Nlong_in = %d\n', Nlong_in);
       fprintf(fid, '/\n');
    end
 

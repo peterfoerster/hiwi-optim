@@ -1,4 +1,4 @@
-function [] = plot_astra (filename, geometry, N_probe)
+function [] = plot_astra (filename, geometry)
    astra = dlmread(filename);
    x = astra(:,3:5);
    [theta, rho] = cart2pol(x(:,2), x(:,3));
@@ -11,12 +11,12 @@ function [] = plot_astra (filename, geometry, N_probe)
    %    hold on;
    % end
 
-   for ip=1:N_probe
+   for ip=1:6
       ix = find(astra(:,1) == ip);
       hold on;
       plot(x(ix,1), x(ix,2)*1e-3);
-      [rho_min, imin] = min(x(ix,2));
-      scatter(x(ix(imin),1), x(ix(imin),2)*1e-3, 'filled');
+      % [rho_min, imin] = min(x(ix,2));
+      % scatter(x(ix(imin),1), x(ix(imin),2)*1e-3, 'filled');
       hold off;
    end
 

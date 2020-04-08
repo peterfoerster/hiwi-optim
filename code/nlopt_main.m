@@ -10,7 +10,7 @@ cst_func  = @(x) cost_function_max(x, order);
 vol_cstr  = @(x) volume_constraint(x, order);
 ctrl_cstr = @(x) ctrl_constraint(x, order, N_ctrl);
 
-% local: {COBYLA, BOBYQA, Sbplx} global: {AGS, ISRES}
+% local: {COBYLA} global: {AGS, ISRES}
 opt.algorithm     = NLOPT_LN_COBYLA;
 opt.min_objective = cst_func;
 opt.lower_bounds  = lb;
@@ -20,7 +20,6 @@ opt.verbose       = 1;
 % base with order 3 needs 150 and +300 per order
 opt.maxeval       = 150;
 opt.maxtime       = 15*60*60;
-% opt.local_optimizer.algorithm = NLOPT_LN_BOBYQA;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_init);

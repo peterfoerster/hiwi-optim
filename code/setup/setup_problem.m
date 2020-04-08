@@ -1,7 +1,5 @@
 function [problem_data, method_data] = setup_problem (geometry_file)
    problem_data.geo_name     = [geometry_file '.txt'];
-   % problem_data.drchlt_sides = [1 2];
-   % problem_data.nmnn_sides   = [3];
    problem_data.drchlt_sides = [1 2 3];
    problem_data.nmnn_sides   = [4];
 
@@ -9,7 +7,6 @@ function [problem_data, method_data] = setup_problem (geometry_file)
    problem_data.epsilon = @(x,y,ip) epsilon(ip, x, y, epsilon_r, geometry_file);
 
    v_el = -300e3;
-   % v_ar = 0;
    v_ar = 1e3;
    problem_data.f = @(x,y) zeros(size(x));
    problem_data.h = @(x,y,ib) drl_bc (ib, x, y, v_el, v_ar);

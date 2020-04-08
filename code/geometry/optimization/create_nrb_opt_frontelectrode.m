@@ -30,11 +30,6 @@ function [nrb_opt, knts] = create_nrb_opt_frontelectrode (ptcs, order)
    knts = [zeros(1,order) repmat(pt(8), 1, order-2) ...
            repmat(pt(9), 1, order-2) repmat(pt(10), 1, order-2) repmat(pt(14), 1, order-2) ones(1,order)];
    nrb_opt = nrbmak(ctrl, knts);
-
-   % hold on;
-   % nrbctrlplot(nrb_opt);
-   % nrbkntplot(nrb_opt);
-   % hold off;
 end
 
 % only needed for precomputation once

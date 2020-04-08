@@ -1,7 +1,18 @@
-function [E] = create_fieldmap (filename, x, y, z, geometry, space, phi)
+function [] = create_fieldmap (filename, nx, ny, nz, geometry, space, phi)
+   % factor 1.5 of distribution width
+   rho   = 1.5e-3;
+   z_min = nrbeval(geometry(6).nurbs, [1 0]);
+   z_min = z_min(1);
+   z_max = nrbeval(geometry(1).nurbs, [0 1]);
+   z_max = z_max(1);
+
+   x = linspace(0, rho, nx);
+   y = linspace(0, rho, ny);
+   z = linspace(z_min, z_max, nz);
+
    tic;
    [E, Nx, Ny, Nz] = compute_fieldmap (geometry, space, phi, x, y, z);
-   fprintf('\nfieldmap computation %d min\n', toc/60)
+   fprintf('\n fieldmap computation %d min \n', toc/60)
 
    % axisymmetry
    x = [-flip(x(2:end)) x];
@@ -12,5 +23,5 @@ function [E] = create_fieldmap (filename, x, y, z, geometry, space, phi)
    % E-field in MV/m for Astra
    tic;
    write_fieldmap (filename, Nx, x, Ny, y, Nz, z, E*1e-6);
-   fprintf('\nfile creation %d min\n', toc/60);
+   fprintf('\n file creation %d min\n', toc/60);
 end

@@ -1,7 +1,7 @@
 pkg load geopdes;
 
-geometry_file = 'photocathode_200kV_v5';
-filename      = 'cvg_v5';
+geometry_file = 'geometry_v6';
+filename      = 'cvg_v6';
 % specify problem and material data
 [problem_data, method_data] = setup_problem (geometry_file);
 N_it       = 4;

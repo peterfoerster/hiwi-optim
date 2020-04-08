@@ -1,10 +1,10 @@
 pkg load geopdes;
 
 % contains the optimized DoFs in [x]
-filename = 'result_nloptim_order=3_run23';
+filename = 'result_order=3_run1';
 load([filename '.mat']);
 order  = 3;
-N_ctrl = 4*(order-2);
+N_ctrl = 5*(order-2);
 x_init = zeros(2*N_ctrl,1);
 
 % volume constraint

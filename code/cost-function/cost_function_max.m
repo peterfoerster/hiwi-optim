@@ -12,5 +12,5 @@ function [obj] = cost_function_max (x, order)
    end
    obj = obj/length(iptcs);
    % save x_opt and obj_opt
-   save(['result_nlopt_order=' num2str(order) '.mat'], 'x', 'obj');
+   save(['result_order=' num2str(order) '.mat'], 'x', 'obj');
 end

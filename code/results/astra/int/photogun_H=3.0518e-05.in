@@ -1,0 +1,24 @@
+&NEWRUN
+  Distribution = 'I=128_Q=0.0001_sc=0.03.in'
+  Zoff = 0.307
+  Z_min = 0.307
+  Z_Cathode = 0.307
+  H_max = 3.05176e-05
+  H_min = 3.05176e-05
+/
+
+&OUTPUT
+  ZSTART = 0.307
+  ZSTOP = 0.447
+  EmitS = True
+  TrackS = True
+  RefS = True
+/
+
+&CAVITY
+  LEField = True
+  File_Efield(1) = 'DC-3D-p=3_nsub=16_nx=ny=16_nz=32'
+  C_noscale(1) = True
+  Com_grid(1) = 'E'
+  Nue(1) = 0
+/
