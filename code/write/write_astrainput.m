@@ -22,7 +22,7 @@ function [] = write_astrainput (filename, generatorname, fieldmapname, H, sc, Nr
    fprintf(fid, '  ZSTOP = %d\n', z_max);
    fprintf(fid, '  EmitS = True\n');
    fprintf(fid, '  TrackS = True\n');
-   fprintf(fid, '  RefS = True\n');
+   fprintf(fid, '  RefS = False\n');
    fprintf(fid, '/\n');
 
    % space charge

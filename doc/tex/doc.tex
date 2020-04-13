@@ -1,101 +1,171 @@
 \subsection{Geometry}
-The two latest geometries are depicted in fig.~\ref{fig:geometry_v5} and fig.~\ref{fig:geometry_v6}. The patch boundaries and boundary conditions are indicated by the colored lines.
-
-We also observe triple points within the computational domain. These are defined by material boundaries between air/vacuum, steel and the insulator.
+\begin{itemize}
+   \item latest geometry in Figure \ref{fig:init}
+   \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$,  $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
+   \item (patches $32 \dots 35$ are not correct, missing the correct high voltage adapter)
+\end{itemize}
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/geometry_v5}
-      \caption{Version 5.}
-      \label{fig:geometry_v5}
-   \end{subfigure}
    \begin{subfigure}{0.45\textwidth}
       \includegraphics[width=\textwidth]{fig/geometry_v6}
-      \caption{Version 6.}
-      \label{fig:geometry_v6}
-   \end{subfigure}
-   % \caption{.}
-\end{figure}
-\end{center}
-
-% \begin{center}
-%    \begin{figure}[p]
-%       \input{fig/geometry}
-%    \end{figure}
-% \end{center}
-%
-% \begin{center}
-%    \begin{figure}[p]
-%       \input{fig/anodering_init}
-%    \end{figure}
-% \end{center}
-
-\subsection{Electric Field}
-The solutions of the electric field for version 6 are shown in fig.~\ref{fig:200kV_v6} and fig.~\ref{fig:300kV_v6}.
-They were computed with $p=2$ as the degree of the basis functions and $n_\mathrm{sub}=16$ as the number of elements that each knot vector is uniformly split into.
-It is evident that there exist parts of the domain where the magnitude of the electric field is close to the limit of $10 \frac{\mathrm{MV}}{\mathrm{m}}$. There are also very high gradients visible at the triple points, however these also coincide with sharp corners so numerical issues might play a role.
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/200kV_v6}
-      \caption{200kV.}
-      \label{fig:200kV_v6}
+      % \caption{geometry}
+      % \label{fig:geometry_v6}
    \end{subfigure}
    \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/300kV_v6}
-      \caption{300kV.}
-      \label{fig:300kV_v6}
+      \includegraphics[width=\textwidth]{fig/E_v6}
+      % \caption{magnitude of electric field}
+      % \label{fig:E_v6}
    \end{subfigure}
+   \caption{initial geometry and electric field}
+   \label{fig:init}
 \end{figure}
 \end{center}
 
 \subsection{Optimization}
-The aim of the previous optimization was to minimize the maximal field amplitudes. The results are shown in fig.~\ref{fig:v5_opt}.
+\begin{itemize}
+   \item optimized geometry in Figure \ref{fig:opt}
+   \item cost function only takes into account electric field
+   \item only the upper electrode shape is optimized (volume constrained could be kept as before at $625\ \mathrm{cm}^3$)
+   \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$,  $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
+   \item \textbf{magnitude of E-field remains large in patch 14}
+\end{itemize}
 
 \begin{center}
 \begin{figure}[H]
    \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/v5_init}
-      \caption{Version 5 initial solution.}
-      \label{fig:v5_init}
+      \includegraphics[width=\textwidth]{fig/geometry_v6_opt_order=3_run1}
+      % \caption{geometry}
+      % \label{fig:geometry_v6_opt}
    \end{subfigure}
    \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/v5_opt}
-      \caption{Version 5 Optimization Result.}
-      \label{fig:v5_opt}
+      \includegraphics[width=\textwidth]{fig/E_v6_opt_order=3_run1}
+      % \caption{magnitude of electric field}
+      % \label{fig:E_v6_opt}
    \end{subfigure}
+   \caption{optimized geometry and electric field}
+   \label{fig:opt}
 \end{figure}
 \end{center}
 
-\subsection{Questions}
+\subsection{Tracking}
 \begin{itemize}
-   % \item \textbf{Geometry}: How much of patches 32,33,34,35 is insulator material or where does the metal start?\\
-
-   \item \textbf{Optimization}: Also make size of patch 1,11 a parameter? (Anode voltage as well?)
-   \item Is there a new maximal volume for electrode? (Otherwise we need to change the starting shape, since its volume is too large.)
-   \item Is there a volume constraint for the anode ring?
-   \item Optimize different parts of the geometry individually? (Couple by enforcing $C^1$ continuity at the curves interface.)
-   \item Patches 8,9,10,14 for beam parameters, since 6,7 fixed? (Also anode ring.)\\
-
-   \item \textbf{Astra}: Investigate fieldmap convergence. (Use fixed $H_\mathrm{max}$, field solution as in optimization, compare particle trajectories.) (Use specific norm?) (Only consider particles in cross-section?)
-   \item Investigate time integrator convergence. (Use fixed fieldmap, $H_\mathrm{max}=H_\mathrm{min}$.)
-
-   \item Use bunch length of 5 ps. (Uniform distribution?)
-   \item Use laser spot size of 4 $\mathrm{mm}^2$. (Gaussian distribution with (2-5) $\sigma$ width of $2/\sqrt{\pi}$?)
-   \item Other parameters: total charge 100 fC.
-
-   \item Investigate convergence for number of probe particles and number of grid cells for 2D space charge. (Tracking is always 3D but 2D space charge computation respects mirror charges and should model the problem better?)
-
-   \item \textbf{Cost Function} Use rms beam size, or individual trajectories (their minima). Other criteria?
-
-   \item \textbf{General}: Let the constraint function return Inf in Lagrangian formulation or rather make all constraints be of similar magnitude? (Different solution: Use a vector for the ctrl-constraint.)\\
+   \item \textbf{general settings}: $Q=100\ \mathrm{fC}$, $\tau_\mathrm{b}=30\ \mathrm{ps}$
+   \item \textbf{initial distribution}: Gaussian with $\sigma=400\ \mu\mathrm{m}$, see Figure \ref{fig:generator} for comparison with laser measurement (probe particles at $0.5\sigma$, $\sigma$, $1.5\sigma$ in red)
 \end{itemize}
 
-\subsection{Astra}
-   \begin{center}
-      \begin{figure}[H]
-         \includegraphics[width=\textwidth]{fig/astra}
-      \end{figure}
-   \end{center}
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/generator}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/laser}
+   \end{subfigure}
+   \caption{initial distribution (1000 particles) and laser measurement}
+   \label{fig:generator}
+\end{figure}
+\end{center}
+
+\begin{itemize}
+   \item \textbf{convergence of time integrator}: error of normalized transversal emmitance $\epsilon$ is shown in Figure \ref{fig:int_cvg} ($H=2^{-11}\ \mathrm{ns}$ used later on)\\
+\end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/int_emit}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/int_cvg}
+   \end{subfigure}
+   \caption{normalized transversal emmitance and absolute error of time integrator in $l_\infty$-norm}
+   \label{fig:int_cvg}
+\end{figure}
+\end{center}
+
+\begin{itemize}
+   \item \textbf{convergence of field map}: look at convergence in transversal $n_x, n_y$ and longitudinal $n_z$ direction with number of interpolation points given by $2^n$
+   \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z$ large and fixed
+   \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=4$ fixed
+   \item $n_x=n_y=4$ and $n_z=6$ used later on
+\end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/map_emit_xy}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/map_cvg_xy}
+   \end{subfigure}
+   \caption{normalized transversal emmitance and absolute error of field map in $l_\infty$-norm for $n_z=6$ and $n_x=n_y$ variable}
+   \label{fig:map_cvg_xy}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/map_emit_z}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/map_cvg_z}
+   \end{subfigure}
+   \caption{normalized transversal emmitance and absolute error of field map in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=4$}
+   \label{fig:map_cvg_z}
+\end{figure}
+\end{center}
+
+\begin{itemize}
+   \item \textbf{convergence of space charge}: look at convergence of grid $n_r, n_l$ and number of particles $n_I$ separately with number of grid cells or particles given by $2^n$
+
+   \item Figure \ref{fig:sc_cvg_rl} looks at convergence of $n_r, n_l$ for $n_I=10$ large and fixed
+   \item $n_r$ seems to have a more profound impact, but neither seem to affect the solution too much for $n\geq8$
+
+   \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=4$
+   \item $n_r=n_l=4$ and $n_I=10$ seem sufficient
+\end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/sc_emit_rl}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/sc_cvg_rl=3}
+   \end{subfigure}
+
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/sc_cvg_rl=4}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/sc_cvg_rl=5}
+   \end{subfigure}
+   \caption{normalized transversal emmitance and absolute error of field map in $l_\infty$-norm for $n_I=10$ and $n_l, n_r$ variable}
+   \label{fig:sc_cvg_rl}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/sc_emit_I}
+   \end{subfigure}
+   \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{fig/sc_cvg_I}
+   \end{subfigure}
+   \caption{normalized transversal emmitance and absolute error of solution in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=4$}
+   \label{fig:sc_cvg_I}
+\end{figure}
+\end{center}
+
+\textbf{TODO}: include plot of initial, optimized tracking and refine plots
+
+\begin{itemize}
+   \item \textbf{remarks}: the convergence studies also looked at $x_{rms}$ and the behavior was almost identical to $\epsilon$
+
+   \item to minimize the electric field on the entire electrode surface all curves could be taken into account
+   \item also anode ring shape, position and voltage
+   \item include tracking to include constraint on $x_\mathrm{rms} \leq 1.5\ \mathrm{mm}$, also optimize or constrain $\epsilon \leq 1\ \mathrm{mrad\ mm}$?
+\end{itemize}
