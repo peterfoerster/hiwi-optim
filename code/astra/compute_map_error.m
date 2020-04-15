@@ -1,6 +1,5 @@
-function [err_l2, err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
+function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
    % [nx_it, nz_it, x/y, xrms/emit]
-   err_l2   = NaN(length(nx_it),length(nz_it),2,2);
    err_linf = NaN(length(nx_it),length(nz_it),2,2);
 
    filename = ['photogun_nx=ny=' num2str(2^nx_ref) '_nz=' num2str(2^nz_ref) '.Xemit.001'];
@@ -11,20 +10,21 @@ function [err_l2, err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
    y_ref = dlmread(filename);
    y_ref = [y_ref(:,1) y_ref(:,4) y_ref(:,6)*pi];
 
-   figure(1);
-   hold on;
+   % figure(1);
+   % hold on;
    % plot(x_ref(:,1), x_ref(:,2));
-   plot(y_ref(:,1), y_ref(:,2));
-   xlabel('z/m');
-   ylabel('x_{rms}');
-   hold off;
+   % plot(y_ref(:,1), y_ref(:,2));
+   % ylabel('x_{rms}/mm');
+   % xlabel('z/m');
+   % hold off;
 
    figure(2);
    hold on;
    % plot(x_ref(:,1), x_ref(:,3));
    plot(y_ref(:,1), y_ref(:,3));
+   write_dat1D ('photogun_map_emit_ref.dat', y_ref(:,1), y_ref(:,3));
    xlabel('z/m');
-   ylabel('\epsilon');
+   ylabel('\epsilon/(mrad mm)');
    hold off;
 
    for inx=1:length(nx_it)
@@ -45,27 +45,33 @@ function [err_l2, err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
          iy    = ~isnan(err_y(:,1)) & ~isnan(err_y(:,2));
          err_y = err_y(iy,:);
 
-         err_l2(inx,inz,1,1) = norm(err_x(:,1), 2);
-         err_l2(inx,inz,1,2) = norm(err_x(:,2), 2);
-         err_l2(inx,inz,2,1) = norm(err_y(:,1), 2);
-         err_l2(inx,inz,2,2) = norm(err_y(:,2), 2);
+         % err_l2(inx,inz,1,1) = norm(err_x(:,1), 2);
+         % err_l2(inx,inz,1,2) = norm(err_x(:,2), 2);
+         % err_l2(inx,inz,2,1) = norm(err_y(:,1), 2);
+         % err_l2(inx,inz,2,2) = norm(err_y(:,2), 2);
 
-         err_linf(inx,inz,1,1) = norm(err_x(:,1), Inf);
-         err_linf(inx,inz,1,2) = norm(err_x(:,2), Inf);
-         err_linf(inx,inz,2,1) = norm(err_y(:,1), Inf);
+         % err_linf(inx,inz,1,1) = norm(err_x(:,1), Inf);
+         % err_linf(inx,inz,1,2) = norm(err_x(:,2), Inf);
+         % err_linf(inx,inz,2,1) = norm(err_y(:,1), Inf);
          err_linf(inx,inz,2,2) = norm(err_y(:,2), Inf);
 
-         figure(1);
-         hold on;
+         % figure(1);
+         % hold on;
          % plot(x_it(:,1), x_it(:,2));
-         plot(y_it(:,1), y_it(:,2));
-         hold off;
+         % plot(y_it(:,1), y_it(:,2));
+         % hold off;
 
          figure(2);
          hold on;
          % plot(x_it(:,1), x_it(:,3));
          plot(y_it(:,1), y_it(:,3));
+         write_dat1D (['photogun_map_emit_nx=ny=' num2str(nx_it(inx)) '_nz=' num2str(nz_it(inz)) '.dat'], y_it(:,1), y_it(:,3));
          hold off;
       end
+   end
+   if (length(nx_it) > 1 && length(nz_it) == 1)
+      write_dat1D (['photogun_map_err_nz=' num2str(nz_it(1)) '.dat'], 2.^nx_it, err_linf(:,1,2,2));
+   elseif (length(nx_it) == 1 && length(nz_it) > 1)
+      write_dat1D (['photogun_map_err_nx=ny=' num2str(nx_it(1)) '.dat'], 2.^nz_it, err_linf(1,:,2,2));
    end
 end

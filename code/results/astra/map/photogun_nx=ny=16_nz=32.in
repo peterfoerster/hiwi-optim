@@ -1,10 +1,10 @@
 &NEWRUN
-  Distribution = 'I=128_Q=0.0001_sc=0.03.in'
+  Distribution = 'I=1024_Q=0.0001_sc=0.005.in'
   Zoff = 0.307
   Z_min = 0.307
   Z_Cathode = 0.307
-  H_max = 0.000976562
-  H_min = 0.000976562
+  H_max = 0.000488281
+  H_min = 0.000488281
 /
 
 &OUTPUT
@@ -12,7 +12,7 @@
   ZSTOP = 0.447
   EmitS = True
   TrackS = True
-  RefS = True
+  RefS = False
 /
 
 &CAVITY

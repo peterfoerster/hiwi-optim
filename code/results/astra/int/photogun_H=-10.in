@@ -1,5 +1,5 @@
 &NEWRUN
-  Distribution = 'I=1024_Q=0.0001_sc=0.03.in'
+  Distribution = 'I=1024_Q=0.0001_sc=0.005.in'
   Zoff = 0.307
   Z_min = 0.307
   Z_Cathode = 0.307
@@ -11,7 +11,7 @@
   ZSTART = 0.307
   ZSTOP = 0.447
   EmitS = True
-  TrackS = False
+  TrackS = True
   RefS = False
 /
 
