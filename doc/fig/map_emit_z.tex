@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+   \begin{axis}[
+      axis equal,
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$z / \mathrm{m}$,
+      ylabel=$\epsilon / \mathrm{mrad\ mm}$,
+      ]
+
+      \addplot[color=TUDa-1a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=16.dat};
+      \addlegendentry{$n_z=16$}
+      \addplot[color=TUDa-2a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=32.dat};
+      \addlegendentry{$n_x=32$}
+      \addplot[color=TUDa-3a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat};
+      \addlegendentry{$n_x=64$}
+      \addplot[color=TUDa-4a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=128.dat};
+      \addlegendentry{$n_x=128$}
+      \addplot[color=TUDa-4a] table {fig/astra/map/photogun_map_emit_ref_nx=ny=16_nz=256.dat};
+      \addlegendentry{$n_x=256$}
+
+   \end{axis}
+\end{tikzpicture}

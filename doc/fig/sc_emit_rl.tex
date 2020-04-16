@@ -1,0 +1,53 @@
+\begin{tikzpicture}
+   \begin{axis}[
+      axis equal,
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$z / \mathrm{m}$,
+      ylabel=$\epsilon / \mathrm{mrad\ mm}$,
+      legend style={fill=none}
+      ]
+
+      \addplot[color=TUDa-6a] table {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl=64.dat};
+      \addlegendentry{$n_r=64\ n_l=64$}
+
+      \addplot[color=TUDa-5a] table {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=32_nc=2_nl=32.dat};
+      \addlegendentry{$n_r=32\ n_l=32$}
+
+      \addplot[color=TUDa-1a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=4.dat};
+      % \addlegendentry{$n_r=4\ n_l=4$}
+      \addplot[color=TUDa-1a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=8.dat};
+      % \addlegendentry{$n_r=4\ n_l=8$}
+      \addplot[color=TUDa-1a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=16.dat};
+      % \addlegendentry{$n_r=4\ n_l=16$}
+      \addplot[color=TUDa-1a, dashdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=32.dat};
+      % \addlegendentry{$n_r=4\ n_l=32$}
+
+      \addplot[color=TUDa-2a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=4.dat};
+      % \addlegendentry{$n_r=8\ n_l=4$}
+      \addplot[color=TUDa-2a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=8.dat};
+      % \addlegendentry{$n_r=8\ n_l=8$}
+      \addplot[color=TUDa-2a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=16.dat};
+      % \addlegendentry{$n_r=8\ n_l=16$}
+      \addplot[color=TUDa-2a, dashdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=32.dat};
+      % \addlegendentry{$n_r=8\ n_l=32$}
+
+      \addplot[color=TUDa-3a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=4.dat};
+      % \addlegendentry{$n_r=16\ n_l=4$}
+      \addplot[color=TUDa-3a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=8.dat};
+      % \addlegendentry{$n_r=16\ n_l=8$}
+      \addplot[color=TUDa-3a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat};
+      % \addlegendentry{$n_r=16\ n_l=16$}
+      \addplot[color=TUDa-3a, dashdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=32.dat};
+      % \addlegendentry{$n_r=16\ n_l=32$}
+
+      \addplot[color=TUDa-4a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=4.dat};
+      % \addlegendentry{$n_r=32\ n_l=4$}
+      \addplot[color=TUDa-4a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=8.dat};
+      % \addlegendentry{$n_r=32\ n_l=8$}
+      \addplot[color=TUDa-4a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.dat};
+      % \addlegendentry{$n_r=32\ n_l=16$}
+
+   \end{axis}
+\end{tikzpicture}

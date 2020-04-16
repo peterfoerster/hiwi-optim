@@ -43,11 +43,11 @@ H = 2^iH;
 
 % space charge
 sc       = 1;
-% 4
+% 5
 Nrad     = 2^4;
 % 1
 Cell_var = 2^1;
-% 4
+% 5
 Nlong_in = 2^4;
 % filename = ['photogun_H=' num2str(iH)];
 % filename = ['photogun_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
@@ -62,10 +62,9 @@ tic;
 fprintf('\n tracking %d min \n', toc/60);
 delete('NORRAN');
 delete([filename '.Log.001']);
-delete([filename '.track.001']);
+% delete([filename '.track.001']);
 delete([filename '.Zemit.001']);
 delete('win_config.dat');
-return
 
 % signal that the program is finished
 t = linspace(1, 20, 8000);
@@ -93,17 +92,7 @@ nz_it  = [6];
 
 [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it);
 
-% continue here!
 % space charge
-nI_ref = 13;
-nr_ref = 4;
-nc_ref = 1;
-nl_ref = 4;
-nI_it  = [8 9 10 11 12];
-nr_it  = [4];
-nc_it  = [1];
-nl_it  = [4];
-
 nI_ref = 10;
 nr_ref = 5;
 nc_ref = 1;
@@ -112,6 +101,15 @@ nI_it  = [10];
 nr_it  = [2 3 4 5];
 nc_it  = [1];
 nl_it  = [2 3 4 5];
+
+nI_ref = 13;
+nr_ref = 4;
+nc_ref = 1;
+nl_ref = 4;
+nI_it  = [8 9 10 11 12];
+nr_it  = [4];
+nc_it  = [1];
+nl_it  = [4];
 
 nI_ref = 10;
 nr_ref = 4;
@@ -123,4 +121,3 @@ nc_it  = [-1 1 2];
 nl_it  = [4];
 
 [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, nr_it, nc_it, nl_it);
-plot_sc_error (nI_it, nr_it, nc_it, nl_it, err_linf);

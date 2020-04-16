@@ -22,7 +22,7 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
    hold on;
    % plot(x_ref(:,1), x_ref(:,3));
    plot(y_ref(:,1), y_ref(:,3));
-   write_dat1D ('photogun_map_emit_ref.dat', y_ref(:,1), y_ref(:,3));
+   write_dat1D (['photogun_map_emit_ref_nx=ny=' num2str(2^nx_ref) '_nz=' num2str(2^nz_ref) '.dat'], y_ref(:,1), y_ref(:,3));
    xlabel('z/m');
    ylabel('\epsilon/(mrad mm)');
    hold off;
@@ -65,13 +65,13 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
          hold on;
          % plot(x_it(:,1), x_it(:,3));
          plot(y_it(:,1), y_it(:,3));
-         write_dat1D (['photogun_map_emit_nx=ny=' num2str(nx_it(inx)) '_nz=' num2str(nz_it(inz)) '.dat'], y_it(:,1), y_it(:,3));
+         write_dat1D (['photogun_map_emit_nx=ny=' num2str(nx) '_nz=' num2str(nz) '.dat'], y_it(:,1), y_it(:,3));
          hold off;
       end
    end
    if (length(nx_it) > 1 && length(nz_it) == 1)
-      write_dat1D (['photogun_map_err_nz=' num2str(nz_it(1)) '.dat'], 2.^nx_it, err_linf(:,1,2,2));
+      write_dat1D (['photogun_map_err_nz=' num2str(2^nz_it(1)) '.dat'], 2.^nx_it, err_linf(:,1,2,2));
    elseif (length(nx_it) == 1 && length(nz_it) > 1)
-      write_dat1D (['photogun_map_err_nx=ny=' num2str(nx_it(1)) '.dat'], 2.^nz_it, err_linf(1,:,2,2));
+      write_dat1D (['photogun_map_err_nx=ny=' num2str(2^nx_it(1)) '.dat'], 2.^nz_it, err_linf(1,:,2,2));
    end
 end

@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+   \begin{axis}[
+      axis equal,
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$z / \mathrm{m}$,
+      ylabel=$\epsilon / \mathrm{mrad\ mm}$,
+      ]
+
+      \addplot[color=TUDa-1a] table {fig/astra/int/photogun_int_emit_H_it=-13.dat};
+      \addlegendentry{$H=2^{-13}$}
+      \addplot[color=TUDa-2a] table {fig/astra/int/photogun_int_emit_H_it=-12.dat};
+      \addlegendentry{$H=2^{-12}$}
+      \addplot[color=TUDa-3a] table {fig/astra/int/photogun_int_emit_H_it=-11.dat};
+      \addlegendentry{$H=2^{-11}$}
+      \addplot[color=TUDa-4a] table {fig/astra/int/photogun_int_emit_H_it=-10.dat};
+      \addlegendentry{$H=2^{-10}$}
+      \addplot[color=TUDa-5a] table {fig/astra/int/photogun_int_emit_H_it=-9.dat};
+      \addlegendentry{$H=2^{-9}$}
+      \addplot[color=TUDa-6a] table {fig/astra/int/photogun_int_emit_H_it=-8.dat};
+      \addlegendentry{$H=2^{-8}$}
+
+   \end{axis}
+\end{tikzpicture}

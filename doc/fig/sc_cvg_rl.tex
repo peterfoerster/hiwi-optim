@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+   \begin{loglogaxis}[
+      axis equal,
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$n_l$,
+      ylabel=$\|\Delta \epsilon\|_\infty / \mathrm{mrad\ mm}$,
+      ]
+
+      \addplot[color=TUDa-1a, ultra thick] table {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=4_nc=2.dat};
+      \addlegendentry{$n_r=4$}
+      \addplot[color=TUDa-2a, ultra thick] table {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=8_nc=2.dat};
+      \addlegendentry{$n_r=8$}
+      \addplot[color=TUDa-3a, ultra thick] table {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=16_nc=2.dat};
+      \addlegendentry{$n_r=16$}
+      \addplot[color=TUDa-4a, ultra thick] table {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=32_nc=2.dat};
+      \addlegendentry{$n_r=32$}
+
+   \end{loglogaxis}
+\end{tikzpicture}

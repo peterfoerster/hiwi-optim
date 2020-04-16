@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+   \begin{loglogaxis}[
+      axis equal,
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$n_c$,
+      ylabel=$\|\Delta \epsilon\|_\infty / \mathrm{mrad\ mm}$,
+      ]
+
+      \addplot[color=TUDa-1a, ultra thick] table {fig/astra/sc/nc/photogun_sc_err_nI=1024_nr=16_nl=16.dat};
+
+   \end{loglogaxis}
+\end{tikzpicture}

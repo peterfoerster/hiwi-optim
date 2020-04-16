@@ -50,7 +50,7 @@
 
 \subsection{Tracking}
 \begin{itemize}
-   \item \textbf{general settings}: $Q=100\ \mathrm{fC}$, $\tau_\mathrm{b}=30\ \mathrm{ps}$
+   \item \textbf{general settings}: $Q=100\ \mathrm{fC}$, temporal bunch length $\tau_\mathrm{b}=30\ \mathrm{ps}$
    \item \textbf{initial distribution}: Gaussian with $\sigma=400\ \mu\mathrm{m}$, see Figure \ref{fig:generator} for comparison with laser measurement (probe particles at $0.5\sigma$, $\sigma$, $1.5\sigma$ in red)
 \end{itemize}
 
@@ -73,13 +73,14 @@
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/int_emit}
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/int_emit}
    \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/int_cvg}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/int_cvg}
    \end{subfigure}
-   \caption{normalized transversal emmitance and absolute error of time integrator in $l_\infty$-norm}
+   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm.}
    \label{fig:int_cvg}
 \end{figure}
 \end{center}
@@ -93,26 +94,28 @@
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/map_emit_xy}
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/map_emit_xy}
    \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/map_cvg_xy}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/map_cvg_xy}
    \end{subfigure}
-   \caption{normalized transversal emmitance and absolute error of field map in $l_\infty$-norm for $n_z=6$ and $n_x=n_y$ variable}
+   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_z=64$ and $n_x=n_y$ variable.}
    \label{fig:map_cvg_xy}
 \end{figure}
 \end{center}
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/map_emit_z}
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/map_emit_z}
    \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/map_cvg_z}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/map_cvg_z}
    \end{subfigure}
-   \caption{normalized transversal emmitance and absolute error of field map in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=4$}
+   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=16$.}
    \label{fig:map_cvg_z}
 \end{figure}
 \end{center}
@@ -129,36 +132,46 @@
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/sc_emit_rl}
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/sc_emit_rl}
    \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/sc_cvg_rl=3}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/sc_cvg_rl}
    \end{subfigure}
-
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/sc_cvg_rl=4}
-   \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/sc_cvg_rl=5}
-   \end{subfigure}
-   \caption{normalized transversal emmitance and absolute error of field map in $l_\infty$-norm for $n_I=10$ and $n_l, n_r$ variable}
+   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l, n_r$ variable.}
    \label{fig:sc_cvg_rl}
 \end{figure}
 \end{center}
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/sc_emit_I}
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/sc_emit_I}
    \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/sc_cvg_I}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/sc_cvg_I}
    \end{subfigure}
-   \caption{normalized transversal emmitance and absolute error of solution in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=4$}
+   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=16$.}
    \label{fig:sc_cvg_I}
 \end{figure}
 \end{center}
+
+% Cell_var
+% \begin{center}
+% \begin{figure}[H]
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/sc_emit_c}
+%    \end{subfigure}
+%    \qquad \qquad \qquad
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/sc_cvg_c}
+%    \end{subfigure}
+%    \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l=n_r=16$.}
+%    \label{fig:sc_cvg_I}
+% \end{figure}
+% \end{center}
 
 \textbf{TODO}: include plot of initial, optimized tracking and refine plots
 

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.3.23)  13 APR 2020 22:24
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.3.23)  16 APR 2020 18:31
  restricted system commands enabled.
 **doc
 (./doc.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.064 seconds
+luaotfload | main : initialization completed in 0.054 seconds
 (/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudapub.cls
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2019-07-01 L3 programming layer (loader) 
@@ -2525,7 +2525,11 @@ TOsF.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
 (Font)              scaled to size 9.79996pt on input line 31.
 
-(./doc.aux)
+(./doc.aux
+
+LaTeX Warning: Label `fig:sc_cvg_I' multiply defined.
+
+)
 \openout1 = doc.aux
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 31.
@@ -2951,69 +2955,237 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-<fig/int_emit.png, id=41, 368.0952pt x 190.311pt>
-File: fig/int_emit.png Graphic file (type png)
-<use fig/int_emit.png>
-Package luatex.def Info: fig/int_emit.png  used on input line 77.
-(luatex.def)             Requested size: 230.46576pt x 119.15315pt.
-<fig/int_cvg.png, id=42, 375.804pt x 190.311pt>
-File: fig/int_cvg.png Graphic file (type png)
-<use fig/int_cvg.png>
-Package luatex.def Info: fig/int_cvg.png  used on input line 80.
-(luatex.def)             Requested size: 230.46576pt x 116.71095pt.
-<fig/map_emit_xy.png, id=45, 392.4261pt x 202.5969pt>
-File: fig/map_emit_xy.png Graphic file (type png)
-<use fig/map_emit_xy.png>
-Package luatex.def Info: fig/map_emit_xy.png  used on input line 97.
-(luatex.def)             Requested size: 230.46576pt x 118.98085pt.
-<fig/map_cvg_xy.png, id=46, 394.5942pt x 201.6333pt>
-File: fig/map_cvg_xy.png Graphic file (type png)
-<use fig/map_cvg_xy.png>
-Package luatex.def Info: fig/map_cvg_xy.png  used on input line 100.
-(luatex.def)             Requested size: 230.46576pt x 117.76886pt.
-[2<./fig/generator.png><./fig/laser.png><./fig/int_emit.png><./fig/int_cvg.png>]
-<fig/map_emit_z.png, id=63, 368.0952pt x 190.311pt>
-File: fig/map_emit_z.png Graphic file (type png)
-<use fig/map_emit_z.png>
-Package luatex.def Info: fig/map_emit_z.png  used on input line 110.
-(luatex.def)             Requested size: 230.46576pt x 119.15315pt.
-<fig/map_cvg_z.png, id=64, 371.9496pt x 190.311pt>
-File: fig/map_cvg_z.png Graphic file (type png)
-<use fig/map_cvg_z.png>
-Package luatex.def Info: fig/map_cvg_z.png  used on input line 113.
-(luatex.def)             Requested size: 230.46576pt x 117.92189pt.
-<fig/sc_emit_rl.png, id=67, 368.0952pt x 190.311pt>
-File: fig/sc_emit_rl.png Graphic file (type png)
-<use fig/sc_emit_rl.png>
-Package luatex.def Info: fig/sc_emit_rl.png  used on input line 133.
-(luatex.def)             Requested size: 230.46576pt x 119.15315pt.
-<fig/sc_cvg_rl=3.png, id=68, 374.1177pt x 190.311pt>
-File: fig/sc_cvg_rl=3.png Graphic file (type png)
-<use fig/sc_cvg_rl=3.png>
-Package luatex.def Info: fig/sc_cvg_rl=3.png  used on input line 136.
-(luatex.def)             Requested size: 230.46576pt x 117.23657pt.
-<fig/sc_cvg_rl=4.png, id=69, 375.5631pt x 190.311pt>
-File: fig/sc_cvg_rl=4.png Graphic file (type png)
-<use fig/sc_cvg_rl=4.png>
-Package luatex.def Info: fig/sc_cvg_rl=4.png  used on input line 140.
-(luatex.def)             Requested size: 230.46576pt x 116.78937pt.
-<fig/sc_cvg_rl=5.png, id=70, 402.303pt x 202.356pt>
-File: fig/sc_cvg_rl=5.png Graphic file (type png)
-<use fig/sc_cvg_rl=5.png>
-Package luatex.def Info: fig/sc_cvg_rl=5.png  used on input line 143.
-(luatex.def)             Requested size: 230.46576pt x 115.92151pt.
- [3<./fig/map_emit_xy.png><./fig/map_cvg_xy.png><./fig/map_emit_z.png><./fig/map
-_cvg_z.png>]
-<fig/sc_emit_I.png, id=82, 368.0952pt x 190.311pt>
-File: fig/sc_emit_I.png Graphic file (type png)
-<use fig/sc_emit_I.png>
-Package luatex.def Info: fig/sc_emit_I.png  used on input line 153.
-(luatex.def)             Requested size: 230.46576pt x 119.15315pt.
-<fig/sc_cvg_I.png, id=83, 374.1177pt x 190.311pt>
-File: fig/sc_cvg_I.png Graphic file (type png)
-<use fig/sc_cvg_I.png>
-Package luatex.def Info: fig/sc_cvg_I.png  used on input line 156.
-(luatex.def)             Requested size: 230.46576pt x 117.23657pt.
+(./fig/int_emit.tex
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-13.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-12.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-11.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-10.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-9.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-8.dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 25--78
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--78
+
+ []
+
+(./fig/int_cvg.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/int/photogun_int_err.dat}
+
+NOTE: coordinate (0.0001220703125,0) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+)
+Overfull \hbox (37.02858pt too wide) in paragraph at lines 14--82
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--82
+
+ []
+
+(./fig/map_emit_xy.tex
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=8_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=32_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=64_nz=64.dat}
+)
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 21--99
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--99
+
+ []
+
+(./fig/map_cvg_xy.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/map/photogun_map_err_nz=64.dat}
+)
+Overfull \hbox (37.01498pt too wide) in paragraph at lines 14--103
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--103
+
+ []
+
+[2
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+<./fig/generator.png><./fig/laser.png>] (./fig/map_emit_z.tex
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=16.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=32.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=128.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=16_nz=256.dat}
+)
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 23--113
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--113
+
+ []
+
+(./fig/map_cvg_z.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/map/photogun_map_err_nx=ny=16.dat}
+)
+Overfull \hbox (37.18443pt too wide) in paragraph at lines 14--117
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--117
+
+ []
+
+(./fig/sc_emit_rl.tex
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl
+=64.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=32_nc=2_nl
+=32.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=4.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=8.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=16.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=32.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=4.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=8.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=16.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=32.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=4.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=8.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=32.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=4.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=8.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.
+dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 53--137
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--137
+
+ []
+
+(./fig/sc_cvg_rl.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=4_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=8_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=16_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=32_nc=2.dat}
+
+NOTE: coordinate (32,0) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+)
+Overfull \hbox (30.20583pt too wide) in paragraph at lines 21--141
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--141
+
+ []
+
+[3
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+] (./fig/sc_emit_I.tex
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=256_nr=16_nc=2_nl=16.dat}
+
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=16_nc=2_nl=16.dat}
+
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=2048_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=4096_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_ref_nI=8192_nr=16_nc=2_nl=16
+.dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 28--151
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--151
+
+ []
+
+(./fig/sc_cvg_I.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_err_nr=16_nc=2_nl=16.dat}
+)
+Overfull \hbox (37.02797pt too wide) in paragraph at lines 14--155
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--155
+
+ []
+
 )
 
 LaTeX Warning: Empty bibliography on input line 48.
@@ -3038,8 +3210,24 @@ Package TUDaPub Warning: You did not provide a Label for key discussion.
 (TUDaPub)                Either you need to recompile your document or add a
 (TUDaPub)                label using \IMRADlabel.
 
-[4<./fig/sc_emit_rl.png><./fig/sc_cvg_rl=3.png><./fig/sc_cvg_rl=4.png><./fig/sc_
-cvg_rl=5.png><./fig/sc_emit_I.png><./fig/sc_cvg_I.png>]
+[4
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (./doc.aux)
@@ -3047,6 +3235,10 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'doc.run.xml'.
 
 \openout1 = doc.run.xml
@@ -3054,17 +3246,19 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63810 strings out of 494291
+ 64642 strings out of 494291
  100000,2373549 words of node,token memory allocated
  1018 words of node memory still in use:
    23 hlist, 4 vlist, 6 rule, 4 local_par, 1 dir, 18 glue, 5 kern, 4 penalty, 1 
 glyph, 32 attribute, 64 glue_spec, 25 attribute_list, 2 write, 4 pdf_colorstack 
 nodes
-   avail lists: 1:3,2:1030,3:163,4:57,5:215,6:68,7:1509,8:18,9:350,10:4,11:90,12
-:1
- 65001 multiletter control sequences out of 65536+600000
+   avail lists: 1:3,2:18795,3:4651,4:85,5:234,6:68,7:3564,8:21,9:975,10:4,11:89,
+12:1
+ 65584 multiletter control sequences out of 65536+600000
  394 fonts using 34401631 bytes
- 78i,21n,136p,9128b,2278s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 78i,21n,136p,9128b,2545s stack positions out of 5000i,500n,10000p,200000b,100000s
+
+warning  (pdf backend): unreferenced destination with name 'figure.caption.9'
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/usr/shar
 e/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}{/usr/share/texlive/te
 xmf-dist/fonts/enc/dvips/xcharter/xch1_w7odti.enc}</usr/share/texlive/texmf-dist
@@ -3078,13 +3272,14 @@ sr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/newtx/fxlri-7letters.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ne
-wtx/zxlri.pfb>
-Output written on doc.pdf (4 pages, 697596 bytes).
+-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
+ewtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlr.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
+Output written on doc.pdf (4 pages, 583325 bytes).
 
-PDF statistics: 156 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 131072)
+PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
