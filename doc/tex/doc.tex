@@ -2,22 +2,18 @@
 \begin{itemize}
    \item latest geometry in Figure \ref{fig:init}
    \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$,  $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
-   \item (patches $32 \dots 35$ are not correct, missing the correct high voltage adapter)
+   \item (patches $32 \dots 35$ are not entirely correct, missing the correct high voltage adapter)
 \end{itemize}
 
 \begin{center}
 \begin{figure}[H]
    \begin{subfigure}{0.45\textwidth}
       \includegraphics[width=\textwidth]{fig/geometry_v6}
-      % \caption{geometry}
-      % \label{fig:geometry_v6}
    \end{subfigure}
    \begin{subfigure}{0.45\textwidth}
       \includegraphics[width=\textwidth]{fig/E_v6}
-      % \caption{magnitude of electric field}
-      % \label{fig:E_v6}
    \end{subfigure}
-   \caption{initial geometry and electric field}
+   \caption{Initial geometry and magnitude of electric field.}
    \label{fig:init}
 \end{figure}
 \end{center}
@@ -26,49 +22,71 @@
 \begin{itemize}
    \item optimized geometry in Figure \ref{fig:opt}
    \item cost function only takes into account electric field
-   \item only the upper electrode shape is optimized (volume constrained could be kept as before at $625\ \mathrm{cm}^3$)
+   \item only the upper electrode shape is optimized (volume constraint could be kept as before at $625\ \mathrm{cm}^3$)
    \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$,  $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
-   \item \textbf{magnitude of E-field remains large in patch 14}
+   \item \textbf{magnitude of E-field remains large in patch 14} (also around anode ring)
+   \item \textbf{results}: \qquad
+                           \begin{tabular}{c|c|c}
+                              & $(V_\mathrm{el}-625) / \mathrm{cm}^3$ & $\max(\mathbf{\|E\|_2}) / \frac{\mathrm{MV}}{\mathrm{m}}$ \\
+                              \hline
+                              initial & 2.445 & 9.295 \\
+                              optimized & -12.872 & 8.49 \\
+                            \end{tabular}
 \end{itemize}
 
 \begin{center}
 \begin{figure}[H]
    \begin{subfigure}{0.45\textwidth}
       \includegraphics[width=\textwidth]{fig/geometry_v6_opt_order=3_run1}
-      % \caption{geometry}
-      % \label{fig:geometry_v6_opt}
    \end{subfigure}
    \begin{subfigure}{0.45\textwidth}
       \includegraphics[width=\textwidth]{fig/E_v6_opt_order=3_run1}
-      % \caption{magnitude of electric field}
-      % \label{fig:E_v6_opt}
    \end{subfigure}
-   \caption{optimized geometry and electric field}
+   \caption{Optimized geometry and electric field.}
    \label{fig:opt}
 \end{figure}
 \end{center}
 
 \subsection{Tracking}
 \begin{itemize}
-   \item \textbf{general settings}: $Q=100\ \mathrm{fC}$, temporal bunch length $\tau_\mathrm{b}=30\ \mathrm{ps}$
-   \item \textbf{initial distribution}: Gaussian with $\sigma=400\ \mu\mathrm{m}$, see Figure \ref{fig:generator} for comparison with laser measurement (probe particles at $0.5\sigma$, $\sigma$, $1.5\sigma$ in red)
+   \item \textbf{general settings}: $Q=100\ \mathrm{fC}$
+   \item \textbf{spatial distribution}: Gaussian with $\sigma=400\ \mu\mathrm{m}$, see Figure \ref{fig:gen_sp} for comparison with laser measurement (probe particles at $0.5\sigma$, $\sigma$, $1.5\sigma$ in red)
+   \item \textbf{temporal distribution}: Gaussian with $\sigma=5\ \mathrm{ps}$, see Figure \ref{fig:gen_tmp} for comparison with measurement/model from \cite{wagner}
 \end{itemize}
 
 \begin{center}
 \begin{figure}[H]
-   \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\textwidth]{fig/generator}
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/gen_sp}
    \end{subfigure}
-   \begin{subfigure}{0.45\textwidth}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.5\textwidth}
       \includegraphics[width=\textwidth]{fig/laser}
    \end{subfigure}
-   \caption{initial distribution (1000 particles) and laser measurement}
-   \label{fig:generator}
+   \caption{Spatial distribution ($2^{10}$ particles) and laser measurement.}
+   \label{fig:gen_sp}
 \end{figure}
 \end{center}
 
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/gen_tmp}
+   \end{subfigure}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{fig/bunch}
+   \end{subfigure}
+   \caption{Temporal distribution ($2^{10}$ particles) and measurement/model.}
+   \label{fig:gen_tmp}
+\end{figure}
+\end{center}
+
+\newpage
+
 \begin{itemize}
-   \item \textbf{convergence of time integrator}: error of normalized transversal emmitance $\epsilon$ is shown in Figure \ref{fig:int_cvg} ($H=2^{-11}\ \mathrm{ns}$ used later on)\\
+   \item \textbf{convergence of time integrator}: difference of normalized transverse emmitance $\epsilon$ w.\,r.\,t.\ finest time step is shown in Figure \ref{fig:int_cvg}
+   \item $H=2^{-11}\ \mathrm{ns}$ used later on
 \end{itemize}
 
 \begin{center}
@@ -80,16 +98,16 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/int_cvg}
    \end{subfigure}
-   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm.}
+   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm.}
    \label{fig:int_cvg}
 \end{figure}
 \end{center}
 
 \begin{itemize}
-   \item \textbf{convergence of field map}: look at convergence in transversal $n_x, n_y$ and longitudinal $n_z$ direction with number of interpolation points given by $2^n$
-   \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z$ large and fixed
-   \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=4$ fixed
-   \item $n_x=n_y=4$ and $n_z=6$ used later on
+   \item \textbf{convergence of field map}: look at convergence with number of grid points in transverse $(n_x, n_y)$ and longitudinal $(n_z)$ direction individually
+   \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z=64$
+   \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=16$
+   \item $n_x=n_y=16$ and $n_z=64$ used later on
 \end{itemize}
 
 \begin{center}
@@ -101,7 +119,7 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/map_cvg_xy}
    \end{subfigure}
-   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_z=64$ and $n_x=n_y$ variable.}
+   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_z=64$ and $n_x=n_y$ variable.}
    \label{fig:map_cvg_xy}
 \end{figure}
 \end{center}
@@ -115,19 +133,19 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/map_cvg_z}
    \end{subfigure}
-   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=16$.}
+   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=16$.}
    \label{fig:map_cvg_z}
 \end{figure}
 \end{center}
 
 \begin{itemize}
-   \item \textbf{convergence of space charge}: look at convergence of grid $n_r, n_l$ and number of particles $n_I$ separately with number of grid cells or particles given by $2^n$
+   \item \textbf{convergence of space charge}: look at convergence with number of grid cells in radial $(n_r)$ and longitudinal $(n_l)$ direction and number of particles $(n_I)$ separately
 
-   \item Figure \ref{fig:sc_cvg_rl} looks at convergence of $n_r, n_l$ for $n_I=10$ large and fixed
-   \item $n_r$ seems to have a more profound impact, but neither seem to affect the solution too much for $n\geq8$
+   \item Figure \ref{fig:sc_cvg_rl} looks at convergence of $n_r, n_l$ for $n_I=2^{10}$
+   \item $n_r=n_l=16$ used later on
 
-   \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=4$
-   \item $n_r=n_l=4$ and $n_I=10$ seem sufficient
+   \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=16$
+   \item $n_I=2^{10}$
 \end{itemize}
 
 \begin{center}
@@ -139,7 +157,7 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/sc_cvg_rl}
    \end{subfigure}
-   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l, n_r$ variable.}
+   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l, n_r$ variable.}
    \label{fig:sc_cvg_rl}
 \end{figure}
 \end{center}
@@ -153,7 +171,7 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/sc_cvg_I}
    \end{subfigure}
-   \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=16$.}
+   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=16$.}
    \label{fig:sc_cvg_I}
 \end{figure}
 \end{center}
@@ -173,12 +191,28 @@
 % \end{figure}
 % \end{center}
 
-\textbf{TODO}: include plot of initial, optimized tracking and refine plots
+\begin{itemize}
+   \item \textbf{tracking results}: $\epsilon$ and $x_\mathrm{rms}$ computed with the determined settings are shown in Figure \ref{fig:astra_res}
+\end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/astra_res_eps}
+   \end{subfigure}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/astra_res_rms}
+   \end{subfigure}
+   \caption{Normalized transverse emmitance and rms beam size.}
+   \label{fig:astra_res}
+\end{figure}
+\end{center}
 
 \begin{itemize}
-   \item \textbf{remarks}: the convergence studies also looked at $x_{rms}$ and the behavior was almost identical to $\epsilon$
+   \item \textbf{remarks}: the convergence studies also looked at $x_{rms}$ and the behavior was very similar to that of $\epsilon$\\
 
    \item to minimize the electric field on the entire electrode surface all curves could be taken into account
-   \item also anode ring shape, position and voltage
-   \item include tracking to include constraint on $x_\mathrm{rms} \leq 1.5\ \mathrm{mm}$, also optimize or constrain $\epsilon \leq 1\ \mathrm{mrad\ mm}$?
+   \item this includes the anode ring shape, position and voltage
+   \item also include tracking in optimization via $x_\mathrm{rms} \leq 1.5\ \mathrm{mm}$, also optimize or constrain $\epsilon \leq 1\ \mathrm{mrad\ mm}$?
 \end{itemize}

@@ -9,9 +9,9 @@ degree_ref = [3 3];
 nsub_ref   = [2^N_it 2^N_it];
 degree     = [2 2];
 
-% compute errors
+% compute error
 compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, degree, N_it, filename);
-% plot errors
+% plot error
 plot_convergence (degree_ref, nsub_ref, degree, N_it, filename);
 
 % signal that the program is finished

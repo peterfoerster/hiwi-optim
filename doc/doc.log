@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.3.23)  16 APR 2020 18:31
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.3.23)  17 APR 2020 14:14
  restricted system commands enabled.
 **doc
 (./doc.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.054 seconds
+luaotfload | main : initialization completed in 0.056 seconds
 (/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudapub.cls
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2019-07-01 L3 programming layer (loader) 
@@ -2130,15 +2130,7 @@ File: pgfmodulematrix.code.tex 2019/05/09 v3.1.3 (3.1.3)
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2019/05/09 v3.1.3 (3.1.3)
 )))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
-tex
-File: pgflibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
-\arrowsize=\dimen287
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 
@@ -2149,7 +2141,7 @@ Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
 \t@pgfplots@toka=\toks39
 \t@pgfplots@tokb=\toks40
 \t@pgfplots@tokc=\toks41
-\pgfplots@tmpa=\dimen288
+\pgfplots@tmpa=\dimen287
 \c@pgfplots@coordindex=\count439
 \c@pgfplots@scanlineindex=\count440
 
@@ -2230,14 +2222,14 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen289
-\pgfdecoratedremainingdistance=\dimen290
-\pgfdecoratedinputsegmentcompleteddistance=\dimen291
-\pgfdecoratedinputsegmentremainingdistance=\dimen292
-\pgf@decorate@distancetomove=\dimen293
+\pgfdecoratedcompleteddistance=\dimen288
+\pgfdecoratedremainingdistance=\dimen289
+\pgfdecoratedinputsegmentcompleteddistance=\dimen290
+\pgfdecoratedinputsegmentremainingdistance=\dimen291
+\pgf@decorate@distancetomove=\dimen292
 \pgf@decorate@repeatstate=\count445
-\pgfdecorationsegmentamplitude=\dimen294
-\pgfdecorationsegmentlength=\dimen295
+\pgfdecorationsegmentamplitude=\dimen293
+\pgfdecorationsegmentlength=\dimen294
 )
 \tikz@lib@dec@box=\box66
 )
@@ -2250,12 +2242,12 @@ zlibrarydecorations.pathreplacing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathreplacing.code.tex))
 \pgfplots@numplots=\count446
-\pgfplots@xmin@reg=\dimen296
-\pgfplots@xmax@reg=\dimen297
-\pgfplots@ymin@reg=\dimen298
-\pgfplots@ymax@reg=\dimen299
-\pgfplots@zmin@reg=\dimen300
-\pgfplots@zmax@reg=\dimen301
+\pgfplots@xmin@reg=\dimen295
+\pgfplots@xmax@reg=\dimen296
+\pgfplots@ymin@reg=\dimen297
+\pgfplots@ymax@reg=\dimen298
+\pgfplots@zmin@reg=\dimen299
+\pgfplots@zmax@reg=\dimen300
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -2274,25 +2266,13 @@ Package: pgfplotstable 2018/03/28 v1.16 Table typesetting and Pretty-printing (1
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.colt
 ype.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
-\col@sep=\dimen302
+\col@sep=\dimen301
 \ar@mcellbox=\box67
-\extrarowheight=\dimen303
+\extrarowheight=\dimen302
 \NC@list=\toks43
 \extratabsurround=\skip90
 \backup@length=\skip91
 \ar@cellbox=\box68
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.un
-its.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.gr
-oupplots.code.tex
-\pgfplots@group@current@plot=\count447
-\pgfplots@group@current@row=\count448
-\pgfplots@group@current@column=\count449
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2019/05/09 v3.1.3 (3.1.3)
 ))
 (/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tuda-pgfplots.sty
 Package: tuda-pgfplots 2020/02/18 2.08 tuda-ci pgfplots color schemes
@@ -2342,7 +2322,7 @@ LaTeX Info: Redefining \textnu on input line 46.
 Package: inconsolata 2019/05/17 v1.12
 
 `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
-\zifour@ocount=\count450
+\zifour@ocount=\count447
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cabin/cabin.sty
 Package: cabin 2019/04/24 (Bob Tennent) Supports Cabin fonts for all LaTeX engin
@@ -2358,11 +2338,11 @@ Package: newtxmath 2018/05/15 v1.553
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count451
+\tx@cntz=\count448
 
 (/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
-\tx@Isdigit=\count452
-\tx@IsAlNum=\count453
+\tx@Isdigit=\count449
+\tx@IsAlNum=\count450
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 171.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/XCharter-TLF/m/n on input line 171.
@@ -2472,12 +2452,12 @@ LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 582.
 LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 583.
 LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 584.
 LaTeX Font Info:    Redeclaring math symbol \m@thbbch@rA on input line 1929.
-\ntx@numstart=\count454
-\ntx@UCstart=\count455
-\ntx@lcstart=\count456
-\ntx@tmpc=\count457
-\ntx@imath=\count458
-\ntx@jmath=\count459
+\ntx@numstart=\count451
+\ntx@UCstart=\count452
+\ntx@lcstart=\count453
+\ntx@tmpc=\count454
+\ntx@imath=\count455
+\ntx@jmath=\count456
 LaTeX Info: Redefining \not on input line 2322.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathalpha/mathalfa.sty)
@@ -2516,102 +2496,98 @@ Package biblatex Info: ... file 'german.lbx' found.
 File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 ))
 LaTeX Font Info:    Try loading font information for T1+XCharter-TOsF on input l
-ine 31.
+ine 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/T1XCharter-TOsF.fd
 File: T1XCharter-TOsF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-
 TOsF.
 )
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 9.79996pt on input line 31.
+(Font)              scaled to size 9.79996pt on input line 28.
 
-(./doc.aux
-
-LaTeX Warning: Label `fig:sc_cvg_I' multiply defined.
-
-)
+(./doc.aux)
 \openout1 = doc.aux
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 31.
-LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 31.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 28.
+LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 28.
 
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 31.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for T2A+cmr on input line 31.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for LY1+ptm on input line 31.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 31.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 28.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 31
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 28
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 8.81996pt on input line 31.
+(Font)              scaled to size 8.81996pt on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count460
-\scratchdimen=\dimen304
+\scratchcounter=\count457
+\scratchdimen=\dimen303
 \scratchbox=\box69
-\nofMPsegments=\count461
-\nofMParguments=\count462
+\nofMPsegments=\count458
+\nofMParguments=\count459
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count463
-\MPscratchDim=\dimen305
-\MPnumerator=\count464
-\makeMPintoPDFobject=\count465
+\MPscratchCnt=\count460
+\MPscratchDim=\dimen304
+\MPnumerator=\count461
+\makeMPintoPDFobject=\count462
 \everyMPtoPDFconversion=\toks45
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2666,18 +2642,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 \TUDa@headline_box=\box70
 \AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring OFF on input line 31.
+Package hyperref Info: Link coloring OFF on input line 28.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count466
+\c@section@level=\count463
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
 (./doc.out) (./doc.out)
 \@outlinefile=\write5
@@ -2689,7 +2665,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message with `\usepackage{bookmark}'
-(scrartcl)           before \begin{document} on input line 31.
+(scrartcl)           before \begin{document} on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
@@ -2699,9 +2675,9 @@ File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line
  164.
-\BKM@id=\count467
+\BKM@id=\count464
 ))
-Package scrbase Info: activating english \authorandname on input line 31.
+Package scrbase Info: activating english \authorandname on input line 28.
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -2711,8 +2687,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'doc.bbl' found.
  (./doc.bbl)
-Package biblatex Info: Reference section=0 on input line 31.
-Package biblatex Info: Reference segment=0 on input line 31.
+Package biblatex Info: Reference section=0 on input line 28.
+Package biblatex Info: Reference segment=0 on input line 28.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -2720,94 +2696,94 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document has
  been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
-\c@mv@tabular=\count468
-\c@mv@boldtabular=\count469
+\c@mv@tabular=\count465
+\c@mv@boldtabular=\count466
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 im
 )
 LaTeX Font Info:    Try loading font information for T1+Cabin-TLF on input line 
-45.
+42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cabin/T1Cabin-TLF.fd
 File: T1Cabin-TLF.fd 2019/04/24 (autoinst) Font definitions for T1/Cabin-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 45.
+(Font)              scaled to size 9.0pt on input line 42.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 9.0pt on input line 45.
+(Font)              scaled to size 9.0pt on input line 42.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 10.95pt on input line 45.
+(Font)              scaled to size 10.95pt on input line 42.
 LaTeX Font Info:    Try loading font information for OT1+XCharter-TLF on input l
-ine 45.
+ine 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/OT1XCharter-TLF.fd
 File: OT1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for OT1/XCharter
 -TLF.
 )
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 10.73094pt on input line 45.
+(Font)              scaled to size 10.73094pt on input line 42.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 7.83997pt on input line 45.
+(Font)              scaled to size 7.83997pt on input line 42.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 5.97797pt on input line 45.
+(Font)              scaled to size 5.97797pt on input line 42.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.40501pt on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.40501pt on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.40501pt on input line 45.
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.40501pt on input line 45.
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.40501pt on input line 45.
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.40501pt on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 11.49753pt on input line 45.
+(Font)              scaled to size 11.49753pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.40002pt on input line 45.
+(Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.40501pt on input line 45.
+(Font)              scaled to size 6.40501pt on input line 42.
  (./tex/doc.tex
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
@@ -2892,70 +2868,124 @@ Package luatex.def Info: fig/geometry_v6.png  used on input line 11.
 <fig/E_v6.png, id=9, 2433.09pt x 1294.8375pt>
 File: fig/E_v6.png Graphic file (type png)
 <use fig/E_v6.png>
-Package luatex.def Info: fig/E_v6.png  used on input line 16.
+Package luatex.def Info: fig/E_v6.png  used on input line 14.
 (luatex.def)             Requested size: 230.46576pt x 122.63544pt.
 LaTeX Font Info:    Font shape `TU/RobotoSlab(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 20.
+(Font)              scaled to size 9.0pt on input line 16.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/b/n' will be
-(Font)              scaled to size 8.81996pt on input line 31.
+(Font)              scaled to size 8.81996pt on input line 27.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 8.81996pt on input line 30.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 7.15396pt on input line 30.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 5.38997pt on input line 30.
 <fig/geometry_v6_opt_order=3_run1.png, id=11, 233.1912pt x 70.1019pt>
 File: fig/geometry_v6_opt_order=3_run1.png Graphic file (type png)
 <use fig/geometry_v6_opt_order=3_run1.png>
 Package luatex.def Info: fig/geometry_v6_opt_order=3_run1.png  used on input lin
-e 37.
+e 40.
 (luatex.def)             Requested size: 230.46576pt x 69.28342pt.
 <fig/E_v6_opt_order=3_run1.png, id=12, 2142.0025pt x 1294.8375pt>
 File: fig/E_v6_opt_order=3_run1.png Graphic file (type png)
 <use fig/E_v6_opt_order=3_run1.png>
-Package luatex.def Info: fig/E_v6_opt_order=3_run1.png  used on input line 42.
+Package luatex.def Info: fig/E_v6_opt_order=3_run1.png  used on input line 43.
 (luatex.def)             Requested size: 230.46576pt x 139.31085pt.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 9.79996pt on input line 50.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 55.
+(Font)              scaled to size 8.0pt on input line 53.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
-(Font)              scaled to size 10.95pt on input line 55.
+(Font)              scaled to size 10.95pt on input line 53.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 10.73094pt on input line 53.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 7.83997pt on input line 53.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 5.97797pt on input line 53.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 10.73094pt on input line 55.
+(Font)              scaled to size 10.73094pt on input line 53.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 6.07596pt on input line 55.
+(Font)              scaled to size 6.07596pt on input line 53.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 6.07596pt on input line 53.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 55.
+(Font)              scaled to size 6.51001pt on input line 53.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 7.83997pt on input line 55.
+(Font)              scaled to size 7.83997pt on input line 53.
  [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./fig/geometry_v6.png><./fig
 /E_v6.png><./fig/geometry_v6_opt_order=3_run1.png><./fig/E_v6_opt_order=3_run1.p
-ng>]
-<fig/generator.png, id=38, 375.3222pt x 190.311pt>
-File: fig/generator.png Graphic file (type png)
-<use fig/generator.png>
-Package luatex.def Info: fig/generator.png  used on input line 60.
-(luatex.def)             Requested size: 230.46576pt x 116.86197pt.
-<fig/laser.png, id=39, 578.16pt x 225.84375pt>
-File: fig/laser.png Graphic file (type png)
-<use fig/laser.png>
-Package luatex.def Info: fig/laser.png  used on input line 63.
-(luatex.def)             Requested size: 230.46576pt x 90.02574pt.
+ng>] (./fig/gen_sp.tex
+PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_gen.dat}
+PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_probe.dat}
+)
+Overfull \hbox (29.9178pt too wide) in paragraph at lines 15--61
+[][]
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--61
 
  []
 
-(./fig/int_emit.tex
+<fig/laser.png, id=41, 578.16pt x 225.84375pt>
+File: fig/laser.png Graphic file (type png)
+<use fig/laser.png>
+Package luatex.def Info: fig/laser.png  used on input line 64.
+(luatex.def)             Requested size: 256.07481pt x 100.0263pt.
+
+Overfull \hbox (3.27162pt too wide) in paragraph at lines 59--66
+[]$[]$    $[]$ 
+ []
+
+(./fig/gen_tmp.tex
+PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_tmp.dat}
+)
+Overfull \hbox (26.38121pt too wide) in paragraph at lines 13--75
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--75
+
+ []
+
+<fig/bunch.png, id=42, 325.6968pt x 208.1376pt>
+File: fig/bunch.png Graphic file (type png)
+<use fig/bunch.png>
+Package luatex.def Info: fig/bunch.png  used on input line 78.
+(luatex.def)             Requested size: 256.07481pt x 163.64879pt.
+
+Overfull \hbox (3.27162pt too wide) in paragraph at lines 73--80
+[]$[]$    $[]$ 
+ []
+
+[2
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+<./fig/laser.png><./fig/bunch.png>] (./fig/int_emit.tex
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-13.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-12.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-11.dat}
@@ -2963,12 +2993,12 @@ PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-10.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-9.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-8.dat}
 )
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 25--78
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 25--96
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--78
+Underfull \hbox (badness 10000) in paragraph at lines 25--96
 
  []
 
@@ -2982,12 +3012,12 @@ PGFPlots: reading {fig/astra/int/photogun_int_err.dat}
 NOTE: coordinate (0.0001220703125,0) has been dropped because it is unbounded (i
 n y). (see also unbounded coords=jump). 
 )
-Overfull \hbox (37.02858pt too wide) in paragraph at lines 14--82
+Overfull \hbox (37.02858pt too wide) in paragraph at lines 14--100
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--82
+Underfull \hbox (badness 10000) in paragraph at lines 14--100
 
  []
 
@@ -2997,12 +3027,12 @@ PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
 PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=32_nz=64.dat}
 PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=64_nz=64.dat}
 )
-Overfull \hbox (41.85959pt too wide) in paragraph at lines 21--99
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 21--117
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--99
+Underfull \hbox (badness 10000) in paragraph at lines 21--117
 
  []
 
@@ -3013,37 +3043,28 @@ Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
 =log unsupported (yet).
 PGFPlots: reading {fig/astra/map/photogun_map_err_nz=64.dat}
 )
-Overfull \hbox (37.01498pt too wide) in paragraph at lines 14--103
+Overfull \hbox (37.01498pt too wide) in paragraph at lines 14--121
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--103
+Underfull \hbox (badness 10000) in paragraph at lines 14--121
 
  []
 
-[2
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-<./fig/generator.png><./fig/laser.png>] (./fig/map_emit_z.tex
+(./fig/map_emit_z.tex
 PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=16.dat}
 PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=32.dat}
 PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
 PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=128.dat}
 PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=16_nz=256.dat}
 )
-Overfull \hbox (41.85959pt too wide) in paragraph at lines 23--113
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 23--131
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--113
+Underfull \hbox (badness 10000) in paragraph at lines 23--131
 
  []
 
@@ -3054,16 +3075,33 @@ Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
 =log unsupported (yet).
 PGFPlots: reading {fig/astra/map/photogun_map_err_nx=ny=16.dat}
 )
-Overfull \hbox (37.18443pt too wide) in paragraph at lines 14--117
+Overfull \hbox (37.18443pt too wide) in paragraph at lines 14--135
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--117
+Underfull \hbox (badness 10000) in paragraph at lines 14--135
 
  []
 
-(./fig/sc_emit_rl.tex
+[3
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+] (./fig/sc_emit_rl.tex
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl
 =64.dat}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=32_nc=2_nl
@@ -3099,12 +3137,12 @@ at}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.
 dat}
 )
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 53--137
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 53--155
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--137
+Underfull \hbox (badness 10000) in paragraph at lines 53--155
 
  []
 
@@ -3121,33 +3159,16 @@ PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=32_nc=2.dat}
 NOTE: coordinate (32,0) has been dropped because it is unbounded (in y). (see al
 so unbounded coords=jump). 
 )
-Overfull \hbox (30.20583pt too wide) in paragraph at lines 21--141
+Overfull \hbox (30.20583pt too wide) in paragraph at lines 21--159
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--141
+Underfull \hbox (badness 10000) in paragraph at lines 21--159
 
  []
 
-[3
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-] (./fig/sc_emit_I.tex
+(./fig/sc_emit_I.tex
 PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=256_nr=16_nc=2_nl=16.dat}
 
 PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=16_nc=2_nl=16.dat}
@@ -3161,12 +3182,12 @@ PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=4096_nr=16_nc=2_nl=16.dat
 PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_ref_nI=8192_nr=16_nc=2_nl=16
 .dat}
 )
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 28--151
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 28--169
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--151
+Underfull \hbox (badness 10000) in paragraph at lines 28--169
 
  []
 
@@ -3177,19 +3198,81 @@ Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
 =log unsupported (yet).
 PGFPlots: reading {fig/astra/sc/nI/photogun_sc_err_nr=16_nc=2_nl=16.dat}
 )
-Overfull \hbox (37.02797pt too wide) in paragraph at lines 14--155
+Overfull \hbox (37.02797pt too wide) in paragraph at lines 14--173
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--155
+Underfull \hbox (badness 10000) in paragraph at lines 14--173
 
  []
 
+[4
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+] (./fig/astra_res_eps.tex
+PGFPlots: reading {fig/astra/results/photogun_init_eps.dat}
+PGFPlots: reading {fig/astra/results/photogun_run1_eps.dat}
 )
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 18--202
+[][]
+ []
 
-LaTeX Warning: Empty bibliography on input line 48.
 
+Underfull \hbox (badness 10000) in paragraph at lines 18--202
+
+ []
+
+(./fig/astra_res_rms.tex
+PGFPlots: reading {fig/astra/results/photogun_init_rms.dat}
+PGFPlots: reading {fig/astra/results/photogun_run1_rms.dat}
+)
+Overfull \hbox (23.52397pt too wide) in paragraph at lines 18--206
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+) [5
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+]
 
 Package TUDaPub Warning: You did not provide a Label for key introduction.
 (TUDaPub)                Either you need to recompile your document or add a
@@ -3210,60 +3293,37 @@ Package TUDaPub Warning: You did not provide a Label for key discussion.
 (TUDaPub)                Either you need to recompile your document or add a
 (TUDaPub)                label using \IMRADlabel.
 
-[4
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (./doc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'doc.run.xml'.
 
 \openout1 = doc.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
 )
 
 Here is how much of LuaTeX's memory you used:
- 64642 strings out of 494291
- 100000,2373549 words of node,token memory allocated
- 1018 words of node memory still in use:
-   23 hlist, 4 vlist, 6 rule, 4 local_par, 1 dir, 18 glue, 5 kern, 4 penalty, 1 
-glyph, 32 attribute, 64 glue_spec, 25 attribute_list, 2 write, 4 pdf_colorstack 
+ 64055 strings out of 494291
+ 125002,2848258 words of node,token memory allocated
+ 1034 words of node memory still in use:
+   23 hlist, 4 vlist, 6 rule, 4 local_par, 1 dir, 18 glue, 6 kern, 4 penalty, 1 
+glyph, 34 attribute, 65 glue_spec, 26 attribute_list, 2 write, 4 pdf_colorstack 
 nodes
-   avail lists: 1:3,2:18795,3:4651,4:85,5:234,6:68,7:3564,8:21,9:975,10:4,11:89,
-12:1
- 65584 multiletter control sequences out of 65536+600000
- 394 fonts using 34401631 bytes
- 78i,21n,136p,9128b,2545s stack positions out of 5000i,500n,10000p,200000b,100000s
-
-warning  (pdf backend): unreferenced destination with name 'figure.caption.9'
+   avail lists: 1:20,2:28379,3:8830,4:85,5:225,6:67,7:3496,8:25,9:1004,10:3,11:7
+5
+ 64929 multiletter control sequences out of 65536+600000
+ 418 fonts using 35884447 bytes
+ 78i,21n,136p,9128b,2532s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/usr/shar
 e/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}{/usr/share/texlive/te
-xmf-dist/fonts/enc/dvips/xcharter/xch1_w7odti.enc}</usr/share/texlive/texmf-dist
-/fonts/opentype/google/roboto/RobotoSlab-Regular.otf>{/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/xcharter/xch_hnm3ex.enc}{/usr/share/texlive/texmf-dist/fonts
+xmf-dist/fonts/enc/dvips/xcharter/xch_hnm3ex.enc}{/usr/share/texlive/texmf-dist/
+fonts/enc/dvips/xcharter/xch1_w7odti.enc}</usr/share/texlive/texmf-dist/fonts/op
+entype/google/roboto/RobotoSlab-Regular.otf>{/usr/share/texlive/texmf-dist/fonts
 /enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/x
 ch1_bwwzc2.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_q7u3c
 c.enc}</usr/share/texlive/texmf-dist/fonts/type1/impallari/cabin/Cabin-Bold.pfb>
@@ -3276,10 +3336,10 @@ exlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf
 ype1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
 ewtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlr.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on doc.pdf (4 pages, 583325 bytes).
+Output written on doc.pdf (6 pages, 720637 bytes).
 
-PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 131072)
+PDF statistics: 159 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 

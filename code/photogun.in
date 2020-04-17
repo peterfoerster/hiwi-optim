@@ -17,9 +17,9 @@
 
 &CHARGE
   LSPCH = True
-  Nrad = 64
+  Nrad = 16
   Cell_var = 2
-  Nlong_in = 64
+  Nlong_in = 16
 /
 
 &CAVITY

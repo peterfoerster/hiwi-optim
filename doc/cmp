@@ -1,7 +1,6 @@
 #!/bin/bash
 lualatex doc
-# bibtex doc
-# lualatex doc
+# biber doc
 # lualatex doc
 # rm doc.toc
 # rm doc.log

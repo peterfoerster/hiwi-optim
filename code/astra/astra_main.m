@@ -4,7 +4,6 @@ pkg load geopdes;
 geometry_file = 'geometry_v6';
 
 [geometry] = mp_geo_load ([geometry_file '.txt']);
-
 [problem_data, method_data] = setup_problem (geometry_file);
 % tic;
 % [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
@@ -14,11 +13,11 @@ geometry_file = 'geometry_v6';
 Ipart = 2^10;
 % total charge in [nC]
 Q_total = 100e-6;
-
 % sigma bunch length in [ns]
-% 5 ps for 1e-3 (shows sc effect)
+% 5 ps for 1e-3 (shows sc effect for individual trajectories)
 % 30 ps for 5e-3
 sig_clock = 5e-3;
+
 generatorname = ['I=' num2str(Ipart) '_Q=' num2str(Q_total) '_sc=' num2str(sig_clock) '.in'];
 if (exist(generatorname, 'file') ~= 2)
    write_generatorinput (generatorname, Ipart, Q_total, sig_clock, geometry);
@@ -26,10 +25,9 @@ if (exist(generatorname, 'file') ~= 2)
    plot_generator (generatorname);
 end
 
-% create field map
-% 4
+% number of transverse grid points 4
 nx = ny = 2^4;
-% 6
+% number of longitudinal grid points 6
 nz = 2^6;
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
                 '_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
@@ -43,12 +41,13 @@ H = 2^iH;
 
 % space charge
 sc       = 1;
-% 5
+% number of radial cells 4
 Nrad     = 2^4;
-% 1
+% size factor between innermost and outermost radial cell
 Cell_var = 2^1;
-% 5
+% number of longitudinal cells 4
 Nlong_in = 2^4;
+
 % filename = ['photogun_H=' num2str(iH)];
 % filename = ['photogun_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
 % filename = ['photogun_I=' num2str(Ipart) '_Nr=' num2str(Nrad) '_Cv=' num2str(Cell_var) ...
@@ -70,54 +69,8 @@ delete('win_config.dat');
 t = linspace(1, 20, 8000);
 Y = sin(2*pi*440*t);
 sound(Y);
+return
 
+plot_astra (filename);
 [status, output] = system(['./lineplot ' filename]);
 [status, output] = system(['./fieldplot ' filename]);
-
-% integrator
-H_ref = -13;
-H_it  = [-8 -9 -10 -11 -12 -13];
-[err_linf] = compute_int_error (H_ref, H_it);
-
-% fieldmap
-nx_ref = 4;
-nz_ref = 8;
-nx_it  = [4];
-nz_it  = [4 5 6 7];
-
-nx_ref = 6;
-nz_ref = 6;
-nx_it  = [3 4 5];
-nz_it  = [6];
-
-[err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it);
-
-% space charge
-nI_ref = 10;
-nr_ref = 5;
-nc_ref = 1;
-nl_ref = 5;
-nI_it  = [10];
-nr_it  = [2 3 4 5];
-nc_it  = [1];
-nl_it  = [2 3 4 5];
-
-nI_ref = 13;
-nr_ref = 4;
-nc_ref = 1;
-nl_ref = 4;
-nI_it  = [8 9 10 11 12];
-nr_it  = [4];
-nc_it  = [1];
-nl_it  = [4];
-
-nI_ref = 10;
-nr_ref = 4;
-nc_ref = 2;
-nl_ref = 4;
-nI_it  = [10];
-nr_it  = [4];
-nc_it  = [-1 1 2];
-nl_it  = [4];
-
-[err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, nr_it, nc_it, nl_it);

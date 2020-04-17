@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+   \begin{axis}[
+      axis equal,
+      try min ticks=6,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$x / \mathrm{mm}$,
+      ylabel=$y / \mathrm{mm}$,
+      ]
+
+      \addplot[color=TUDa-1a, only marks, mark=*] table {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_gen.dat};
+      \addplot[color=TUDa-9a, only marks, mark=*] table {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_probe.dat};
+
+   \end{axis}
+\end{tikzpicture}

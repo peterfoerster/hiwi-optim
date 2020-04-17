@@ -1,0 +1,50 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{wagner}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e677be29346d195622b44f23db10f01f}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Technische Universität Darmstadt}%
+      }
+      \strng{namehash}{e677be29346d195622b44f23db10f01f}
+      \strng{fullhash}{e677be29346d195622b44f23db10f01f}
+      \strng{bibnamehash}{e677be29346d195622b44f23db10f01f}
+      \strng{authorbibnamehash}{e677be29346d195622b44f23db10f01f}
+      \strng{authornamehash}{e677be29346d195622b44f23db10f01f}
+      \strng{authorfullhash}{e677be29346d195622b44f23db10f01f}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Production and investigation of pulsed electron beams at the S-DALINAC}
+      \field{type}{phdthesis}
+      \field{year}{2013}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

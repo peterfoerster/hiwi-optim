@@ -74,22 +74,22 @@ domain_vac = discretize_vacuumchamber_v6 (electrode, anode_ring, inner_insulator
 
 [ptcs_vac, ptcs_el] = create_ptcs_v6 (electrode, anode_ring, inner_insulator, outer_insulator, vacuumchamber, domain_vac, domain_el);
 
-% figure(1);
-% hold on;
-% for iptc=1:length(ptcs_vac)
-%   nrbkntplot(ptcs_vac(iptc));
-%   x = nrbeval(ptcs_vac(iptc), {0.5,0.5});
-%   text(x(1), x(2), num2str(iptc));
-% end
-% hold off;
-%
-% figure(2);
-% hold on;
-% for iptc=1:length(ptcs_el)
-%   nrbkntplot(ptcs_el(iptc));
-%   x = nrbeval(ptcs_el(iptc), {0.5,0.5});
-%   text(x(1), x(2), num2str(iptc));
-% end
-% hold off;
+figure(1);
+hold on;
+for iptc=1:length(ptcs_vac)
+  nrbkntplot(ptcs_vac(iptc));
+  x = nrbeval(ptcs_vac(iptc), {0.5,0.5});
+  text(x(1), x(2), num2str(iptc));
+end
+hold off;
 
+figure(2);
+hold on;
+for iptc=1:length(ptcs_el)
+  nrbkntplot(ptcs_el(iptc));
+  x = nrbeval(ptcs_el(iptc), {0.5,0.5});
+  text(x(1), x(2), num2str(iptc));
+end
+hold off;
+return
 write_geometryfile_v6 (ptcs_vac, ptcs_el, filename);
