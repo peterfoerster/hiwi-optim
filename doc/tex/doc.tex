@@ -82,99 +82,99 @@
 \end{figure}
 \end{center}
 
-\newpage
-
-\begin{itemize}
-   \item \textbf{convergence of time integrator}: difference of normalized transverse emmitance $\epsilon$ w.\,r.\,t.\ finest time step is shown in Figure \ref{fig:int_cvg}
-   \item $H=2^{-11}\ \mathrm{ns}$ used later on
-\end{itemize}
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/int_emit}
-   \end{subfigure}
-   \qquad \qquad \qquad
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/int_cvg}
-   \end{subfigure}
-   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm.}
-   \label{fig:int_cvg}
-\end{figure}
-\end{center}
-
-\begin{itemize}
-   \item \textbf{convergence of field map}: look at convergence with number of grid points in transverse $(n_x, n_y)$ and longitudinal $(n_z)$ direction individually
-   \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z=64$
-   \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=16$
-   \item $n_x=n_y=16$ and $n_z=64$ used later on
-\end{itemize}
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/map_emit_xy}
-   \end{subfigure}
-   \qquad \qquad \qquad
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/map_cvg_xy}
-   \end{subfigure}
-   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_z=64$ and $n_x=n_y$ variable.}
-   \label{fig:map_cvg_xy}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/map_emit_z}
-   \end{subfigure}
-   \qquad \qquad \qquad
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/map_cvg_z}
-   \end{subfigure}
-   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=16$.}
-   \label{fig:map_cvg_z}
-\end{figure}
-\end{center}
-
-\begin{itemize}
-   \item \textbf{convergence of space charge}: look at convergence with number of grid cells in radial $(n_r)$ and longitudinal $(n_l)$ direction and number of particles $(n_I)$ separately
-
-   \item Figure \ref{fig:sc_cvg_rl} looks at convergence of $n_r, n_l$ for $n_I=2^{10}$
-   \item $n_r=n_l=16$ used later on
-
-   \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=16$
-   \item $n_I=2^{10}$
-\end{itemize}
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/sc_emit_rl}
-   \end{subfigure}
-   \qquad \qquad \qquad
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/sc_cvg_rl}
-   \end{subfigure}
-   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l, n_r$ variable.}
-   \label{fig:sc_cvg_rl}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[H]
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/sc_emit_I}
-   \end{subfigure}
-   \qquad \qquad \qquad
-   \begin{subfigure}{0.4\textwidth}
-      \input{fig/sc_cvg_I}
-   \end{subfigure}
-   \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=16$.}
-   \label{fig:sc_cvg_I}
-\end{figure}
-\end{center}
+% \newpage
+%
+% \begin{itemize}
+%    \item \textbf{convergence of time integrator}: difference of normalized transverse emmitance $\epsilon$ w.\,r.\,t.\ finest time step is shown in Figure \ref{fig:int_cvg}
+%    \item $H=2^{-11}\ \mathrm{ns}$ used later on
+% \end{itemize}
+%
+% \begin{center}
+% \begin{figure}[H]
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/int_emit}
+%    \end{subfigure}
+%    \qquad \qquad \qquad
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/int_cvg}
+%    \end{subfigure}
+%    \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm.}
+%    \label{fig:int_cvg}
+% \end{figure}
+% \end{center}
+%
+% \begin{itemize}
+%    \item \textbf{convergence of field map}: look at convergence with number of grid points in transverse $(n_x, n_y)$ and longitudinal $(n_z)$ direction individually
+%    \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z=64$
+%    \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=16$
+%    \item $n_x=n_y=16$ and $n_z=64$ used later on
+% \end{itemize}
+%
+% \begin{center}
+% \begin{figure}[H]
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/map_emit_xy}
+%    \end{subfigure}
+%    \qquad \qquad \qquad
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/map_cvg_xy}
+%    \end{subfigure}
+%    \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_z=64$ and $n_x=n_y$ variable.}
+%    \label{fig:map_cvg_xy}
+% \end{figure}
+% \end{center}
+%
+% \begin{center}
+% \begin{figure}[H]
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/map_emit_z}
+%    \end{subfigure}
+%    \qquad \qquad \qquad
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/map_cvg_z}
+%    \end{subfigure}
+%    \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=16$.}
+%    \label{fig:map_cvg_z}
+% \end{figure}
+% \end{center}
+%
+% \begin{itemize}
+%    \item \textbf{convergence of space charge}: look at convergence with number of grid cells in radial $(n_r)$ and longitudinal $(n_l)$ direction and number of particles $(n_I)$ separately
+%
+%    \item Figure \ref{fig:sc_cvg_rl} looks at convergence of $n_r, n_l$ for $n_I=2^{10}$
+%    \item $n_r=n_l=16$ used later on
+%
+%    \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=16$
+%    \item $n_I=2^{10}$
+% \end{itemize}
+%
+% \begin{center}
+% \begin{figure}[H]
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/sc_emit_rl}
+%    \end{subfigure}
+%    \qquad \qquad \qquad
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/sc_cvg_rl}
+%    \end{subfigure}
+%    \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l, n_r$ variable.}
+%    \label{fig:sc_cvg_rl}
+% \end{figure}
+% \end{center}
+%
+% \begin{center}
+% \begin{figure}[H]
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/sc_emit_I}
+%    \end{subfigure}
+%    \qquad \qquad \qquad
+%    \begin{subfigure}{0.4\textwidth}
+%       \input{fig/sc_cvg_I}
+%    \end{subfigure}
+%    \caption{Normalized transverse emmitance and absolute error in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=16$.}
+%    \label{fig:sc_cvg_I}
+% \end{figure}
+% \end{center}
 
 % Cell_var
 % \begin{center}

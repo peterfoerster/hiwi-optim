@@ -70,4 +70,18 @@ function [] = plot_bounds (lb, ub, filename, order)
       plot([pts1(1,ictrl) pts1(1,ictrl)], [pts1(2,ictrl) pts1(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
       hold off;
    end
+
+   % 14
+   bnds  = nrbextract(geometry(14).nurbs);
+   pts3  = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   ioff = 10*order - 20;
+   for ictrl=2:(order-1)
+      ix = ioff + 2*ictrl - 3;
+      hold on;
+      plot([pts3(1,ictrl)+lb(ix) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '>', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)+ub(ix)], [pts3(2,ictrl) pts3(2,ictrl)], 'marker', '<', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl)+lb(ix+1) pts3(2,ictrl)], 'marker', '^', 'color', 'k');
+      plot([pts3(1,ictrl) pts3(1,ictrl)], [pts3(2,ictrl) pts3(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+      hold off;
+   end
 end

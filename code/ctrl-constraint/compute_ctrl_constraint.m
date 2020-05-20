@@ -101,4 +101,22 @@ function [ctrl_diff_lb, ctrl_diff_ub] = compute_ctrl_constraint(geometry, ctrl_d
       % top given by bounds
       ctrl_diff_ub(ix+1) = NaN;
    end
+
+   % 14
+   bnds = nrbextract(geometry(14).nurbs);
+   pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+   ioff = 10*order - 20;
+   for ictrl=2:(order-1)
+      ix = ioff + 2*ictrl - 3;
+      % left given by bounds
+      ctrl_diff_lb(ix) = NaN;
+      % right given by bounds
+      ctrl_diff_ub(ix) = NaN;
+      % check bottom -> enforce correct order
+      ctrl_diff_lb(ix+1) = pts3(2,ictrl) - (pts3(2,ictrl-1) + tol);
+      % check top
+      x = pts3(1,ictrl);
+      y_max = compute_lineu(x, bnds(2));
+      ctrl_diff_ub(ix+1) = (y_max - tol) - pts3(2,ictrl);
+   end
 end

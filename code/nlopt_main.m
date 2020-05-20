@@ -1,7 +1,7 @@
 pkg load geopdes;
 
 order  = 3;
-N_ctrl = 5*(order-2);
+N_ctrl = 6*(order-2);
 x_init = zeros(2*N_ctrl,1);
 
 [lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);

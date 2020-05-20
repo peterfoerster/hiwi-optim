@@ -33,4 +33,9 @@ function [crv] = cut_nrb_opt (nrb_opt, order, knts)
    ctrl14(:,1)   = ctrl14(:,1)/ctrl14(4,1);
    ctrl14(:,end) = ctrl14(:,end)/ctrl14(4,end);
    crv(14) = nrbmak(ctrl14, knts);
+
+   ctrl10        = nrb_opt.coefs(:,(6*order+1):(7*order));
+   ctrl10(:,1)   = ctrl10(:,1)/ctrl10(4,1);
+   ctrl10(:,end) = ctrl10(:,end)/ctrl10(4,end);
+   crv(10) = nrbmak(ctrl10, knts);
 end

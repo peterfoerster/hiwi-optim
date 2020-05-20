@@ -43,6 +43,11 @@ function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv)
    bnds = nrbextract(ptcs_vac(11));
    ptcs_vac(11) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
 
+   bnds    = nrbextract(ptcs_vac(10));
+   bnds(1) = nrbline(nrbeval(crv(10), 1), nrbeval(bnds(4), 0));
+   bnds(2) = nrbline(nrbeval(crv(10), 0), nrbeval(bnds(4), 1));
+   ptcs_vac(10) = nrbcoons(nrbreverse(crv(10)), bnds(4), bnds(1), bnds(2));
+
    % electrode
    bnds    = nrbextract(ptcs_el(6));
    bnds(1) = nrbline(nrbeval(crv(19), 0), nrbeval(bnds(4), 0));
@@ -70,5 +75,7 @@ function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv)
    ptcs_el(2) = nrbcoons(bnds(3), nrbreverse(crv(14)), bnds(1), nrbdegelev(bnds(2), order-2));
 
    bnds = nrbextract(ptcs_el(1));
-   ptcs_el(1) = nrbcoons(bnds(3), bnds(4), bnds(1), nrbdegelev(bnds(2), order-3));
+   bnds(1) = nrbline(nrbeval(bnds(3), 0), nrbeval(crv(10), 1));
+   bnds(2) = nrbline(nrbeval(bnds(3), 1), nrbeval(crv(10), 0));
+   ptcs_el(1) = nrbcoons(bnds(3), nrbreverse(crv(10)), bnds(1), nrbdegelev(bnds(2), order-2));
 end

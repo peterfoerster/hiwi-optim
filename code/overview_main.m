@@ -2,12 +2,12 @@ pkg load geopdes;
 
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
-geometry_file = 'v6_opt_order=3_run1';
+geometry_file = 'v6_opt_order=3';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
 % write .iges files
-% write_iges (['v6_optim'], geometry);
+% write_iges (['v6_opt'], geometry);
 
 % write .dat files
 % write_ctrl_opt (geometry);
@@ -24,10 +24,10 @@ tic;
 fprintf('\ntime elapsed for solution: %d min\n', toc/60);
 
 % plot absolute value of electric field and write .dat files
-% npts = 8;
-% vtk_pts = {linspace(0, 1, npts), linspace(0, 1, npts)};
-% plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);
-% view(2);
+npts = 8;
+vtk_pts = {linspace(0, 1, npts), linspace(0, 1, npts)};
+plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);
+view(2);
 
 % write .vtk files
 sp_to_vtk (phi, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');

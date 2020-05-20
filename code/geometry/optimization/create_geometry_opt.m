@@ -9,12 +9,12 @@ function [] = create_geometry_opt (filename, x, order)
 
    [ptcs_vac, ptcs_el] = create_ptcs_v6 (electrode, anode_ring, inner_insulator, outer_insulator, vacuumchamber, domain_vac, domain_el);
 
-   [nrb_opt, knts] = create_nrb_opt_upperelectrode (ptcs_vac, order);
+   [nrb_opt, knts] = create_nrb_opt_electrode (ptcs_vac, order);
    % [nrb_opt, knts] = create_nrb_opt_anodering (ptcs_vac, order);
-   % [nrb_opt, knts] = create_nrb_opt_frontelectrode (ptcs_vac, order);
 
    nrb_opt = move_ctrl_opt (nrb_opt, x, order);
    crv     = cut_nrb_opt (nrb_opt, order, knts);
+
    [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
 
    write_geometryfile_v6 (ptcs_vac, ptcs_el, filename);

@@ -4,7 +4,7 @@ pkg load geopdes;
 filename = 'result_nlopt_order=3_run1';
 load([filename '.mat']);
 order  = 3;
-N_ctrl = 5*(order-2);
+N_ctrl = 6*(order-2);
 x_init = zeros(2*N_ctrl,1);
 
 % volume constraint
