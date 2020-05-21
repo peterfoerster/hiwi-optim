@@ -6,7 +6,7 @@ function [fc] = ctrl_constraint(x, order, N_ctrl)
    ctrl_diff_lb = ctrl_diff_ub = NaN(2*N_ctrl,1);
    [ctrl_diff_lb, ctrl_diff_ub] = compute_ctrl_constraint(geometry, ctrl_diff_lb, ctrl_diff_ub, order);
    % plot_bounds (-ctrl_diff_lb, ctrl_diff_ub, geometry_file, order);
-keyboard
+
    ctrl_diff = [ctrl_diff_lb; ctrl_diff_ub];
    ix = ~isnan(ctrl_diff);
    % fc <= 0
