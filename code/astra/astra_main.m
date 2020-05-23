@@ -1,13 +1,14 @@
 pkg load geopdes;
+pkg load statistics;
 
-% geometry_file = 'v6_opt_order=3_run1';
+% geometry_file = 'v6_opt_order=3_run2';
 geometry_file = 'geometry_v6';
 
 [geometry] = mp_geo_load ([geometry_file '.txt']);
 [problem_data, method_data] = setup_problem (geometry_file);
-% tic;
-% [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
-% fprintf('\n field solution %d min \n', toc/60);
+tic;
+[geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
+fprintf('\n field solution: %d min \n', toc/60);
 
 % number of particles (10 [8:13])
 Ipart = 2^10;
@@ -18,15 +19,16 @@ Q_total = 100e-6;
 % 30 ps for 5e-3
 sig_clock = 5e-3;
 
-generatorname = ['I=' num2str(Ipart) '_Q=' num2str(Q_total) '_sc=' num2str(sig_clock) '.in'];
+generatorname = ['laser_' 'I=' num2str(Ipart) '_Q=' num2str(Q_total) '_sc=' num2str(sig_clock) '.in'];
 if (exist(generatorname, 'file') ~= 2)
-   write_generatorinput (generatorname, Ipart, Q_total, sig_clock, geometry);
-   [status, output] = system(['./generator generator_' generatorname]);
+   [rho, tau] = create_laserinput(Ipart, sig_clock, Q_total, generatorname);
+   % write_generatorinput (generatorname, Ipart, Q_total, sig_clock, geometry);
+   % [status, output] = system(['./generator generator_' generatorname]);
    plot_generator (generatorname);
 end
 
-% number of transverse grid points 4
-nx = ny = 2^4;
+% number of transverse grid points 3
+nx = ny = 2^3;
 % number of longitudinal grid points 6
 nz = 2^6;
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
@@ -34,10 +36,10 @@ fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(metho
 if (exist([fieldmapname '.ex']) ~= 2)
    create_fieldmap (fieldmapname, nx, ny, nz, geometry, space, phi);
 end
-
+return
 % time step in [ns] (-11 [-13:-8])
 iH = -11;
-H = 2^iH;
+H  = 2^iH;
 
 % space charge
 sc       = 1;
