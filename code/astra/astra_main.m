@@ -30,12 +30,16 @@ end
 % number of transverse grid points 3
 nx = ny = 2^3;
 % number of longitudinal grid points 6
-nz = 2^6;
+nz = 2^9;
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
                 '_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
 if (exist([fieldmapname '.ex']) ~= 2)
    create_fieldmap (fieldmapname, nx, ny, nz, geometry, space, phi);
 end
+% signal that the program is finished
+t = linspace(1, 20, 8000);
+Y = sin(2*pi*440*t);
+sound(Y);
 return
 % time step in [ns] (-11 [-13:-8])
 iH = -11;
