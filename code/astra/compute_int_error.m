@@ -38,7 +38,7 @@ function [err_linf] = compute_int_error (H_ref, H_it)
       % err_x = interp1(x_it(:,1), x_it(:,2:3), x_ref(:,1)) - x_ref(:,2:3);
       % ix    = ~isnan(err_x(:,1)) & ~isnan(err_x(:,2));
       % err_x = err_x(ix,:);
-      err_y = interp1(y_it(:,1), y_it(:,2:3), y_ref(:,1)) - y_ref(:,2:3);
+      err_y = (interp1(y_it(:,1), y_it(:,2:3), y_ref(:,1)) - y_ref(:,2:3)) ./ y_ref(:,2:3);
       iy    = ~isnan(err_y(:,1)) & ~isnan(err_y(:,2));
       err_y = err_y(iy,:);
 

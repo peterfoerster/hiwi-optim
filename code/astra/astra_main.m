@@ -30,7 +30,7 @@ end
 % number of transverse grid points 3
 nx = ny = 2^3;
 % number of longitudinal grid points 6
-nz = 2^9;
+nz = 2^6;
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
                 '_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
 if (exist([fieldmapname '.ex']) ~= 2)
@@ -40,13 +40,13 @@ end
 t = linspace(1, 20, 8000);
 Y = sin(2*pi*440*t);
 sound(Y);
-return
-% time step in [ns] (-11 [-13:-8])
-iH = -11;
+
+% time step in [ns] (-12 [-13:-8])
+iH = -12;
 H  = 2^iH;
 
 % space charge
-sc       = 1;
+sc       = 0;
 % number of radial cells 4
 Nrad     = 2^4;
 % size factor between innermost and outermost radial cell
@@ -55,7 +55,7 @@ Cell_var = 2^1;
 Nlong_in = 2^4;
 
 % filename = ['photogun_H=' num2str(iH)];
-% filename = ['photogun_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
+filename = ['photogun_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
 % filename = ['photogun_I=' num2str(Ipart) '_Nr=' num2str(Nrad) '_Cv=' num2str(Cell_var) ...
 %             '_Nl=' num2str(Nlong_in)];
 filename = ['photogun'];
@@ -67,7 +67,7 @@ tic;
 fprintf('\n tracking %d min \n', toc/60);
 delete('NORRAN');
 delete([filename '.Log.001']);
-% delete([filename '.track.001']);
+delete([filename '.track.001']);
 delete([filename '.Zemit.001']);
 delete('win_config.dat');
 

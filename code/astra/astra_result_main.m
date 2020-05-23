@@ -1,8 +1,8 @@
 % integrator
-H_ref = -13;
-H_it  = [-8 -9 -10 -11 -12 -13];
-
-[err_linf] = compute_int_error (H_ref, H_it);
+% H_ref = -13;
+% H_it  = [-8 -9 -10 -11 -12 -13];
+%
+% [err_linf] = compute_int_error (H_ref, H_it);
 
 % fieldmap
 nx_ref = 4;
@@ -16,7 +16,7 @@ nx_it  = [3 4 5];
 nz_it  = [6];
 
 [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it);
-
+return
 % space charge
 nI_ref = 10;
 nr_ref = 5;

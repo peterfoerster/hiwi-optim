@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.5.8)  23 MAY 2020 10:09
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.5.8)  23 MAY 2020 22:42
  restricted system commands enabled.
 **doc
 (./doc.tex
@@ -2259,7 +2259,11 @@ TOsF.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
 (Font)              scaled to size 8.81996pt on input line 28.
 
-(./doc.aux)
+(./doc.aux
+
+LaTeX Warning: Label `fig:sc_cvg_I' multiply defined.
+
+)
 \openout1 = doc.aux
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 28.
@@ -2769,6 +2773,290 @@ Overfull \hbox (3.27162pt too wide) in paragraph at lines 73--80
 []$[]$    $[]$ 
  []
 
+[2
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+<./fig/laser.png><./fig/bunch.png>] (./fig/int_emit.tex
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-13.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-12.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-11.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-10.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-9.dat}
+PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-8.dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 25--96
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--96
+
+ []
+
+(./fig/int_cvg.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/int/photogun_int_err.dat}
+
+NOTE: coordinate (0.0001220703125,0) has been dropped because it is unbounded (i
+n y). (see also unbounded coords=jump). 
+)
+Overfull \hbox (36.30809pt too wide) in paragraph at lines 14--100
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--100
+
+ []
+
+(./fig/map_emit_xy.tex
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=8_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=32_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=64_nz=64.dat}
+)
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 21--117
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--117
+
+ []
+
+(./fig/map_cvg_xy.tex
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/map/photogun_map_err_nz=64.dat}
+)
+Overfull \hbox (36.30412pt too wide) in paragraph at lines 13--121
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--121
+
+ []
+
+(./fig/map_emit_z.tex
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=16.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=32.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=128.dat}
+PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=16_nz=256.dat}
+)
+Overfull \hbox (41.85959pt too wide) in paragraph at lines 23--131
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--131
+
+ []
+
+(./fig/map_cvg_z.tex
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/map/photogun_map_err_nx=ny=16.dat}
+)
+Overfull \hbox (30.20483pt too wide) in paragraph at lines 13--135
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--135
+
+ []
+
+[3
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+] (./fig/sc_emit_rl.tex
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl
+=64.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=32_nc=2_nl
+=32.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=4.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=8.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=16.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=32.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=4.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=8.da
+t}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=16.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=32.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=4.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=8.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=32.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=4.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=8.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.
+dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 53--155
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--155
+
+ []
+
+(./fig/sc_cvg_rl.tex
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=4_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=8_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=16_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=32_nc=2.dat}
+
+NOTE: coordinate (32,0) has been dropped because it is unbounded (in y). (see al
+so unbounded coords=jump). 
+)
+Overfull \hbox (30.20418pt too wide) in paragraph at lines 20--159
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--159
+
+ []
+
+(./fig/sc_emit_I.tex
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=256_nr=16_nc=2_nl=16.dat}
+
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=16_nc=2_nl=16.dat}
+
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=2048_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=4096_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_ref_nI=8192_nr=16_nc=2_nl=16
+.dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 28--169
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--169
+
+ []
+
+(./fig/sc_cvg_I.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_err_nr=16_nc=2_nl=16.dat}
+)
+Overfull \hbox (36.30748pt too wide) in paragraph at lines 14--173
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--173
+
+ []
+
+[4
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+] (./fig/sc_emit_c.tex
+PGFPlots: reading {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=16_nc=0.5_nl=16.d
+at}
+PGFPlots: reading {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat
+}
+PGFPlots: reading {fig/astra/sc/nc/photogun_sc_emit_ref_nI=1024_nr=16_nc=4_nl=16
+.dat}
+)
+Overfull \hbox (41.86092pt too wide) in paragraph at lines 20--184
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--184
+
+ []
+
+(./fig/sc_cvg_c.tex
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/sc/nc/photogun_sc_err_nI=1024_nr=16_nl=16.dat}
+
+NOTE: coordinate (4,0) has been dropped because it is unbounded (in y). (see als
+o unbounded coords=jump). 
+)
+Overfull \hbox (36.30412pt too wide) in paragraph at lines 14--188
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--188
+
+ []
+
 (./fig/astra_res_eps.tex
 PGFPlots: reading {fig/astra/results/photogun_init_eps.dat}
 PGFPlots: reading {fig/astra/results/photogun_run1_eps.dat}
@@ -2795,7 +3083,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--206
 
  []
 
-[2
+[5
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
@@ -2804,7 +3092,15 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-<./fig/laser.png><./fig/bunch.png>]
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+]
 Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
@@ -2830,7 +3126,7 @@ Package TUDaPub Warning: You did not provide a Label for key discussion.
 (TUDaPub)                Either you need to recompile your document or add a
 (TUDaPub)                label using \IMRADlabel.
 
-[3
+[6
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
@@ -2851,6 +3147,9 @@ Package rerunfilecheck Info: File `doc.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'doc.run.xml'.
 
 \openout1 = doc.run.xml
@@ -2858,16 +3157,16 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
 )
 
 Here is how much of LuaTeX's memory you used:
- 55964 strings out of 481365
- 125007,2848258 words of node,token memory allocated
+ 56553 strings out of 481365
+ 125002,2848258 words of node,token memory allocated
  1042 words of node memory still in use:
    23 hlist, 4 vlist, 6 rule, 4 local_par, 21 glue, 4 kern, 4 penalty, 1 glyph, 
 28 attribute, 69 glue_spec, 23 attribute_list, 2 write, 4 pdf_colorstack nodes
-   avail lists: 1:15,2:32518,3:9733,4:67,5:144,6:67,7:2503,8:25,9:728,10:2,11:73
+   avail lists: 1:12,2:28349,3:8823,4:81,5:167,6:67,7:3456,8:26,9:988,10:2,11:71
 
- 70498 multiletter control sequences out of 65536+600000
+ 70682 multiletter control sequences out of 65536+600000
  306 fonts using 29630315 bytes
- 78i,21n,136p,10144b,2546s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 78i,21n,136p,10144b,2551s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch1_wwsmtw.enc}</usr/sh
 are/texmf/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/share/texlive/texm
 f-dist/fonts/enc/dvips/xcharter/xch_hnm3ex.enc}</usr/share/texlive/texmf-dist/fo
@@ -2875,14 +3174,15 @@ nts/opentype/google/roboto/RobotoSlab-Regular.otf></usr/share/texmf/fonts/openty
 pe/public/lm/lmroman9-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmr
 oman10-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/Liber
 tineMathMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/Libertine
-MathMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-
-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Rom
-an.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (3 pages, 707196 bytes).
+MathMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/LibertineMat
+hRM.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on doc.pdf (6 pages, 761357 bytes).
 
-PDF statistics: 121 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 131072)
+PDF statistics: 152 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
