@@ -1,4 +1,4 @@
-function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, nr_it, nc_it, nl_it)
+function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, nr_it, nc_it, nl_it, rho, dz)
    % [nI_it, nr_it, nc_it, nl_it, x/y, xrms/emit]
    err_linf = NaN(length(nI_it),length(nr_it),length(nc_it),length(nl_it),2,2);
 
@@ -50,7 +50,7 @@ function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, n
                % err_x = interp1(x_it(:,1), x_it(:,2:3), x_ref(:,1)) - x_ref(:,2:3);
                % ix    = ~isnan(err_x(:,1)) & ~isnan(err_x(:,2));
                % err_x = err_x(ix,:);
-               err_y = interp1(y_it(:,1), y_it(:,2:3), y_ref(:,1)) - y_ref(:,2:3);
+               err_y = (interp1(y_it(:,1), y_it(:,2:3), y_ref(:,1)) - y_ref(:,2:3)) ./ y_ref(:,2:3);
                iy    = ~isnan(err_y(:,1)) & ~isnan(err_y(:,2));
                err_y = err_y(iy,:);
 
@@ -79,13 +79,13 @@ function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, n
    if (length(nI_it) == 1 && length(nr_it) > 1 && length(nc_it) == 1 && length(nl_it) > 1)
       for inr=1:length(nr_it)
          write_dat1D (['photogun_sc_err_nI=' num2str(2^nI_it(1)) '_nr=' num2str(2^nr_it(inr)) ...
-                       '_nc=' num2str(2^nc_it(1)) '.dat'], 2.^nl_it, err_linf(1,inr,1,:,2,2));
+                       '_nc=' num2str(2^nc_it(1)) '.dat'], rho./(2.^nl_it), err_linf(1,inr,1,:,2,2));
       end
    elseif (length(nI_it) > 1 && length(nr_it) == 1 && length(nc_it) == 1 && length(nl_it) == 1)
       write_dat1D (['photogun_sc_err_nr=' num2str(2^nr_it(1)) '_nc=' num2str(2^nc_it(1)) ...
                     '_nl=' num2str(2^nl_it(1)) '.dat'], 2.^nI_it, err_linf(:,1,1,1,2,2));
    elseif (length(nI_it) == 1 && length(nr_it) == 1 && length(nc_it) > 1 && length(nl_it) == 1)
       write_dat1D (['photogun_sc_err_nI=' num2str(2^nI_it(1)) '_nr=' num2str(2^nr_it(1)) ...
-                    '_nl=' num2str(2^nl_it(1)) '.dat'], 2.^nc_it, err_linf(1,1,:,1,2,2));
+                    '_nl=' num2str(2^nl_it(1)) '.dat'], dz./(2.^nc_it), err_linf(1,1,:,1,2,2));
   end
 end

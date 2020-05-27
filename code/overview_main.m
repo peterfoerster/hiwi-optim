@@ -1,4 +1,3 @@
-pkg load geopdes;
 
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
@@ -16,7 +15,7 @@ geometry_file = 'v6_opt_order=3_run2';
 
 % plot geometry
 plot_geometry (geometry, boundaries);
-
+return
 % solve electrostatic problem
 [problem_data, method_data] = setup_problem (geometry_file);
 tic;

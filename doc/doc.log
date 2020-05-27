@@ -1,87 +1,224 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.5.8)  23 MAY 2020 22:42
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2020.5.24)  27 MAY 2020 23:51
  restricted system commands enabled.
 **doc
 (./doc.tex
-LaTeX2e <2020-02-02> patch level 2
-Lua module: luaotfload-main 2020-02-02 3.12 luaotfload entry point
-Lua module: luaotfload-init 2020-02-02 3.12 luaotfload submodule / initializatio
+LaTeX2e <2018-12-01>
+Lua module: luaotfload-main 2019-05-18 2.97 luaotfload entry point
+Lua module: luaotfload-init 2019-05-18 2.97 luaotfload submodule / initializatio
 n
-Lua module: lualibs 2020-02-02 2.70 ConTeXt Lua standard libraries.
-Lua module: lualibs-extended 2020-02-02 2.70 ConTeXt Lua libraries -- extended c
+Lua module: lualibs 2019-07-04 2.66 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2019-07-04 2.66 ConTeXt Lua libraries -- extended c
 ollection.
-Lua module: luaotfload-log 2020-02-02 3.12 luaotfload submodule / logging
-Lua module: luaotfload-parsers 2020-02-02 3.12 luaotfload submodule / filelist
-Lua module: luaotfload-configuration 2020-02-02 3.12 luaotfload submodule / conf
+Lua module: luaotfload-log 2019-05-18 2.97 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2019-05-18 2.97 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2019-05-18 2.97 luaotfload submodule / conf
 ig file reader
 luaotfload | conf : Root cache directory is /home/peter/.texlive2019/texmf-var/l
-uatex-cache/generic-dev/names.
-luaotfload | init : Loading fontloader “fontloader-2020-01-26.lua” from kpse
+uatex-cache/generic/names.
+luaotfload | init : Loading fontloader “fontloader-2019-05-18.lua” from kpse
 -resolved path “/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader
--2020-01-26.lua”.
+-2019-05-18.lua”.
 Lua-only attribute luaotfload@state = 2
 Lua-only attribute luaotfload@noligature = 3
 Lua-only attribute luaotfload@syllabe = 4
-luaotfload | init : Context OpenType loader version “3.11”
+luaotfload | init : Context OpenType loader version “3.108”
 Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
 Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
-Lua module: luaotfload-loaders 2020-02-02 3.12 luaotfload submodule / callback h
+Lua module: luaotfload-loaders 2019-05-18 2.97 luaotfload submodule / callback h
 andling
 Inserting `luaotfload.define_font' at position 1 in `define_font'.
-Lua module: luaotfload-database 2020-02-02 3.12 luaotfload submodule / database
-Lua module: luaotfload-unicode 2020-02-02 3.12 luaotfload submodule / Unicode he
-lpers
-Lua module: luaotfload-colors 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-database 2019-05-18 2.97 luaotfload submodule / database
+Lua module: luaotfload-colors 2019-05-18 2.97 luaotfload submodule / color
 Lua-only attribute luaotfload_color_attribute = 5
-Lua module: luaotfload-resolvers 2020-02-02 3.12 luaotfload submodule / resolver
+Lua module: luaotfload-resolvers 2019-05-18 2.97 luaotfload submodule / resolver
 s
 luaotfload | conf : Root cache directory is /home/peter/.texlive2019/texmf-var/l
-uatex-cache/generic-dev/names.
-Lua module: luaotfload-features 2020-02-02 3.12 luaotfload submodule / features
-Lua module: luaotfload-letterspace 2020-02-02 3.12 luaotfload submodule / color
-Lua module: luaotfload-embolden 2020-02-02 3.12 luaotfload submodule / color
-Lua module: luaotfload-notdef 2020-02-02 3.12 luaotfload submodule / color
-Lua module: luaotfload-auxiliary 2020-02-02 3.12 luaotfload submodule / auxiliar
+uatex-cache/generic/names.
+Lua module: luaotfload-features 2019-05-18 2.97 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2019-05-18 2.97 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2019-05-18 2.97 luaotfload submodule / auxiliar
 y functions
 Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
 font'.
-Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
-t'.
-Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+Inserting `luaotfload.aux.patch_cambria_domh' at position 2 in `luaotfload.patch
 _font'.
 Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
 t_unsafe'.
-Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
-Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
-Lua module: luaotfload-fallback 2020-02-02 3.12 luaotfload submodule / fallback
-Lua module: luaotfload-multiscript 2020-02-02 3.12 luaotfload submodule / multis
-cript
-Lua module: luaotfload-script 2020-02-02 3.12 luaotfload submodule / Script help
-ers
-Lua module: luaotfload-tounicode 2020-02-02 3.12 luaotfload submodule / tounicod
-e
-Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
-. L3 programming layer <2020-02-14>
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudapub.cls
+Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
+.
+luaotfload | main : initialization completed in 0.073 seconds
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudapub.cls
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-02-14 L3 programming layer (loader) 
+Package: expl3 2019-07-25 L3 programming layer (loader) 
 
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-07-25 L3 programming layer (code)
+\ucharcat@table=\catcodetable5
+\c_max_int=\count80
+\l_tmpa_int=\count81
+\l_tmpb_int=\count82
+\g_tmpa_int=\count83
+\g_tmpb_int=\count84
+\g__kernel_prg_map_int=\count85
+\c__ior_term_ior=\count86
+\c_log_iow=\count87
+\l_iow_line_count_int=\count88
+\l__iow_line_target_int=\count89
+\l__iow_one_indent_int=\count90
+\l__iow_indent_int=\count91
+\c_zero_dim=\dimen102
+\c_max_dim=\dimen103
+\l_tmpa_dim=\dimen104
+\l_tmpb_dim=\dimen105
+\g_tmpa_dim=\dimen106
+\g_tmpb_dim=\dimen107
+\c_zero_skip=\skip41
+\c_max_skip=\skip42
+\l_tmpa_skip=\skip43
+\l_tmpb_skip=\skip44
+\g_tmpa_skip=\skip45
+\g_tmpb_skip=\skip46
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count92
+\l__intarray_loop_int=\count93
+\c__intarray_sp_dim=\dimen108
+\g__intarray_font_int=\count94
+\c__fp_leading_shift_int=\count95
+\c__fp_middle_shift_int=\count96
+\c__fp_trailing_shift_int=\count97
+\c__fp_big_leading_shift_int=\count98
+\c__fp_big_middle_shift_int=\count99
+\c__fp_big_trailing_shift_int=\count100
+\c__fp_Bigg_leading_shift_int=\count101
+\c__fp_Bigg_middle_shift_int=\count102
+\c__fp_Bigg_trailing_shift_int=\count103
+\g__fp_array_int=\count104
+\l__fp_array_loop_int=\count105
+\l__sort_length_int=\count106
+\l__sort_min_int=\count107
+\l__sort_top_int=\count108
+\l__sort_max_int=\count109
+\l__sort_true_max_int=\count110
+\l__sort_block_int=\count111
+\l__sort_begin_int=\count112
+\l__sort_end_int=\count113
+\l__sort_A_int=\count114
+\l__sort_B_int=\count115
+\l__sort_C_int=\count116
+\l__str_internal_int=\count117
+\l__tl_analysis_normal_int=\count118
+\l__tl_analysis_index_int=\count119
+\l__tl_analysis_nesting_int=\count120
+\l__tl_analysis_type_int=\count121
+\l__regex_internal_a_int=\count122
+\l__regex_internal_b_int=\count123
+\l__regex_internal_c_int=\count124
+\l__regex_balance_int=\count125
+\l__regex_group_level_int=\count126
+\l__regex_mode_int=\count127
+\c__regex_cs_in_class_mode_int=\count128
+\c__regex_cs_mode_int=\count129
+\l__regex_catcodes_int=\count130
+\l__regex_default_catcodes_int=\count131
+\c__regex_catcode_L_int=\count132
+\c__regex_catcode_O_int=\count133
+\c__regex_catcode_A_int=\count134
+\c__regex_all_catcodes_int=\count135
+\l__regex_show_lines_int=\count136
+\l__regex_min_state_int=\count137
+\l__regex_max_state_int=\count138
+\l__regex_left_state_int=\count139
+\l__regex_right_state_int=\count140
+\l__regex_capturing_group_int=\count141
+\l__regex_min_pos_int=\count142
+\l__regex_max_pos_int=\count143
+\l__regex_curr_pos_int=\count144
+\l__regex_start_pos_int=\count145
+\l__regex_success_pos_int=\count146
+\l__regex_curr_char_int=\count147
+\l__regex_curr_catcode_int=\count148
+\l__regex_last_char_int=\count149
+\l__regex_case_changed_char_int=\count150
+\l__regex_curr_state_int=\count151
+\l__regex_step_int=\count152
+\l__regex_min_active_int=\count153
+\l__regex_max_active_int=\count154
+\l__regex_replacement_csnames_int=\count155
+\l__regex_match_count_int=\count156
+\l__regex_min_submatch_int=\count157
+\l__regex_submatch_int=\count158
+\l__regex_zeroth_submatch_int=\count159
+\g__regex_trace_regex_int=\count160
+\c_empty_box=\box27
+\l_tmpa_box=\box28
+\l_tmpb_box=\box29
+\g_tmpa_box=\box30
+\g_tmpb_box=\box31
+\l__box_top_dim=\dimen109
+\l__box_bottom_dim=\dimen110
+\l__box_left_dim=\dimen111
+\l__box_right_dim=\dimen112
+\l__box_top_new_dim=\dimen113
+\l__box_bottom_new_dim=\dimen114
+\l__box_left_new_dim=\dimen115
+\l__box_right_new_dim=\dimen116
+\l__box_internal_box=\box32
+\l__coffin_internal_box=\box33
+\l__coffin_internal_dim=\dimen117
+\l__coffin_offset_x_dim=\dimen118
+\l__coffin_offset_y_dim=\dimen119
+\l__coffin_x_dim=\dimen120
+\l__coffin_y_dim=\dimen121
+\l__coffin_x_prime_dim=\dimen122
+\l__coffin_y_prime_dim=\dimen123
+\c_empty_coffin=\box34
+\l__coffin_aligned_coffin=\box35
+\l__coffin_aligned_internal_coffin=\box36
+\l_tmpa_coffin=\box37
+\l_tmpb_coffin=\box38
+\g_tmpa_coffin=\box39
+\g_tmpb_coffin=\box40
+\l__coffin_bounding_shift_dim=\dimen124
+\l__coffin_left_corner_dim=\dimen125
+\l__coffin_right_corner_dim=\dimen126
+\l__coffin_bottom_corner_dim=\dimen127
+\l__coffin_top_corner_dim=\dimen128
+\l__coffin_scaled_total_height_dim=\dimen129
+\l__coffin_scaled_width_dim=\dimen130
+\c__coffin_empty_coffin=\box41
+\l__coffin_display_coffin=\box42
+\l__coffin_display_coord_coffin=\box43
+\l__coffin_display_pole_coffin=\box44
+\l__coffin_display_offset_dim=\dimen131
+\l__coffin_display_x_dim=\dimen132
+\l__coffin_display_y_dim=\dimen133
+\g__file_internal_ior=\read1
+\l__seq_internal_a_int=\count161
+\l__seq_internal_b_int=\count162
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+File: l3backend-pdfmode.def 2019-04-06 v L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count163
 \l__pdf_internal_box=\box45
 ))
 Document Class: tudapub 2020/03/13 v2.09 Publications using TU Darmstadt's Copor
 ate Design (TUDa-CI)
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2020-02-14 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2019-05-28 LaTeX2e option processing using LaTeX3 keys
 )
 (/usr/share/texlive/texmf-dist/tex/latex/urcls/URspecialopts.sty
 Package: URspecialopts 2019/01/22 v2.1 Implementation of keyval-options acceptin
 g multiple values as grouped clists
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2020-02-14 L3 Experimental document command parser
+Package: xparse 2019-05-28 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count164
 \g__xparse_grabber_int=\count165
 \l__xparse_m_args_int=\count166
@@ -91,39 +228,39 @@ Package: xparse 2020-02-14 L3 Experimental document command parser
 \g_TUDa_paper_int=\count169
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2020/01/24 v3.29 KOMA-Script document class (article)
+Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-dependent ba
-sics and keyval usage)
+Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-independent b
-asics and keyval usage)
+Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
+Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2020/01/24 v3.29 KOMA-Script package (handling toc-files)
+Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip47
 \scr@dte@tocline@numbox=\box46
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 137.
+(tocbasic)             for `toc' on input line 134.
 Class scrartcl Info: File `tudasize9pt.clo' used to setup font sizes on input li
-ne 2212.
+ne 2162.
 
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudasize9pt.clo
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudasize9pt.clo
 File: tudasize9pt.clo TUDa-CI  font size class option (9pt)
 luaotfload | db : Font names database loaded from /home/peter/.texlive2019/texmf
--var/luatex-cache/generic-dev/names/luaotfload-names.luc)
+-var/luatex-cache/generic/names/luaotfload-names.luc)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2020/01/24 v3.29 KOMA-Script package (type area)
+Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
 \ta@bcor=\skip48
 \ta@div=\count170
 \ta@hblk=\skip49
@@ -153,7 +290,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 9.0pt
 (typearea)              \footskip       = 38.32497pt
 (typearea)              \baselineskip   = 10.95pt
-(typearea)              on input line 1719.
+(typearea)              on input line 1715.
 )
 \c@part=\count171
 \c@section=\count172
@@ -163,55 +300,55 @@ Package typearea Info: These are the values describing the layout:
 \c@subparagraph=\count176
 \scr@dte@section@maxnumwidth=\skip53
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 4723.
+(scrartcl)           for `\section on input line 4489.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 4723.
+(scrartcl)           for `\section on input line 4489.
 \scr@dte@part@maxnumwidth=\skip54
 Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 4731.
+(scrartcl)           for `\part on input line 4497.
 \scr@dte@subsection@maxnumwidth=\skip55
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 4741.
+(scrartcl)           for `\subsection on input line 4507.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 4741.
+(scrartcl)           for `\subsection on input line 4507.
 \scr@dte@subsubsection@maxnumwidth=\skip56
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 4751.
+(scrartcl)           for `\subsubsection on input line 4517.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 4751.
+(scrartcl)           for `\subsubsection on input line 4517.
 \scr@dte@paragraph@maxnumwidth=\skip57
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 4761.
+(scrartcl)           for `\paragraph on input line 4527.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 4761.
+(scrartcl)           for `\paragraph on input line 4527.
 \scr@dte@subparagraph@maxnumwidth=\skip58
 Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 4771.
+(scrartcl)           for `\subparagraph on input line 4537.
 Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 4771.
+(scrartcl)           for `\subparagraph on input line 4537.
 \abovecaptionskip=\skip59
 \belowcaptionskip=\skip60
 \c@pti@nb@sid@b@x=\box47
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6002.
+(tocbasic)             for `lof' on input line 5781.
 \scr@dte@figure@maxnumwidth=\skip61
 \c@figure=\count177
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6014.
+(tocbasic)             for `lot' on input line 5793.
 \scr@dte@table@maxnumwidth=\skip62
 \c@table=\count178
-Class scrartcl Info: Redefining `\numberline' on input line 6178.
+Class scrartcl Info: Redefining `\numberline' on input line 5957.
 \bibindent=\dimen134
-) (/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudarules.sty
+) (/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudarules.sty
 Package: tudarules 2020/03/13 v2.09 Creation of colored bars for tuda-ci bundle
 \c_TUDa_largerule_dim=\dimen135
 \c_TUDa_rulesep_dim=\dimen136
 \c_TUDa_smallrule_dim=\dimen137
 \c_TUDa_logoheight_dim=\dimen138
 
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudacolors.sty
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudacolors.sty
 Package: tudacolors 2020/03/13 v2.09 Color definition for TU Darmstadt's tuda-ci
  bundle
 
@@ -236,26 +373,27 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudacolors.def
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudacolors.def
 File: tudacolors.def 2020/03/13 2.09 Color definitions for tuda-ci
 ))
 \l_TUDa_headrule_width_dim=\dimen139
 )
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tudafonts.sty
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudafonts.sty
 Package: tudafonts 2020/03/13 2.09 font loading for TUDa-CI, TU Darmstadt's Corp
 orate Design
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2019/11/07 v1.0c TeX engine tests
+Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, a
+nd LuaTeX
 )
 (/usr/share/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
-Package: fontspec 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2020/02/03 2.7h Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2019/03/15 2.7c Font selection for XeLaTeX and LuaLaTeX
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
-Package: fontspec-luatex 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTe
+Package: fontspec-luatex 2019/03/15 v2.7c Font selection for XeLaTeX and LuaLaTe
 X
 \l__fontspec_script_int=\count179
 \l__fontspec_language_int=\count180
@@ -273,9 +411,20 @@ X
 \l__fontspec_tmpc_dim=\dimen142
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/tuenc.def
+File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+LaTeX Info: Redefining \itshape on input line 3783.
+LaTeX Info: Redefining \slshape on input line 3788.
+LaTeX Info: Redefining \scshape on input line 3793.
+LaTeX Info: Redefining \upshape on input line 3798.
+LaTeX Info: Redefining \em on input line 3828.
+LaTeX Info: Redefining \emph on input line 3853.
+))
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/XCharter.fontspec)
 
 Package fontspec Info: Font family 'XCharter(0)' created for font 'XCharter'
@@ -292,52 +441,54 @@ Package fontspec Info: Font family 'XCharter(0)' created for font 'XCharter'
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[XCharter-Roman.otf]:mode=node;script=latn;language=d
-flt;+tlig;"
+(fontspec)             <->"[XCharter-Roman.otf]:mode=node;script=latn;language=D
+FLT;+tlig;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[XCharter-Roman.otf]:mode=node;script=latn;language=d
-flt;+tlig;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[XCharter-Bold.otf]:mode=node;script=latn;language=df
-lt;+tlig;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[XCharter-Bold.otf]:mode=node;script=latn;language=df
-lt;+tlig;+smcp;"
+(fontspec)             <->"[XCharter-Roman.otf]:mode=node;script=latn;language=D
+FLT;+tlig;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
+(fontspec)             <->"[XCharter-Bold.otf]:mode=node;script=latn;language=DF
+LT;+tlig;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
+(fontspec)             <->"[XCharter-Bold.otf]:mode=node;script=latn;language=DF
+LT;+tlig;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->"[XCharter-Italic.otf]:mode=node;script=latn;language=
-dflt;+tlig;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+DFLT;+tlig;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->"[XCharter-Italic.otf]:mode=node;script=latn;language=
-dflt;+tlig;+smcp;"
+DFLT;+tlig;+smcp;"
 (fontspec)             - 'slanted' (m/sl) with NFSS spec.:
 (fontspec)             <->"[XCharter-Slanted.otf]:mode=node;script=latn;language
-=dflt;+tlig;"
-(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+=DFLT;+tlig;"
+(fontspec)             - 'slanted small caps'  (m/slsc) with NFSS spec.:
 (fontspec)             <->"[XCharter-Slanted.otf]:mode=node;script=latn;language
-=dflt;+tlig;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+=DFLT;+tlig;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->"[XCharter-BoldItalic.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+age=DFLT;+tlig;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->"[XCharter-BoldItalic.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+smcp;"
-(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+age=DFLT;+tlig;+smcp;"
+(fontspec)             - 'bold slanted' (bx/sl) with NFSS spec.:
 (fontspec)             <->"[XCharter-BoldSlanted.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;"
-(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+uage=DFLT;+tlig;"
+(fontspec)             - 'bold slanted small caps'  (bx/slsc) with NFSS spec.:
 (fontspec)             <->"[XCharter-BoldSlanted.otf]:mode=node;script=latn;lang
-uage=dflt;+tlig;+smcp;"
+uage=DFLT;+tlig;+smcp;"
 
+LaTeX Info: Redefining \rmfamily on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/roboto/roboto.sty
-Package: roboto 2019/12/11 (Bob Tennent) Supports Roboto fonts for all LaTeX eng
+Package: roboto 2019/04/19 (Bob Tennent) Supports Roboto fonts for all LaTeX eng
 ines.
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
@@ -351,7 +502,85 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
 
 Package fontspec Info: Font family 'Roboto(0)' created for font 'Roboto' with
@@ -366,29 +595,30 @@ Package fontspec Info: Font family 'Roboto(0)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;"
+age=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+age=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;+smcp;"
+=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;+smcp;"
+nguage=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
+LaTeX Info: Redefining \sffamily on input line 149.
 
 Package fontspec Info: Font family 'Roboto(1)' created for font 'Roboto' with
 (fontspec)             options [Ligatures = TeX,Scale = 1,Extension =
@@ -401,28 +631,28 @@ Package fontspec Info: Font family 'Roboto(1)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;"
+age=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+age=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;+smcp;"
+=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;+smcp;"
+nguage=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'RobotoCondensed(0)' created for font
@@ -437,28 +667,28 @@ Package fontspec Info: Font family 'RobotoCondensed(0)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Regular.otf]:mode=node;script=l
-atn;language=dflt;+tlig;+pnum;+lnum;"
+atn;language=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Regular.otf]:mode=node;script=l
-atn;language=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+atn;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Bold.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+;language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Bold.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;+smcp;"
+;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Italic.otf]:mode=node;script=la
-tn;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+tn;language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Italic.otf]:mode=node;script=la
-tn;language=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+tn;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-BoldItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+t=latn;language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-BoldItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+lnum;+smcp;"
+t=latn;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'RobotoCondensed(1)' created for font
@@ -473,30 +703,31 @@ Package fontspec Info: Font family 'RobotoCondensed(1)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Bold.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;"
+;language=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Bold.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Bold.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+;language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-Bold.otf]:mode=node;script=latn
-;language=dflt;+tlig;+pnum;+lnum;+smcp;"
+;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-BoldItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+t=latn;language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-BoldItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+t=latn;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-BoldItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+t=latn;language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoCondensed-BoldItalic.otf]:mode=node;scrip
-t=latn;language=dflt;+tlig;+pnum;+lnum;+smcp;"
+t=latn;language=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
-luaotfload | aux : font no 51 (nil) defines no feature for script latn
+luaotfload | aux : font no 48 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 48
 
 Package fontspec Info: Font family 'RobotoSlab(0)' created for font
 (fontspec)             'RobotoSlab' with options [Ligatures = TeX,Scale =
@@ -508,16 +739,16 @@ Package fontspec Info: Font family 'RobotoSlab(0)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoSlab-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;+tlig;"
+anguage=DFLT;+tlig;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoSlab-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;+tlig;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+anguage=DFLT;+tlig;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoSlab-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;+tlig;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+uage=DFLT;+tlig;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoSlab-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;+tlig;+smcp;"
+uage=DFLT;+tlig;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(2)' created for font 'Roboto' with
@@ -530,16 +761,16 @@ Package fontspec Info: Font family 'Roboto(2)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;"
+age=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+lnum;+smcp;"
+age=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;+smcp;"
+ge=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(3)' created for font 'Roboto' with
@@ -552,16 +783,16 @@ Package fontspec Info: Font family 'Roboto(3)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Medium.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;"
+ge=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Medium.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+lnum;+smcp;"
+ge=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-MediumItalic.otf]:mode=node;script=latn;
-language=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+language=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-MediumItalic.otf]:mode=node;script=latn;
-language=dflt;+tlig;+pnum;+lnum;+smcp;"
+language=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(4)' created for font 'Roboto' with
@@ -574,16 +805,16 @@ Package fontspec Info: Font family 'Roboto(4)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Thin.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;"
+=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Thin.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;+smcp;"
+=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-ThinItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-ThinItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;+smcp;"
+nguage=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(5)' created for font 'Roboto' with
@@ -596,16 +827,16 @@ Package fontspec Info: Font family 'Roboto(5)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Light.otf]:mode=node;script=latn;languag
-e=dflt;+tlig;+pnum;+lnum;"
+e=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Light.otf]:mode=node;script=latn;languag
-e=dflt;+tlig;+pnum;+lnum;+smcp;"
+e=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-LightItalic.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+anguage=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-LightItalic.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+pnum;+lnum;+smcp;"
+anguage=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(6)' created for font 'Roboto' with
@@ -618,16 +849,16 @@ Package fontspec Info: Font family 'Roboto(6)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;"
+=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+lnum;+smcp;"
+=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+lnum;+smcp;"
+nguage=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(7)' created for font 'Roboto' with
@@ -640,16 +871,16 @@ Package fontspec Info: Font family 'Roboto(7)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Black.otf]:mode=node;script=latn;languag
-e=dflt;+tlig;+pnum;+lnum;"
+e=DFLT;+tlig;+pnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Black.otf]:mode=node;script=latn;languag
-e=dflt;+tlig;+pnum;+lnum;+smcp;"
+e=DFLT;+tlig;+pnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BlackItalic.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+pnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+anguage=DFLT;+tlig;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BlackItalic.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+pnum;+lnum;+smcp;"
+anguage=DFLT;+tlig;+pnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(8)' created for font 'Roboto' with
@@ -663,28 +894,28 @@ Package fontspec Info: Font family 'Roboto(8)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;"
+age=DFLT;+tlig;+pnum;+onum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+age=DFLT;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+=DFLT;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+pnum;+onum;+smcp;"
+=DFLT;+tlig;+pnum;+onum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+onum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+pnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+ge=DFLT;+tlig;+pnum;+onum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+pnum;+onum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+pnum;+onum;+smcp;"
+nguage=DFLT;+tlig;+pnum;+onum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(9)' created for font 'Roboto' with
@@ -698,28 +929,28 @@ Package fontspec Info: Font family 'Roboto(9)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+tnum;+lnum;"
+age=DFLT;+tlig;+tnum;+lnum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+age=DFLT;+tlig;+tnum;+lnum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+=DFLT;+tlig;+tnum;+lnum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+tnum;+lnum;+smcp;"
+=DFLT;+tlig;+tnum;+lnum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+ge=DFLT;+tlig;+tnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+ge=DFLT;+tlig;+tnum;+lnum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+tnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+tnum;+lnum;+smcp;"
+nguage=DFLT;+tlig;+tnum;+lnum;+smcp;"
 
 
 Package fontspec Info: Font family 'Roboto(10)' created for font 'Roboto' with
@@ -733,34 +964,35 @@ Package fontspec Info: Font family 'Roboto(10)' created for font 'Roboto' with
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+tnum;+onum;"
+age=DFLT;+tlig;+tnum;+onum;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Regular.otf]:mode=node;script=latn;langu
-age=dflt;+tlig;+tnum;+onum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+age=DFLT;+tlig;+tnum;+onum;+smcp;"
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+=DFLT;+tlig;+tnum;+onum;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Bold.otf]:mode=node;script=latn;language
-=dflt;+tlig;+tnum;+onum;+smcp;"
+=DFLT;+tlig;+tnum;+onum;+smcp;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+ge=DFLT;+tlig;+tnum;+onum;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-Italic.otf]:mode=node;script=latn;langua
-ge=dflt;+tlig;+tnum;+onum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+ge=DFLT;+tlig;+tnum;+onum;+smcp;"
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+tnum;+onum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+nguage=DFLT;+tlig;+tnum;+onum;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[Roboto-BoldItalic.otf]:mode=node;script=latn;la
-nguage=dflt;+tlig;+tnum;+onum;+smcp;"
+nguage=DFLT;+tlig;+tnum;+onum;+smcp;"
 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/roboto/roboto-mono.sty
-Package: roboto-mono 2019/12/11 (Bob Tennent) Supports RobotoMono fonts for all 
+Package: roboto-mono 2019/06/03 (Bob Tennent) Supports RobotoMono fonts for all 
 LaTeX engines.
-luaotfload | aux : font no 72 (nil) defines no feature for script latn
+luaotfload | aux : font no 64 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 64
 
 Package fontspec Info: Font family 'RobotoMono(0)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -775,22 +1007,22 @@ ordSpace,UprightFont
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;"
+anguage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;+smcp;"
+anguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+uage=DFLT;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;+smcp;"
+uage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
@@ -799,22 +1031,22 @@ uage=dflt;+smcp;"
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Italic.otf]:mode=node;script=DFLT;la
-nguage=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+nguage=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Italic.otf]:mode=node;script=DFLT;la
-nguage=dflt;+smcp;"
+nguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-BoldItalic.otf]:mode=node;script=DFL
-T;language=dflt;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+T;language=DFLT;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-BoldItalic.otf]:mode=node;script=DFL
-T;language=dflt;+smcp;"
+T;language=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
@@ -822,7 +1054,9 @@ T;language=dflt;+smcp;"
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-luaotfload | aux : font no 72 (nil) defines no feature for script latn
+LaTeX Info: Redefining \ttfamily on input line 78.
+luaotfload | aux : font no 64 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 64
 
 Package fontspec Info: Font family 'RobotoMono(1)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -835,38 +1069,39 @@ Package fontspec Info: Font family 'RobotoMono(1)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;"
+anguage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;+smcp;"
+anguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+uage=DFLT;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;+smcp;"
+uage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Italic.otf]:mode=node;script=DFLT;la
-nguage=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+nguage=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Italic.otf]:mode=node;script=DFLT;la
-nguage=dflt;+smcp;"
+nguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-BoldItalic.otf]:mode=node;script=DFL
-T;language=dflt;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+T;language=DFLT;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-BoldItalic.otf]:mode=node;script=DFL
-T;language=dflt;+smcp;"
+T;language=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-luaotfload | aux : font no 72 (nil) defines no feature for script latn
+luaotfload | aux : font no 64 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 64
 
 Package fontspec Info: Font family 'RobotoMono(2)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -878,22 +1113,23 @@ Package fontspec Info: Font family 'RobotoMono(2)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;"
+anguage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Regular.otf]:mode=node;script=DFLT;l
-anguage=dflt;+smcp;"
+anguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Italic.otf]:mode=node;script=DFLT;la
-nguage=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+nguage=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Italic.otf]:mode=node;script=DFLT;la
-nguage=dflt;+smcp;"
+nguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-luaotfload | aux : font no 77 (nil) defines no feature for script latn
+luaotfload | aux : font no 69 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 69
 
 Package fontspec Info: Font family 'RobotoMono(3)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -905,22 +1141,23 @@ Package fontspec Info: Font family 'RobotoMono(3)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Medium.otf]:mode=node;script=DFLT;la
-nguage=dflt;"
+nguage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Medium.otf]:mode=node;script=DFLT;la
-nguage=dflt;+smcp;"
+nguage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-MediumItalic.otf]:mode=node;script=D
-FLT;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+FLT;language=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-MediumItalic.otf]:mode=node;script=D
-FLT;language=dflt;+smcp;"
+FLT;language=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-luaotfload | aux : font no 80 (nil) defines no feature for script latn
+luaotfload | aux : font no 72 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 72
 
 Package fontspec Info: Font family 'RobotoMono(4)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -932,22 +1169,23 @@ Package fontspec Info: Font family 'RobotoMono(4)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Thin.otf]:mode=node;script=DFLT;lang
-uage=dflt;"
+uage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Thin.otf]:mode=node;script=DFLT;lang
-uage=dflt;+smcp;"
+uage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-ThinItalic.otf]:mode=node;script=DFL
-T;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+T;language=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-ThinItalic.otf]:mode=node;script=DFL
-T;language=dflt;+smcp;"
+T;language=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-luaotfload | aux : font no 83 (nil) defines no feature for script latn
+luaotfload | aux : font no 75 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 75
 
 Package fontspec Info: Font family 'RobotoMono(5)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -959,22 +1197,23 @@ Package fontspec Info: Font family 'RobotoMono(5)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Light.otf]:mode=node;script=DFLT;lan
-guage=dflt;"
+guage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Light.otf]:mode=node;script=DFLT;lan
-guage=dflt;+smcp;"
+guage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-LightItalic.otf]:mode=node;script=DF
-LT;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+LT;language=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-LightItalic.otf]:mode=node;script=DF
-LT;language=dflt;+smcp;"
+LT;language=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-luaotfload | aux : font no 73 (nil) defines no feature for script latn
+luaotfload | aux : font no 65 (nil) defines no feature for script latn
+luaotfload | aux : no font with id 65
 
 Package fontspec Info: Font family 'RobotoMono(6)' created for font
 (fontspec)             'RobotoMono' with options [HyphenChar=None,Scale =
@@ -986,18 +1225,18 @@ Package fontspec Info: Font family 'RobotoMono(6)' created for font
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;"
+uage=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-Bold.otf]:mode=node;script=DFLT;lang
-uage=dflt;+smcp;"
+uage=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-BoldItalic.otf]:mode=node;script=DFL
-T;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+T;language=DFLT;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.:
 (fontspec)             <->s*[1]"[RobotoMono-BoldItalic.otf]:mode=node;script=DFL
-T;language=dflt;+smcp;"
+T;language=DFLT;+smcp;"
 (fontspec)             and font adjustment code:
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
@@ -1014,30 +1253,34 @@ LaTeX Info: Redefining \LaTeX on input line 89.
 \g_TUDa_headwidth_dim=\dimen150
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2020/01/24 v3.29 KOMA-Script package (end user interfa
-ce for scrlayer)
+Package: scrlayer-scrpage 2019/02/01 v3.26b KOMA-Script package (end user interf
+ace for scrlayer)
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2020/01/24 v3.29 KOMA-Script package (defining layers and page
- styles)
+Package: scrlayer 2019/02/01 v3.26b KOMA-Script package (defining layers and pag
+e styles)
 Package scrlayer Info: Using already defined \footheight
 (scrlayer)             hoping, that this is a length and
 (scrlayer)             not only a macro on input line 109.
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2106
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2083
 .
 )
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
-(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1244.
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1241.
 Package scrlayer-scrpage Info: deactivating warning for font element
-(scrlayer-scrpage)             `pagefoot' on input line 1271.
+(scrlayer-scrpage)             `pagefoot' on input line 1268.
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+Package: geometry 2018/04/16 v5.8 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
 )
 \Gm@cnth=\count191
 \Gm@cntv=\count192
@@ -1056,17 +1299,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \g_TUDa_title_box=\box48
 \g_TUDa_title_fill_skip=\skip63
 
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tuda-a4paper.clo
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tuda-a4paper.clo
 File: tuda-a4paper.clo 2020/03/13 v2.09 tuda-cisizeadjustmentsfora4paper
 )
 \g_TUDa_title_info_box=\box49
 \TUDa@title_headline_box=\box50
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -1074,7 +1317,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 105.
+Package graphics Info: Driver file: luatex.def on input line 99.
 )
 \Gin@req@height=\dimen160
 \Gin@req@width=\dimen161
@@ -1084,103 +1327,99 @@ Package tudaPub Info: The tudapub class won't create PDF/A-mode.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+Package: hyperref 2019/06/12 v6.88h Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
+(/usr/share/texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 \pdftexcmds@toks=\toks18
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen162
 \Hy@linkcounter=\count194
 \Hy@pagecounter=\count195
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+File: pd1enc.def 2019/06/12 v6.88h Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count196
-Package hyperref Info: Option `pdfa' set `false' on input line 4421.
-Package hyperref Info: Option `unicode' set `true' on input line 4421.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `pdfa' set `false' on input line 4424.
+Package hyperref Info: Option `unicode' set `true' on input line 4424.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2019/06/12 v6.88h Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Hyper figures OFF on input line 4547.
-Package hyperref Info: Link nesting OFF on input line 4552.
-Package hyperref Info: Hyper index ON on input line 4555.
-Package hyperref Info: Plain pages OFF on input line 4562.
-Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Hyper figures OFF on input line 4550.
+Package hyperref Info: Link nesting OFF on input line 4555.
+Package hyperref Info: Hyper index ON on input line 4558.
+Package hyperref Info: Plain pages OFF on input line 4565.
+Package hyperref Info: Backreferencing OFF on input line 4570.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4800.
+Package hyperref Info: Bookmarks ON on input line 4803.
 \c@Hy@tempcnt=\count197
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5159.
+LaTeX Info: Redefining \url on input line 5156.
 \XeTeXLinkMargin=\dimen163
-
-(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
-
-))
 \Fld@menulength=\count198
 \Field@Width=\dimen164
 \Fld@charsize=\dimen165
-Package hyperref Info: Hyper figures OFF on input line 6430.
-Package hyperref Info: Link nesting OFF on input line 6435.
-Package hyperref Info: Hyper index ON on input line 6438.
-Package hyperref Info: backreferencing OFF on input line 6445.
-Package hyperref Info: Link coloring OFF on input line 6450.
-Package hyperref Info: Link coloring with OCG OFF on input line 6455.
-Package hyperref Info: PDF/A mode OFF on input line 6460.
-LaTeX Info: Redefining \ref on input line 6500.
-LaTeX Info: Redefining \pageref on input line 6504.
-
-(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
-)
+Package hyperref Info: Hyper figures OFF on input line 6411.
+Package hyperref Info: Link nesting OFF on input line 6416.
+Package hyperref Info: Hyper index ON on input line 6419.
+Package hyperref Info: backreferencing OFF on input line 6426.
+Package hyperref Info: Link coloring OFF on input line 6431.
+Package hyperref Info: Link coloring with OCG OFF on input line 6436.
+Package hyperref Info: PDF/A mode OFF on input line 6441.
+LaTeX Info: Redefining \ref on input line 6481.
+LaTeX Info: Redefining \pageref on input line 6485.
 \Hy@abspage=\count199
 \c@Item=\count266
 \c@Hfootnote=\count267
@@ -1188,83 +1427,101 @@ Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 Package hyperref Info: Driver (autodetected): hluatex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
-File: hluatex.def 2020/01/14 v7.00d Hyperref driver for luaTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
-
-)
-(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-)
+File: hluatex.def 2019/06/12 v6.88h Hyperref driver for luaTeX
 \Fld@listcount=\count268
 \c@bookmark@seq@number=\count269
 
-(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
-6.
+2.
 )
 \Hy@SectionHShift=\skip64
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/02/14 3.40 The Babel package
+Package: babel 2019/07/19 3.33 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2020/02/14 3.40 Babel switching mechanism
+File: switch.def 2019/07/19 3.33 Babel switching mechanism
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
-\bbl@readstream=\read2
 \l@dumylang=\language2
-Package babel Info: Non-standard hyphenation setup on input line 117.
+Package babel Info: Non-standard hyphenation setup on input line 114.
 \l@nohyphenation=\language3
-\l@hungarian=\language4
-\l@finnish=\language5
-\l@ngerman-x-2019-04-04=\language6
-\l@estonian=\language7
-\l@liturgicallatin=\language8
-\l@romansh=\language9
-\l@bokmal=\language10
-\l@serbian=\language11
-\l@nynorsk=\language12
-\l@belarusian=\language13
-\l@churchslavonic=\language14
-\l@bulgarian=\language15
-\l@romanian=\language16
-\l@uppersorbian=\language17
-\l@usenglishmax=\language18
-\l@danish=\language19
-\l@mongolianlmc=\language20
-\l@occitan=\language21
-\l@irish=\language22
-\l@icelandic=\language23
-\l@swissgerman=\language24
-\l@classiclatin=\language25
-\l@slovenian=\language26
-\l@german-x-2019-04-04=\language27
-\l@latin=\language28
-\l@swedish=\language29
-\l@ukenglish=\language30
-\l@serbianc=\language31
-\l@turkish=\language32
-\l@german=\language33
-\l@kurmanji=\language34
-\l@russian=\language35
-\l@latvian=\language36
-\l@lithuanian=\language37
-\l@friulan=\language38
-\l@ukrainian=\language39
-\l@mongolian=\language40
-\l@ngerman=\language41
-\l@welsh=\language42
-\l@croatian=\language43
-\l@dutch=\language44
-\l@piedmontese=\language45
+\l@polish=\language4
+\l@russian=\language5
+\l@ukrainian=\language6
+\l@afrikaans=\language7
+\l@ibycus=\language8
+\l@arabic=\language9
+\l@basque=\language10
+\l@belarusian=\language11
+\l@bulgarian=\language12
+\l@catalan=\language13
+\l@pinyin=\language14
+\l@coptic=\language15
+\l@croatian=\language16
+\l@czech=\language17
+\l@danish=\language18
+\l@dutch=\language19
+\l@ukenglish=\language20
+\l@usenglishmax=\language21
+\l@esperanto=\language22
+\l@estonian=\language23
+\l@ethiopic=\language24
+\l@farsi=\language25
+\l@finnish=\language26
+\l@french=\language27
+\l@friulan=\language28
+\l@galician=\language29
+\l@georgian=\language30
+\l@german=\language31
+\l@ngerman=\language32
+\l@swissgerman=\language33
+\l@greek=\language34
+\l@hungarian=\language35
+\l@icelandic=\language36
+\l@assamese=\language37
+\l@bengali=\language38
+\l@gujarati=\language39
+\l@hindi=\language40
+\l@kannada=\language41
+\l@malayalam=\language42
+\l@marathi=\language43
+\l@oriya=\language44
+\l@odia=\language45
+\l@panjabi=\language46
+\l@tamil=\language47
+\l@telugu=\language48
+\l@indonesian=\language49
+\l@interlingua=\language50
+\l@irish=\language51
+\l@italian=\language52
+\l@kurmanji=\language53
+\l@latin=\language54
+\l@classiclatin=\language55
+\l@latvian=\language56
+\l@lithuanian=\language57
+\l@mongolian=\language58
+\l@mongolianlmc=\language59
+\l@bokmal=\language60
+\l@nynorsk=\language61
+\l@piedmontese=\language62
+\l@portuguese=\language63
+\l@romanian=\language64
+\l@romansh=\language65
+\l@sanskrit=\language66
+\l@serbian=\language67
+\l@serbianc=\language68
+\l@slovak=\language69
+\l@slovenian=\language70
+\l@spanish=\language71
+\l@swedish=\language72
+\l@thai=\language73
+\l@turkish=\language74
+\l@turkmen=\language75
+\l@uppersorbian=\language76
+\l@welsh=\language77
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
 Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthograp
@@ -1275,7 +1532,7 @@ Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogra
 phy)
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/02/14 3.40 Babel common definitions
+File: babel.def 2019/07/19 3.33 Babel common definitions
 \babel@savecnt=\count270
 \U@D=\dimen166
 
@@ -1291,17 +1548,14 @@ tex
 German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2019-04-04
  (WL))))) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: \l@canadian = using hyphenrules for english
-(babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language30) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language30) on input line 108.
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 )) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count271
 )
 \csq@reset=\count272
@@ -1313,7 +1567,7 @@ Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \csq@ltx@everypar=\toks19
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+File: csquotes.def 2019/05/10 v5.2e csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
@@ -1326,7 +1580,7 @@ Package csquotes Info: Option 'babel' depreciated.
 Package csquotes Info: Enabling multilingual quotes.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
@@ -1387,9 +1641,8 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \bibinitsep=\skip70
 \bibparsep=\skip71
 \bibhang=\skip72
-\blx@bcfin=\read3
+\blx@bcfin=\read2
 \blx@bcfout=\write3
-\blx@langwohyphens=\language46
 \c@mincomprange=\count320
 \c@maxcomprange=\count321
 \c@mincompwidth=\count322
@@ -1397,7 +1650,7 @@ Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
@@ -1491,45 +1744,39 @@ Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 \c@textcitecount=\count391
 \c@textcitetotal=\count392
 \c@textcitemaxnames=\count393
-\c@biburlbigbreakpenalty=\count394
-\c@biburlbreakpenalty=\count395
-\c@biburlnumpenalty=\count396
-\c@biburlucpenalty=\count397
-\c@biburllcpenalty=\count398
-\biburlbigskip=\muskip17
-\biburlnumskip=\muskip18
-\biburlucskip=\muskip19
-\biburllcskip=\muskip20
-\c@smartand=\count399
+\c@biburlnumpenalty=\count394
+\c@biburlucpenalty=\count395
+\c@biburllcpenalty=\count396
+\c@smartand=\count397
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count400
-\c@bbx:relatedtotal=\count401
+File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count398
+\c@bbx:relatedtotal=\count399
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+File: numeric.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1548,11 +1795,11 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/hologo/hologo.sty
-Package: hologo 2019/12/05 v1.14 A logo collection with bookmark support (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hologo.sty
+Package: hologo 2017/05/01 v1.13 A logo collection with bookmark support (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip87
 
 For additional information on amsmath, use the `?' option.
@@ -1571,30 +1818,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count402
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count403
-\leftroot@=\count404
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count405
-\DOTSCASE@=\count406
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
+\inf@bad=\count400
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count401
+\leftroot@=\count402
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count403
+\DOTSCASE@=\count404
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
 \Mathstrutbox@=\box51
 \strutbox@=\box52
 \big@size=\dimen169
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count407
-\c@MaxMatrixCols=\count408
-\dotsspace@=\muskip21
-\c@parentequation=\count409
-\dspbrk@lvl=\count410
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count405
+\c@MaxMatrixCols=\count406
+\dotsspace@=\muskip17
+\c@parentequation=\count407
+\dspbrk@lvl=\count408
 \tag@help=\toks21
-\row@=\count411
-\column@=\count412
-\maxfields@=\count413
+\row@=\count409
+\column@=\count410
+\maxfields@=\count411
 \andhelp@=\toks22
 \eqnshift@=\dimen170
 \alignsep@=\dimen171
@@ -1606,26 +1853,26 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \multlinegap=\skip88
 \multlinetaggap=\skip89
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count414
+\c@float@type=\count412
 \float@exts=\toks25
 \float@box=\box53
 \@float@everytoks=\toks26
 \@floatcapt=\box54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 61.
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen176
 \captionmargin@=\dimen177
 \captionwidth=\dimen178
@@ -1633,16 +1880,15 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@indent=\dimen180
 \caption@parindent=\dimen181
 \caption@hangindent=\dimen182
-Package caption Info: KOMA-Script document class detected.
 )
 Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count415
-\c@continuedfloat=\count416
+\c@caption@flags=\count413
+\c@ContinuedFloat=\count414
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count417
-\c@subtable=\count418
+\c@subfigure=\count415
+\c@subtable=\count416
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -1660,14 +1906,14 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgfrcs 2019/08/03 v3.1.4b (3.1.4b)
 ))
-Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgf 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgfsys 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks28
@@ -1688,46 +1934,46 @@ ex
 \pgf@xd=\dimen193
 \pgf@yd=\dimen194
 \w@pgf@writea=\write4
-\r@pgf@reada=\read4
-\c@pgf@counta=\count419
-\c@pgf@countb=\count420
-\c@pgf@countc=\count421
-\c@pgf@countd=\count422
+\r@pgf@reada=\read3
+\c@pgf@counta=\count417
+\c@pgf@countb=\count418
+\c@pgf@countc=\count419
+\c@pgf@countd=\count420
 \t@pgf@toka=\toks31
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count423
+\pgf@sys@id@count=\count421
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+File: pgf.cfg 2019/08/03 v3.1.4b (3.1.4b)
 )
 Driver file for pgf: pgfsys-luatex.def
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
-File: pgfsys-luatex.def 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfsys-luatex.def 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
 f
-File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfsys-common-pdf.def 2019/08/03 v3.1.4b (3.1.4b)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
-File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count424
-\pgfsyssoftpath@bigbuffer@items=\count425
+File: pgfsyssoftpath.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfsyssoftpath@smallbuffer@items=\count422
+\pgfsyssoftpath@bigbuffer@items=\count423
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
-File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfsysprotocol.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgfcore 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen195
-\pgfmath@count=\count426
+\pgfmath@count=\count424
 \pgfmath@box=\box56
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
@@ -1751,12 +1997,12 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count427
+\c@pgfmathroundto@lastzeros=\count425
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
-File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorepoints.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@picminx=\dimen196
 \pgf@picmaxx=\dimen197
 \pgf@picminy=\dimen198
@@ -1774,103 +2020,103 @@ File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
-File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorepathconstruct.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@path@lastx=\dimen266
 \pgf@path@lasty=\dimen267
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
-File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorepathusage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@shorten@end@additional=\dimen268
 \pgf@shorten@start@additional=\dimen269
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
-File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorescopes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count428
+\pgf@picture@serial@count=\count426
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
-File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoregraphicstate.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgflinewidth=\dimen270
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
-File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoretransformations.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@pt@x=\dimen271
 \pgf@pt@y=\dimen272
 \pgf@pt@temp=\dimen273
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorequick.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
 ex
-File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoreobjects.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
 .code.tex
-File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorepathprocessing.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
-File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorearrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfarrowsep=\dimen274
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoreshade.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@max=\dimen275
-\pgf@sys@shading@range@num=\count429
-\pgf@shadingcount=\count430
+\pgf@sys@shading@range@num=\count427
+\pgf@shadingcount=\count428
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoreimage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
-File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoreexternal.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfexternal@startupbox=\box60
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
-File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorelayers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
 ode.tex
-File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcoretransparency.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
 tex
-File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorepatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfcorerdf.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfmoduleshapes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgfnodeparttextbox=\box61
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgfmoduleplot.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
-Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgfcomp-version-0-65 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@nodesepstart=\dimen276
 \pgf@nodesepend=\dimen277
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
-Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgfcomp-version-1-18 2019/08/03 v3.1.4b (3.1.4b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+Package: pgffor 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen278
@@ -1879,12 +2125,12 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 \pgffor@toks=\toks38
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+Package: tikz 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
-File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count431
+File: pgflibraryplothandlers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@plot@mark@count=\count429
 \pgfplotmarksize=\dimen280
 )
 \tikz@lastx=\dimen281
@@ -1899,22 +2145,22 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box63
 \tikz@tempbox=\box64
 \tikz@tempbox@bg=\box65
-\tikztreelevel=\count432
-\tikznumberofchildren=\count433
-\tikznumberofcurrentchild=\count434
-\tikz@fig@count=\count435
+\tikztreelevel=\count430
+\tikznumberofchildren=\count431
+\tikznumberofcurrentchild=\count432
+\tikz@fig@count=\count433
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count436
-\pgfmatrixcurrentcolumn=\count437
-\pgf@matrix@numberofcolumns=\count438
+File: pgfmodulematrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfmatrixcurrentrow=\count434
+\pgfmatrixcurrentcolumn=\count435
+\pgf@matrix@numberofcolumns=\count436
 )
-\tikz@expandcount=\count439
+\tikz@expandcount=\count437
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: tikzlibrarytopaths.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
@@ -1923,13 +2169,13 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
-\pgfplots@luabackend@table=\catcodetable5
+\pgfplots@luabackend@table=\catcodetable6
 \t@pgfplots@toka=\toks39
 \t@pgfplots@tokb=\toks40
 \t@pgfplots@tokc=\toks41
 \pgfplots@tmpa=\dimen289
-\c@pgfplots@coordindex=\count440
-\c@pgfplots@scanlineindex=\count441
+\c@pgfplots@coordindex=\count438
+\c@pgfplots@scanlineindex=\count439
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -1941,7 +2187,7 @@ gfsupp_loader.code.tex
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibraryluam
 ath.code.tex)
-Package pgfplots info on input line 275: luamath library shipped with pgf 3.1.5b
+Package pgfplots info on input line 275: luamath library shipped with pgf 3.1.4b
  is up-to-date
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
@@ -1954,13 +2200,13 @@ tructure.code.tex)
 tructureext.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count442
+\c@pgfplotsarray@tmp=\count440
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count443
+\c@pgfplotstable@counta=\count441
 \t@pgfplotstable@a=\toks42
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
@@ -1973,7 +2219,7 @@ de.tex))
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count444
+\c@pgfplotslibrarysurf@no=\count442
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
 shading.pgfsys-luatex.def)))
@@ -2005,7 +2251,7 @@ e.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen292
 \pgfdecoratedinputsegmentremainingdistance=\dimen293
 \pgf@decorate@distancetomove=\dimen294
-\pgf@decorate@repeatstate=\count445
+\pgf@decorate@repeatstate=\count443
 \pgfdecorationsegmentamplitude=\dimen295
 \pgfdecorationsegmentlength=\dimen296
 )
@@ -2019,7 +2265,7 @@ decorations.pathmorphing.code.tex))
 zlibrarydecorations.pathreplacing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count446
+\pgfplots@numplots=\count444
 \pgfplots@xmin@reg=\dimen297
 \pgfplots@xmax@reg=\dimen298
 \pgfplots@ymin@reg=\dimen299
@@ -2029,11 +2275,11 @@ decorations.pathreplacing.code.tex))
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: tikzlibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
 de.tex
-File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplotstable 2018/03/28 v1.16 Table typesetting and Pretty-printing (1
@@ -2043,7 +2289,7 @@ Package: pgfplotstable 2018/03/28 v1.16 Table typesetting and Pretty-printing (1
 .tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable.colt
 ype.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen303
 \ar@mcellbox=\box67
 \extrarowheight=\dimen304
@@ -2052,15 +2298,15 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \backup@length=\skip91
 \ar@cellbox=\box68
 ))
-(/home/peter/.texlive2019/texmf-var/tex/latex/tuda-ci/tuda-pgfplots.sty
+(/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tuda-pgfplots.sty
 Package: tuda-pgfplots 2020/03/13 2.09 tuda-ci pgfplots color schemes
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/XCharter.sty
-Package: XCharter 2019/11/21 v1.203
+Package: XCharter 2017/12/19 v1.112
 
-`XCharter' v1.203, 2019/11/21 Text macros for XCharter, an extension of Charter
+`XCharter' v1.112, 2017/12/19 Text macros for XCharter, an extension of Charter
  (msharpe) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
 File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
@@ -2068,26 +2314,30 @@ File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
 (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1enc.def
 File: ly1enc.def 2009/07/22 v0.7 TeX 'n ANSI encoding (DPC/KB)
 )
-LaTeX Font Info:    Trying to load font information for T1+XCharter(0) on input 
-line 112.
-LaTeX Font Info:    No file T1XCharter(0).fd. on input line 112.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 105.
 
-
-LaTeX Font Warning: Font shape `T1/XCharter(0)/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 112.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/mweights/mweights.sty
+Package: mweights 2017/03/30 (Bob Tennent) Support package for multiple-weight f
+ont packages. 
+LaTeX Info: Redefining \bfseries on input line 22.
+LaTeX Info: Redefining \mdseries on input line 30.
+LaTeX Info: Redefining \rmfamily on input line 38.
+LaTeX Info: Redefining \sffamily on input line 66.
+LaTeX Info: Redefining \ttfamily on input line 94.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2014/03/23 v1.0d Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
 LaTeX Info: Redefining \slshape on input line 33.
-LaTeX Info: Redefining \swshape on input line 35.
 LaTeX Info: Redefining \scshape on input line 37.
-LaTeX Info: Redefining \sscshape on input line 39.
-LaTeX Info: Redefining \ulcshape on input line 41.
-LaTeX Info: Redefining \textsw on input line 47.
-LaTeX Info: Redefining \textssc on input line 48.
-LaTeX Info: Redefining \textulc on input line 49.
 )
 LaTeX Info: Redefining \textin on input line 46.
 LaTeX Info: Redefining \textnu on input line 46.
@@ -2096,23 +2346,14 @@ LaTeX Info: Redefining \textnu on input line 46.
 Package: inconsolata 2019/05/17 v1.12
 
 `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
-\zifour@ocount=\count447
+\zifour@ocount=\count445
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cabin/cabin.sty
-Package: cabin 2019/10/21 (Bob Tennent) Supports Cabin fonts for all LaTeX engin
+Package: cabin 2019/04/24 (Bob Tennent) Supports Cabin fonts for all LaTeX engin
 es.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+XCharter-TLF on input
- line 112.
-
-(/usr/share/texlive/texmf-dist/tex/latex/xcharter/T1XCharter-TLF.fd
-File: T1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-T
-LF.
-)
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 8.81996pt on input line 112.
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
 Package: newtxmath 2020/01/25 v1.624
@@ -2121,14 +2362,14 @@ Package: newtxmath 2020/01/25 v1.624
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count448
+\tx@cntz=\count446
 
 (/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
-\tx@Isdigit=\count449
-\tx@IsAlNum=\count450
+\tx@Isdigit=\count447
+\tx@IsAlNum=\count448
 \tx@tA=\toks44
 \tx@tB=\toks45
-\tx@su=\read5
+\tx@su=\read4
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 317.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/XCharter-TLF/m/n on input line 317.
@@ -2224,24 +2465,20 @@ LaTeX Font Info:    Redeclaring math delimiter \langle on input line 798.
 LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 800.
 LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 804.
 LaTeX Font Info:    Redeclaring math delimiter \vert on input line 805.
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 851.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 876.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 877.
-LaTeX Font Info:    Redeclaring math accent \vec on input line 1940.
-\ntx@numstart=\count451
-\ntx@UCstart=\count452
-\ntx@lcstart=\count453
-\ntx@tmpc=\count454
-\ntx@imath=\count455
-\ntx@jmath=\count456
+\ntx@numstart=\count449
+\ntx@UCstart=\count450
+\ntx@lcstart=\count451
+\ntx@tmpc=\count452
+\ntx@imath=\count453
+\ntx@jmath=\count454
 LaTeX Info: Redefining \Bbbk on input line 2449.
 LaTeX Info: Redefining \not on input line 2598.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathalpha/mathalfa.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/mathalpha/mathalpha.sty
-Package: mathalpha 2019/10/05 - 1.13mathalpha (License LPPL) Michael Sharpe
+Package: mathalpha 2019/05/20 - 1.12mathalpha (License LPPL) Michael Sharpe
 
-`mathalpha' v1.13, 2019/10/05, a renaming of mathalfa (msharpe)
+`mathalpha' v1.12, 2019/05/20, a renaming of mathalfa (msharpe)
 LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 297.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
 (Font)                  U/BOONDOX-calo/m/n --> U/BOONDOX-calo/b/n on input line 
@@ -2249,54 +2486,71 @@ LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+XCharter-TOsF on inpu
-t line 28.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+))
+LaTeX Font Info:    Try loading font information for T1+XCharter-TOsF on input l
+ine 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/T1XCharter-TOsF.fd
 File: T1XCharter-TOsF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-
 TOsF.
 )
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 8.81996pt on input line 28.
+(Font)              scaled to size 9.79996pt on input line 28.
 
-(./doc.aux
-
-LaTeX Warning: Label `fig:sc_cvg_I' multiply defined.
-
-)
+(./doc.aux)
 \openout1 = doc.aux
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 28.
-LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line 
-28.
+LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 28.
+
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 28
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 2
-8.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
@@ -2304,73 +2558,63 @@ LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 28
-.
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 28
-.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 
-28.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 28.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 28.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line
- 28.
+LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 28
+.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Trying to load font information for TU+XCharter-TOsF on inpu
-t line 28.
-LaTeX Font Info:    No file TUXCharter-TOsF.fd. on input line 28.
+LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
+(Font)              scaled to size 8.81996pt on input line 28.
 
-
-LaTeX Font Warning: Font shape `TU/XCharter-TOsF/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 28.
-
-Package scrbase Info: activating english \contentsname on input line 28.
-Package scrbase Info: activating english \listfigurename on input line 28.
-Package scrbase Info: activating english \listtablename on input line 28.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count457
+\scratchcounter=\count455
 \scratchdimen=\dimen305
 \scratchbox=\box69
-\nofMPsegments=\count458
-\nofMParguments=\count459
+\nofMPsegments=\count456
+\nofMParguments=\count457
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count460
+\MPscratchCnt=\count458
 \MPscratchDim=\dimen306
-\MPnumerator=\count461
-\makeMPintoPDFobject=\count462
+\MPnumerator=\count459
+\makeMPintoPDFobject=\count460
 \everyMPtoPDFconversion=\toks48
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
-5.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
 ,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
+(grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
@@ -2414,15 +2658,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \AtBeginShipoutBox=\box71
 Package hyperref Info: Link coloring OFF on input line 28.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count463
+\c@section@level=\count461
 )
 LaTeX Info: Redefining \ref on input line 28.
 LaTeX Info: Redefining \pageref on input line 28.
@@ -2437,44 +2678,20 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           because of handling of possible bookmark level gaps.
 (scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
-(scrartcl)           you can avoid this message adding:
-(scrartcl)             \usepackage{bookmark}
+(scrartcl)           you can avoid this message with `\usepackage{bookmark}'
 (scrartcl)           before \begin{document} on input line 28.
 
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
-Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/bookmark.sty
+Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
+File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line
- 168.
-\BKM@id=\count464
+ 164.
+\BKM@id=\count462
 ))
 Package scrbase Info: activating english \authorandname on input line 28.
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'ngerman'...
-Package biblatex Info: ... file 'ngerman.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
-File: ngerman.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
-))
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -2482,47 +2699,38 @@ Package biblatex Info: Automatic encoding selection.
 
 \openout3 = doc.bcf
 Package biblatex Info: Trying to load bibliographic data...
-
-
-Package biblatex Warning: File 'doc.bbl' is wrong format version - expected 3.1.
-
-
 Package biblatex Info: ... file 'doc.bbl' found.
-(./doc.bbl)
+ (./doc.bbl)
 Package biblatex Info: Reference section=0 on input line 28.
 Package biblatex Info: Reference segment=0 on input line 28.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document has
  been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
-\c@mv@tabular=\count465
-\c@mv@boldtabular=\count466
+\c@mv@tabular=\count463
+\c@mv@boldtabular=\count464
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 im
 )
-LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input li
-ne 42.
+LaTeX Font Info:    Try loading font information for T1+Cabin-TLF on input line 
+42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cabin/T1Cabin-TLF.fd
-File: T1Cabin-TLF.fd 2019/10/21 (autoinst) Font definitions for T1/Cabin-TLF.
+File: T1Cabin-TLF.fd 2019/04/24 (autoinst) Font definitions for T1/Cabin-TLF.
 )
-LaTeX Font Info:    Trying to load font information for TU+Cabin-TLF on input li
-ne 42.
-LaTeX Font Info:    No file TUCabin-TLF.fd. on input line 42.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 9.0pt on input line 42.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 9.0pt on input line 42.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 10.95pt on input line 42.
+LaTeX Font Info:    Try loading font information for OT1+XCharter-TLF on input l
+ine 42.
 
-
-LaTeX Font Warning: Font shape `TU/Cabin-TLF/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 42.
-
-
-LaTeX Font Warning: Font shape `TU/Cabin-TLF/b/n' undefined
-(Font)              using `TU/Cabin-TLF/m/n' instead on input line 42.
-
-LaTeX Font Info:    Trying to load font information for OT1+XCharter-TLF on inpu
-t line 42.
 (/usr/share/texlive/texmf-dist/tex/latex/xcharter/OT1XCharter-TLF.fd
 File: OT1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for OT1/XCharter
 -TLF.
@@ -2551,8 +2759,7 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
 (Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
 (Font)              scaled to size 6.40501pt on input line 42.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 4
-2.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
@@ -2563,8 +2770,7 @@ LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 (Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
 (Font)              scaled to size 6.40501pt on input line 42.
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 4
-2.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
@@ -2575,8 +2781,7 @@ LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
 (Font)              scaled to size 8.40002pt on input line 42.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
 (Font)              scaled to size 6.40501pt on input line 42.
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 4
-2.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
@@ -2594,6 +2799,8 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.40501pt on input line 42.
  (./tex/doc.tex
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 9.79996pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
@@ -2642,6 +2849,15 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 7.66502pt on input line 1.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 5.77501pt on input line 1.
+LaTeX Font Info:    Try loading font information for TS1+XCharter-TOsF on input 
+line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/xcharter/TS1XCharter-TOsF.fd
+File: TS1XCharter-TOsF.fd 2017/06/25 (autoinst) Font definitions for TS1/XCharte
+r-TOsF.
+)
+LaTeX Font Info:    Font shape `TS1/XCharter-TOsF/m/n' will be
+(Font)              scaled to size 8.81996pt on input line 3.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 8.81996pt on input line 4.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
@@ -2661,116 +2877,543 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 <fig/geometry_v6.png, id=8, 233.1912pt x 68.6565pt>
 File: fig/geometry_v6.png Graphic file (type png)
 <use fig/geometry_v6.png>
-Package luatex.def Info: fig/geometry_v6.png  used on input line 11.
+Package luatex.def Info: fig/geometry_v6.png  used on input line 10.
 (luatex.def)             Requested size: 230.46576pt x 67.85487pt.
 <fig/E_v6.png, id=9, 2433.09pt x 1294.8375pt>
 File: fig/E_v6.png Graphic file (type png)
 <use fig/E_v6.png>
-Package luatex.def Info: fig/E_v6.png  used on input line 14.
+Package luatex.def Info: fig/E_v6.png  used on input line 13.
 (luatex.def)             Requested size: 230.46576pt x 122.63544pt.
 LaTeX Font Info:    Font shape `TU/RobotoSlab(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 16.
-
-
-LaTeX Font Warning: Font shape `TU/XCharter-TOsF/b/n' undefined
-(Font)              using `TU/XCharter-TOsF/m/n' instead on input line 27.
-
+(Font)              scaled to size 9.0pt on input line 15.
+LaTeX Font Info:    Font shape `T1/XCharter-TOsF/b/n' will be
+(Font)              scaled to size 8.81996pt on input line 25.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 8.81996pt on input line 30.
+(Font)              scaled to size 8.81996pt on input line 27.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 7.15396pt on input line 30.
+(Font)              scaled to size 7.15396pt on input line 27.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 5.38997pt on input line 30.
-<fig/geometry_v6_opt_order=3_run2.png, id=11, 1927.2pt x 1084.05pt>
+(Font)              scaled to size 5.38997pt on input line 27.
+<fig/geometry_v6_opt_order=3_run2.png, id=11, 976.64874pt x 289.08pt>
 File: fig/geometry_v6_opt_order=3_run2.png Graphic file (type png)
 <use fig/geometry_v6_opt_order=3_run2.png>
 Package luatex.def Info: fig/geometry_v6_opt_order=3_run2.png  used on input lin
-e 40.
-(luatex.def)             Requested size: 230.46576pt x 129.63377pt.
+e 37.
+(luatex.def)             Requested size: 230.46576pt x 68.21611pt.
 <fig/E_v6_opt_order=3_run2.png, id=12, 2868.7175pt x 1595.9625pt>
 File: fig/E_v6_opt_order=3_run2.png Graphic file (type png)
 <use fig/E_v6_opt_order=3_run2.png>
-Package luatex.def Info: fig/E_v6_opt_order=3_run2.png  used on input line 43.
+Package luatex.def Info: fig/E_v6_opt_order=3_run2.png  used on input line 40.
 (luatex.def)             Requested size: 230.46576pt x 128.21536pt.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 8.0pt on input line 47.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 10.95pt on input line 47.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 9.79996pt on input line 50.
+(Font)              scaled to size 10.73094pt on input line 47.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 10.73094pt on input line 53.
+(Font)              scaled to size 7.83997pt on input line 47.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 7.83997pt on input line 53.
-LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 5.97797pt on input line 53.
+(Font)              scaled to size 5.97797pt on input line 47.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 10.73094pt on input line 53.
+(Font)              scaled to size 10.73094pt on input line 47.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 6.07596pt on input line 53.
+(Font)              scaled to size 6.07596pt on input line 47.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 6.07596pt on input line 53.
+(Font)              scaled to size 6.07596pt on input line 47.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.51001pt on input line 53.
+(Font)              scaled to size 6.51001pt on input line 47.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
-(Font)              scaled to size 7.83997pt on input line 53.
-[1
+(Font)              scaled to size 7.83997pt on input line 47.
+ [1
 
 
 
-{/home/peter/.texlive2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./fig/ge
-ometry_v6.png><./fig/E_v6.png><./fig/geometry_v6_opt_order=3_run2.png><./fig/E_v
-6_opt_order=3_run2.png>] (./fig/gen_sp.tex
-PGFPlots: reading {fig/astra/gen/laser_I=1024_Q=0.0001_sc=0.005_gen.dat}
-PGFPlots: reading {fig/astra/gen/laser_I=1024_Q=0.0001_sc=0.005_probe.dat}
+{/usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): invalid entry for 'LHSName': both ps_name and font file missing
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): invalid entry for 'RHSName': both ps_name and font file missing
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'UniClass[letter]': font file present but not in
+cluded, will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'cob' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'cobo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'com' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'coo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'hv' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'hvb' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'hvbo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'hvo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrb8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrb8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrb8u' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrb8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrbo8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrbo8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrbo8u' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrbo8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrr8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrr8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrr8rn' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrr8u' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrr8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrro8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrro8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrro8u' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pcrro8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvb8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvb8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvb8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvb8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvbo8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvbo8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvbo8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvbo8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvr8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvr8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvr8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvr8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvro8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvro8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvro8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'phvro8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pncr8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pncr8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pncri8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pncri8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pplbo8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'psyr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'psyrgo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'psyro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmb8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmb8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmb8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmbi8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmbi8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmbi8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmbo8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmr8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmr8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmr8rn' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmr8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmri8g' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmri8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmri8z' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmro8r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmrr8re' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'pzdr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpcrb' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpcrbo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpcrr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpcrro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvb' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvbo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvbon' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvbrn' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvron' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rphvrrn' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpsyr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpsyro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmb' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmbi' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmbo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmri' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmrre' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rptmrrn' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rpzdr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxphvb': font file present but not included, w
+ill be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxphvb' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxphvbo': font file present but not included, 
+will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxphvbo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxphvr': font file present but not included, w
+ill be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxphvr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxphvro': font file present but not included, 
+will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxphvro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxptmb': font file present but not included, w
+ill be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxptmb' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxptmbi': font file present but not included, 
+will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxptmbi' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxptmbo': font file present but not included, 
+will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxptmbo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxptmr': font file present but not included, w
+ill be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxptmr' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxptmri': font file present but not included, 
+will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxptmri' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): ambiguous entry for 'rtxptmro': font file present but not included, 
+will be treated as font file not present
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'rtxptmro' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'sy' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tib' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tibi' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tibo' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tii' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tio' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tir' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmbi108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmbo108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmbu108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmrb108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmri108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmrm108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmro108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'tmui108r' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'zd' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmb8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmbi8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmbo8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmr8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmr8yn' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmri8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmro8y' already exists, duplicates ignored
+
+warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map) 
+(map file): entry for 'ptmrr8ye' already exists, duplicates ignored
+}<./fig/geometry_v6.png><./fig/E_v6.png><./fig/geometry_v6_opt_order=3_run2.png>
+<./fig/E_v6_opt_order=3_run2.png>]
+LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
+(Font)              scaled to size 9.79996pt on input line 49.
+
+
+LaTeX Warning: Reference `fig:gen_sp' on page 2 undefined on input line 52.
+
+(./fig/gen_sp_laser.tex
+PGFPlots: reading {fig/astra/gen/laser_I=2048_Q=0.0001_sc=0.005_gen.dat}
+PGFPlots: reading {fig/astra/gen/laser_I=2048_Q=0.0001_sc=0.005_probe.dat}
 )
-Overfull \hbox (22.29979pt too wide) in paragraph at lines 15--61
+Overfull \hbox (21.93658pt too wide) in paragraph at lines 16--60
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--61
+Underfull \hbox (badness 10000) in paragraph at lines 16--60
 
  []
 
-<fig/laser.png, id=38, 578.16pt x 225.84375pt>
+<fig/laser.png, id=41, 578.16pt x 225.84375pt>
 File: fig/laser.png Graphic file (type png)
 <use fig/laser.png>
-Package luatex.def Info: fig/laser.png  used on input line 64.
+Package luatex.def Info: fig/laser.png  used on input line 63.
 (luatex.def)             Requested size: 256.07481pt x 100.0263pt.
 
-Overfull \hbox (3.27162pt too wide) in paragraph at lines 59--66
+Overfull \hbox (3.27162pt too wide) in paragraph at lines 58--65
 []$[]$    $[]$ 
  []
 
 (./fig/gen_tmp.tex
-PGFPlots: reading {fig/astra/gen/laser_I=1024_Q=0.0001_sc=0.005_tmp.dat}
+PGFPlots: reading {fig/astra/gen/laser_I=2048_Q=0.0001_sc=0.005_tmp.dat}
 )
-Overfull \hbox (26.41429pt too wide) in paragraph at lines 13--75
+Overfull \hbox (26.41429pt too wide) in paragraph at lines 13--74
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--75
+Underfull \hbox (badness 10000) in paragraph at lines 13--74
 
  []
 
-<fig/bunch.png, id=39, 325.6968pt x 208.1376pt>
-File: fig/bunch.png Graphic file (type png)
-<use fig/bunch.png>
-Package luatex.def Info: fig/bunch.png  used on input line 78.
-(luatex.def)             Requested size: 256.07481pt x 163.64879pt.
+(./fig/gen_sp.tex
+PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_gen.dat}
+PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_probe.dat}
+)
+Overfull \hbox (29.23958pt too wide) in paragraph at lines 16--78
+[][]
+ []
 
-Overfull \hbox (3.27162pt too wide) in paragraph at lines 73--80
-[]$[]$    $[]$ 
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--78
+
  []
 
 [2
@@ -2782,7 +3425,15 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-<./fig/laser.png><./fig/bunch.png>] (./fig/int_emit.tex
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+<./fig/laser.png>]
+
+LaTeX Warning: Reference `fig:int_cvg' on page 3 undefined on input line 87.
+
+(./fig/int_emit.tex
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-13.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-12.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-11.dat}
@@ -2790,7 +3441,7 @@ PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-10.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-9.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-8.dat}
 )
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 25--96
+Overfull \hbox (39.93309pt too wide) in paragraph at lines 25--96
 [][]
  []
 
@@ -2809,7 +3460,7 @@ PGFPlots: reading {fig/astra/int/photogun_int_err.dat}
 NOTE: coordinate (0.0001220703125,0) has been dropped because it is unbounded (i
 n y). (see also unbounded coords=jump). 
 )
-Overfull \hbox (36.30809pt too wide) in paragraph at lines 14--100
+Overfull \hbox (35.84505pt too wide) in paragraph at lines 14--100
 [][]
  []
 
@@ -2818,66 +3469,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--100
 
  []
 
+
+LaTeX Warning: Reference `fig:map_cvg_xy' on page 3 undefined on input line 108.
+
+
+
+LaTeX Warning: Reference `fig:map_cvg_z' on page 3 undefined on input line 109.
+
+
+LaTeX Warning: Reference `fig:gen_sp' on page 3 undefined on input line 111.
+
 (./fig/map_emit_xy.tex
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=8_nz=64.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=32_nz=64.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=64_nz=64.dat}
+PGFPlots: reading {fig/astra/map/nx_ny/photogun_map_emit_nx=ny=8_nz=64.dat}
+PGFPlots: reading {fig/astra/map/nx_ny/photogun_map_emit_nx=ny=16_nz=64.dat}
+PGFPlots: reading {fig/astra/map/nx_ny/photogun_map_emit_nx=ny=32_nz=64.dat}
+PGFPlots: reading {fig/astra/map/nx_ny/photogun_map_emit_ref_nx=ny=64_nz=64.dat}
+
 )
-Overfull \hbox (41.85959pt too wide) in paragraph at lines 21--117
+Overfull \hbox (39.93309pt too wide) in paragraph at lines 21--118
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--117
+Underfull \hbox (badness 10000) in paragraph at lines 21--118
 
  []
 
 (./fig/map_cvg_xy.tex
-Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
+Package pgfplots info on input line 6: Using 'lua backend=false' for axis: xmode
 =log unsupported (yet).
-Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
+Package pgfplots info on input line 6: Using 'lua backend=false' for axis: ymode
 =log unsupported (yet).
-PGFPlots: reading {fig/astra/map/photogun_map_err_nz=64.dat}
+PGFPlots: reading {fig/astra/map/nx_ny/photogun_map_err_nz=64.dat}
 )
-Overfull \hbox (36.30412pt too wide) in paragraph at lines 13--121
+Overfull \hbox (35.84187pt too wide) in paragraph at lines 11--122
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--121
-
- []
-
-(./fig/map_emit_z.tex
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=16.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=32.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_nx=ny=16_nz=128.dat}
-PGFPlots: reading {fig/astra/map/photogun_map_emit_ref_nx=ny=16_nz=256.dat}
-)
-Overfull \hbox (41.85959pt too wide) in paragraph at lines 23--131
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--131
-
- []
-
-(./fig/map_cvg_z.tex
-Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
-=log unsupported (yet).
-Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
-=log unsupported (yet).
-PGFPlots: reading {fig/astra/map/photogun_map_err_nx=ny=16.dat}
-)
-Overfull \hbox (30.20483pt too wide) in paragraph at lines 13--135
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--135
+Underfull \hbox (badness 10000) in paragraph at lines 11--122
 
  []
 
@@ -2894,31 +3524,48 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-] (./fig/sc_emit_rl.tex
+] (./fig/map_emit_z.tex
+PGFPlots: reading {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=16.dat}
+PGFPlots: reading {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=32.dat}
+PGFPlots: reading {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=64.dat}
+PGFPlots: reading {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=128.dat}
+PGFPlots: reading {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=256.dat}
+PGFPlots: reading {fig/astra/map/nz/photogun_map_emit_ref_nx=ny=8_nz=512.dat}
+)
+Overfull \hbox (39.93309pt too wide) in paragraph at lines 25--132
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--132
+
+ []
+
+(./fig/map_cvg_z.tex
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
+=log unsupported (yet).
+Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
+=log unsupported (yet).
+PGFPlots: reading {fig/astra/map/nz/photogun_map_err_nx=ny=8.dat}
+)
+Overfull \hbox (29.74348pt too wide) in paragraph at lines 13--136
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--136
+
+ []
+
+
+LaTeX Warning: Reference `fig:sc_cvg_rl' on page 4 undefined on input line 145.
+
+
+LaTeX Warning: Reference `fig:sc_cvg_I' on page 4 undefined on input line 148.
+
+(./fig/sc_emit_rl.tex
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl
 =64.dat}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=32_nc=2_nl
-=32.dat}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=4.da
-t}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=8.da
-t}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=16.d
-at}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=4_nc=2_nl=32.d
-at}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=4.da
-t}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=8.da
-t}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=16.d
-at}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=8_nc=2_nl=32.d
-at}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=4.d
 at}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=8.d
@@ -2927,64 +3574,73 @@ PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.
 dat}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=32.
 dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=64.
+dat}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=4.d
 at}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=8.d
 at}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.
 dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=32.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=64.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=4.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=8.d
+at}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=16.
+dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=32.
+dat}
 )
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 53--155
+Overfull \hbox (39.93309pt too wide) in paragraph at lines 44--156
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--155
+Underfull \hbox (badness 10000) in paragraph at lines 44--156
 
  []
 
 (./fig/sc_cvg_rl.tex
-Package pgfplots info on input line 8: Using 'lua backend=false' for axis: xmode
-=log unsupported (yet).
-Package pgfplots info on input line 8: Using 'lua backend=false' for axis: ymode
-=log unsupported (yet).
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=4_nc=2.dat}
-PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=8_nc=2.dat}
+Package pgfplots info on input line 10: Using 'lua backend=false' for axis: xmod
+e=log unsupported (yet).
+Package pgfplots info on input line 10: Using 'lua backend=false' for axis: ymod
+e=log unsupported (yet).
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=16_nc=2.dat}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=32_nc=2.dat}
+PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=64_nc=2.dat}
 
-NOTE: coordinate (32,0) has been dropped because it is unbounded (in y). (see al
-so unbounded coords=jump). 
+NOTE: coordinate (2.34375e-05,0) has been dropped because it is unbounded (in y)
+. (see also unbounded coords=jump). 
 )
-Overfull \hbox (30.20418pt too wide) in paragraph at lines 20--159
+Overfull \hbox (29.7403pt too wide) in paragraph at lines 24--160
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--159
+Underfull \hbox (badness 10000) in paragraph at lines 24--160
 
  []
 
 (./fig/sc_emit_I.tex
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=256_nr=16_nc=2_nl=16.dat}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=64_nc=2_nl=64.dat}
 
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=16_nc=2_nl=16.dat}
-
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=64.dat
 }
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=2048_nr=16_nc=2_nl=16.dat
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=2048_nr=64_nc=2_nl=64.dat
 }
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_nI=4096_nr=16_nc=2_nl=16.dat
-}
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_ref_nI=8192_nr=16_nc=2_nl=16
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_emit_ref_nI=4096_nr=64_nc=2_nl=64
 .dat}
 )
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 28--169
+Overfull \hbox (39.93309pt too wide) in paragraph at lines 23--170
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--169
+Underfull \hbox (badness 10000) in paragraph at lines 23--170
 
  []
 
@@ -2993,14 +3649,14 @@ Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
 =log unsupported (yet).
 Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
 =log unsupported (yet).
-PGFPlots: reading {fig/astra/sc/nI/photogun_sc_err_nr=16_nc=2_nl=16.dat}
+PGFPlots: reading {fig/astra/sc/nI/photogun_sc_err_nr=64_nc=2_nl=64.dat}
 )
-Overfull \hbox (36.30748pt too wide) in paragraph at lines 14--173
+Overfull \hbox (42.42097pt too wide) in paragraph at lines 14--174
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--173
+Underfull \hbox (badness 10000) in paragraph at lines 14--174
 
  []
 
@@ -3021,91 +3677,7 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-] (./fig/sc_emit_c.tex
-PGFPlots: reading {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=16_nc=0.5_nl=16.d
-at}
-PGFPlots: reading {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat
-}
-PGFPlots: reading {fig/astra/sc/nc/photogun_sc_emit_ref_nI=1024_nr=16_nc=4_nl=16
-.dat}
-)
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 20--184
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--184
-
- []
-
-(./fig/sc_cvg_c.tex
-Package pgfplots info on input line 9: Using 'lua backend=false' for axis: xmode
-=log unsupported (yet).
-Package pgfplots info on input line 9: Using 'lua backend=false' for axis: ymode
-=log unsupported (yet).
-PGFPlots: reading {fig/astra/sc/nc/photogun_sc_err_nI=1024_nr=16_nl=16.dat}
-
-NOTE: coordinate (4,0) has been dropped because it is unbounded (in y). (see als
-o unbounded coords=jump). 
-)
-Overfull \hbox (36.30412pt too wide) in paragraph at lines 14--188
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--188
-
- []
-
-(./fig/astra_res_eps.tex
-PGFPlots: reading {fig/astra/results/photogun_init_eps.dat}
-PGFPlots: reading {fig/astra/results/photogun_run1_eps.dat}
-)
-Overfull \hbox (41.86092pt too wide) in paragraph at lines 18--202
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--202
-
- []
-
-(./fig/astra_res_rms.tex
-PGFPlots: reading {fig/astra/results/photogun_init_rms.dat}
-PGFPlots: reading {fig/astra/results/photogun_run1_rms.dat}
-)
-Overfull \hbox (23.24388pt too wide) in paragraph at lines 17--206
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--206
-
- []
-
-[5
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-Missing character: There is no p (U+0070) in font nullfont!
-Missing character: There is no t (U+0074) in font nullfont!
-]
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
-
- []
-
-)
+])
 
 Package TUDaPub Warning: You did not provide a Label for key introduction.
 (TUDaPub)                Either you need to recompile your document or add a
@@ -3126,7 +3698,7 @@ Package TUDaPub Warning: You did not provide a Label for key discussion.
 (TUDaPub)                Either you need to recompile your document or add a
 (TUDaPub)                label using \IMRADlabel.
 
-[6
+[5
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
@@ -3145,10 +3717,13 @@ Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please rerun LaTeX.
 
 Package logreq Info: Writing requests to 'doc.run.xml'.
 
@@ -3157,32 +3732,36 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56553 strings out of 481365
- 125002,2848258 words of node,token memory allocated
- 1042 words of node memory still in use:
-   23 hlist, 4 vlist, 6 rule, 4 local_par, 21 glue, 4 kern, 4 penalty, 1 glyph, 
-28 attribute, 69 glue_spec, 23 attribute_list, 2 write, 4 pdf_colorstack nodes
-   avail lists: 1:12,2:28349,3:8823,4:81,5:167,6:67,7:3456,8:26,9:988,10:2,11:71
-
- 70682 multiletter control sequences out of 65536+600000
- 306 fonts using 29630315 bytes
- 78i,21n,136p,10144b,2551s stack positions out of 5000i,500n,10000p,200000b,100000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch1_wwsmtw.enc}</usr/sh
-are/texmf/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/xcharter/xch_hnm3ex.enc}</usr/share/texlive/texmf-dist/fo
-nts/opentype/google/roboto/RobotoSlab-Regular.otf></usr/share/texmf/fonts/openty
-pe/public/lm/lmroman9-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmr
-oman10-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/Liber
-tineMathMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/Libertine
-MathMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/LibertineMat
-hRM.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.p
+ 64021 strings out of 494291
+ 305195,3417909 words of node,token memory allocated
+ 1034 words of node memory still in use:
+   23 hlist, 4 vlist, 6 rule, 4 local_par, 1 dir, 18 glue, 6 kern, 4 penalty, 1 
+glyph, 34 attribute, 65 glue_spec, 26 attribute_list, 2 write, 4 pdf_colorstack 
+nodes
+   avail lists: 1:24,2:78893,3:25453,4:83,5:223,6:59,7:3475,8:40,9:978,10:3,11:7
+1
+ 65091 multiletter control sequences out of 65536+600000
+ 312 fonts using 30578719 bytes
+ 78i,21n,136p,9128b,2618s stack positions out of 5000i,500n,10000p,200000b,100000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}{/usr/share/
+texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_hnm3ex.enc}{/usr/share/texlive/t
+exmf-dist/fonts/enc/dvips/xcharter/xch1_wwsmtw.enc}</usr/share/texlive/texmf-dis
+t/fonts/opentype/google/roboto/RobotoSlab-Regular.otf>{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/xcharter/xch_q7u3cc.enc}</usr/share/texlive/texmf-dist/font
+s/type1/impallari/cabin/Cabin-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/impallari/cabin/Cabin-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/newtx/LibertineMathMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/newtx/LibertineMathMI5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
+ewtx/LibertineMathMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newt
+x/LibertineMathRM.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter
+/XCharter-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter/XC
+harter-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (6 pages, 761357 bytes).
+Output written on doc.pdf (5 pages, 814259 bytes).
 
-PDF statistics: 152 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 131072)
+PDF statistics: 132 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -18,7 +18,7 @@ function [] = plot_generator (filename)
    % dt_avg = mean(diff(dt_avg));
    % fprintf('\n average distance %d ps \n', dt_avg*1e3);
 
-   dt = 2e-3;
+   dt = 1e-3;
    t  = -15e-3:dt:15e-3;
    I  = zeros(length(t),1);
    for it=1:length(t)

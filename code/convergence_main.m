@@ -1,4 +1,3 @@
-pkg load geopdes;
 
 geometry_file = 'geometry_v6';
 filename      = 'cvg_v6';

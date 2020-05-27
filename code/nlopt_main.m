@@ -1,4 +1,3 @@
-pkg load geopdes;
 
 order  = 3;
 N_ctrl = 6*(order-2);

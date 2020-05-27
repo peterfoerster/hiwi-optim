@@ -4,20 +4,22 @@
       try min ticks=4,
       max space between ticks=1000pt,
       enlargelimits=true,
-      xlabel=$z / \mathrm{m}$,
-      ylabel=$\epsilon / \mathrm{mrad\ mm}$,
+      xlabel=$z\ \mathrm{in\ m}$,
+      ylabel=$\epsilon\ \mathrm{in\ mrad\ mm}$,
       ]
 
-      \addplot[color=TUDa-1a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=16.dat};
+      \addplot[color=TUDa-1a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=16.dat};
       \addlegendentry{$n_z=16$}
-      \addplot[color=TUDa-2a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=32.dat};
+      \addplot[color=TUDa-2a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=32.dat};
       \addlegendentry{$n_x=32$}
-      \addplot[color=TUDa-3a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=64.dat};
+      \addplot[color=TUDa-3a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=64.dat};
       \addlegendentry{$n_x=64$}
-      \addplot[color=TUDa-4a] table {fig/astra/map/photogun_map_emit_nx=ny=16_nz=128.dat};
+      \addplot[color=TUDa-4a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=128.dat};
       \addlegendentry{$n_x=128$}
-      \addplot[color=TUDa-4a] table {fig/astra/map/photogun_map_emit_ref_nx=ny=16_nz=256.dat};
+      \addplot[color=TUDa-5a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=256.dat};
       \addlegendentry{$n_x=256$}
+      \addplot[color=TUDa-6a] table {fig/astra/map/nz/photogun_map_emit_ref_nx=ny=8_nz=512.dat};
+      \addlegendentry{$n_x=512$}
 
    \end{axis}
 \end{tikzpicture}

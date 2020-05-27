@@ -1,6 +1,6 @@
 function [] = create_fieldmap (filename, nx, ny, nz, geometry, space, phi)
-   % factor 1.5 of distribution width
-   rho   = 1.5e-3;
+   % 1.5 for Gaussian, 4 for laser
+   rho   = 4e-3;
    z_min = nrbeval(geometry(6).nurbs, [1 0]);
    z_min = z_min(1);
    z_max = nrbeval(geometry(1).nurbs, [0 1]);

@@ -1,5 +1,5 @@
-function [rho, tau] = create_laserinput(Ipart, sig_clock, Q_total, filename)
-    % step size from file (in [mu m])
+function [] = create_laserinput(Ipart, sig_clock, Q_total, filename)
+    % step size from file (in [um])
     dx = 1.6631;
     data = dlmread('laser.txt', ',', 1, 1);
 

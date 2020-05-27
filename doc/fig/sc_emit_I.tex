@@ -4,25 +4,20 @@
       try min ticks=4,
       max space between ticks=1000pt,
       enlargelimits=true,
-      xlabel=$z / \mathrm{m}$,
-      ylabel=$\epsilon / \mathrm{mrad\ mm}$,
+      xlabel=$z\ \mathrm{in\ m}$,
+      ylabel=$\epsilon\ \mathrm{in\ mrad\ mm}$,
       legend style={fill=none},
       legend pos=south east
       ]
 
-      \addplot[color=TUDa-1a] table {fig/astra/sc/nI/photogun_sc_emit_nI=256_nr=16_nc=2_nl=16.dat};
-      \addlegendentry{$n_I=2^{8}$}
-      \addplot[color=TUDa-2a] table {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=16_nc=2_nl=16.dat};
+      \addplot[color=TUDa-1a] table {fig/astra/sc/nI/photogun_sc_emit_nI=512_nr=64_nc=2_nl=64.dat};
       \addlegendentry{$n_I=2^{9}$}
-      \addplot[color=TUDa-3a] table {fig/astra/sc/nI/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat};
+      \addplot[color=TUDa-2a] table {fig/astra/sc/nI/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=64.dat};
       \addlegendentry{$n_I=2^{10}$}
-      \addplot[color=TUDa-4a] table {fig/astra/sc/nI/photogun_sc_emit_nI=2048_nr=16_nc=2_nl=16.dat};
+      \addplot[color=TUDa-3a] table {fig/astra/sc/nI/photogun_sc_emit_nI=2048_nr=64_nc=2_nl=64.dat};
       \addlegendentry{$n_I=2^{11}$}
-      \addplot[color=TUDa-5a] table {fig/astra/sc/nI/photogun_sc_emit_nI=4096_nr=16_nc=2_nl=16.dat};
+      \addplot[color=TUDa-4a] table {fig/astra/sc/nI/photogun_sc_emit_ref_nI=4096_nr=64_nc=2_nl=64.dat};
       \addlegendentry{$n_I=2^{12}$}
-
-      \addplot[color=TUDa-6a] table {fig/astra/sc/nI/photogun_sc_emit_ref_nI=8192_nr=16_nc=2_nl=16.dat};
-      \addlegendentry{$n_I=2^{13}$}
 
    \end{axis}
 \end{tikzpicture}

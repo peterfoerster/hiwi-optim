@@ -17,7 +17,7 @@
 
 &CAVITY
   LEField = True
-  File_Efield(1) = 'DC-3D-p=3_nsub=16_nx=ny=16_nz=64'
+  File_Efield(1) = 'DC-3D-p=3_nsub=16_nx=ny=8_nz=256'
   C_noscale(1) = True
   Com_grid(1) = 'E'
   Nue(1) = 0

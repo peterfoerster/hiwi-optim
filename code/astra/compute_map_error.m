@@ -1,4 +1,4 @@
-function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
+function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it, rho, dz)
    % [nx_it, nz_it, x/y, xrms/emit]
    err_linf = NaN(length(nx_it),length(nz_it),2,2);
 
@@ -7,7 +7,7 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
    % x_ref = [x_ref(:,1) x_ref(:,4) x_ref(:,6)*pi];
    filename = ['photogun_nx=ny=' num2str(2^nx_ref) '_nz=' num2str(2^nz_ref) '.Yemit.001'];
    y_ref = dlmread(filename);
-   % emmitance * pi?
+   % emmittance * pi (astra units)
    y_ref = [y_ref(:,1) y_ref(:,4) y_ref(:,6)*pi];
 
    % figure(1);
@@ -42,7 +42,7 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
          % err_x = interp1(x_it(:,1), x_it(:,2:3), x_ref(:,1)) - x_ref(:,2:3);
          % ix    = ~isnan(err_x(:,1)) & ~isnan(err_x(:,2));
          % err_x = err_x(ix,:);
-         err_y = (interp1(y_it(:,1), y_it(:,2:3), y_ref(:,1)) - y_ref(:,2:3)) / y_ref(:,2:3);
+         err_y = (interp1(y_it(:,1), y_it(:,2:3), y_ref(:,1)) - y_ref(:,2:3)) ./ y_ref(:,2:3);
          iy    = ~isnan(err_y(:,1)) & ~isnan(err_y(:,2));
          err_y = err_y(iy,:);
 
@@ -66,8 +66,8 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it)
       end
    end
    if (length(nx_it) > 1 && length(nz_it) == 1)
-      write_dat1D (['photogun_map_err_nz=' num2str(2^nz_it(1)) '.dat'], 2.^nx_it, err_linf(:,1,2,2));
+      write_dat1D (['photogun_map_err_nz=' num2str(2^nz_it(1)) '.dat'], rho./(2.^nx_it), err_linf(:,1,2,2));
    elseif (length(nx_it) == 1 && length(nz_it) > 1)
-      write_dat1D (['photogun_map_err_nx=ny=' num2str(2^nx_it(1)) '.dat'], 2.^nz_it, err_linf(1,:,2,2));
+      write_dat1D (['photogun_map_err_nx=ny=' num2str(2^nx_it(1)) '.dat'], dz./(2.^nz_it), err_linf(1,:,2,2));
    end
 end
