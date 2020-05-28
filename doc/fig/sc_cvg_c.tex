@@ -5,10 +5,10 @@
       max space between ticks=1000pt,
       enlargelimits=true,
       xlabel=$n_c$,
-      ylabel=$\|\Delta \epsilon\|_\infty / \mathrm{mrad\ mm}$,
+      ylabel=$\mathrm{relative\ error\ in}\ l_\infty \mathrm{-norm}$,
       ]
 
-      \addplot[color=TUDa-1a, ultra thick] table {fig/astra/sc/nc/photogun_sc_err_nI=1024_nr=16_nl=16.dat};
+      \addplot[color=TUDa-1a, ultra thick, mark=*] table {fig/astra/sc/nc/photogun_sc_err_nI=1024_nr=64_nl=64.dat};
 
    \end{loglogaxis}
 \end{tikzpicture}

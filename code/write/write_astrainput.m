@@ -2,9 +2,9 @@ function [] = write_astrainput (filename, generatorname, fieldmapname, H, sc, Nr
    z_min = nrbeval(geometry(6).nurbs, [1 0]);
    z_min = z_min(1);
    z_max = nrbeval(geometry(1).nurbs, [0 1]);
-   z_max = z_max(1);
    % including beam pipe
-   % z_max = z_max(1) + z_max(1)/3;
+   z_max = z_max(1) + z_max(1)/3;
+   % z_max = z_max(1);
 
    fid = fopen (filename, 'w');
 

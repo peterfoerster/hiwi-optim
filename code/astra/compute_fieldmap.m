@@ -6,6 +6,9 @@ function [E, Nx, Ny, Nz] = compute_fieldmap (geometry, space, phi, x, y, z)
    E = zeros(2*Nx-1, 2*Ny-1, Nz, 3);
 
    for iz=1:Nz
+      if (mod(iz,16) == 0)
+         fprintf('\ncompute_fieldmap: nz=%i\n', iz);
+      end
       for iy=1:Ny
          for ix=1:Nx
             % transform cartesian to polar coordinates

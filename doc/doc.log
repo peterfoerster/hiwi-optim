@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2020.5.24)  27 MAY 2020 23:51
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2020.5.24)  28 MAY 2020 22:59
  restricted system commands enabled.
 **doc
 (./doc.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.073 seconds
+luaotfload | main : initialization completed in 0.054 seconds
 (/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudapub.cls
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2019-07-25 L3 programming layer (loader) 
@@ -2519,7 +2519,11 @@ TOsF.
 LaTeX Font Info:    Font shape `T1/XCharter-TOsF/m/n' will be
 (Font)              scaled to size 9.79996pt on input line 28.
 
-(./doc.aux)
+(./doc.aux
+
+LaTeX Warning: Label `fig:astra_res' multiply defined.
+
+)
 \openout1 = doc.aux
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 28.
@@ -3364,11 +3368,7 @@ warning  (file /usr/share/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map)
 <./fig/E_v6_opt_order=3_run2.png>]
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 9.79996pt on input line 49.
-
-
-LaTeX Warning: Reference `fig:gen_sp' on page 2 undefined on input line 52.
-
-(./fig/gen_sp_laser.tex
+ (./fig/gen_sp_laser.tex
 PGFPlots: reading {fig/astra/gen/laser_I=2048_Q=0.0001_sc=0.005_gen.dat}
 PGFPlots: reading {fig/astra/gen/laser_I=2048_Q=0.0001_sc=0.005_probe.dat}
 )
@@ -3381,7 +3381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--60
 
  []
 
-<fig/laser.png, id=41, 578.16pt x 225.84375pt>
+<fig/laser.png, id=43, 578.16pt x 225.84375pt>
 File: fig/laser.png Graphic file (type png)
 <use fig/laser.png>
 Package luatex.def Info: fig/laser.png  used on input line 63.
@@ -3407,12 +3407,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--74
 PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_gen.dat}
 PGFPlots: reading {fig/astra/gen/I=1024_Q=0.0001_sc=0.005_probe.dat}
 )
-Overfull \hbox (29.23958pt too wide) in paragraph at lines 16--78
+Overfull \hbox (29.23958pt too wide) in paragraph at lines 17--78
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--78
+Underfull \hbox (badness 10000) in paragraph at lines 17--78
 
  []
 
@@ -3429,11 +3429,7 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-<./fig/laser.png>]
-
-LaTeX Warning: Reference `fig:int_cvg' on page 3 undefined on input line 87.
-
-(./fig/int_emit.tex
+<./fig/laser.png>] (./fig/int_emit.tex
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-13.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-12.dat}
 PGFPlots: reading {fig/astra/int/photogun_int_emit_H_it=-11.dat}
@@ -3468,16 +3464,6 @@ Overfull \hbox (35.84505pt too wide) in paragraph at lines 14--100
 Underfull \hbox (badness 10000) in paragraph at lines 14--100
 
  []
-
-
-LaTeX Warning: Reference `fig:map_cvg_xy' on page 3 undefined on input line 108.
-
-
-
-LaTeX Warning: Reference `fig:map_cvg_z' on page 3 undefined on input line 109.
-
-
-LaTeX Warning: Reference `fig:gen_sp' on page 3 undefined on input line 111.
 
 (./fig/map_emit_xy.tex
 PGFPlots: reading {fig/astra/map/nx_ny/photogun_map_emit_nx=ny=8_nz=64.dat}
@@ -3557,12 +3543,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--136
 
  []
 
-
-LaTeX Warning: Reference `fig:sc_cvg_rl' on page 4 undefined on input line 145.
-
-
-LaTeX Warning: Reference `fig:sc_cvg_I' on page 4 undefined on input line 148.
-
 (./fig/sc_emit_rl.tex
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl
 =64.dat}
@@ -3595,12 +3575,12 @@ dat}
 PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=32.
 dat}
 )
-Overfull \hbox (39.93309pt too wide) in paragraph at lines 44--156
+Overfull \hbox (39.93309pt too wide) in paragraph at lines 32--156
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--156
+Underfull \hbox (badness 10000) in paragraph at lines 32--156
 
  []
 
@@ -3616,12 +3596,12 @@ PGFPlots: reading {fig/astra/sc/nr_nl/photogun_sc_err_nI=1024_nr=64_nc=2.dat}
 NOTE: coordinate (2.34375e-05,0) has been dropped because it is unbounded (in y)
 . (see also unbounded coords=jump). 
 )
-Overfull \hbox (29.7403pt too wide) in paragraph at lines 24--160
+Overfull \hbox (29.7403pt too wide) in paragraph at lines 20--160
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--160
+Underfull \hbox (badness 10000) in paragraph at lines 20--160
 
  []
 
@@ -3677,6 +3657,135 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
+] (./fig/res_init_eps.tex
+PGFPlots: reading {fig/astra/results/init/photogun_Xeps.dat}
+PGFPlots: reading {fig/astra/results/init/photogun_Yeps.dat}
+PGFPlots: reading {fig/astra/results/init/fine/photogun_Xeps.dat}
+PGFPlots: reading {fig/astra/results/init/fine/photogun_Yeps.dat}
+)
+Overfull \hbox (39.93428pt too wide) in paragraph at lines 22--207
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--207
+
+ []
+
+(./fig/res_opt_eps.tex
+PGFPlots: reading {fig/astra/results/opt/photogun_Xeps.dat}
+PGFPlots: reading {fig/astra/results/opt/photogun_Yeps.dat}
+)
+Overfull \hbox (21.31566pt too wide) in paragraph at lines 17--211
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--211
+
+ []
+
+(./fig/res_init_rms.tex
+PGFPlots: reading {fig/astra/results/init/photogun_Xrms.dat}
+PGFPlots: reading {fig/astra/results/init/photogun_Yrms.dat}
+PGFPlots: reading {fig/astra/results/init/fine/photogun_Xrms.dat}
+PGFPlots: reading {fig/astra/results/init/fine/photogun_Yrms.dat}
+PGFPlots: reading {fig/geometry/init/boundary11.dat}
+PGFPlots: reading {fig/geometry/init/boundary12.dat}
+PGFPlots: reading {fig/geometry/init/boundary13.dat}
+PGFPlots: reading {fig/geometry/init/boundary14.dat}
+PGFPlots: reading {fig/geometry/init/boundary21.dat}
+PGFPlots: reading {fig/geometry/init/boundary22.dat}
+PGFPlots: reading {fig/geometry/init/boundary23.dat}
+PGFPlots: reading {fig/geometry/init/boundary24.dat}
+PGFPlots: reading {fig/geometry/init/boundary31.dat}
+PGFPlots: reading {fig/geometry/init/boundary32.dat}
+PGFPlots: reading {fig/geometry/init/boundary33.dat}
+PGFPlots: reading {fig/geometry/init/boundary34.dat}
+PGFPlots: reading {fig/geometry/init/boundary41.dat}
+PGFPlots: reading {fig/geometry/init/boundary42.dat}
+PGFPlots: reading {fig/geometry/init/boundary43.dat}
+PGFPlots: reading {fig/geometry/init/boundary44.dat}
+PGFPlots: reading {fig/geometry/init/boundary51.dat}
+PGFPlots: reading {fig/geometry/init/boundary52.dat}
+PGFPlots: reading {fig/geometry/init/boundary53.dat}
+PGFPlots: reading {fig/geometry/init/boundary54.dat}
+PGFPlots: reading {fig/geometry/init/boundary61.dat}
+PGFPlots: reading {fig/geometry/init/boundary62.dat}
+PGFPlots: reading {fig/geometry/init/boundary63.dat}
+PGFPlots: reading {fig/geometry/init/boundary64.dat}
+PGFPlots: reading {fig/geometry/init/boundary71.dat}
+PGFPlots: reading {fig/geometry/init/boundary72.dat}
+PGFPlots: reading {fig/geometry/init/boundary73.dat}
+PGFPlots: reading {fig/geometry/init/boundary74.dat}
+PGFPlots: reading {fig/geometry/init/boundary81.dat}
+PGFPlots: reading {fig/geometry/init/boundary82.dat}
+PGFPlots: reading {fig/geometry/init/boundary83.dat}
+PGFPlots: reading {fig/geometry/init/boundary84.dat}
+PGFPlots: reading {fig/geometry/init/boundary91.dat}
+PGFPlots: reading {fig/geometry/init/boundary92.dat}
+PGFPlots: reading {fig/geometry/init/boundary93.dat}
+PGFPlots: reading {fig/geometry/init/boundary94.dat}
+PGFPlots: reading {fig/geometry/init/boundary101.dat}
+PGFPlots: reading {fig/geometry/init/boundary102.dat}
+PGFPlots: reading {fig/geometry/init/boundary103.dat}
+PGFPlots: reading {fig/geometry/init/boundary104.dat}
+PGFPlots: reading {fig/geometry/init/boundary111.dat}
+PGFPlots: reading {fig/geometry/init/boundary112.dat}
+PGFPlots: reading {fig/geometry/init/boundary113.dat}
+PGFPlots: reading {fig/geometry/init/boundary114.dat}
+PGFPlots: reading {fig/geometry/init/boundary121.dat}
+PGFPlots: reading {fig/geometry/init/boundary122.dat}
+PGFPlots: reading {fig/geometry/init/boundary123.dat}
+PGFPlots: reading {fig/geometry/init/boundary124.dat}
+PGFPlots: reading {fig/geometry/init/boundary131.dat}
+PGFPlots: reading {fig/geometry/init/boundary132.dat}
+PGFPlots: reading {fig/geometry/init/boundary133.dat}
+PGFPlots: reading {fig/geometry/init/boundary134.dat}
+PGFPlots: reading {fig/geometry/init/boundary141.dat}
+PGFPlots: reading {fig/geometry/init/boundary142.dat}
+PGFPlots: reading {fig/geometry/init/boundary143.dat}
+PGFPlots: reading {fig/geometry/init/boundary144.dat}
+)
+Overfull \hbox (22.51198pt too wide) in paragraph at lines 94--221
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--221
+
+ []
+
+(./fig/res_opt_rms.tex
+PGFPlots: reading {fig/astra/results/opt/photogun_Xrms.dat}
+PGFPlots: reading {fig/astra/results/opt/photogun_Yrms.dat}
+)
+Overfull \hbox (22.50923pt too wide) in paragraph at lines 16--225
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--225
+
+ []
+
+[5
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
 ])
 
 Package TUDaPub Warning: You did not provide a Label for key introduction.
@@ -3698,7 +3807,7 @@ Package TUDaPub Warning: You did not provide a Label for key discussion.
 (TUDaPub)                Either you need to recompile your document or add a
 (TUDaPub)                label using \IMRADlabel.
 
-[5
+[6
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
@@ -3717,13 +3826,7 @@ Package rerunfilecheck Info: File `doc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please rerun LaTeX.
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'doc.run.xml'.
 
@@ -3732,15 +3835,15 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
 )
 
 Here is how much of LuaTeX's memory you used:
- 64021 strings out of 494291
- 305195,3417909 words of node,token memory allocated
+ 64987 strings out of 494291
+ 305193,3417909 words of node,token memory allocated
  1034 words of node memory still in use:
    23 hlist, 4 vlist, 6 rule, 4 local_par, 1 dir, 18 glue, 6 kern, 4 penalty, 1 
 glyph, 34 attribute, 65 glue_spec, 26 attribute_list, 2 write, 4 pdf_colorstack 
 nodes
-   avail lists: 1:24,2:78893,3:25453,4:83,5:223,6:59,7:3475,8:40,9:978,10:3,11:7
-1
- 65091 multiletter control sequences out of 65536+600000
+   avail lists: 1:26,2:79034,3:25473,4:83,5:224,6:59,7:3846,8:40,9:1025,10:4,11:
+73
+ 65614 multiletter control sequences out of 65536+600000
  312 fonts using 30578719 bytes
  78i,21n,136p,9128b,2618s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}{/usr/share/
@@ -3758,10 +3861,10 @@ x/LibertineMathRM.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xcharter
 harter-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (5 pages, 814259 bytes).
+Output written on doc.pdf (6 pages, 832601 bytes).
 
-PDF statistics: 132 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 131072)
+PDF statistics: 151 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 131072)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 

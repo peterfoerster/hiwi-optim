@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+   \begin{axis}[
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$z\ \mathrm{in\ m}$,
+      ylabel=$x_\mathrm{rms}\ \mathrm{in\ mm}$,
+      legend style={fill=none}
+      ]
+
+      \addplot[color=TUDa-1a] table {fig/astra/results/opt/photogun_Xrms.dat};
+      \addlegendentry{$x_\mathrm{rms}$}
+      \addplot[color=TUDa-2a] table {fig/astra/results/opt/photogun_Yrms.dat};
+      \addlegendentry{$y_\mathrm{rms}$}
+   \end{axis}
+\end{tikzpicture}

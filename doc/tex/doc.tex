@@ -50,7 +50,7 @@
 \begin{itemize}
    \item \textbf{general settings}: $Q=100\ \mathrm{fC}$
    \item \textbf{spatial distribution}: generated from measurement, see Figure \ref{fig:gen_sp} for comparison with laser measurement
-   \item \textbf{temporal distribution}: Gaussian with $\sigma=5\ \mathrm{ps}$\ (model from thesis requires additional data about cathode in use and measurement for comparison, measurement alone could work analogous to spatial case)
+   \item \textbf{temporal distribution}: Gaussian with $\sigma=5\ \mathrm{ps}$\ (model from thesis \cite{wagner} requires additional data about cathode in use and measurement for comparison, measurement alone could work analogous to spatial case)
 \end{itemize}
 
 \begin{center}
@@ -62,7 +62,7 @@
    \begin{subfigure}{0.5\textwidth}
       \includegraphics[width=\textwidth]{fig/laser}
    \end{subfigure}
-   \caption{Spatial distribution generated from measurement ($2^{10}$ particles) and laser measurement.}
+   \caption{Spatial distribution generated from measurement ($2^{11}$ particles) and laser measurement.}
    \label{fig:gen_sp}
 \end{figure}
 \end{center}
@@ -146,7 +146,7 @@
    \item $n_r=n_l=64$ used later on
 
    \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=64$
-   \item $n_I=2^{11}$ used later on
+   \item $n_I=2^{11}$ used for actual simulation
 \end{itemize}
 
 \begin{center}
@@ -177,7 +177,7 @@
 \end{figure}
 \end{center}
 
-% % Cell_var
+% Cell_var
 % \begin{center}
 % \begin{figure}[H]
 %    \begin{subfigure}{0.4\textwidth}
@@ -187,33 +187,43 @@
 %    \begin{subfigure}{0.4\textwidth}
 %       \input{fig/sc_cvg_c}
 %    \end{subfigure}
-%    \caption{Normalized transversal emmitance and absolute error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l=n_r=16$.}
+%    \caption{Normalized transversal emmitance and relative error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l=n_r=64$.}
 %    \label{fig:sc_cvg_I}
 % \end{figure}
 % \end{center}
-%
-% \begin{itemize}
-%    \item \textbf{tracking results}: $\epsilon$ and $x_\mathrm{rms}$ computed with the determined settings are shown in Figure \ref{fig:astra_res}
-% \end{itemize}
-%
-% \begin{center}
-% \begin{figure}[H]
-%    \begin{subfigure}{0.4\textwidth}
-%       \input{fig/astra_res_eps}
-%    \end{subfigure}
-%    \qquad \qquad \qquad
-%    \begin{subfigure}{0.4\textwidth}
-%       \input{fig/astra_res_rms}
-%    \end{subfigure}
-%    \caption{Normalized transverse emmitance and rms beam size.}
-%    \label{fig:astra_res}
-% \end{figure}
-% \end{center}
-%
-% \begin{itemize}
-%    \item \textbf{remarks}: the convergence studies also looked at $x_{rms}$ and the behavior was very similar to that of $\epsilon$\\
-%
-%    \item to minimize the electric field on the entire electrode surface all curves could be taken into account
-%    \item this includes the anode ring shape, position and voltage
-%    \item also include tracking in optimization via $x_\mathrm{rms} \leq 1.5\ \mathrm{mm}$, also optimize or constrain $\epsilon \leq 1\ \mathrm{mrad\ mm}$?
-% \end{itemize}
+
+\begin{itemize}
+   \item \textbf{tracking results}: $x_\mathrm{rms}$ and
+   \item continues tracking for 15 cm into the beam pipe
+   \item initial $\epsilon$ for $H=2^{-12}$, $n_x=n_y=8$, $n_z=256$, $n_r=n_l=64$, $n_I=2^{11}$ and order finer ($H=2^{-13}$, $n_x=n_y=16$, $n_z=512$, $n_r=n_l=128$, $n_I=2^{12}$) in Figure \ref{fig:astra_res}
+   \item intial uses Gaussian distribution, optimized uses laser distribution
+   \item optimized $\epsilon$ for $H=2^{-12}$, $n_x=n_y=16$, $n_z=256$, $n_r=n_l=64$, $n_I=2^{11}$ and order finer in Figure
+\end{itemize}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/res_init_eps}
+   \end{subfigure}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/res_opt_eps}
+   \end{subfigure}
+   \caption{Normalized transverse emmitance of initial and optimized geometry.}
+   \label{fig:astra_res}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/res_init_rms}
+   \end{subfigure}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/res_opt_rms}
+   \end{subfigure}
+   \caption{Normalized transverse emmitance of initial and optimized geometry.}
+   \label{fig:astra_res}
+\end{figure}
+\end{center}
