@@ -14,8 +14,8 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it, rho, dz)
    % hold on;
    % plot(x_ref(:,1), x_ref(:,2));
    % plot(y_ref(:,1), y_ref(:,2));
-   % ylabel('x_{rms}/mm');
-   % xlabel('z/m');
+   % ylabel('x_{rms} in mm');
+   % xlabel('z in m');
    % hold off;
 
    figure(2);
@@ -23,8 +23,8 @@ function [err_linf] = compute_map_error (nx_ref, nz_ref, nx_it, nz_it, rho, dz)
    % plot(x_ref(:,1), x_ref(:,3));
    plot(y_ref(:,1), y_ref(:,3));
    write_dat1D (['photogun_map_emit_ref_nx=ny=' num2str(2^nx_ref) '_nz=' num2str(2^nz_ref) '.dat'], y_ref(:,1), y_ref(:,3));
-   xlabel('z/m');
-   ylabel('\epsilon/(mrad mm)');
+   xlabel('z in m');
+   ylabel('\epsilon in mrad mm');
    hold off;
 
    for inx=1:length(nx_it)

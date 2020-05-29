@@ -38,7 +38,7 @@ function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order)
    nrb_opt = nrbmak(ctrl, knts);
 end
 
-% only needed for precomputation once
+% only needed for precomputation once:
 % approximate knot vector via fixed point iteration
 % for ii=1:2^8
 %    pt(19) = nrbinverse_mod(nrb_opt, nrbeval(crv(19), 1));

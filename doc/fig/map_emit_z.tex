@@ -1,25 +1,25 @@
 \begin{tikzpicture}
    \begin{axis}[
-      axis equal,
       try min ticks=4,
       max space between ticks=1000pt,
       enlargelimits=true,
       xlabel=$z\ \mathrm{in\ m}$,
       ylabel=$\epsilon\ \mathrm{in\ mrad\ mm}$,
+      legend style={fill=none}
       ]
 
-      \addplot[color=TUDa-1a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=16.dat};
-      \addlegendentry{$n_z=16$}
-      \addplot[color=TUDa-2a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=32.dat};
-      \addlegendentry{$n_x=32$}
-      \addplot[color=TUDa-3a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=64.dat};
-      \addlegendentry{$n_x=64$}
-      \addplot[color=TUDa-4a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=128.dat};
-      \addlegendentry{$n_x=128$}
-      \addplot[color=TUDa-5a] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=256.dat};
-      \addlegendentry{$n_x=256$}
-      \addplot[color=TUDa-6a] table {fig/astra/map/nz/photogun_map_emit_ref_nx=ny=8_nz=512.dat};
-      \addlegendentry{$n_x=512$}
+      \addplot[color=TUDa-1a, thick] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=16.dat};
+      \addlegendentry{$h_z=6.813 \cdot 10^{-3}$}
+      \addplot[color=TUDa-2a, thick] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=32.dat};
+      \addlegendentry{$h_z=3.406 \cdot 10^{-3}$}
+      \addplot[color=TUDa-3a, thick] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=64.dat};
+      \addlegendentry{$h_z=1.703 \cdot 10^{-3}$}
+      \addplot[color=TUDa-4a, thick] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=128.dat};
+      \addlegendentry{$h_z=8.516 \cdot 10^{-4}$}
+      \addplot[color=TUDa-5a, thick] table {fig/astra/map/nz/photogun_map_emit_nx=ny=8_nz=256.dat};
+      \addlegendentry{$h_z=4.258 \cdot 10^{-4}$}
+      \addplot[color=TUDa-6a, thick] table {fig/astra/map/nz/photogun_map_emit_ref_nx=ny=8_nz=512.dat};
+      \addlegendentry{$h_z=2.129 \cdot 10^{-4}$}
 
    \end{axis}
 \end{tikzpicture}

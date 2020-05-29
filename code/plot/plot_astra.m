@@ -15,6 +15,6 @@ function [] = plot_astra (filename)
    hold on;
    plot(x(:,1), x(:,3));
    legend('x_{rms}', '\epsilon');
-   xlabel('z/m');
+   xlabel('z in m');
    hold off;
 end

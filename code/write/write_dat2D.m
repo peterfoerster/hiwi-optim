@@ -1,6 +1,6 @@
 function [] = write_dat2D (filename, X, Y)
    % write to .dat file
-   fprintf(['\n creating ' filename '\n']);
+   fprintf(['\nwrite_dat2D: ' filename '\n']);
    fid = fopen(filename, 'w');
    fprintf(fid, 'x y c\n');
    for icol=1:size(X,2)

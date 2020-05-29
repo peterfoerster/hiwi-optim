@@ -12,12 +12,12 @@ function [] = plot_convergence (degree_ref, nsub_ref, degree, N_it, filename)
    figure(1);
    loglog(h, errl2, h, h_l2*errl2(1));
    legend('computed', 'p+1');
-   xlabel('h');
+   xlabel('h in m');
    title('error in L^2 norm');
 
    figure(2);
    loglog(h, errh1, h, h_h1*errh1(1));
    legend('computed', 'p');
-   xlabel('h');
+   xlabel('h in m');
    title('error in H^1 norm');
 end

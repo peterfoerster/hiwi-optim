@@ -14,8 +14,8 @@ function [err_linf] = compute_int_error (H_ref, H_it)
    % hold on;
    % plot(x_ref(:,1), x_ref(:,2));
    % plot(y_ref(:,1), y_ref(:,2));
-   % xlabel('z/m');
-   % ylabel('x_{rms}/mm');
+   % xlabel('z in m');
+   % ylabel('x_{rms} in mm');
    % hold off;
 
    figure(2);
@@ -23,8 +23,8 @@ function [err_linf] = compute_int_error (H_ref, H_it)
    % plot(x_ref(:,1), x_ref(:,3));
    plot(y_ref(:,1), y_ref(:,3));
    write_dat1D ('photogun_int_emit_ref.dat', y_ref(:,1), y_ref(:,3));
-   xlabel('z/m');
-   ylabel('\epsilon/(mrad mm)');
+   xlabel('z in m');
+   ylabel('\epsilon in mrad mm');
    hold off;
 
    for iH=1:length(H_it)

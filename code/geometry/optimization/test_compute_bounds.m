@@ -1,5 +1,4 @@
-pkg load geopdes;
-
+% 
 order    = 5;
 filename = ['v6_opt_order=' num2str(order)];
 N_ctrl   = 6*(order-2);

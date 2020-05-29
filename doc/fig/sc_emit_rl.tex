@@ -1,32 +1,26 @@
 \begin{tikzpicture}
    \begin{axis}[
-      axis equal,
       try min ticks=4,
       max space between ticks=1000pt,
       enlargelimits=true,
-      xlabel=$z\ \mathrm{in}\ \mathrm{m}$,
-      ylabel=$\epsilon\ \mathrm{in}\ \mathrm{mrad\ mm}$,
-      legend style={fill=none}
+      xlabel=$z\ \mathrm{in\ m}$,
+      ylabel=$\epsilon\ \mathrm{in\ mrad\ mm}$,
+      legend style={fill=none},
+      legend pos=south east
       ]
 
-      \addplot[color=TUDa-4a] table {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl=64.dat};
+      \addplot[color=TUDa-3a, thick] table {fig/astra/sc/nr_nl/photogun_sc_emit_ref_nI=1024_nr=64_nc=2_nl=64.dat};
       \addlegendentry{$h_r=2.3438 \cdot 10^{-5}, h_l=1.7031 \cdot 10^{-3}$}
 
-      \addplot[color=TUDa-1a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=4.dat};
-      \addplot[color=TUDa-1a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=8.dat};
-      \addplot[color=TUDa-1a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat};
-      \addplot[color=TUDa-1a, dashdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=32.dat};
-      \addplot[color=TUDa-1a, dashdotdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=64.dat};
+      \addplot[color=TUDa-1a, thick] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=16.dat};
+      \addplot[color=TUDa-1a, thick, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=32.dat};
+      \addplot[color=TUDa-1a, thick, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=16_nc=2_nl=64.dat};
 
-      \addplot[color=TUDa-2a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=4.dat};
-      \addplot[color=TUDa-2a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=8.dat};
-      \addplot[color=TUDa-2a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.dat};
-      \addplot[color=TUDa-2a, dashdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=32.dat};
-      \addplot[color=TUDa-2a, dashdotdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=64.dat};
+      \addplot[color=TUDa-2a, thick] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=16.dat};
+      \addplot[color=TUDa-2a, thick, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=32.dat};
+      \addplot[color=TUDa-2a, thick, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=32_nc=2_nl=64.dat};
 
-      \addplot[color=TUDa-3a] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=4.dat};
-      \addplot[color=TUDa-3a, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=8.dat};
-      \addplot[color=TUDa-3a, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=16.dat};
-      \addplot[color=TUDa-3a, dashdotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=32.dat};
+      \addplot[color=TUDa-3a, thick, dashed] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=16.dat};
+      \addplot[color=TUDa-3a, thick, dotted] table {fig/astra/sc/nr_nl/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=32.dat};
    \end{axis}
 \end{tikzpicture}

@@ -1,5 +1,4 @@
-% create the 2D photo gun geometry
-pkg load nurbs;
+% create the 2D photogun geometry
 filename = 'geometry_v6';
 
 electrode = create_electrode_v6();

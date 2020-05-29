@@ -1,5 +1,3 @@
-pkg load geopdes;
-
 % contains the optimized DoFs in [x]
 filename = 'result_opt_order=3_run2';
 load([filename '.mat']);

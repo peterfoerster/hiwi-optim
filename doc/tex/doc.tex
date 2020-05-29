@@ -1,7 +1,7 @@
 \subsection{Geometry}
 \begin{itemize}
    \item initial geometry in Figure \ref{fig:init}
-   \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$,  $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
+   \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$, $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
 \end{itemize}
 
 \begin{center}
@@ -20,7 +20,7 @@
 \subsection{Optimization}
 \begin{itemize}
    \item optimized geometry in Figure \ref{fig:opt}
-   \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$,  $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
+   \item corresponding electric field for $p=3$, $n_\mathrm{sub}=16$, $V_\mathrm{el}=-300\ \mathrm{kV}$ and $V_\mathrm{ar}=1\ \mathrm{kV}$
    \item cost function employs $I = \{ 14, \dots, 19 \}$
    \item \textbf{results}: \qquad
                            \begin{tabular}{c|c|c|c}
@@ -49,8 +49,9 @@
 \subsection{Tracking}
 \begin{itemize}
    \item \textbf{general settings}: $Q=100\ \mathrm{fC}$
-   \item \textbf{spatial distribution}: generated from measurement, see Figure \ref{fig:gen_sp} for comparison with laser measurement
-   \item \textbf{temporal distribution}: Gaussian with $\sigma=5\ \mathrm{ps}$\ (model from thesis \cite{wagner} requires additional data about cathode in use and measurement for comparison, measurement alone could work analogous to spatial case)
+   \item \textbf{spatial distribution}: see Figure \ref{fig:gen_sp} for distribution generated from measurement and for comparison with laser measurement
+   \item see Figure \ref{fig:gen_tmp} for spatial distribution from Gaussian ($\sigma=400\ \mu \mathrm{m}$)
+   \item \textbf{temporal distribution}: Gaussian with $\sigma=5\ \mathrm{ps}$\ (is measurement data available?)
 \end{itemize}
 
 \begin{center}
@@ -70,13 +71,13 @@
 \begin{center}
 \begin{figure}[H]
    \begin{subfigure}{0.4\textwidth}
-      \input{fig/gen_tmp}
+      \input{fig/gen_sp}
    \end{subfigure}
    \qquad \qquad \qquad
    \begin{subfigure}{0.4\textwidth}
-      \input{fig/gen_sp}
+      \input{fig/gen_tmp}
    \end{subfigure}
-   \caption{Spatial distribution from Gaussian ($\sigma = 400\ \mu \mathrm{m}$) and temporal distribution ($2^{10}$ particles).}
+   \caption{Spatial distribution from Gaussian ($\sigma=400\ \mu \mathrm{m}$, $2^{10}$ particles) and temporal distribution ($2^{11}$ particles).}
    \label{fig:gen_tmp}
 \end{figure}
 \end{center}
@@ -85,7 +86,7 @@
 
 \begin{itemize}
    \item \textbf{convergence of time integrator}: relative error of normalized transverse emmitance $\epsilon$ w.\,r.\,t.\ finest time step is shown in Figure \ref{fig:int_cvg}
-   \item computed with $n_x=n_y=8$ and $n_z=256$
+   \item computed with $n_x=n_y=8$ ($h_x=h_y=1.875 \cdot 10^{-4}$) and $n_z=256$ ($h_z=4.258 \cdot 10^{-4}$)
    \item $H=2^{-12}\ \mathrm{ns}$ used later on
 \end{itemize}
 
@@ -103,12 +104,14 @@
 \end{figure}
 \end{center}
 
+\newpage
+
 \begin{itemize}
    \item \textbf{convergence of field map}: look at convergence with number of grid points in transverse $(n_x, n_y)$ and longitudinal $(n_z)$ direction individually
-   \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z=64$
-   \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=8$
-   \item $n_x=n_y=8$ and $n_z=256$ used for convergence studies
-   \item $n_x=n_y=16$ and $n_z=256$ used for actual simulation (actual distribution is larger by more then a factor 2, see Figure \ref{fig:gen_sp})
+   \item Figure \ref{fig:map_cvg_xy} looks at convergence of $n_x, n_y$ for $n_z=64$ ($h_z=1.703 \cdot 10^{-3}$)
+   \item Figure \ref{fig:map_cvg_z} looks at convergence of $n_z$ for $n_x=n_y=8$ ($h_x=h_y=1.875 \cdot 10^{-4}$)
+   \item $n_x=n_y=8$ ($h_x=h_y=1.875 \cdot 10^{-4}$) and $n_z=256$ ($h_z=4.258 \cdot 10^{-4}$) used for convergence studies later on
+   \item $n_x=n_y=16$ ($h_x=h_y=2.5 \cdot 10^{-4}$) and $n_z=256$ ($h_z=4.258 \cdot 10^{-4}$) used for simulation later on (distribution from measurement is larger then that from Gaussian by more then a factor 2, see Figure \ref{fig:gen_sp} and Figure \ref{fig:gen_tmp})
 \end{itemize}
 
 \begin{center}
@@ -120,7 +123,7 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/map_cvg_xy}
    \end{subfigure}
-   \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_z=64$ and $n_x=n_y$ variable.}
+   \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_z=64$ ($h_z=1.703 \cdot 10^{-3}$) and $n_x=n_y$ variable.}
    \label{fig:map_cvg_xy}
 \end{figure}
 \end{center}
@@ -134,19 +137,21 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/map_cvg_z}
    \end{subfigure}
-   \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=8$.}
+   \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_z$ variable and $n_x=n_y=8$ ($h_x=h_y=1.875 \cdot 10^{-4}$).}
    \label{fig:map_cvg_z}
 \end{figure}
 \end{center}
+
+\newpage
 
 \begin{itemize}
    \item \textbf{convergence of space charge}: look at convergence with number of grid cells in radial $(n_r)$ and longitudinal $(n_l)$ direction and number of particles $(n_I)$ separately
 
    \item Figure \ref{fig:sc_cvg_rl} looks at convergence of $n_r, n_l$ for $n_I=2^{10}$
-   \item $n_r=n_l=64$ used later on
+   \item $n_r=n_l=64$ ($h_r=2.344 \cdot 10^{-5}, h_l=1.703 \cdot 10^{-3}$) used later on
 
-   \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=64$
-   \item $n_I=2^{11}$ used for actual simulation
+   \item Figure \ref{fig:sc_cvg_I} looks at convergence of $n_I$ for $n_r=n_l=64$ ($h_r=2.344 \cdot 10^{-5}, h_l=1.703 \cdot 10^{-3}$)
+   \item $n_I=2^{11}$ used for simulation later on
 \end{itemize}
 
 \begin{center}
@@ -172,7 +177,7 @@
    \begin{subfigure}{0.4\textwidth}
       \input{fig/sc_cvg_I}
    \end{subfigure}
-   \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_I$ variable and $n_l=n_r=64$.}
+   \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_I$ variable and $n_r=n_l=64$ ($h_r=2.344 \cdot 10^{-5}, h_l=1.703 \cdot 10^{-3}$).}
    \label{fig:sc_cvg_I}
 \end{figure}
 \end{center}
@@ -187,17 +192,19 @@
 %    \begin{subfigure}{0.4\textwidth}
 %       \input{fig/sc_cvg_c}
 %    \end{subfigure}
-%    \caption{Normalized transversal emmitance and relative error in $l_\infty$-norm for $n_I=2^{10}$ and $n_l=n_r=64$.}
-%    \label{fig:sc_cvg_I}
+%    \caption{Normalized transverse emmitance and relative error in $l_\infty$-norm for $n_I=2^{10}$ and $n_r=n_l=64$ ($h_r=2.344 \cdot 10^{-5}, h_l=1.703 \cdot 10^{-3}$).}
 % \end{figure}
 % \end{center}
 
+\newpage
+
 \begin{itemize}
-   \item \textbf{tracking results}: $x_\mathrm{rms}$ and
-   \item continues tracking for 15 cm into the beam pipe
-   \item initial $\epsilon$ for $H=2^{-12}$, $n_x=n_y=8$, $n_z=256$, $n_r=n_l=64$, $n_I=2^{11}$ and order finer ($H=2^{-13}$, $n_x=n_y=16$, $n_z=512$, $n_r=n_l=128$, $n_I=2^{12}$) in Figure \ref{fig:astra_res}
-   \item intial uses Gaussian distribution, optimized uses laser distribution
-   \item optimized $\epsilon$ for $H=2^{-12}$, $n_x=n_y=16$, $n_z=256$, $n_r=n_l=64$, $n_I=2^{11}$ and order finer in Figure
+   \item \textbf{tracking results}: simulation results for initial and optimized geometry
+   \item continued tracking for $15\ \mathrm{cm}$ into the beam pipe
+   \item initial normalized transverse emmitance for $H=2^{-12}$, $n_x=n_y=8$, $n_z=256$, $n_r=n_l=64$, $n_I=2^{11}$ and refined ($H=2^{-13}$, $n_x=n_y=16$, $n_z=512$, $n_r=n_l=128$, $n_I=2^{12}$) in Figure \ref{fig:res_eps} (uses Gaussian distribution, $\tilde{\epsilon}$ signifies refined solution)
+   \item optimized normalized transverse emmitance for $H=2^{-12}$, $n_x=n_y=16$, $n_z=256$, $n_r=n_l=64$, $n_I=2^{11}$ also in Figure \ref{fig:res_eps} (uses distribution from measurement)
+   \item rms beam size of initial geometry in Figure \ref{fig:res_init}
+   \item rms beam size of optimized geometry in Figure \ref{fig:res_opt}
 \end{itemize}
 
 \begin{center}
@@ -210,9 +217,11 @@
       \input{fig/res_opt_eps}
    \end{subfigure}
    \caption{Normalized transverse emmitance of initial and optimized geometry.}
-   \label{fig:astra_res}
+   \label{fig:res_eps}
 \end{figure}
 \end{center}
+
+\newpage
 
 \begin{center}
 \begin{figure}[H]
@@ -221,9 +230,23 @@
    \end{subfigure}
    \qquad \qquad \qquad
    \begin{subfigure}{0.4\textwidth}
+      \input{fig/res_init_rms_geo}
+   \end{subfigure}
+   \caption{RMS beam size of initial geometry.}
+   \label{fig:res_init}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[H]
+   \begin{subfigure}{0.4\textwidth}
       \input{fig/res_opt_rms}
    \end{subfigure}
-   \caption{Normalized transverse emmitance of initial and optimized geometry.}
-   \label{fig:astra_res}
+   \qquad \qquad \qquad
+   \begin{subfigure}{0.4\textwidth}
+      \input{fig/res_opt_rms_geo}
+   \end{subfigure}
+   \caption{RMS beam size of optimized geometry.}
+   \label{fig:res_opt}
 \end{figure}
 \end{center}

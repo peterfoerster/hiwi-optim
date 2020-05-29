@@ -1,4 +1,4 @@
-
+% 
 geometry_file = 'geometry_v6';
 filename      = 'cvg_v6';
 % specify problem and material data

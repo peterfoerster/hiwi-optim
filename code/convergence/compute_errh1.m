@@ -8,7 +8,7 @@ function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, de
    method_data.nquad      = degree_ref+1;
    tic;
    [geometry, msh_ref, space_ref, phi_ref] = mp_solve_electrostatics (problem_data, method_data);
-   fprintf('\ntime elapsed for reference solution:%d min\n', toc/60);
+   fprintf('\ncompute_errh1: mp_solve_electrostatics: %d min\n', toc/60);
 
    % iterative solution and error computation
    for iit=0:N_it
@@ -20,7 +20,7 @@ function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, de
       [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
       tic;
       [errh1(iit+1), errl2(iit+1)] = mp_errh1 (geometry, msh_ref, space_ref, phi_ref, space, phi);
-      fprintf('\ntime elapsed for error computation:%d min\n', toc/60);
+      fprintf('\ncompute_errh1: mp_errh1: %d min\n', toc/60);
    end
 
    % save results

@@ -22,5 +22,5 @@ function [fc] = volume_constraint(x, order)
    V_el = computeV_cyl_mp (msh);
    % 625 cm^3 as maximal volume
    fc = V_el*1e6 - 625;
-   fprintf('fc = %d\n', fc);
+   fprintf('\nvolume_constraint: fc=%d\n', fc);
 end

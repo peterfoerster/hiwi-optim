@@ -1,4 +1,3 @@
-
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
 geometry_file = 'v6_opt_order=3_run2';
@@ -20,7 +19,7 @@ return
 [problem_data, method_data] = setup_problem (geometry_file);
 tic;
 [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
-fprintf('\ntime elapsed for solution: %d min\n', toc/60);
+fprintf('\nmp_solve_electrostatics: %d min\n', toc/60);
 
 % plot absolute value of electric field and write .dat files
 % npts = 8;

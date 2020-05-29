@@ -31,9 +31,9 @@ end
 % time step in [ns] (-12 [-13:-8])
 H = 2^(-12);
 
-% number of transverse grid points (3 convergences study) (4 actual simulation)
+% number of transverse grid points (3 convergences study) (4 simulation) ([3:6])
 nx = ny = 2^4;
-% number of longitudinal grid points 8
+% number of longitudinal grid points (8 [4:9])
 nz = 2^8;
 
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
@@ -44,11 +44,11 @@ end
 
 % space charge
 sc       = 1;
-% number of radial cells 6
+% number of radial cells (6 [4:6])
 Nrad     = 2^6;
 % size factor between innermost and outermost radial cell (1 [-1:2])
 Cell_var = 2^(1);
-% number of longitudinal cells 6
+% number of longitudinal cells (6 [4:6])
 Nlong_in = 2^6;
 
 % filename = ['photogun_H=' num2str(iH)];
@@ -64,7 +64,7 @@ tic;
 fprintf('\n tracking %d min \n', toc/60);
 delete('NORRAN');
 delete([filename '.Log.001']);
-delete([filename '.track.001']);
+% delete([filename '.track.001']);
 delete([filename '.Zemit.001']);
 delete('win_config.dat');
 

@@ -1,6 +1,5 @@
 \begin{tikzpicture}
    \begin{axis}[
-      axis equal,
       try min ticks=4,
       max space between ticks=1000pt,
       enlargelimits=true,
@@ -10,13 +9,13 @@
       legend pos=south east
       ]
 
-      \addplot[color=TUDa-1a] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=0.5_nl=64.dat};
+      \addplot[color=TUDa-1a, thick] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=0.5_nl=64.dat};
       \addlegendentry{$n_c=0.5$}
-      \addplot[color=TUDa-2a] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=1_nl=64.dat};
+      \addplot[color=TUDa-2a, thick] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=1_nl=64.dat};
       \addlegendentry{$n_c=1$}
-      \addplot[color=TUDa-3a] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=64.dat};
+      \addplot[color=TUDa-3a, thick] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=2_nl=64.dat};
       \addlegendentry{$n_c=2$}
-      \addplot[color=TUDa-3a] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=4_nl=64.dat};
+      \addplot[color=TUDa-3a, thick] table {fig/astra/sc/nc/photogun_sc_emit_nI=1024_nr=64_nc=4_nl=64.dat};
       \addlegendentry{$n_c=4$}
 
    \end{axis}

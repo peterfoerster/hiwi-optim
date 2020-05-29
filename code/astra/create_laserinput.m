@@ -31,7 +31,7 @@ function [] = create_laserinput(Ipart, sig_clock, Q_total, filename)
             end
         end
     end
-    fprintf('\nsample creation: %d s for Ipart = %d\n', toc, Ipart);
+    fprintf('\ncreate_laserinput: %d s with Ipart=%d\n', toc, Ipart);
 
     rho = [rho(1:Ipart/2), rho(Ipart+1:Ipart+Ipart/2); rho(Ipart/2+1:Ipart), rho(Ipart+Ipart/2+1:end)];
 

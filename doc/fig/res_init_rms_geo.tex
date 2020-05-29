@@ -1,0 +1,94 @@
+\begin{tikzpicture}
+   \begin{axis}[
+      axis equal,
+      try min ticks=4,
+      max space between ticks=1000pt,
+      enlargelimits=true,
+      xlabel=$z\ \mathrm{in\ m}$,
+      ylabel=$10 \cdot x_\mathrm{rms}\ \mathrm{in\ m}$,
+      legend style={fill=none}
+      ]
+
+      \addplot[color=TUDa-1a, thick] table[y expr=\thisrow{y}*0.01] {fig/astra/results/init/photogun_Xrms.dat};
+      \addlegendentry{$x_\mathrm{rms}$}
+      \addplot[color=TUDa-2a] table[y expr=\thisrow{y}*0.01] {fig/astra/results/init/photogun_Yrms.dat};
+      \addlegendentry{$y_\mathrm{rms}$}
+
+      \addplot[color=TUDa-3a] table[y expr=\thisrow{y}*0.01] {fig/astra/results/init/fine/photogun_Xrms.dat};
+      \addlegendentry{$\tilde{x}_\mathrm{rms}$}
+      \addplot[color=TUDa-4a] table[y expr=\thisrow{y}*0.01] {fig/astra/results/init/fine/photogun_Yrms.dat};
+      \addlegendentry{$\tilde{y}_\mathrm{rms}$}
+
+      % add geometry
+      \addplot[color=TUDa-5a, semithick] table{fig/geometry/init/boundary11.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary12.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary13.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary14.dat};
+
+      \addplot[color=TUDa-5a, semithick] table{fig/geometry/init/boundary21.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary22.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary23.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary24.dat};
+
+      \addplot[color=TUDa-5a, semithick] table{fig/geometry/init/boundary31.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary32.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary33.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary34.dat};
+
+      \addplot[color=TUDa-5a, semithick] table{fig/geometry/init/boundary41.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary42.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary43.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary44.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary51.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary52.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary53.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary54.dat};
+
+      \addplot[color=TUDa-5a, semithick] table{fig/geometry/init/boundary61.dat};
+      \addplot[color=TUDa-0b, semithick, opacity=0.35] table{fig/geometry/init/boundary62.dat};
+      \addplot[color=TUDa-1a, semithick] table{fig/geometry/init/boundary63.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary64.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary71.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary72.dat};
+      \addplot[color=TUDa-1a, semithick] table{fig/geometry/init/boundary73.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary74.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary81.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary82.dat};
+      \addplot[color=TUDa-1a, semithick] table{fig/geometry/init/boundary83.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary84.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary91.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary92.dat};
+      \addplot[color=TUDa-1a, semithick] table{fig/geometry/init/boundary93.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary94.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary101.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary102.dat};
+      \addplot[color=TUDa-1a, semithick] table{fig/geometry/init/boundary103.dat};
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary104.dat};
+
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary111.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary112.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary113.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary114.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary121.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary122.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary123.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary124.dat};
+
+      \addplot[color=TUDa-9a, semithick] table{fig/geometry/init/boundary131.dat};
+      \addplot[color=black, semithick] table{fig/geometry/init/boundary132.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary133.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary134.dat};
+
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary141.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary142.dat};
+      \addplot[color=TUDa-1a, semithick] table{fig/geometry/init/boundary143.dat};
+      \addplot[color=TUDa-0b, semithick] table{fig/geometry/init/boundary144.dat};
+
+   \end{axis}
+\end{tikzpicture}

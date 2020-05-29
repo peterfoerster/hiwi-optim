@@ -1,6 +1,5 @@
 \begin{tikzpicture}
    \begin{axis}[
-      axis equal,
       try min ticks=4,
       max space between ticks=1000pt,
       enlargelimits=true,
@@ -9,9 +8,9 @@
       legend style={fill=none}
       ]
 
-      \addplot[color=TUDa-1a] table {fig/astra/results/opt/photogun_Xeps.dat};
+      \addplot[color=TUDa-1a, thick] table {fig/astra/results/opt/photogun_Xeps.dat};
       \addlegendentry{$\epsilon_x$}
-      \addplot[color=TUDa-2a] table {fig/astra/results/opt/photogun_Yeps.dat};
+      \addplot[color=TUDa-2a, thick] table {fig/astra/results/opt/photogun_Yeps.dat};
       \addlegendentry{$\epsilon_y$}
    \end{axis}
 \end{tikzpicture}

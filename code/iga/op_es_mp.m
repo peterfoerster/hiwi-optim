@@ -16,7 +16,7 @@ function mat = op_es_mp (spu, spv, msh, epsilon, patch_list)
    end
 
    if ((spu.npatch ~= spv.npatch) || (spu.npatch ~= msh.npatch))
-      error('op_es2d_mp: the number of patches does not coincide')
+      error('op_es_mp: the number of patches does not coincide')
    end
 
    ncounter = 0;

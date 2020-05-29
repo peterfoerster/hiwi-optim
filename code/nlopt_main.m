@@ -1,4 +1,4 @@
-
+%
 order  = 3;
 N_ctrl = 6*(order-2);
 x_init = zeros(2*N_ctrl,1);
@@ -22,7 +22,7 @@ opt.maxtime       = 15*60*60;
 
 tic;
 [x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
-fprintf('\n time elapsed for optimization: %d min \n', toc/60);
+fprintf('\nnlopt_optimize: %d min\n', toc/60);
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

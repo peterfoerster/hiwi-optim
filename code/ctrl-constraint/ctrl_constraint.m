@@ -11,5 +11,5 @@ function [fc] = ctrl_constraint(x, order, N_ctrl)
    ix = ~isnan(ctrl_diff);
    % fc <= 0
    fc = -min(ctrl_diff(ix));
-   fprintf('fc = %d\n', fc);
+   fprintf('\nctrl_constraint: fc=%d\n', fc);
 end

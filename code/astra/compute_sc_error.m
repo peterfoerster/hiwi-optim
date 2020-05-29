@@ -15,8 +15,8 @@ function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, n
    % hold on;
    % plot(x_ref(:,1), x_ref(:,2));
    % plot(y_ref(:,1), y_ref(:,2));
-   % xlabel('z/m');
-   % ylabel('x_{rms}/mm');
+   % xlabel('z in m');
+   % ylabel('x_{rms} in mm');
    % hold off;
 
    figure(2);
@@ -25,8 +25,8 @@ function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, n
    plot(y_ref(:,1), y_ref(:,3));
    write_dat1D (['photogun_sc_emit_ref_nI=' num2str(2^nI_ref) '_nr=' num2str(2^nr_ref) '_nc=' num2str(2^nc_ref) ...
                  '_nl=' num2str(2^nl_ref) '.dat'], y_ref(:,1), y_ref(:,3));
-   xlabel('z/m');
-   ylabel('\epsilon/(mrad mm)');
+   xlabel('z in m');
+   ylabel('\epsilon in mrad mm');
    hold off;
 
    for inI=1:length(nI_it)
@@ -79,13 +79,13 @@ function [err_linf] = compute_sc_error (nI_ref, nr_ref, nc_ref, nl_ref, nI_it, n
    if (length(nI_it) == 1 && length(nr_it) > 1 && length(nc_it) == 1 && length(nl_it) > 1)
       for inr=1:length(nr_it)
          write_dat1D (['photogun_sc_err_nI=' num2str(2^nI_it(1)) '_nr=' num2str(2^nr_it(inr)) ...
-                       '_nc=' num2str(2^nc_it(1)) '.dat'], rho./(2.^nl_it), err_linf(1,inr,1,:,2,2));
+                       '_nc=' num2str(2^nc_it(1)) '.dat'], dz./(2.^nl_it), err_linf(1,inr,1,:,2,2));
       end
    elseif (length(nI_it) > 1 && length(nr_it) == 1 && length(nc_it) == 1 && length(nl_it) == 1)
       write_dat1D (['photogun_sc_err_nr=' num2str(2^nr_it(1)) '_nc=' num2str(2^nc_it(1)) ...
                     '_nl=' num2str(2^nl_it(1)) '.dat'], 2.^nI_it, err_linf(:,1,1,1,2,2));
    elseif (length(nI_it) == 1 && length(nr_it) == 1 && length(nc_it) > 1 && length(nl_it) == 1)
       write_dat1D (['photogun_sc_err_nI=' num2str(2^nI_it(1)) '_nr=' num2str(2^nr_it(1)) ...
-                    '_nl=' num2str(2^nl_it(1)) '.dat'], dz./(2.^nc_it), err_linf(1,1,:,1,2,2));
+                    '_nl=' num2str(2^nl_it(1)) '.dat'], (2.^nc_it), err_linf(1,1,:,1,2,2));
   end
 end
