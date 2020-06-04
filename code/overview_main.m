@@ -1,6 +1,6 @@
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
-geometry_file = 'v6_opt_order=3_run2';
+geometry_file = 'v6_opt_order=4';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
@@ -13,7 +13,7 @@ geometry_file = 'v6_opt_order=3_run2';
 % write_geometry (geometry);
 
 % plot geometry
-% plot_geometry (geometry, boundaries);
+plot_geometry (geometry, boundaries);
 return
 % solve electrostatic problem
 [problem_data, method_data] = setup_problem (geometry_file);

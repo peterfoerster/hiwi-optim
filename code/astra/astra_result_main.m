@@ -2,6 +2,8 @@
 rho = 1.5e-3;
 dz  = 416e-3 - 307e-3;
 
+[err_linf] = compute_astra_error ()
+
 % integrator
 % H_ref = -13;
 % H_it  = [-8 -9 -10 -11 -12 -13];
