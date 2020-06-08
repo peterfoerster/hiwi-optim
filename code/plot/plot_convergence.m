@@ -1,3 +1,13 @@
+% Plots the convergence of the field solution w.r.t. a reference solution.
+
+% INPUT:
+%
+%   degree_ref: degree of the reference solution
+%   nsub_ref: number of subdomains of the reference solution
+%   degree: array of degrees of the iterative solution
+%   N_it: number of iterative solutions
+%   filename: name of the file containing the errors (.mat)
+
 function [] = plot_convergence (degree_ref, nsub_ref, degree, N_it, filename)
    filename = [filename '_degree_ref=' num2str(degree_ref(1)) '_nsub_ref=' num2str(nsub_ref(1)) ...
                '_degree=' num2str(degree(1)) '_N_it=' num2str(N_it) '.mat'];

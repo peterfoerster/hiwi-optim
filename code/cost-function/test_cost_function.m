@@ -1,8 +1,14 @@
-pkg load geopdes;
+% computes the cost function for the optimization
+order = 4;
 
-order  = 3;
-N_ctrl = 6*(order-2);
-x      = zeros(2*N_ctrl,1);
+if (order == 3)
+    N_ctrl = 6*1;
+elseif (order == 4)
+    N_ctrl = 2*1 + 1*2 + 2*1;
+elseif (order == 5)
+    N_ctrl = 2*1 + 1*3 + 2*1;
+end
+x = zeros(2*N_ctrl,1);
 
 tic;
 cst_func = @(x) cost_function_max(x, order);

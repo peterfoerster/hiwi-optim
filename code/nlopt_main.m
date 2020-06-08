@@ -1,6 +1,13 @@
-%
-order  = 3;
-N_ctrl = 6*(order-2);
+% run the optimization employing the NLopt library
+order = 4;
+
+if (order == 3)
+    N_ctrl = 6*1;
+elseif (order == 4)
+    N_ctrl = 2*1 + 1*2 + 2*1;
+elseif (order == 5)
+    N_ctrl = 2*1 + 1*3 + 2*1;
+end
 x_init = zeros(2*N_ctrl,1);
 
 [lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);
@@ -16,8 +23,8 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
-% base with order 3 needs 150 and +300 per order
-opt.maxeval       = 300;
+% base with order 3 needs 150
+opt.maxeval       = 200;
 opt.maxtime       = 15*60*60;
 
 tic;

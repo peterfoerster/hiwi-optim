@@ -1,8 +1,16 @@
 % contains the optimized DoFs in [x]
 filename = 'result_opt_order=3_run2';
+order    = 3;
+
 load([filename '.mat']);
-order  = 3;
-N_ctrl = 6*(order-2);
+
+if (order == 3)
+    N_ctrl = 6*1;
+elseif (order == 4)
+    N_ctrl = 2*1 + 1*2 + 2*1;
+elseif (order == 5)
+    N_ctrl = 2*1 + 1*3 + 2*1;
+end
 x_init = zeros(2*N_ctrl,1);
 
 % volume constraint
