@@ -1,5 +1,6 @@
-% run the optimization employing the NLopt library
+% Run the optimization employing the NLopt library.
 order = 4;
+
 
 if (order == 3)
     N_ctrl = 6*1;
@@ -23,7 +24,7 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
-% base with order 3 needs 150
+% order=4: 200?
 opt.maxeval       = 200;
 opt.maxtime       = 15*60*60;
 

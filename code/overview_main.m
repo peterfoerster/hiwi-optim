@@ -1,6 +1,8 @@
+% Plots the geometry and computes the field solution.
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
 geometry_file = 'v6_opt_order=5';
+
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
@@ -12,7 +14,6 @@ geometry_file = 'v6_opt_order=5';
 % write_boundary (geometry);
 % write_geometry (geometry);
 
-% plot geometry
 % plot_geometry (geometry, boundaries);
 
 % solve electrostatic problem
@@ -21,7 +22,7 @@ tic;
 [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
 fprintf('\nmp_solve_electrostatics: %d min\n', toc/60);
 
-% plot absolute value of electric field and write .dat files
+% plot magnitude of electric field and write .dat files
 % npts = 8;
 % vtk_pts = {linspace(0, 1, npts), linspace(0, 1, npts)};
 % plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);

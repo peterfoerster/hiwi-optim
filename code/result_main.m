@@ -1,6 +1,8 @@
+% Computes the important quantities for the initial and optimized geometry.
 % contains the optimized DoFs in [x]
 filename = 'result_opt_order=3_run2';
-order    = 3;
+order = 3;
+
 
 load([filename '.mat']);
 

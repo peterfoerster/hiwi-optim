@@ -1,5 +1,6 @@
-% compute the volume constraint on the electrode
+% Compute the volume constraint on the electrode.
 order = 5;
+
 
 if (order == 3)
     N_ctrl = 6*1;

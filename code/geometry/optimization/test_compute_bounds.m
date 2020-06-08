@@ -1,6 +1,7 @@
-% compute the bounds on the control points
+% Compute the bounds on the control points.
 order    = 5;
 filename = ['v6_opt_order=' num2str(order)];
+
 
 if (order == 3)
     N_ctrl = 6*1;

@@ -1,5 +1,6 @@
-% computes the cost function for the optimization
+% Computes the cost function for the optimization.
 order = 4;
+
 
 if (order == 3)
     N_ctrl = 6*1;

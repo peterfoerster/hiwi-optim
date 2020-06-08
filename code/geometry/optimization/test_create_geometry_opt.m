@@ -1,6 +1,8 @@
-% removing a knot or adding a control point increases the degree by 1 (formal)
-order    = 5;
+% Create the geometry to be optimized (based on a continuous NURBS representation).
+% Removing a knot or adding a control point increases the degree by 1 (formal).
+order = 5;
 filename = ['v6_opt_order=' num2str(order)];
+
 
 if (order == 3)
     N_ctrl = 6*1;

@@ -126,7 +126,7 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl)
         bnds = nrbextract(geometry(16).nurbs);
         pts1 = bnds(1).coefs(1:2,:) ./ bnds(1).coefs(4,:);
 
-        ioff = 6;
+        ioff = 4;
         for ictrl=2:(order-1)
             ix = ioff + 2*ictrl - 3;
             lb(ix)   = (pts1(1,1) + tol) - pts1(1,ictrl);
@@ -141,7 +141,7 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl)
         pts2 = bnds(2).coefs(1:2,:) ./ bnds(2).coefs(4,:);
 
         ictrl = order-1;
-        ioff  = 6 + 2*(order-2);
+        ioff  = 4 + 2*(order-2);
         ix    = ioff + 1;
         lb(ix)   = (pts1(1,1) + tol) - pts1(1,ictrl);
         ub(ix)   = (pts2(1,end) - tol) - pts1(1,ictrl);
@@ -154,7 +154,7 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl)
         pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
 
         ictrl = 2;
-        ioff  = 8 + 2*(order-2);
+        ioff  = 6 + 2*(order-2);
         ix    = ioff + 1;
         lb(ix)   = (x_min + tol) - pts3(1,ictrl);
         ub(ix)   = (pts4(1,end) - tol) - pts3(1,ictrl);
