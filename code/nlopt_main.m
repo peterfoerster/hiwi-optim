@@ -1,5 +1,5 @@
 % Run the optimization employing the NLopt library.
-order = 4;
+order = 5;
 
 
 if (order == 3)
@@ -24,13 +24,15 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
-% order=4: 200?
+% order=3,4: 200, order=5: 200
 opt.maxeval       = 200;
 opt.maxtime       = 15*60*60;
 
 tic;
-[x_opt, obj, retcode] = nlopt_optimize (opt, x_init);
+[x_opt, obj_opt, retcode] = nlopt_optimize (opt, x_init);
 fprintf('\nnlopt_optimize: %d min\n', toc/60);
+
+save(['result_nlopt_order=' num2str(order) '.mat'], 'x_opt', 'obj_opt');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

@@ -12,7 +12,7 @@ addpath('/home/peter/iga-optim/code/iga', '-begin');
 
 addpath('/home/peter/iga-optim/code/plot', '-begin');
 
-addpath('/home/peter/iga-optim/code/results/astra/int:/home/peter/iga-optim/code/results/astra/map/nx_ny:/home/peter/iga-optim/code/results/astra/map/nz:/home/peter/iga-optim/code/results/astra/sc/nc:/home/peter/iga-optim/code/results/astra/sc/nI:/home/peter/iga-optim/code/results/astra/sc/nr_nl:/home/peter/iga-optim/code/results/optimization/cobyla/run2', '-begin');
+addpath('/home/peter/iga-optim/code/results/astra/int:/home/peter/iga-optim/code/results/astra/map/nx_ny:/home/peter/iga-optim/code/results/astra/map/nz:/home/peter/iga-optim/code/results/astra/sc/nc:/home/peter/iga-optim/code/results/astra/sc/nI:/home/peter/iga-optim/code/results/astra/sc/nr_nl:/home/peter/iga-optim/code/results/optimization/cobyla/run3', '-begin');
 
 addpath('/home/peter/iga-optim/code/setup', '-begin');
 
