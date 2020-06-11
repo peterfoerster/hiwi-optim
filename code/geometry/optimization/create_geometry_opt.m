@@ -15,6 +15,6 @@ function [] = create_geometry_opt (filename, x, order)
    crv     = cut_nrb_opt (nrb_opt, order, knts);
 
    [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
-
+keyboard
    write_geometryfile_opt (ptcs_vac, ptcs_el, filename, order);
 end

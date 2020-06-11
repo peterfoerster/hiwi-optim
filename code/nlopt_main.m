@@ -1,5 +1,5 @@
 % Run the optimization employing the NLopt library.
-order = 5;
+order = 4;
 
 
 if (order == 3)
@@ -24,8 +24,8 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
-% order=3,4: 200, order=5: 200
-opt.maxeval       = 200;
+% order=3: 150, order=4: 250
+opt.maxeval       = 15;
 opt.maxtime       = 15*60*60;
 
 tic;

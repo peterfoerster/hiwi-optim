@@ -166,7 +166,7 @@ function [ctrl_diff_lb, ctrl_diff_ub] = compute_ctrl_constraint(geometry, ctrl_d
        bnds = nrbextract(geometry(16).nurbs);
        pts1 = bnds(1).coefs(1:2,:) ./ bnds(1).coefs(4,:);
 
-       ioff = 6;
+       ioff = 4;
        for ictrl=2:(order-1);
            ix = ioff + 2*ictrl - 3;
            % check left/right -> enforce correct order
@@ -182,7 +182,7 @@ function [ctrl_diff_lb, ctrl_diff_ub] = compute_ctrl_constraint(geometry, ctrl_d
        pts1 = bnds(1).coefs(1:2,:) ./ bnds(1).coefs(4,:);
 
        ictrl = order-1;
-       ioff  = 6 + 2*(order-2);
+       ioff  = 4 + 2*(order-2);
        ix    = ioff + 1;
        % check left -> enforce correct order
        ctrl_diff_lb(ix) = pts1(1,ictrl) - (pts1(1,ictrl-1) + tol);
@@ -206,7 +206,7 @@ function [ctrl_diff_lb, ctrl_diff_ub] = compute_ctrl_constraint(geometry, ctrl_d
        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
 
        ictrl = 2;
-       ioff  = 8 + 2*(order-2);
+       ioff  = 6 + 2*(order-2);
        ix    = ioff + 1;
        % left given by bounds
        ctrl_diff_lb(ix) = NaN;

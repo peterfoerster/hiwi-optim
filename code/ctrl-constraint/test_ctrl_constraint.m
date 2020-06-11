@@ -1,5 +1,5 @@
 % compute the constraints on the control points
-order    = 5;
+order    = 4;
 filename = ['v6_opt_order=' num2str(order)];
 
 if (order == 3)

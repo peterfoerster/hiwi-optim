@@ -1,6 +1,6 @@
 function [] = plot_boundary (geometry, boundaries)
     width = 4;
-    nsub  = 8;
+    nsub  = 64;
     for ib=1:length(boundaries)
         switch(ib)
             % electrode
