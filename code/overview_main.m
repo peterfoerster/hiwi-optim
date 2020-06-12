@@ -10,10 +10,10 @@ order = 4;
 % write_iges (['v6_opt'], geometry);
 
 % write .dat files
-% write_ctrl_opt (geometry, order);
+write_ctrl_opt (geometry, order);
 % write_boundary (geometry);
 % write_geometry (geometry);
-
+return
 plot_geometry (geometry, boundaries);
 return
 % solve electrostatic problem
@@ -29,4 +29,5 @@ fprintf('\nmp_solve_electrostatics: %d min\n', toc/60);
 % view(2);
 
 % write .vtk files
-sp_to_vtk (phi, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');
+sp_to_vtk (phi, space, geometry, method_data.nsub, ['E_degree=' num2str(method_data.degree(1)) ...
+           '_nsub=' num2str(method_data.nsub(1))], 'E', 'gradient');

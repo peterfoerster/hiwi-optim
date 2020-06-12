@@ -18,7 +18,7 @@ x_init = zeros(2*N_ctrl,1);
 % volume constraint
 volume_constraint_init = volume_constraint(x_init, order);
 volume_constraint_opt  = volume_constraint(x_opt, order);
-
+return
 % cost function
 [obj_init] = cost_function_max (x_init, order);
 [obj_opt]  = cost_function_max (x_opt, order);

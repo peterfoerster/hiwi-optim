@@ -1,9 +1,9 @@
 function [] = write_ctrl_opt (geometry, order)
-    nsub  = 8;
+    nsub = 100;
     % electrode
     if (order == 3)
         iptcs = [10 14 15 16 17 18 19];
-        ibnds = [ 3  3  1  3  1  4  4];
+        ibnds = [ 3  3  3  3  3  4  4];
     elseif (order == 4 || order == 5)
         iptcs = [10 14 15 16 17 18];
         ibnds = [ 3  3  3  3  4  4];

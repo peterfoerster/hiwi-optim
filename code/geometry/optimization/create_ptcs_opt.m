@@ -1,47 +1,21 @@
 function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv)
-    bnds    = nrbextract(ptcs_vac(19));
-    bnds(1) = nrbline(nrbeval(bnds(3), 0), nrbeval(crv(19), 0));
-    bnds(2) = nrbline(nrbeval(bnds(3), 1), nrbeval(crv(19), 1));
+    bnds = nrbextract(ptcs_vac(19));
     ptcs_vac(19) = nrbruled(bnds(3), crv(19));
-    % ptcs_vac(19) = nrbcoons_mod(bnds(3), crv(19), bnds(1), bnds(2));
-    % keyboard
-    % bnds = nrbextract(ptcs_vac(19));
-    % hold on;
-    % nrbctrlplot(bnds(4));
 
-    bnds    = nrbextract(ptcs_vac(18));
-    bnds(1) = nrbline(nrbeval(bnds(3), 0), nrbeval(crv(18), 0));
-    bnds(2) = nrbline(nrbeval(bnds(3), 1), nrbeval(crv(18), 1));
+    bnds = nrbextract(ptcs_vac(18));
     ptcs_vac(18) = nrbruled(bnds(3), crv(18));
-    % ptcs_vac(18) = nrbcoons(bnds(3), crv(18), bnds(1), bnds(2));
-
-    % bnds = nrbextract(ptcs_vac(18));
-    % hold on;
-    % nrbctrlplot(bnds(4));
-
 
     if (order == 3)
-        bnds    = nrbextract(ptcs_vac(17));
-        bnds(3) = nrbline(nrbeval(crv(17), 0), nrbeval(bnds(2), 0));
-        bnds(4) = nrbline(nrbeval(crv(17), 1), nrbeval(bnds(2), 1));
-        ptcs_vac(17) = nrbcoons(bnds(3), bnds(4), crv(17), bnds(2));
+        bnds = nrbextract(ptcs_vac(17));
+        ptcs_vac(17) = nrbruled(crv(17), bnds(2));
 
-        bnds    = nrbextract(ptcs_vac(16));
-        bnds(3) = nrbline(nrbeval(crv(16), 0), nrbeval(bnds(2), 0));
-        bnds(4) = nrbline(nrbeval(crv(16), 1), nrbeval(bnds(2), 1));
-        ptcs_vac(16) = nrbcoons(bnds(3), bnds(4), crv(16), bnds(2));
+        bnds = nrbextract(ptcs_vac(16));
+        ptcs_vac(16) = nrbruled(crv(16), bnds(2));
     elseif (order == 4 || order == 5)
         bnds16  = nrbextract(ptcs_vac(16));
         bnds17  = nrbextract(ptcs_vac(17));
         bnds(2) = nrbline(nrbeval(bnds17(2), 0), nrbeval(bnds16(2), 1));
-        bnds(3) = nrbline(nrbeval(crv(16), 0), nrbeval(bnds(2), 0));
-        bnds(4) = nrbline(nrbeval(crv(16), 1), nrbeval(bnds(2), 1));
         ptcs_vac(16) = nrbruled(crv(16), bnds(2));
-        % ptcs_vac(16) = nrbcoons(bnds(3), bnds(4), crv(16), bnds(2));
-
-        % bnds = nrbextract(ptcs_vac(16));
-        % hold on;
-        % nrbctrlplot(bnds(3));
 
         % renumber patches
         for iptc=17:(length(ptcs_vac)-1)
@@ -68,23 +42,14 @@ function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv)
         ptcs_vac(22) = nrbcoons(bnds(3), nrbdegelev(bnds(4), order-3), bnds(1), bnds(2));
     end
 
-    bnds    = nrbextract(ptcs_vac(15));
-    bnds(3) = nrbline(nrbeval(crv(15), 0), nrbeval(bnds(2), 0));
-    bnds(4) = nrbline(nrbeval(crv(15), 1), nrbeval(bnds(2), 1));
+    bnds = nrbextract(ptcs_vac(15));
     ptcs_vac(15) = nrbruled(crv(15), bnds(2));
-    % ptcs_vac(15) = nrbcoons(bnds(3), bnds(4), crv(15), bnds(2));
 
-    bnds    = nrbextract(ptcs_vac(14));
-    bnds(1) = nrbline(nrbeval(crv(14), 1), nrbeval(bnds(4), 0));
-    bnds(2) = nrbline(nrbeval(crv(14), 0), nrbeval(bnds(4), 1));
+    bnds = nrbextract(ptcs_vac(14));
     ptcs_vac(14) = nrbruled(nrbreverse(crv(14)), bnds(4));
-    % ptcs_vac(14) = nrbcoons(nrbreverse(crv(14)), bnds(4), bnds(1), bnds(2));
 
-    bnds    = nrbextract(ptcs_vac(10));
-    bnds(1) = nrbline(nrbeval(crv(10), 1), nrbeval(bnds(4), 0));
-    bnds(2) = nrbline(nrbeval(crv(10), 0), nrbeval(bnds(4), 1));
+    bnds = nrbextract(ptcs_vac(10));
     ptcs_vac(10) = nrbruled(nrbreverse(crv(10)), bnds(4));
-    % ptcs_vac(10) = nrbcoons(nrbreverse(crv(10)), bnds(4), bnds(1), bnds(2));
 
     % electrode
     if (order == 3)

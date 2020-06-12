@@ -7,14 +7,13 @@ function [] = create_geometry_opt (filename, x, order)
     domain_vac      = discretize_vacuumchamber_v6 (electrode, anode_ring, inner_insulator, outer_insulator, vacuumchamber);
     domain_el       = discretize_electrode_v6 (electrode);
 
-   [ptcs_vac, ptcs_el] = create_ptcs_v6 (electrode, anode_ring, inner_insulator, outer_insulator, vacuumchamber, domain_vac, domain_el);
+   [ptcs_vac, ptcs_el] = create_ptcs_v6 (electrode, anode_ring, inner_insulator, outer_insulator, ...
+                                         vacuumchamber, domain_vac, domain_el);
 
    [nrb_opt, knts] = create_nrb_opt_electrode (ptcs_vac, order);
 
    nrb_opt = move_ctrl_opt (nrb_opt, x, order);
    crv     = cut_nrb_opt (nrb_opt, order, knts);
-   nrbctrlplot(nrb_opt);
-   keyboard
 
    [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
 
