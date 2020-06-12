@@ -1,86 +1,87 @@
 function [crv] = cut_nrb_opt (nrb_opt, order, knts)
-    keyboard
-    % knts = unique(knts(order+1:end-order));
-    % for ii=1:(order-1)
-    %     nrb_opt = nrbkntins(nrb_opt, knts);
-    % end
-    % knts = [zeros(1,order) ones(1,order)];
-
-% skip before here
-    nrb = nrb_opt;
-    for ii=1:order-1
-        nrb = nrbkntins(nrb, nrb_opt.knots(order+1));
+    knts = unique(knts(order+1:end-order));
+    for ii=1:(order-1)
+        nrb_opt = nrbkntins(nrb_opt, knts);
     end
 
-    coefs = nrb.coefs
-    pt19 = nrbeval(nrb_opt, knts(order+1))
-    scatter(pt19(1), pt19(2), 'k', '*');
+%     % insert control points at the patch boundaries
+%     pt19 = nrbeval(nrb_opt, knts(1));
+%     pt18 = nrbeval(nrb_opt, knts(2));
+%     pt16 = nrbeval(nrb_opt, knts(3));
+%     pt15 = nrbeval(nrb_opt, knts(4));
+%     pt14 = nrbeval(nrb_opt, knts(5));
+%
+%     ctrl19 = [pt19; 1];
+%     ctrl18 = [pt18; 1];
+%     ctrl16 = [pt16; 1];
+%     ctrl15 = [pt15; 1];
+%     ctrl14 = [pt14; 1];
+%
+%     coefs = nrb_opt.coefs;
+%     ctrl  = [coefs(:,1:order-2) repmat(ctrl19,1,order-1) coefs(:,order+2) repmat(ctrl18,1,order-1) ...
+%              coefs(:,2*order+2:2*order+3) repmat(ctrl16,1,order-1) coefs(:,3*order+3) repmat(ctrl15,1,order-1) ...
+%              coefs(:,4*order+3) repmat(ctrl14,1,order-1) coefs(:,5*order+3:end)];
+%     nrb   = nrbmak(ctrl, nrb_opt.knots);
+%
+%     % remove order-2 knots until order-2 continuous
+%     knots = [nrb.knots(1:order) nrb.knots(order+1:order+2) nrb.knots(2*order+1:2*order+2) nrb.knots(3*order+1:3*order+2) ...
+%             nrb.knots(4*order+1:4*order+2) nrb.knots(5*order+1:5*order+2) nrb.knots(6*order+1:end)];
+%     % remove order-2 control points to attain order curve
+%     ctrl  = [coefs(:,1:order-2) repmat(ctrl19,1,order-3) coefs(:,order+2) repmat(ctrl18,1,order-3) ...
+%              coefs(:,2*order+2:2*order+3) repmat(ctrl16,1,order-3) coefs(:,3*order+3) repmat(ctrl15,1,order-3) ...
+%              coefs(:,4*order+3) repmat(ctrl14,1,order-3) coefs(:,5*order+3:end)];
+%
+%     nrb_opt = nrbmak(ctrl, knots);
+%
+% nrbctrlplot(nrb_opt);
+%
+%     % check if C2 continuous again
+%     % [der, der2] = nrbderiv(nrb_opt);
+%
+%     % perform knot insertion to attain the final NURBS
+%     for ii=2:(order-1)
+%         nrb_opt = nrbkntins(nrb_opt, knts);
+%     end
 
-    ctrl19 = [pt19; 1]
-    ctrl = [coefs(:,1:order-1) ctrl19 coefs(:,order+1:end)]
+    % cut the individual NURBS
+    knts = [zeros(1,order) ones(1,order)];
 
-    nrb19 = nrbmak(ctrl, nrb.knots);
-    % repeat this procedure for all knots, where the curve needs to be cut!
-    % should maintain a order 4 or C^2 continuous curve throughout
-
-    % nrb19 = nrbkntins(nrb19, knts(order+1));
-keyboard
-    ctrl19  = nrb_opt.coefs(:,4:4+order);
+    ctrl19  = nrb_opt.coefs(:,1:order);
+    % ctrl19(:,end) = ctrl19(:,end) / ctrl19(end,end);
     crv(19) = nrbmak(ctrl19, knts);
 
-    ctrl19(:,4) = ctrl19(:,4) / ctrl19(4,4);
-    nrb19 = nrbmak(ctrl19, knts);
-
-    [der19, der219]   = nrbderiv(crv(19));
-    [dern19, dern219] = nrbderiv(nrb19);
-
-    nrbplot(crv(19), 100);
-    hold on;
-    nrbplot(nrb19, 100);
-
-    % 1 is interesting
-    nrbeval(der19, 1)
-    nrbeval(dern19, 1)
-
-    ctrl18  = nrb_opt.coefs(:,(order+1):(2*order));
+    ctrl18  = nrb_opt.coefs(:,order+1:2*order);
+    % ctrl18(:,1) = ctrl18(:,1) / ctrl18(end,1);
     crv(18) = nrbmak(ctrl18, knts);
 
-    ctrl18(:,1) = ctrl18(:,1) / ctrl18(4,1);
-    ctrl18(:,4) = ctrl18(:,4) / ctrl18(4,4);
-    nrb18 = nrbmak(ctrl18, knts);
+%     [dert, dert2] = nrbderiv(crv(19));
+%     [der, der2] = nrbderiv(crv(18));
+%     nrbeval(dert, 1)
+%     nrbeval(der, 0)
+%     nrbeval(dert2, 1)
+%     nrbeval(der2, 0)
+% keyboard
 
-    [der18, der218]   = nrbderiv(crv(18));
-    [dern18, dern218] = nrbderiv(nrb18);
+    ctrl16  = nrb_opt.coefs(:,2*order+1:3*order);
+    crv(16) = nrbmak(ctrl16, knts);
 
-    nrbplot(crv(18), 100);
-    hold on;
-    nrbplot(nrb18, 100);
-
-    % 0 is interesting
-    nrbeval(der18, 0)
-    nrbeval(dern18, 0)
-
-    if (order == 3)
-        ctrl17  = nrb_opt.coefs(:,(2*order+1):(3*order));
-        crv(17) = nrbmak(ctrl17, knts);
-
-        ctrl16  = nrb_opt.coefs(:,(3*order+1):(4*order));
-        crv(16) = nrbmak(ctrl16, knts);
-        ioff = 4;
-    elseif (order == 4 || order == 5)
-        ctrl16  = nrb_opt.coefs(:,(2*order+1):(3*order));
-        crv(16) = nrbmak(ctrl16, knts);
-        ioff = 3;
-    end
-
-    ctrl15  = nrb_opt.coefs(:,(ioff*order+1):((ioff+1)*order));
+    ctrl15  = nrb_opt.coefs(:,3*order+1:4*order);
+    % ctrl15(:,end) = ctrl15(:,end) / ctrl15(end,end);
     crv(15) = nrbmak(ctrl15, knts);
-    ioff += 1;
 
-    ctrl14  = nrb_opt.coefs(:,(ioff*order+1):((ioff+1)*order));
+    ctrl14  = nrb_opt.coefs(:,4*order+1:5*order);
+    % ctrl14(:,1) = ctrl14(:,1) / ctrl14(end,1);
+    % ctrl14(:,end) = ctrl14(:,end) / ctrl14(end,end);
     crv(14) = nrbmak(ctrl14, knts);
-    ioff += 1;
 
-    ctrl10  = nrb_opt.coefs(:,(ioff*order+1):((ioff+1)*order));
+    ctrl10  = nrb_opt.coefs(:,5*order+1:6*order);
+    % ctrl10(:,1) = ctrl10(:,1) / ctrl10(end,1);
     crv(10) = nrbmak(ctrl10, knts);
+
+icrv = [19 18 16 15 14 10];
+for ii=icrv
+    hold on;
+    nrbplot(crv(ii), 100);
+    hold off;
+end
 end

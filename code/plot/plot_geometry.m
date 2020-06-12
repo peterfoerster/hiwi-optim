@@ -8,10 +8,10 @@
 function [] = plot_geometry (geometry, boundaries)
     for iptc=1:length(geometry)
        hold on;
-       % nrbplot(geometry(iptc).nurbs, [8 8]);
-       % shading interp;
-       % x = geo_nurbs(geometry(iptc).nurbs, geometry(iptc).dnurbs, geometry(iptc).dnurbs2, {0.5,0.5}, 0, geometry(iptc).rdim);
-       % text(x(1), x(2), num2str(iptc));
+       nrbkntplot(geometry(iptc).nurbs);
+       shading interp;
+       x = geo_nurbs(geometry(iptc).nurbs, geometry(iptc).dnurbs, geometry(iptc).dnurbs2, {0.5,0.5}, 0, geometry(iptc).rdim);
+       text(x(1), x(2), num2str(iptc));
        hold off;
     end
 

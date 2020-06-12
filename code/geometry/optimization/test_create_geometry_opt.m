@@ -1,5 +1,14 @@
 % Create the geometry to be optimized (based on a continuous NURBS representation).
-% Removing a knot or adding a control point increases the degree by 1 (formal).
+% Removing a knot in the middle and adding 2 at the ends of the knot vector, or adding a control point ...
+% and adding two knots at the ends, to an otherwise unchanged NURBS increases the degree by 1 (formal).
+% (Due to the TVD property (<=> approximation property?) this process keeps the higher order curves similar to the initial.)
+% <order = n_knts - n_ctrl> with <order = degree + 1> (p+1 knot spans support for degree=p)
+% Curve is order-n_mult times differentiable in any point.
+
+% Then perform knot insertion to achieve multiplicity of order for each knot. This does not change the shape of ...
+% the curve, however it makes the NURBS only C0 (interpolatory) in the knots which allows for the cutting into ...
+% seperate disjoint NURBS that each have the same order and maintain the same shape (and same continuity).
+
 order = 5;
 filename = ['v6_opt_order=' num2str(order)];
 

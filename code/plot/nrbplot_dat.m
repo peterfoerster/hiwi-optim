@@ -16,7 +16,7 @@ function nrbplot_dat (nurbs, nsub, filename)
             surf(squeeze(pts(1,:,:)), squeeze(pts(2,:,:)), squeeze(pts(3,:,:)));
             shading faceted;
         end
-        % curve
+    % curve
     else
         order = nurbs.order;
         pts   = nrbeval(nurbs, linspace(nurbs.knots(order), nurbs.knots(end-order+1), nsub));

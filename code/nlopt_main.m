@@ -24,9 +24,9 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr, ctrl_cstr};
 opt.verbose       = 1;
-% order=3: 150, order=4: 250
-opt.maxeval       = 15;
-opt.maxtime       = 15*60*60;
+% order=3/4: 150, order=5: 250
+opt.maxeval       = 150;
+opt.maxtime       = 20*60*60;
 
 tic;
 [x_opt, obj_opt, retcode] = nlopt_optimize (opt, x_init);
