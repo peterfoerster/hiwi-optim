@@ -18,6 +18,7 @@ function [] = write_ctrl_opt (geometry, order)
         bnds = nrbextract(geometry(iptcs(ii)).nurbs);
         % nrbctrlplot_dat(bnds(ibnds(ii)), nsub, ['nurbs_' num2str(iptcs(ii)) '_' num2str(ibnds(ii))]);
         nrbctrlplot(bnds(ibnds(ii)));
+        % nrbplot(bnds(ibnds(ii)), nsub);
         hold off;
     end
 end
