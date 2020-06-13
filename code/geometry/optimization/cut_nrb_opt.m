@@ -1,7 +1,13 @@
-function [crv] = cut_nrb_opt (nrb_opt, order, knts)
+function [crv] = cut_nrb_opt (nrb_opt, order, knts, continuity)
     knts = unique(knts(order+1:end-order));
-    for ii=1:(order-1)
-        nrb_opt = nrbkntins(nrb_opt, knts);
+    if (order == 5 && continuity < order-1)
+        for ii=1:continuity
+            nrb_opt = nrbkntins(nrb_opt, knts);
+        end
+    else
+        for ii=1:(order-1)
+            nrb_opt = nrbkntins(nrb_opt, knts);
+        end
     end
 
     % cut the individual NURBS

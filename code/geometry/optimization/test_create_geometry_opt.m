@@ -13,7 +13,8 @@
 % This also gives extra control points. Should these stay fixed and only the original ones shall be optimized further ...
 % or should they be added to the DoFs as well?
 
-order = 3;
+order = 5;
+continuity = order-1;
 filename = ['v6_opt_order=' num2str(order)];
 
 
@@ -26,23 +27,14 @@ elseif (order == 5)
 end
 x = zeros(2*N_ctrl,1);
 
-% x(3) = 0.005;
-% x(4)  = -0.005;
-% x(6)  = 0.02;
-% x(7)  = 0.005;
-% x(8)  = 0.025;
-% x(9)  = 0.005;
-% x(10) = 0.0075;
-% x(12) = 0.005;
-
 tic;
-create_geometry_opt (filename, x, order);
+create_geometry_opt (filename, x, order, continuity);
 fprintf('\ncreate_geometry_opt: %d s\n', toc);
 return
 geometry = mp_geo_load ([filename '.txt']);
 for iptc=1:length(geometry)
     hold on;
-    nrbkntplot(geometry(iptc).nurbs, [8 8]);
+    nrbkntplot(geometry(iptc).nurbs);
     xt = nrbeval(geometry(iptc).nurbs, {0.5,0.5});
     text(xt(1), xt(2), num2str(iptc));
     hold off;
@@ -53,7 +45,7 @@ figure;
 geometry = mp_geo_load ('electrode_v6.txt');
 for iptc=1:length(geometry)
     hold on;
-    nrbkntplot(geometry(iptc).nurbs, [8 8]);
+    nrbkntplot(geometry(iptc).nurbs);
     xt = nrbeval(geometry(iptc).nurbs, {0.5,0.5});
     text(xt(1), xt(2), num2str(iptc));
     hold off;

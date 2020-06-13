@@ -1,8 +1,8 @@
 % Plots the geometry and computes the field solution.
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
-geometry_file = 'v6_opt_order=4_run4';
-order = 4;
+geometry_file = 'v6_opt_order=5';
+order = 5;
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 

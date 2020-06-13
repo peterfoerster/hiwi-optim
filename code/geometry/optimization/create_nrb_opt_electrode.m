@@ -1,4 +1,4 @@
-function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order)
+function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order, continuity)
     bnds    = nrbextract(ptcs(10));
     crv(10) = bnds(3);
     bnds    = nrbextract(ptcs(14));
@@ -13,12 +13,9 @@ function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order)
     crv(18) = bnds(4);
     bnds    = nrbextract(ptcs(19));
     crv(19) = bnds(4);
-keyboard
+
     % glue nurbs
     if (order == 3)
-        ctrl = [crv(19).coefs(:,1:2) crv(18).coefs(:,2) crv(17).coefs(:,end) crv(15).coefs(:,2) ...
-                flip(crv(14).coefs(:,2), 2) flip(crv(10).coefs(:,1:2), 2)];
-
         ctrl = [crv(19).coefs(:,1:2) crv(18).coefs(:,2) crv(17).coefs(:,2) crv(16).coefs(:,2) crv(15).coefs(:,2) ...
                 flip(crv(14).coefs(:,2), 2) flip(crv(10).coefs(:,1:2), 2)];
         pt(19) = 0.093;
@@ -48,6 +45,11 @@ keyboard
         pt(15) = 0.98;
         pt(14) = 0.995;
         knts = [zeros(1,order) pt(19) pt(18) pt(16) pt(15) pt(14) ones(1,order)];
+        nrb_opt = nrbmak(ctrl, knts);
+    elseif (order == Inf)
+        ctrl = [crv(19).coefs(:,1:2) crv(18).coefs(:,2) crv(17).coefs(:,2) crv(16).coefs(:,2) crv(15).coefs(:,2) ...
+                flip(crv(14).coefs(:,2), 2) flip(crv(10).coefs(:,1:2), 2)];
+        knts = [zeros(1,8) ones(1,9)];
         nrb_opt = nrbmak(ctrl, knts);
     else
         error('create_nrb_opt_electrode: order = %i not implemented', order);
