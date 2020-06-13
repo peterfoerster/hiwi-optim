@@ -6,10 +6,14 @@
 % Curve is order-n_mult times differentiable in any point.
 
 % Then perform knot insertion to achieve multiplicity of order for each knot. This does not change the shape of ...
-% the curve, however it makes the NURBS only C0 (interpolatory) in the knots which allows for the cutting into ...
+% the curve, however it makes the NURBS only C^0 (interpolatory) in the knots which allows for the cutting into ...
 % seperate disjoint NURBS that each have the same order and maintain the same shape (and same continuity).
 
-order = 5;
+% To achieve a NURBS of fixed order with lower continuity simply repeat the already present knots.
+% This also gives extra control points. Should these stay fixed and only the original ones shall be optimized further ...
+% or should they be added to the DoFs as well?
+
+order = 3;
 filename = ['v6_opt_order=' num2str(order)];
 
 
@@ -21,6 +25,15 @@ elseif (order == 5)
     N_ctrl = 2*1 + 1*3 + 2*1;
 end
 x = zeros(2*N_ctrl,1);
+
+% x(3) = 0.005;
+% x(4)  = -0.005;
+% x(6)  = 0.02;
+% x(7)  = 0.005;
+% x(8)  = 0.025;
+% x(9)  = 0.005;
+% x(10) = 0.0075;
+% x(12) = 0.005;
 
 tic;
 create_geometry_opt (filename, x, order);
