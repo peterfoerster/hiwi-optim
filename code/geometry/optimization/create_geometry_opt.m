@@ -11,6 +11,10 @@ function [] = create_geometry_opt (filename, x, order, continuity)
                                          vacuumchamber, domain_vac, domain_el);
 
    [nrb_opt, knts] = create_nrb_opt_electrode (ptcs_vac, order);
+   nrbkntplot(nrb_opt)
+   hold on
+   nrbctrlplot(nrb_opt)
+   keyboard
    [nrb_opt]       = create_nrb_opt (nrb_opt, knts, order, continuity);
 
    nrb_opt = move_ctrl_opt (nrb_opt, x, order, continuity);

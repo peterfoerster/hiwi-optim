@@ -13,13 +13,16 @@
 % This also gives extra control points. Should these stay fixed and only the original ones shall be optimized further ...
 % or should they be added to the DoFs as well?
 
-order = 5;
+% Control points can be moved past each other, also across the patch boundaries. This simply leads to undesirable ...
+% geometries?
+
+order = Inf;
 continuity = order-1;
 filename = ['v6_opt_order=' num2str(order)];
 
 
 if (order == 3)
-    N_ctrl = 6*1;
+    N_ctrl = 5*1;
 elseif (order == 4)
     N_ctrl = 2*1 + 1*2 + 2*1;
 elseif (order == 5)

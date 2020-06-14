@@ -56,47 +56,39 @@ function [electrode] = create_electrode_v6 ()
     center = [230e-3 55e-3];
     sang = pi/2;
     eang = pi;
-    electrode(10) = nrbcirc(radius, center, sang, eang);
-    electrode(10) = nrbreverse(electrode(10));
+    electrode(9) = nrbcirc(radius, center, sang, eang);
+    electrode(9) = nrbreverse(electrode(9));
 
     sang = pi;
     eang = 3*pi/2;
-    electrode(11) = nrbcirc(radius, center, sang, eang);
-    electrode(11) = nrbreverse(electrode(11));
+    electrode(10) = nrbcirc(radius, center, sang, eang);
+    electrode(10) = nrbreverse(electrode(10));
 
-    p1 = nrbeval(electrode(10), 1);
+    p1 = nrbeval(electrode(9), 1);
     p2 = nrbeval(electrode(7), 0);
     electrode(8) = nrbline(p1, p2);
 
-    p1 = nrbeval(electrode(8), 0);
-    p2 = nrbeval(electrode(8), 0.5);
-    electrode(9) = nrbline(p1, p2);
-
-    p1 = nrbeval(electrode(8), 0.5);
-    p2 = nrbeval(electrode(8), 1);
-    electrode(8) = nrbline(p1, p2);
-
     % insulator connection
-    p1 = nrbeval(electrode(11), 0);
+    p1 = nrbeval(electrode(10), 0);
     p2 = [252.5e-3 45e-3];
-    electrode(12) = nrbline(p1, p2);
+    electrode(11) = nrbline(p1, p2);
 
     % lift connection
-    p1 = nrbeval(electrode(12), 1);
+    p1 = nrbeval(electrode(11), 1);
     p2 = [302e-3 45e-3];
-    electrode(13) = nrbline(p1, p2);
+    electrode(12) = nrbline(p1, p2);
 
     p1 = nrbeval(electrode(5), 1);
-    p2 = nrbeval(electrode(13), 1);
+    p2 = nrbeval(electrode(12), 1);
     p1 = [p2(1) p1(2)];
-    electrode(14) = nrbline(p1, p2);
+    electrode(13) = nrbline(p1, p2);
 
     % cut here to evaluate volume constraint, discretize inside
     p1 = [302e-3 20.4e-3];
-    p2 = nrbeval(electrode(14), 0);
-    electrode(15) = nrbline(p1, p2);
+    p2 = nrbeval(electrode(13), 0);
+    electrode(14) = nrbline(p1, p2);
 
     p1 = [302e-3 17.5e-3];
-    p2 = nrbeval(electrode(15), 0);
-    electrode(16) = nrbline(p1, p2);
+    p2 = nrbeval(electrode(14), 0);
+    electrode(15) = nrbline(p1, p2);
 end

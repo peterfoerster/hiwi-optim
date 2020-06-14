@@ -1,6 +1,7 @@
 function [inner_insulator] = create_innerinsulator_v6 ()
-    % connection to electrode
-    p1 = [264e-3 21e-3];
+    % connection to electrode (new high voltage adapter not properly included)
+    % p1 = [264e-3 21e-3];
+    p1 = [264e-3 17.5e-3];
     p2 = [302e-3 17.5e-3];
     inner_insulator(1) = nrbline(p1, p2);
 

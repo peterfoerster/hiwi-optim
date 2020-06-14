@@ -5,11 +5,7 @@ function [obj] = cost_function_abs_max (x, order)
     [problem_data, method_data] = setup_problem (geometry_file, order);
     [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
 
-    if (order == 3)
-        iptcs = [19 18 17 16 15 14];
-    elseif (order == 4 || order == 5)
-        iptcs = [18 17 16 15 14];
-    end
+    iptcs = [18 17 16 15 14];
 
     obj = 0;
     for ii=1:length(iptcs)
