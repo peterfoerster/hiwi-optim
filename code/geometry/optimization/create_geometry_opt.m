@@ -11,16 +11,17 @@ function [] = create_geometry_opt (filename, x, order, continuity)
                                          vacuumchamber, domain_vac, domain_el);
 
    [nrb_opt, knts] = create_nrb_opt_electrode (ptcs_vac, order);
-   nrbkntplot(nrb_opt)
-   hold on
-   nrbctrlplot(nrb_opt)
-   keyboard
-   [nrb_opt]       = create_nrb_opt (nrb_opt, knts, order, continuity);
 
-   nrb_opt = move_ctrl_opt (nrb_opt, x, order, continuity);
+   nrb_opt = move_ctrl_opt (nrb_opt, x, order);
    crv     = cut_nrb_opt (nrb_opt, order, knts, continuity);
 
+   % icrv = [18 17 16 15 14 10];
+   % for ii=icrv
+   %     hold on
+   %     nrbctrlplot(crv(ii))
+   %     hold off
+   % end
    [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
-
+keyboard
    write_geometryfile_opt (ptcs_vac, ptcs_el, filename, order);
 end

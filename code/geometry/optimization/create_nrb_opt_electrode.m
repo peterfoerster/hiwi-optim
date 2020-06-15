@@ -1,4 +1,4 @@
-function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order, continuity)
+function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order)
     bnds    = nrbextract(ptcs(10));
     crv(10) = bnds(3);
     bnds    = nrbextract(ptcs(14));
