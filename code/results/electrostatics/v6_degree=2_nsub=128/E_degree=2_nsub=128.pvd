@@ -35,6 +35,5 @@
 <DataSet part="32" file="E_degree=2_nsub=128_32.vts"/> 
 <DataSet part="33" file="E_degree=2_nsub=128_33.vts"/> 
 <DataSet part="34" file="E_degree=2_nsub=128_34.vts"/> 
-<DataSet part="35" file="E_degree=2_nsub=128_35.vts"/> 
 </Collection>
 </VTKFile> 

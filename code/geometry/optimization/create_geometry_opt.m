@@ -1,27 +1,10 @@
-function [] = create_geometry_opt (filename, x, order, continuity)
-    electrode       = create_electrode_v6();
-    anode_ring      = create_anodering_v6();
-    inner_insulator = create_innerinsulator_v6();
-    outer_insulator = create_outerinsulator_v6();
-    vacuumchamber   = create_vacuumchamber_v6 (electrode, anode_ring, inner_insulator, outer_insulator);
-    domain_vac      = discretize_vacuumchamber_v6 (electrode, anode_ring, inner_insulator, outer_insulator, vacuumchamber);
-    domain_el       = discretize_electrode_v6 (electrode);
+function [] = create_geometry_opt (filename, x, order)
+    [nrb_opt, knts, ptcs_vac, ptcs_el] = create_nrb_opt_electrode (order);
 
-   [ptcs_vac, ptcs_el] = create_ptcs_v6 (electrode, anode_ring, inner_insulator, outer_insulator, ...
-                                         vacuumchamber, domain_vac, domain_el);
+    nrb_opt = move_ctrl_opt (nrb_opt, x);
+    crv     = cut_nrb_opt (nrb_opt, order, knts);
 
-   [nrb_opt, knts] = create_nrb_opt_electrode (ptcs_vac, order);
+    [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
 
-   nrb_opt = move_ctrl_opt (nrb_opt, x, order);
-   crv     = cut_nrb_opt (nrb_opt, order, knts, continuity);
-
-   % icrv = [18 17 16 15 14 10];
-   % for ii=icrv
-   %     hold on
-   %     nrbctrlplot(crv(ii))
-   %     hold off
-   % end
-   [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
-keyboard
-   write_geometryfile_opt (ptcs_vac, ptcs_el, filename, order);
+    write_geometryfile_opt (ptcs_vac, ptcs_el, filename);
 end

@@ -1,15 +1,25 @@
-function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order)
-    bnds    = nrbextract(ptcs(10));
+function [nrb_opt, knts, ptcs_vac, ptcs_el] = create_nrb_opt_electrode (order)
+    electrode       = create_electrode_v6();
+    anode_ring      = create_anodering_v6();
+    inner_insulator = create_innerinsulator_v6();
+    outer_insulator = create_outerinsulator_v6();
+    vacuumchamber   = create_vacuumchamber_v6 (electrode, anode_ring, inner_insulator, outer_insulator);
+    domain_vac      = discretize_vacuumchamber_v6 (electrode, anode_ring, inner_insulator, outer_insulator, vacuumchamber);
+    domain_el       = discretize_electrode_v6 (electrode);
+    [ptcs_vac, ptcs_el] = create_ptcs_v6 (electrode, anode_ring, inner_insulator, outer_insulator, ...
+                                          vacuumchamber, domain_vac, domain_el);
+
+    bnds    = nrbextract(ptcs_vac(10));
     crv(10) = bnds(3);
-    bnds    = nrbextract(ptcs(14));
+    bnds    = nrbextract(ptcs_vac(14));
     crv(14) = bnds(3);
-    bnds    = nrbextract(ptcs(15));
+    bnds    = nrbextract(ptcs_vac(15));
     crv(15) = bnds(1);
-    bnds    = nrbextract(ptcs(16));
+    bnds    = nrbextract(ptcs_vac(16));
     crv(16) = bnds(1);
-    bnds    = nrbextract(ptcs(17));
+    bnds    = nrbextract(ptcs_vac(17));
     crv(17) = bnds(4);
-    bnds    = nrbextract(ptcs(18));
+    bnds    = nrbextract(ptcs_vac(18));
     crv(18) = bnds(4);
 
     % glue nurbs
@@ -44,11 +54,6 @@ function [nrb_opt, knts] = create_nrb_opt_electrode (ptcs, order)
         pt(15) = 0.980;
         pt(14) = 0.995;
         knts = [zeros(1,order) pt(18) pt(17) pt(16) pt(15) pt(14) ones(1,order)];
-        nrb_opt = nrbmak(ctrl, knts);
-    elseif (order == Inf)
-        ctrl = [crv(18).coefs(:,1:2) crv(17).coefs(:,2) crv(16).coefs(:,2) crv(15).coefs(:,2) ...
-                flip(crv(14).coefs(:,2), 2) flip(crv(10).coefs(:,1:2), 2)];
-        knts = [zeros(1,8) ones(1,8)];
         nrb_opt = nrbmak(ctrl, knts);
     else
         error('create_nrb_opt_electrode: order = %i not implemented', order);

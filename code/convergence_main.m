@@ -2,7 +2,7 @@
 geometry_file = 'geometry_v6';
 filename      = 'cvg_v6';
 % specify problem and material data
-[problem_data, method_data] = setup_problem (geometry_file, order);
+[problem_data, method_data] = setup_problem (geometry_file);
 N_it       = 4;
 degree_ref = [3 3];
 nsub_ref   = [2^N_it 2^N_it];

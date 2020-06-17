@@ -1,4 +1,5 @@
 function [fc] = ctrl_constraint(x, order, N_ctrl)
+    % simply create nrb_opt here
     geometry_file = ['v6_opt_order=' num2str(order)];
     create_geometry_opt (geometry_file, x, order);
     geometry = mp_geo_load ([geometry_file '.txt']);

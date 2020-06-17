@@ -1,20 +1,17 @@
 % Create the geometry to be optimized (based on a continuous NURBS representation).
-% Removing a knot in the middle and adding 2 at the ends of the knot vector, or adding a control point ...
-% and adding two knots at the ends, to an otherwise unchanged NURBS increases the degree by 1 (formal).
-% (Due to the TVD property (<=> approximation property?) this process keeps the higher order curves similar to the initial.)
 % <order = n_knts - n_ctrl> with <order = degree + 1> (p+1 knot spans support for degree=p)
 % Curve is degree-n_mult (number of knot repetitions) times differentiable in any point.
 
-% Then perform knot insertion to achieve multiplicity of order for each knot. This does not change the shape of ...
+% Elevate the degree of each individual curve beforehand to achieve larger number of DoFs while keeping the same ...
+% degree.
+% To achieve a NURBS of fixed order with lower continuity (and additional control points) simply repeat the ...
+% already present knots.
+
+% Perform knot insertion to achieve multiplicity equal to order for each knot. This does not change the shape of ...
 % the curve, however it makes the NURBS only C^0 (interpolatory) in the knots which allows for the cutting into ...
-% seperate disjoint NURBS that each have the same order and maintain the same shape (and same continuity).
+% separate disjoint NURBS that each have the same order and maintain the same shape (and same continuity at the interfaces).
 
-% To achieve a NURBS of fixed order with lower continuity simply repeat the already present knots.
-% This also gives extra control points. Should these stay fixed and only the original ones shall be optimized further ...
-% or should they be added to the DoFs as well?
-
-% Control points can be moved past each other, also across the patch boundaries. This simply leads to undesirable ...
-% geometries?
+% Constrain the control points only if necessary.
 
 order = 5;
 filename = ['v6_opt_order=' num2str(order)];
@@ -22,11 +19,8 @@ filename = ['v6_opt_order=' num2str(order)];
 N_ctrl = order+2;
 x = zeros(2*N_ctrl,1);
 
-% test with random x
-% x = rand(size(x));
-
 tic;
-create_geometry_opt (filename, x, order, continuity);
+create_geometry_opt (filename, x, order);
 fprintf('\ncreate_geometry_opt: %d s\n', toc);
 return
 geometry = mp_geo_load ([filename '.txt']);
@@ -38,7 +32,7 @@ for iptc=1:length(geometry)
     hold off;
 end
 shading interp;
-
+return
 figure;
 geometry = mp_geo_load ('electrode_v6.txt');
 for iptc=1:length(geometry)
