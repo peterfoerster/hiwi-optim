@@ -1,11 +1,14 @@
 % Computes the important quantities for the initial and optimized geometry.
 % contains the optimized DoFs in [x_opt]
-filename = 'result_nlopt_order=4_run4';
-order = 4;
+filename = 'result_nlopt_order=3_run1';
+order = 3;
 
 load([filename '.mat']);
 N_ctrl = order+2;
 x_init = zeros(2*N_ctrl,1);
+
+% optimized NURBS
+write_ctrl_opt (order, x_opt);
 
 % volume constraint
 volume_constraint_init = volume_constraint(x_init, order);
