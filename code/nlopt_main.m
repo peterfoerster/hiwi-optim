@@ -1,5 +1,5 @@
 % Run the optimization employing the NLopt library.
-order = 3;
+order = 4;
 
 N_ctrl = order+2;
 x_init = zeros(2*N_ctrl,1);
@@ -17,8 +17,8 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr};
 opt.verbose       = 1;
-% order=3: 150
-opt.maxeval       = 150;
+% order=3: 150 + 25 per control point
+opt.maxeval       = 175;
 opt.maxtime       = 20*60*60;
 
 tic;
