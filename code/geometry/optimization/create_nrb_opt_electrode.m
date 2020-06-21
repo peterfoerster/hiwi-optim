@@ -55,6 +55,12 @@ function [nrb_opt, knts, ptcs_vac, ptcs_el] = create_nrb_opt_electrode (order)
         pt(14) = 0.995;
         knts = [zeros(1,order) pt(18) pt(17) pt(16) pt(15) pt(14) ones(1,order)];
         nrb_opt = nrbmak(ctrl, knts);
+    elseif (order == 8)
+        ctrl = [crv(18).coefs(:,1:2)./crv(18).coefs(4,1:2) crv(17).coefs(:,2)./crv(17).coefs(4,2) ...
+                crv(16).coefs(:,2)./crv(16).coefs(4,2) crv(15).coefs(:,2)./crv(15).coefs(4,2) ...
+                flip(crv(14).coefs(:,2)./crv(14).coefs(4,2), 2) flip(crv(10).coefs(:,1:2)./crv(10).coefs(4,1:2), 2)];
+        knts = [zeros(1,order) ones(1,order)];
+        nrb_opt = nrbmak(ctrl, knts);
     else
         error('create_nrb_opt_electrode: order = %i not implemented', order);
     end

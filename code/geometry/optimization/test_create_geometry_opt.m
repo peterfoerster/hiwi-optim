@@ -13,16 +13,24 @@
 
 % Constrain the control points only if necessary.
 
-order = 5;
+% Use a smooth NURBS (arbitrary order) to start. Then insert knots at predetermined positions to split into the individual curves.
+% Increase the degree of the entire NURBS or of each individual curve?
+
+order = 8;
 filename = ['v6_opt_order=' num2str(order)];
 
-N_ctrl = order+2;
+if (order < 8)
+    N_ctrl = order+2;
+elseif (order >= 8)
+    N_ctrl = order-3;
+end
 x = zeros(2*N_ctrl,1);
 
 tic;
 create_geometry_opt (filename, x, order);
 fprintf('\ncreate_geometry_opt: %d s\n', toc);
 return
+figure;
 geometry = mp_geo_load ([filename '.txt']);
 for iptc=1:length(geometry)
     hold on;

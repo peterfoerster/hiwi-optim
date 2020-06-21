@@ -1,12 +1,17 @@
 % Run the optimization employing the NLopt library.
-order = 4;
+order = 8;
 
-N_ctrl = order+2;
+if (order < 8)
+    N_ctrl = order+2;
+elseif (order >= 8)
+    N_ctrl = order-3;
+end
+
 x_init = zeros(2*N_ctrl,1);
 
 [lb, ub] = compute_bounds (x_init, order, 2*N_ctrl);
 
-cst_func  = @(x) cost_function_max(x, order);
+cst_func  = @(x) cost_function_abs_max(x, order);
 vol_cstr  = @(x) volume_constraint(x, order);
 % ctrl_cstr = @(x) ctrl_constraint(x, order, N_ctrl);
 
@@ -18,7 +23,7 @@ opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr};
 opt.verbose       = 1;
 % order=3: 150 + 25 per control point
-opt.maxeval       = 175;
+opt.maxeval       = 150;
 opt.maxtime       = 20*60*60;
 
 tic;

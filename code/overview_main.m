@@ -1,12 +1,12 @@
 % Plots the geometry and computes the field solution.
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
-geometry_file = 'v6_opt_order=3';
+geometry_file = 'v6_opt_order=8';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
 % write .iges files
-% write_iges (['v6_opt'], geometry);
+% write_iges (['v6_init'], geometry);
 
 % write .dat files
 % write_boundary (geometry);

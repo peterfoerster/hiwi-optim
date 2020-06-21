@@ -1,7 +1,36 @@
-function [crv] = cut_nrb_opt (nrb_opt, order, knts)
-    knts = unique(knts(order+1:end-order));
-    for ii=1:(order-1)
-        nrb_opt = nrbkntins(nrb_opt, knts);
+function [crv] = cut_nrb_opt (nrb_opt, order, knts, ptcs_vac)
+    if (order < 8)
+        knts = unique(knts(order+1:end-order));
+        for ii=1:(order-1)
+            nrb_opt = nrbkntins(nrb_opt, knts);
+        end
+    elseif (order >= 8)
+        % possibly specify different starting intervals
+        bnds    = nrbextract(ptcs_vac(18));
+        crv(18) = bnds(2);
+        pt(18)  = compute_intersectionu(nrb_opt, crv(18), [0 0.25]);
+
+        bnds    = nrbextract(ptcs_vac(17));
+        crv(17) = bnds(2);
+        pt(17)  = compute_intersectionv(nrb_opt, crv(17), [0.1 0.5]);
+
+        bnds    = nrbextract(ptcs_vac(16));
+        crv(16) = bnds(4);
+        pt(16)  = compute_intersectionv(nrb_opt, crv(16), [0.5 0.75]);
+
+        bnds    = nrbextract(ptcs_vac(15));
+        crv(15) = bnds(4);
+        pt(15)  = compute_intersectionv(nrb_opt, crv(15), [0.5 0.85]);
+
+        bnds    = nrbextract(ptcs_vac(14));
+        crv(14) = bnds(1);
+        % orientation of curve is reversed
+        pt(14)  = compute_intersectionu(nrb_opt, crv(14), [1 0.65]);
+
+        knts = [pt(18) pt(17) pt(16) pt(15) pt(14)];
+        for ii=1:order
+            nrb_opt = nrbkntins(nrb_opt, knts);
+        end
     end
 
     % cut the individual NURBS
