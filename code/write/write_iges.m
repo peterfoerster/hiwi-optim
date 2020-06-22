@@ -14,8 +14,8 @@ function [] = write_iges (filename, geometry)
     % ibnd = [5 5 5 5  5  5  3  3  6  6  3  6  4  5  4  6  6  6  3  6];
 
     % inner insulator
-    iptc = [31 31 32 33 34 34];
-    ibnd = [ 6  4  4  4  4  5];
+    % iptc = [31 31 32 33 34 34];
+    % ibnd = [ 6  4  4  4  4  5];
 
     % outer insulator
     % iptc = [23 23 24 24 24 23];

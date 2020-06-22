@@ -1,7 +1,7 @@
 % Plots the geometry and computes the field solution.
 % geometry_file = 'geometry_v6';
 % geometry_file = 'electrode_v6';
-geometry_file = 'v6_opt_order=8';
+geometry_file = 'v6_opt_order=8_run1';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
@@ -12,8 +12,8 @@ geometry_file = 'v6_opt_order=8';
 % write_boundary (geometry);
 % write_geometry (geometry);
 
-plot_geometry (geometry, boundaries);
-return
+% plot_geometry (geometry, boundaries);
+
 % solve electrostatic problem
 [problem_data, method_data] = setup_problem (geometry_file);
 tic;
