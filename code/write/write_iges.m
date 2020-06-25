@@ -1,5 +1,5 @@
 function [] = write_iges (filename, geometry)
-    display = 1;
+    display = 0;
 
     % anode ring
     % iptc = [5 13 10 9 8 7 4 3];
@@ -22,8 +22,8 @@ function [] = write_iges (filename, geometry)
     % ibnd = [ 6  4  4  5  3  3];
 
     % vacuum chamber
-    % iptc = [1 1 5 11 11 11 12 13 15 16 19 20 20 22 24 25 34];
-    % ibnd = [6 4 4  3  6  4  4  4  4  4  4  4  5  5  5  5  5];
+    iptc = [1 1 5 11 11 11 12 13 15 16 19 20 20 22 24 25 34];
+    ibnd = [6 4 6  3  6  4  4  4  4  4  4  4  5  5  5  5  5];
 
     for ii=1:length(iptc)
         nurbs = geometry(iptc(ii)).nurbs;
@@ -36,6 +36,11 @@ function [] = write_iges (filename, geometry)
             nrbkntplot(nurbs(ibnd(ii)));
             hold off;
         end
-        nrb2iges(nurbs(ibnd(ii)), [filename '_' num2str(iptc(ii)) num2str(ibnd(ii)) '.igs']);
+        % nrb2iges(nurbs(ibnd(ii)), [filename '_' num2str(iptc(ii)) num2str(ibnd(ii)) '.igs']);
     end
+
+    % additional vacuum chamber piece
+    % nurbs = nrbline([447e-3 20e-3], [447e-3 30e-3]);
+    % nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
+    % nrb2iges(nurbs, ['additional.igs']);
 end
