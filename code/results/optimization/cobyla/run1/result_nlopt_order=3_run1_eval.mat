@@ -1,4 +1,4 @@
-# Created by Octave 5.2.0, Thu Jun 18 10:53:11 2020 CEST <peter@peter-fedora>
+# Created by Octave 5.2.0, Fri Jun 26 23:14:33 2020 CEST <peter@peter-fedora>
 # name: volume_constraint_init
 # type: scalar
 -2.2565838947514294
@@ -9,23 +9,13 @@
 -25.117247602878251
 
 
-# name: obj_init
-# type: scalar
-7963858.1365764784
-
-
-# name: obj_opt
-# type: scalar
-6362154.4063168159
-
-
 # name: max_init
 # type: scalar
-9816166.2954404894
+13527965.461598199
 
 
 # name: max_opt
 # type: scalar
-7089460.2295412207
+9623130.2292738408
 
 

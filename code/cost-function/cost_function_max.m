@@ -3,7 +3,7 @@ function [obj] = cost_function_max (x, order)
     create_geometry_opt (geometry_file, x, order);
 
     [problem_data, method_data] = setup_problem (geometry_file);
-    [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
+    [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 
     iptcs = [18 17 16 15 14];
 

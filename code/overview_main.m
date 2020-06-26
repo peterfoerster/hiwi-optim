@@ -6,20 +6,20 @@ geometry_file = 'v6_opt_order=8_run1';
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 
 % write .iges files
-write_iges (['v6_opt'], geometry);
+% write_iges (['v6_opt'], geometry);
 
 % write .dat files
 % write_boundary (geometry);
 % write_geometry (geometry);
 
 % plot_geometry (geometry, boundaries);
-return
+
 % solve electrostatic problem
 [problem_data, method_data] = setup_problem (geometry_file);
 tic;
-[geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
+[geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 save(['phi_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '.mat'], 'phi');
-fprintf('\nmp_solve_electrostatics: %d min\n', toc/60);
+fprintf('\nmp_solve_electrostatics_axi2d: %d min\n', toc/60);
 
 % plot magnitude of electric field and write .dat files
 % npts = 8;
