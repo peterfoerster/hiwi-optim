@@ -1,7 +1,7 @@
 % Computes the important quantities for the initial and optimized geometry.
 % contains the optimized DoFs in [x_opt]
-filename = 'result_nlopt_order=3_run1';
-order = 3;
+filename = 'result_nlopt_order=8_run2';
+order = 8;
 
 load([filename '.mat']);
 if (order < 8)
@@ -15,6 +15,7 @@ x_init = zeros(2*N_ctrl,1);
 % write_ctrl_opt (order, x_opt);
 
 % volume constraint
+volume_constraint_orig = volume_constraint_orig('electrode_v6_orig');
 volume_constraint_init = volume_constraint(x_init, order);
 volume_constraint_opt  = volume_constraint(x_opt, order);
 
@@ -23,10 +24,12 @@ volume_constraint_opt  = volume_constraint(x_opt, order);
 % [obj_opt]  = cost_function_max (x_opt, order);
 
 % absolute maximum
+[max_orig] = cost_function_abs_max_orig ('geometry_v6_orig');
 [max_init] = cost_function_abs_max (x_init, order);
 [max_opt]  = cost_function_abs_max (x_opt, order);
 
-save([filename '_eval.mat'], 'volume_constraint_init', 'volume_constraint_opt', 'max_init', 'max_opt');
+save([filename '_eval.mat'], 'volume_constraint_orig', 'volume_constraint_init', 'volume_constraint_opt', ...
+                             'max_orig', 'max_init', 'max_opt');
 
 % signal that the program is finished
 x = linspace(1, 20, 8000);

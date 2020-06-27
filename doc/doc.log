@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2020.5.24)  26 JUN 2020 23:22
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2020.5.24)  27 JUN 2020 12:45
  restricted system commands enabled.
 **doc
 (./doc.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.053 seconds
+luaotfload | main : initialization completed in 0.051 seconds
 (/usr/share/texlive/texmf-local/tex/latex/tuda-ci/tudapub.cls
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2019-07-25 L3 programming layer (loader) 
@@ -3386,44 +3386,43 @@ LaTeX Font Info:    Font shape `T1/XCharter-TOsF/b/n' will be
 File: fig/png/geometry_v6_opt_order=8.png Graphic file (type png)
 <use fig/png/geometry_v6_opt_order=8.png>
 Package luatex.def Info: fig/png/geometry_v6_opt_order=8.png  used on input line
- 78.
+ 79.
 (luatex.def)             Requested size: 230.46576pt x 67.84016pt.
 <fig/png/opt_order=8.png, id=51, 1009.7725pt x 798.985pt>
 File: fig/png/opt_order=8.png Graphic file (type png)
 <use fig/png/opt_order=8.png>
-Package luatex.def Info: fig/png/opt_order=8.png  used on input line 81.
+Package luatex.def Info: fig/png/opt_order=8.png  used on input line 82.
 (luatex.def)             Requested size: 230.46576pt x 182.34846pt.
 <fig/png/E_init_iga.png, id=52, 2987.16pt x 1491.5725pt>
 File: fig/png/E_init_iga.png Graphic file (type png)
 <use fig/png/E_init_iga.png>
-Package luatex.def Info: fig/png/E_init_iga.png  used on input line 91.
+Package luatex.def Info: fig/png/E_init_iga.png  used on input line 92.
 (luatex.def)             Requested size: 230.46576pt x 115.0722pt.
 <fig/png/E_opt_order=8_iga.png, id=53, 2987.16pt x 1491.5725pt>
 File: fig/png/E_opt_order=8_iga.png Graphic file (type png)
 <use fig/png/E_opt_order=8_iga.png>
-Package luatex.def Info: fig/png/E_opt_order=8_iga.png  used on input line 94.
+Package luatex.def Info: fig/png/E_opt_order=8_iga.png  used on input line 95.
 (luatex.def)             Requested size: 230.46576pt x 115.0722pt.
 <fig/png/E_init_cst.png, id=54, 1244.39906pt x 444.15938pt>
 File: fig/png/E_init_cst.png Graphic file (type png)
 <use fig/png/E_init_cst.png>
-Package luatex.def Info: fig/png/E_init_cst.png  used on input line 104.
+Package luatex.def Info: fig/png/E_init_cst.png  used on input line 105.
 (luatex.def)             Requested size: 230.46576pt x 82.2563pt.
 <fig/png/E_opt_order=8_cst.png, id=55, 1243.64626pt x 444.15938pt>
 File: fig/png/E_opt_order=8_cst.png Graphic file (type png)
 <use fig/png/E_opt_order=8_cst.png>
-Package luatex.def Info: fig/png/E_opt_order=8_cst.png  used on input line 107.
+Package luatex.def Info: fig/png/E_opt_order=8_cst.png  used on input line 108.
 (luatex.def)             Requested size: 230.46576pt x 82.30374pt.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 10.73094pt on input line 112.
+(Font)              scaled to size 10.73094pt on input line 113.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 7.83997pt on input line 112.
+(Font)              scaled to size 7.83997pt on input line 113.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 5.97797pt on input line 112.
+(Font)              scaled to size 5.97797pt on input line 113.
 LaTeX Font Info:    Font shape `OT1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 6.07596pt on input line 112.
+(Font)              scaled to size 6.07596pt on input line 113.
  [3<./fig/png/geometry_v6_opt_order=8.png><./fig/png/opt_order=8.png><./fig/png/
-E_init_iga.png><./fig/png/E_opt_order=8_iga.png><./fig/png/E_init_cst.png><./fig
-/png/E_opt_order=8_cst.png>])
+E_init_iga.png><./fig/png/E_opt_order=8_iga.png>])
 
 Package TUDaPub Warning: You did not provide a Label for key introduction.
 (TUDaPub)                Either you need to recompile your document or add a
@@ -3444,7 +3443,7 @@ Package TUDaPub Warning: You did not provide a Label for key discussion.
 (TUDaPub)                Either you need to recompile your document or add a
 (TUDaPub)                label using \IMRADlabel.
 
-[4]
+[4<./fig/png/E_init_cst.png><./fig/png/E_opt_order=8_cst.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (./doc.aux)
@@ -3465,10 +3464,10 @@ Here is how much of LuaTeX's memory you used:
    23 hlist, 4 vlist, 6 rule, 4 local_par, 1 dir, 18 glue, 5 kern, 4 penalty, 1 
 glyph, 32 attribute, 64 glue_spec, 25 attribute_list, 2 write, 4 pdf_colorstack 
 nodes
-   avail lists: 1:4,2:991,3:122,4:55,5:182,6:54,7:1239,8:24,9:352,10:3,11:63
+   avail lists: 1:4,2:1006,3:119,4:55,5:184,6:54,7:1273,8:24,9:361,10:3,11:64
  64453 multiletter control sequences out of 65536+600000
  309 fonts using 30393327 bytes
- 78i,20n,136p,9128b,2278s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 78i,21n,136p,9128b,2278s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch1_wwsmtw.enc}{/usr/sh
 are/texlive/texmf-dist/fonts/enc/dvips/xcharter/xch_hnm3ex.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc}</usr/share/texlive/texmf-dis
@@ -3481,7 +3480,7 @@ c/newtx/LibertineMathRM.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xc
 harter/XCharter-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xchar
 ter/XCharter-Roman.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/t
 xmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (4 pages, 1016273 bytes).
+Output written on doc.pdf (4 pages, 1002636 bytes).
 
 PDF statistics: 125 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream

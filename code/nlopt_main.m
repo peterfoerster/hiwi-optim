@@ -22,7 +22,6 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr};
 opt.verbose       = 1;
-% order=3: 150 + 25 per control point
 opt.maxeval       = 150;
 opt.maxtime       = 20*60*60;
 
