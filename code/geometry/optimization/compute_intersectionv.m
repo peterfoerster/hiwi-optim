@@ -24,12 +24,12 @@ function [knt] = compute_intersectionv(nrb_opt, crv, I)
                 I = [I(1), knt];
                 y2 = ym;
             end
-        % crv too far left
-        elseif (ucrv(y1(2)) < y1(1))
+        % crv left
+        elseif (ucrv(y1(2)) <= y1(1))
             knt = I(1);
             break;
-        % crv too far right
-        elseif (ucrv(y2(2)) > y2(1))
+        % crv right
+        elseif (ucrv(y2(2)) >= y2(1))
             knt = I(2);
             break;
         end

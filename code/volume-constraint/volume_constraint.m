@@ -20,7 +20,7 @@ function [fc] = volume_constraint(x, order)
     msh = msh_multipatch (msh, boundaries);
 
     V_el = computeV_cyl_mp (msh);
-    % 625 cm^3 as maximal volume
-    fc = V_el*1e6 - 625;
+    % 625 cm^3 as maximal volume (restricted to 624 cm^3 for optimization)
+    fc = V_el*1e6 - 624;
     fprintf('\nvolume_constraint: fc=%d\n', fc);
 end

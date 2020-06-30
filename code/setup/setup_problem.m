@@ -12,8 +12,8 @@ function [problem_data, method_data] = setup_problem (geometry_file)
     problem_data.h = @(x,y,ib) drl_bc (ib, x, y, v_el, v_ar);
     problem_data.g = @(x,y,ib) nm_bc (ib, x, y);
 
-    method_data.degree     = [2 2];
+    method_data.degree     = [3 3];
     method_data.regularity = method_data.degree - 1;
-    method_data.nsub       = [2^7 2^7];
+    method_data.nsub       = [2^4 2^4];
     method_data.nquad      = method_data.degree + 1;
 end

@@ -20,8 +20,14 @@ function [knt] = compute_intersectionu(nrb_opt, crv, I)
                 I = [I(1), knt];
                 y2 = ym;
             end
-        else
-            error('The interval appears to not contain a zero.');
+        % crv below
+        elseif (vcrv(y1(1)) <= y1(2))
+            knt = I(1);
+            break;
+        % crv above
+        elseif (vcrv(y2(1)) >= y2(2))
+            knt = I(2);
+            break;
         end
         % converged
         if (abs(diff(I)) < 1e-4)
