@@ -17,14 +17,18 @@ cst_func  = @(x) cost_function_abs_max(x, order);
 vol_cstr  = @(x) volume_constraint(x, order);
 
 % local: {COBYLA} global: {AGS, ISRES}
-opt.algorithm     = NLOPT_LN_COBYLA;
+% opt.algorithm     = NLOPT_LN_COBYLA;
+opt.algorithm     = NLOPT_GN_ISRES;
+opt.population    = 4;
 opt.min_objective = cst_func;
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr};
 opt.verbose       = 1;
-opt.maxeval       = 150;
-opt.maxtime       = 20*60*60;
+opt.stopval       = 9.2e6;
+opt.ftol_rel      = 1e-3;
+opt.maxeval       = 450;
+opt.maxtime       = 36*60*60;
 
 tic;
 [x_opt, obj_opt, retcode] = nlopt_optimize (opt, x_init);
