@@ -13,8 +13,8 @@ x_init = zeros(2*N_ctrl,1);
 
 v = linspace(0,1,100);
 cst_func  = @(x) cost_function_fit(x, order, v);
-cost_function_fit(x_init, 8, v)
-return
+% cost_function_fit(x_opt, 8, v)
+% return
 % local: {COBYLA} global: {AGS, ISRES}
 opt.algorithm     = NLOPT_LN_COBYLA;
 % opt.algorithm     = NLOPT_GN_ISRES;
@@ -23,8 +23,9 @@ opt.min_objective = cst_func;
 opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.verbose       = 1;
-opt.maxeval       = 150;
-opt.maxtime       = 20*60*60;
+% opt.maxeval       = 150;
+opt.ftol_rel      = 1e-3;
+opt.maxtime       = 24*60*60;
 
 tic;
 [x_opt, obj_opt, retcode] = nlopt_optimize (opt, x_init);

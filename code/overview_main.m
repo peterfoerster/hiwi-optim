@@ -2,7 +2,7 @@
 % geometry_file = 'geometry_v6_orig';
 % geometry_file = 'electrode_v6';
 geometry_file = 'v6_opt_order=8';
-% geometry_file = 'nrb_opt_fit';
+% geometry_file = 'nrb_opt_fit_run1';
 
 [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 

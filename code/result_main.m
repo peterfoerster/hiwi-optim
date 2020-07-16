@@ -1,20 +1,22 @@
 % Computes the important quantities for the initial and optimized geometry.
 % contains the optimized DoFs in [x_opt]
-filename = 'result_nlopt_order=8_run2';
-order = 8;
+filename = 'result_nlopt_order=8_run3';
+order = 8
+% [x_opt]
+load('fit_init_run1.mat');
 
-load([filename '.mat']);
 if (order < 8)
     N_ctrl = order+2;
 elseif (order >= 8)
     N_ctrl = order-3;
 end
-x_init = zeros(2*N_ctrl,1);
+x_init = x_opt;
+load([filename '.mat']);
 
 % optimized NURBS
 % write_ctrl_opt (order, x_opt);
 
-% volume constraint
+% volume constraint (+1 cm^3)
 volume_constraint_orig = volume_constraint_orig('electrode_v6_orig');
 volume_constraint_init = volume_constraint(x_init, order);
 volume_constraint_opt  = volume_constraint(x_opt, order);
