@@ -64,12 +64,13 @@ function [nrb_opt, knts, ptcs_vac, ptcs_el, nrb_orig] = create_nrb_opt_electrode
         nrb_opt = nrbmak(ctrl, knts);
 
         % glue crv
-        nrb_orig = nrbglue(crv(18), crv(17));
-        nrb_orig = nrbglue(nrb_orig, crv(16));
-        nrb_orig = nrbglue(nrb_orig, crv(15));
-        nrb_orig = nrbglue(nrb_orig, crv(14));
-        nrb_orig = nrbglue(nrb_orig, crv(10));
-        nrb_orig.knots = nrb_orig.knots/6;
+        nrb_orig = nrb_opt;
+        % nrb_orig = nrbglue(crv(18), crv(17));
+        % nrb_orig = nrbglue(nrb_orig, crv(16));
+        % nrb_orig = nrbglue(nrb_orig, crv(15));
+        % nrb_orig = nrbglue(nrb_orig, crv(14));
+        % nrb_orig = nrbglue(nrb_orig, crv(10));
+        % nrb_orig.knots = nrb_orig.knots/6;
     else
         error('create_nrb_opt_electrode: order = %i not implemented', order);
     end
