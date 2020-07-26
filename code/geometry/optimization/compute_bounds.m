@@ -4,6 +4,11 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl)
     [geometry] = mp_geo_load ([geometry_file '.txt']);
 
     nrb_opt = create_nrb_opt_electrode (order);
+
+    if (order > 8)
+        nrb_opt = nrbdegelev(nrb_opt, order-8);
+    end
+
     nrb_opt = move_ctrl_opt (nrb_opt, x);
     ctrl    = nrb_opt.coefs ./ nrb_opt.coefs(4,:);
 
@@ -25,132 +30,111 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl)
     x_min = nrbeval(bnds(3), 0);
     x_min = x_min(1);
 
-    if (order < 8)
-        % 18
-        bnds = nrbextract(geometry(18).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
+    % 18
+    bnds = nrbextract(geometry(18).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+    pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
 
-        ictrl = 2;
-        ix    = 1;
-        lb(ix) = 0;
-        ub(ix) = (pts4(1,1) - tol) - ctrl(1,ictrl);
-        lb(ix+1) = 0;
-        ub(ix+1) = (pts3(2,end) - tol) - ctrl(2,ictrl);
+    ictrl = 2;
+    ix    = 1;
+    lb(ix) = (pts3(1,end) - tol) - ctrl(1,ictrl);
+    ub(ix) = (pts4(1,1) - tol) - ctrl(1,ictrl);
+    lb(ix+1) = 0;
+    ub(ix+1) = (pts3(2,end) - tol) - ctrl(2,ictrl);
 
-        % 17
-        bnds = nrbextract(geometry(17).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
+    % 17
+    bnds = nrbextract(geometry(17).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+    pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
 
-        ictrl = 3;
-        ioff  = 2;
+    ictrl += 1;
+    ioff  = 2;
+    ix    = ioff + 1;
+    lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
+    ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
+    lb(ix+1) = (pts4(2,1) + tol) - ctrl(2,ictrl);
+    ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
+
+    if (order >= 10)
+        ictrl += 1;
+        ioff  += 2;
         ix    = ioff + 1;
         lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
-        ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
-        lb(ix+1) = (pts4(2,1) + tol) - ctrl(2,ictrl);
-        ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
 
         % 16
         bnds = nrbextract(geometry(16).nurbs);
         pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
 
-        ioff = 4;
-        for ictrl=4:(order+1)
-            ix = ioff + 2*ictrl-7;
-            lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
-            ub(ix)   = (pts3(1,end) - tol) - ctrl(1,ictrl);
-            lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
-            ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
-        end
-
-        % 15
-        bnds = nrbextract(geometry(15).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
-
-        ictrl = order+2;
-        ioff  = 4 + 2*(order-2);
-        ix    = ioff + 1;
-        lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
-        ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
+        ub(ix)   = (pts3(1,end) - tol) - ctrl(1,ictrl);
         lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
         ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
+    end
 
-        % 14
-        bnds = nrbextract(geometry(14).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
+    % 16
+    bnds = nrbextract(geometry(16).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
 
-        ictrl = order+3;
-        ioff  = 6 + 2*(order-2);
-        ix = ioff + 1;
-        lb(ix)   = (x_min + tol) - ctrl(1,ictrl);
-        ub(ix)   = (pts4(1,1) - tol) - ctrl(1,ictrl);
-        lb(ix+1) = (pts3(2,1) + tol) - ctrl(2,ictrl);
-        ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
-    elseif (order >= 8)
-        % 18
-        bnds = nrbextract(geometry(18).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
+    ictrl += 1;
+    ioff  += 2;
+    ix    = ioff + 1;
+    lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
+    ub(ix)   = (pts3(1,end) - tol) - ctrl(1,ictrl);
+    lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
+    ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
 
-        ictrl = 2;
-        ix    = 1;
-        lb(ix) = (pts3(1,end) - tol) - ctrl(1,ictrl);
-        ub(ix) = (pts4(1,1) - tol) - ctrl(1,ictrl);
-        lb(ix+1) = 0;
-        ub(ix+1) = (pts3(2,end) - tol) - ctrl(2,ictrl);
-
-        % 17
-        bnds = nrbextract(geometry(17).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
-
-        ictrl = 3;
-        ioff  = 2;
-        ix    = ioff + 1;
-        lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
-        ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
-        lb(ix+1) = (pts4(2,1) + tol) - ctrl(2,ictrl);
-        ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
-
-        % 16
-        bnds = nrbextract(geometry(16).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-
-        ictrl = 4;
-        ioff  = 4;
+    if (order == 9 || order == 11)
+        ictrl += 1;
+        ioff  += 2;
         ix    = ioff + 1;
         lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
         ub(ix)   = (pts3(1,end) - tol) - ctrl(1,ictrl);
         lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
         ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
+    end
+
+    if (order >= 10)
+        ictrl += 1;
+        ioff  += 2;
+        ix    = ioff + 1;
+        lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
 
         % 15
         bnds = nrbextract(geometry(15).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
         pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
 
-        ictrl = 5;
-        ioff  = 6;
-        ix    = ioff + 1;
-        lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
         ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
         lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
         ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
-
-        % 14
-        bnds = nrbextract(geometry(14).nurbs);
-        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
-        pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
-
-        ictrl = 6;
-        ioff  = 8;
-        ix    = ioff + 1;
-        lb(ix)   = (x_min + tol) - ctrl(1,ictrl);
-        ub(ix)   = (pts4(1,1) - tol) - ctrl(1,ictrl);
-        lb(ix+1) = (pts3(2,1) + tol) - ctrl(2,ictrl);
-        ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
     end
+
+    % 15
+    bnds = nrbextract(geometry(15).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+    pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
+
+    ictrl += 1;
+    ioff  += 2;
+    ix    = ioff + 1;
+    lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
+    ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
+    lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
+    ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
+
+    % 14
+    bnds = nrbextract(geometry(14).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+    pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
+
+    ictrl += 1;
+    ioff  += 2;
+    ix    = ioff + 1;
+    lb(ix)   = (x_min + tol) - ctrl(1,ictrl);
+    ub(ix)   = (pts4(1,1) - tol) - ctrl(1,ictrl);
+
+    % 10
+    bnds = nrbextract(geometry(10).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+
+    lb(ix+1) = (pts3(2,1) + tol) - ctrl(2,ictrl);
+    ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
 end

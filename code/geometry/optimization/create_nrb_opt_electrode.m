@@ -55,22 +55,23 @@ function [nrb_opt, knts, ptcs_vac, ptcs_el, nrb_orig] = create_nrb_opt_electrode
         pt(14) = 0.995;
         knts = [zeros(1,order) pt(18) pt(17) pt(16) pt(15) pt(14) ones(1,order)];
         nrb_opt = nrbmak(ctrl, knts);
-    elseif (order == 8)
+    elseif (order >= 8)
         % B-spline
         ctrl = [crv(18).coefs(:,1:2)./crv(18).coefs(4,1:2) crv(17).coefs(:,2)./crv(17).coefs(4,2) ...
                 crv(16).coefs(:,2)./crv(16).coefs(4,2) crv(15).coefs(:,2)./crv(15).coefs(4,2) ...
                 flip(crv(14).coefs(:,2)./crv(14).coefs(4,2), 2) flip(crv(10).coefs(:,1:2)./crv(10).coefs(4,1:2), 2)];
-        knts = [zeros(1,order) ones(1,order)];
+        knts = [zeros(1,8) ones(1,8)];
         nrb_opt = nrbmak(ctrl, knts);
 
-        % glue crv
-        nrb_orig = nrb_opt;
-        % nrb_orig = nrbglue(crv(18), crv(17));
-        % nrb_orig = nrbglue(nrb_orig, crv(16));
-        % nrb_orig = nrbglue(nrb_orig, crv(15));
-        % nrb_orig = nrbglue(nrb_orig, crv(14));
-        % nrb_orig = nrbglue(nrb_orig, crv(10));
-        % nrb_orig.knots = nrb_orig.knots/6;
+        if (nargout == 5)
+            % glue crv
+            nrb_orig = nrbglue(crv(18), crv(17));
+            nrb_orig = nrbglue(nrb_orig, crv(16));
+            nrb_orig = nrbglue(nrb_orig, crv(15));
+            nrb_orig = nrbglue(nrb_orig, crv(14));
+            nrb_orig = nrbglue(nrb_orig, crv(10));
+            nrb_orig.knots = nrb_orig.knots/6;
+        end
     else
         error('create_nrb_opt_electrode: order = %i not implemented', order);
     end

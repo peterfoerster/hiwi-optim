@@ -1,9 +1,9 @@
 % Computes the important quantities for the initial and optimized geometry.
-% contains the optimized DoFs in [x_opt]
-filename = 'result_nlopt_order=8_run3';
-order = 8
+
+filename = 'result_nlopt_order=8_run6';
+order = 8;
 % [x_opt]
-load('fit_init_run1.mat');
+load('result_ls_fit_init.mat');
 
 if (order < 8)
     N_ctrl = order+2;

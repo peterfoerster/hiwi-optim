@@ -7,6 +7,9 @@ if (order < 8)
 elseif (order >= 8)
     N_ctrl = order-3;
 end
+
+% load('result_nlopt_order=8_run5.mat');
+% x = x_opt;
 x = zeros(2*N_ctrl,1);
 
 [lb, ub] = compute_bounds (x, order, 2*N_ctrl);
