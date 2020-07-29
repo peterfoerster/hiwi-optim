@@ -1,5 +1,5 @@
 % Computes the cost function for the optimization.
-order = 8;
+order = 9;
 
 if (order < 8)
     N_ctrl = order+2;
