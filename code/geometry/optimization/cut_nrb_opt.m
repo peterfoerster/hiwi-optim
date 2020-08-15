@@ -33,7 +33,13 @@ function [crv] = cut_nrb_opt (nrb_opt, order, knts, ptcs_vac)
         end
     end
 
+keyboard
+    il = max(find(knts < 1/2));
+    ih = min(find(knts > 1/2));
+    knot = (1/2 - knts(il)) / (knts(ih) - knts(il));
+
     % cut the individual NURBS
+    % insert additional knots here and then another function to fit nrb_opt
     knts = [zeros(1,order) ones(1,order)];
     ctrl18  = nrb_opt.coefs(:,1:order);
     crv(18) = nrbmak(ctrl18, knts);
@@ -41,8 +47,22 @@ function [crv] = cut_nrb_opt (nrb_opt, order, knts, ptcs_vac)
     ctrl17  = nrb_opt.coefs(:,order+1:2*order);
     crv(17) = nrbmak(ctrl17, knts);
 
-    ctrl16  = nrb_opt.coefs(:,2*order+1:3*order);
-    crv(16) = nrbmak(ctrl16, knts);
+    if (il==2 && ih==3)
+        % ctrl16  = nrb_opt.coefs(:,2*order+1:3*order);
+        % crv(16) = nrbmak(ctrl16, knts);
+        ctrl16  = nrb_opt.coefs(:,2*order+1:3*order+1);
+        crv(16) = nrbmak(ctrl16, [zeros(1,order) knot ones(1,order)]);
+
+        ctrl15  = nrb_opt.coefs(:,3*order+2:4*order+1);
+        crv(15) = nrbmak(ctrl15, knts);
+
+        ctrl14  = nrb_opt.coefs(:,4*order+2:5*order+1);
+        crv(14) = nrbmak(ctrl14, knts);
+
+        ctrl10  = nrb_opt.coefs(:,5*order+2:6*order+1);
+        crv(10) = nrbmak(ctrl10, knts);
+        keyboard
+    end
 
     ctrl15  = nrb_opt.coefs(:,3*order+1:4*order);
     crv(15) = nrbmak(ctrl15, knts);

@@ -1,4 +1,4 @@
-function [nrb_opt, knts, ptcs_vac, ptcs_el, nrb_orig] = create_nrb_opt_electrode (order)
+function [nrb_opt, knts, ptcs_vac, ptcs_el, nrb_orig] = create_nrb_opt_electrode (order, continuity)
     electrode       = create_electrode_v6();
     anode_ring      = create_anodering_v6();
     inner_insulator = create_innerinsulator_v6();
@@ -62,6 +62,9 @@ function [nrb_opt, knts, ptcs_vac, ptcs_el, nrb_orig] = create_nrb_opt_electrode
                 flip(crv(14).coefs(:,2)./crv(14).coefs(4,2), 2) flip(crv(10).coefs(:,1:2)./crv(10).coefs(4,1:2), 2)];
         knts = [zeros(1,8) ones(1,8)];
         nrb_opt = nrbmak(ctrl, knts);
+
+        % if (nargin == 2 && continuity < order)
+        %     nrb_opt = nrbkntins
 
         if (nargout == 5)
             % glue crv

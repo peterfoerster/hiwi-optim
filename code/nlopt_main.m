@@ -1,6 +1,6 @@
 % Run the optimization employing the NLopt library.
 
-order = 10;
+order = 11;
 % [x_opt]
 % load('result_ls_fit_init.mat');
 % load('result_nlopt_order=8_run5.mat');

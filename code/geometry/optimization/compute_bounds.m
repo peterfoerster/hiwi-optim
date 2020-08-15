@@ -117,7 +117,12 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl)
     ix    = ioff + 1;
     lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
     ub(ix)   = (pts4(1,end) - tol) - ctrl(1,ictrl);
-    lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
+
+    % 14
+    bnds = nrbextract(geometry(14).nurbs);
+    pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+
+    lb(ix+1) = (pts3(2,1) + tol) - ctrl(2,ictrl);
     ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
 
     % 14

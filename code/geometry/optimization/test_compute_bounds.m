@@ -1,5 +1,5 @@
 % Compute the bounds on the control points.
-order = 8;
+order = 11;
 filename = ['v6_opt_order=' num2str(order)];
 
 if (order < 8)

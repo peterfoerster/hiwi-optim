@@ -33,8 +33,15 @@ function [] = create_geometry_opt (filename, x, order)
     end
 
     nrb_opt = move_ctrl_opt (nrb_opt, x);
-    crv     = cut_nrb_opt (nrb_opt, order, knts, ptcs_vac);
 
+    nrb_opt = nrbkntins(nrb_opt, [1/2]);
+    % nrbctrlplot(nrb_opt)
+
+    crv     = cut_nrb_opt (nrb_opt, order, knts, ptcs_vac);
+    %
+    % figure
+    % nrbctrlplot(nrbkntins(crv(16), [1/2]));
+keyboard
     [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv);
 
     write_geometryfile_opt (ptcs_vac, ptcs_el, filename);

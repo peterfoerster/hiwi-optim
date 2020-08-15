@@ -16,7 +16,7 @@
 % Use a smooth NURBS (arbitrary order) to start. Then insert knots at predetermined positions to split into the individual curves.
 % Increase the degree of the entire NURBS or of each individual curve?
 
-order = 11;
+order = 8;
 filename = ['v6_opt_order=' num2str(order)];
 
 if (order < 8)
@@ -25,6 +25,7 @@ elseif (order >= 8)
     N_ctrl = order-3;
 end
 x = zeros(2*N_ctrl,1);
+x = 1e-2*rand(2*N_ctrl,1);
 
 tic;
 create_geometry_opt (filename, x, order);
