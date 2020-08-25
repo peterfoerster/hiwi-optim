@@ -1,11 +1,12 @@
 % Plots the electric field for a single patch and writes a corresponding .dat file.
 %
 % INPUT:
-%
-%    phi: vector of dof weights
-%    space: object defining the discrete space (sp_scalar)
-%    geometry: geometry structure (geo_load)
-%    vtk_pts: cell array with coordinates of points along each parametric direction
+%       - phi: vector of dof weights
+%       - space: object defining the discrete space (sp_scalar)
+%       - geometry: geometry structure (geo_load)
+%       - vtk_pts: cell array with coordinates of points along each parametric direction
+%       - filename
+%       - iptc
 
 function plot_es_dat (phi, space, geometry, vtk_pts, filename, iptc)
     [E, F] = sp_eval (phi, space, geometry, vtk_pts, 'gradient');

@@ -1,3 +1,14 @@
+% INPUT:
+%       - geometry
+%       - msh_ref
+%       - sp_ref
+%       - u_ref
+%       - sp
+%       - u
+% OUTPUT:
+%       - errh1
+%       - errl2
+
 function [errh1, errl2] = sp_errh1_el (geometry, msh_ref, sp_ref, u_ref, sp, u)
     % evaluate reference
     eu_ref = sp_eval (u_ref, sp_ref, geometry, msh_ref.qn, {'value', 'gradient'});
@@ -13,12 +24,12 @@ function [errh1, errl2] = sp_errh1_el (geometry, msh_ref, sp_ref, u_ref, sp, u)
 
     jacdet_weights = msh_ref.jacdet .* msh_ref.quad_weights;
 
-    % change to relative error?
-    tmpl2 = (valu - valu_ref);
+    % relative error
+    tmpl2 = (valu - valu_ref) ./ valu_ref;
     tmpl2 = sum(tmpl2.^2, 1);
     tmpl2 = jacdet_weights .* reshape(tmpl2, [msh_ref.nqn, msh_ref.nel]);
 
-    tmph1 = (gradu - gradu_ref);
+    tmph1 = (gradu - gradu_ref) ./ gradu_ref;
     tmph1 = sum(sum(tmph1.^2, 1), 2);
     tmph1 = jacdet_weights .* reshape(tmph1, [msh_ref.nqn, msh_ref.nel]);
 

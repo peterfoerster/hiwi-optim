@@ -1,3 +1,8 @@
+% INPUT:
+%       - msh
+% OUTPUT:
+%       - V
+
 function [V] = computeV_cyl_mp (msh)
     V = 0;
     for iptc=1:msh.npatch

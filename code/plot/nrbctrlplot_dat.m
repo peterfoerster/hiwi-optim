@@ -1,3 +1,8 @@
+% INPUT:
+%       - nurbs
+%       - nsub
+%       - filename
+
 function nrbctrlplot_dat (nurbs, nsub, filename)
     nsub = nsub+1;
 

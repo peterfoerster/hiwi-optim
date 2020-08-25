@@ -1,3 +1,8 @@
+% INPUT:
+%       - filename
+%       - x
+%       - y
+
 function [] = write_dat1D (filename, x, y)
     % write to .dat file
     fprintf(['\n creating ' filename '\n']);

@@ -1,3 +1,12 @@
+% INPUT:
+%       - ib
+%       - x
+%       - y
+%       - v_el
+%       - v_ar
+% OUTPUT:
+%       - h
+
 function [h] = drl_bc (ib, x, y, v_el, v_ar)
     switch (ib)
         % electrode

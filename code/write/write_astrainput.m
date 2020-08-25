@@ -1,3 +1,14 @@
+% INPUT:
+%       - filename
+%       - generatorname
+%       - fieldmapname
+%       - H
+%       - sc
+%       - Nrad
+%       - Cell_var
+%       - Nlong_in
+%       - geometry
+
 function [] = write_astrainput (filename, generatorname, fieldmapname, H, sc, Nrad, Cell_var, Nlong_in, geometry)
     z_min = nrbeval(geometry(6).nurbs, [1 0]);
     z_min = z_min(1);

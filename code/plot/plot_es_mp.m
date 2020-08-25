@@ -1,11 +1,11 @@
 % Plots the magnitude of the electric field for an electrostatic field solution.
 %
 % INPUT:
-%
-%   phi: vector of dof weights
-%   space: object defining the discrete space (sp_multipatch)
-%   geometry: array of geometry structures (mp_geo_load)
-%   pts: cell array with coordinates of points along each parametric direction
+%       - phi: vector of dof weights
+%       - space: object defining the discrete space (sp_multipatch)
+%       - geometry: array of geometry structures (mp_geo_load)
+%       - pts: cell array with coordinates of points along each parametric direction
+%       - filename
 
 function plot_es_mp (phi, space, geometry, pts, filename)
     for iptc=1:space.npatch

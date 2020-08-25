@@ -1,3 +1,7 @@
+% INPUT:
+%       - geometry
+%       - boundaries
+
 function [] = plot_boundary (geometry, boundaries)
     width = 4;
     nsub  = 100;

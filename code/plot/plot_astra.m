@@ -1,3 +1,6 @@
+% INPUT:
+%       - filename
+
 function [] = plot_astra (filename)
     astra = dlmread([filename '.Xemit.001']);
     x = [astra(:,1), astra(:,4), astra(:,6)*pi];

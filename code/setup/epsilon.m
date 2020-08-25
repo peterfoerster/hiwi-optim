@@ -1,5 +1,14 @@
+% INPUT:
+%       - ib
+%       - x
+%       - y
+%       - epsilon_r
+%       - geometry_file
+% OUTPUT:
+%       - epsilon_ptc
+
 function [epsilon_ptc] = epsilon (ip, x, y, epsilon_r, geometry_file)
-    if (strcmp(geometry_file, 'geometry_v6'))
+    if (strcmp(geometry_file, 'geometry_v6_orig'))
         switch (ip)
             case {5, 23, 24, 31, 32, 33, 34}
                 epsilon_ptc = epsilon_r * 8.854e-12*ones(size(x));

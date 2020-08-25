@@ -1,13 +1,10 @@
 % INPUT:
-%
-%   spv:     object representing the function space (see sp_multipatch)
-%   msh:     object defining the domain partition and the quadrature rule (see msh_multipatch)
-%   coeff:   function handle to compute the source function
-%   patches: list of patches where the integrals have to be computed. By default, all patches are selected.
-%
+%       - spv:     object representing the function space (see sp_multipatch)
+%       - msh:     object defining the domain partition and the quadrature rule (see msh_multipatch)
+%       - coeff:   function handle to compute the source function
+%       - patches: list of patches where the integrals have to be computed. By default, all patches are selected.
 % OUTPUT:
-%
-%   rhs: assembled right-hand side
+%       - rhs: assembled right-hand side
 
 function rhs = op_f_v_axi2d_mp (space, msh, coeff, patch_list)
     if (nargin < 4)
@@ -18,8 +15,8 @@ function rhs = op_f_v_axi2d_mp (space, msh, coeff, patch_list)
         error ('op_f_v_axi2d_mp: the number of patches does not coincide')
     end
 
-    rhs = zeros (space.ndof, 1);
-    for iptc = patch_list
+    rhs = zeros (space.ndof,1);
+    for iptc=patch_list
         rhs_loc = op_f_v_axi2d_tp (space.sp_patch{iptc}, msh.msh_patch{iptc}, coeff);
 
         if (~isempty (space.dofs_ornt))

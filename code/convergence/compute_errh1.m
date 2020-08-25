@@ -1,5 +1,14 @@
+% INPUT:
+%       - problem_data
+%       - method_data
+%       - degree_ref
+%       - nsub_ref
+%       - degree
+%       - N_it
+%       - filename
+
 function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, degree, N_it, filename)
-    % change solver calls for other studies
+    % change solver calls to match problem
     errh1 = errl2 = NaN(N_it+1,1);
     % reference solution
     method_data.degree     = degree_ref;
@@ -7,7 +16,7 @@ function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, de
     method_data.nsub       = nsub_ref;
     method_data.nquad      = degree_ref+1;
     tic;
-    [geometry, msh_ref, space_ref, phi_ref] = mp_solve_electrostatics (problem_data, method_data);
+    [geometry, msh_ref, space_ref, phi_ref] = mp_solve_electrostatics_axi2d (problem_data, method_data);
     fprintf('\ncompute_errh1: mp_solve_electrostatics: %d min\n', toc/60);
 
     % iterative solution and error computation
@@ -17,7 +26,7 @@ function [] = compute_errh1 (problem_data, method_data, degree_ref, nsub_ref, de
         method_data.regularity = degree-1;
         method_data.nsub       = [2^iit 2^iit];
         method_data.nquad      = degree+1;
-        [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
+        [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
         tic;
         [errh1(iit+1), errl2(iit+1)] = mp_errh1 (geometry, msh_ref, space_ref, phi_ref, space, phi);
         fprintf('\ncompute_errh1: mp_errh1: %d min\n', toc/60);

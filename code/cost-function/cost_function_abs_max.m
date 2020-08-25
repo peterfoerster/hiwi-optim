@@ -1,7 +1,18 @@
-function [obj] = cost_function_abs_max (x, order)
+% INPUT:
+%       - x:
+%       - order:
+%       - continuity
+% OUTPUT:
+%       - obj:
+
+function [obj] = cost_function_abs_max (x, order, continuity)
     tic;
-    geometry_file = ['v6_opt_order=' num2str(order)];
-    create_geometry_opt (geometry_file, x, order);
+    if (continuity < order)
+        geometry_file = ['v6_opt_order=' num2str(order) '_continuity=' num2str(continuity)];
+    else
+        geometry_file = ['v6_opt_order=' num2str(order)];
+    end
+    create_geometry_opt (geometry_file, x, order, continuity);
 
     [problem_data, method_data] = setup_problem (geometry_file);
     [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);

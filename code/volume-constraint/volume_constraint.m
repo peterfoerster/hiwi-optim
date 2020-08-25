@@ -1,6 +1,16 @@
-function [fc] = volume_constraint(x, order)
-    geometry_file = ['v6_opt_order=' num2str(order)];
-    create_geometry_opt (geometry_file, x, order);
+% INPUT:
+%       - x
+%       - order
+% OUTPUT:
+%       - fc
+
+function [fc] = volume_constraint(x, order, continuity)
+    if (continuity < order)
+        geometry_file = ['v6_opt_order=' num2str(order) '_continuity=' num2str(continuity)];
+    else
+        geometry_file = ['v6_opt_order=' num2str(order)];
+    end
+    create_geometry_opt (geometry_file, x, order, continuity);
     [geometry, boundaries] = mp_geo_load ('electrode_v6.txt');
 
     degree = [2 2];

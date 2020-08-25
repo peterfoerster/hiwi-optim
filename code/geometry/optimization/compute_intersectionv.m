@@ -1,4 +1,11 @@
-function [knt] = compute_intersectionv(nrb_opt, crv, I)
+% INPUT:
+%       - nrb_opt:
+%       - crv:
+%       - I
+% OUTPUT:
+%       - knt:
+
+function [knt] = compute_intersectionv (nrb_opt, crv, I)
     x0 = nrbeval(crv, 0);
     x1 = nrbeval(crv, 1);
     if (x1(1) == x0(1))

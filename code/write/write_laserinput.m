@@ -1,3 +1,10 @@
+% INPUT:
+%       - Q_total
+%       - Ipart
+%       - filename
+%       - rho
+%       - tau
+
 function [] = write_laserinput (Q_total, Ipart, filename, rho, tau)
     q = -Q_total/Ipart;
 

@@ -1,6 +1,6 @@
 % Run a convergence study for the electrostatic field solution.
 
-geometry_file = 'geometry_v6';
+geometry_file = 'geometry_v6_orig';
 filename      = 'cvg_v6';
 % specify problem and material data
 [problem_data, method_data] = setup_problem (geometry_file);

@@ -1,3 +1,8 @@
+% INPUT:
+%       - nurbs
+%       - nsub
+%       - filename
+
 function nrbplot_dat (nurbs, nsub, filename)
     % nsub -> npts
     nsub = nsub+1;

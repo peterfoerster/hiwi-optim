@@ -1,3 +1,8 @@
+% INPUT:
+%       - filename
+% OUTPUT:
+%       - fc
+
 function [fc] = volume_constraint_orig(filename)
     [geometry, boundaries] = mp_geo_load ([filename '.txt']);
 

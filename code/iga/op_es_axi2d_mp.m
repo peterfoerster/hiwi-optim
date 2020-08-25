@@ -1,16 +1,12 @@
 % INPUT:
-%
-%   spu:     object representing the space of trial functions (see sp_multipatch)
-%   spv:     object representing the space of test functions (see sp_multipatch)
-%   msh:     object defining the domain partition and the quadrature rule (see msh_multipatch)
-%   epsilon: electric permittivity
-%
+%       - spu:     object representing the space of trial functions (see sp_scalar)
+%       - spv:     object representing the space of test functions (see sp_scalar)
+%       - msh:     object defining the domain partition and the quadrature rule (see msh_cartesian)
+%       - epsilon: electric permittivity
 % OUTPUT:
-%
-%   mat:    assembled stiffness matrix
+%       - mat: assembled stiffness matrix
 
 function mat = op_es_axi2d_mp (spu, spv, msh, epsilon, patch_list)
-
     if (nargin < 5)
         patch_list = 1:msh.npatch;
     end
@@ -20,7 +16,7 @@ function mat = op_es_axi2d_mp (spu, spv, msh, epsilon, patch_list)
     end
 
     ncounter = 0;
-    for iptc = patch_list
+    for iptc=patch_list
         [rs, cs, vs] = op_es_axi2d_tp (spu.sp_patch{iptc}, spv.sp_patch{iptc}, msh.msh_patch{iptc}, epsilon, iptc);
         rows(ncounter+(1:numel(rs))) = spv.gnum{iptc}(rs);
         cols(ncounter+(1:numel(rs))) = spu.gnum{iptc}(cs);

@@ -1,3 +1,6 @@
+% INPUT:
+%       - geometry
+
 function [] = write_geometry (geometry)
     nsub = 4;
     % write to .dat file

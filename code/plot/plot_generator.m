@@ -1,8 +1,7 @@
 % Plots the spatial and temporal input distribution for Astra.
 %
 % INPUT:
-%
-%   filename: filename of the input distribution (.in)
+%      - filename: filename of the input distribution (.in)
 
 function [] = plot_generator (filename)
     generator = dlmread(filename);

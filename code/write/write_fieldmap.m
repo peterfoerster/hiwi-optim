@@ -1,3 +1,13 @@
+% INPUT:
+%       - filename
+%       - Nx
+%       - x
+%       - Ny
+%       - y
+%       - Nz
+%       - z
+%       - E
+
 function [] = write_fieldmap (filename, Nx, x, Ny, y, Nz, z, E)
     fid = fopen([filename '.ex'], 'w');
     dlmwrite(fid, [Nx x], ' ');

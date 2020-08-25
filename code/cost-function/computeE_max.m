@@ -1,3 +1,11 @@
+% INPUT:
+%       - phi:
+%       - msh:
+%       - space:
+%       - geometry:
+% OUTPUT:
+%       - E_max:
+
 function [E_max] = computeE_max (phi, msh, space, geometry)
     E_max = 0;
     N_el  = msh.nel_dir(1);

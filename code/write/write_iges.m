@@ -1,3 +1,7 @@
+% INPUT:
+%       - filename
+%       - geometry
+
 function [] = write_iges (filename, geometry)
     display = 0;
 

@@ -1,3 +1,9 @@
+% INPUT:
+%       - geometry_file
+% OUTPUT:
+%       - problem_data
+%       - method_data
+
 function [problem_data, method_data] = setup_problem (geometry_file)
     problem_data.geo_name     = [geometry_file '.txt'];
     problem_data.drchlt_sides = [1 2 3];

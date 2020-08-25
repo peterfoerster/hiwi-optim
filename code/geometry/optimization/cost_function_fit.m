@@ -1,7 +1,14 @@
+% INPUT:
+%       - x:
+%       - order:
+%       - v:
+% OUTPUT:
+%       - obj:
+
 function [obj] = cost_function_fit (x, order, v)
     tic;
-    geometry_file = ['nrb_opt_fit'];
-    create_geometry_opt (geometry_file, x, order);
+    geometry_file = ['nlopt_fit'];
+    create_geometry_opt (geometry_file, x, order, order);
 
     [nrb_opt, ~, ~, ~, nrb_orig] = create_nrb_opt_electrode (order);
     [nrb_opt] = move_ctrl_opt (nrb_opt, x);

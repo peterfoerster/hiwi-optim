@@ -1,3 +1,8 @@
+% INPUT:
+%       - msh
+% OUTPUT:
+%       - V
+
 function [V] = computeV_cyl_ptc (msh)
     V = 0;
     for iel=1:msh.nel_dir(1)

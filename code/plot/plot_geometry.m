@@ -1,9 +1,8 @@
 % Plots a NURBS geometry.
 %
 % INPUT:
-%
-%   geometry: array of geometry structures (mp_geo_load)
-%   boundaries: array of boundary structures (mp_geo_load)
+%       - geometry: array of geometry structures (mp_geo_load)
+%       - boundaries: array of boundary structures (mp_geo_load)
 
 function [] = plot_geometry (geometry, boundaries)
     for iptc=1:length(geometry)

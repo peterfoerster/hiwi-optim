@@ -1,3 +1,8 @@
+% INPUT:
+%       - filename
+% OUTPUT:
+%       - obj
+
 function [obj] = cost_function_abs_max_orig (filename)
     tic;
     [problem_data, method_data] = setup_problem (filename);

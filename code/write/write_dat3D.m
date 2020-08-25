@@ -1,3 +1,9 @@
+% INPUT:
+%       - filename
+%       - X
+%       - Y
+%       - c
+
 function [] = write_dat3D (filename, X, Y, c)
     % write to .dat file
     fprintf(['\nwrite_dat3D: ' filename '\n']);

@@ -1,16 +1,13 @@
 % INPUT:
-%
-%   spu:     structure representing the space of trial functions (see sp_scalar/sp_evaluate_col)
-%   spv:     structure representing the space of test functions (see sp_scalar/sp_evaluate_col)
-%   msh:     structure containing the domain partition and the quadrature rule (see msh_cartesian/msh_evaluate_col)
-%   epsilon: electric permittivity
-%
+%       - spu:     object representing the space of trial functions (see sp_scalar)
+%       - spv:     object representing the space of test functions (see sp_scalar)
+%       - msh:     object defining the domain partition and the quadrature rule (see msh_cartesian)
+%       - epsilon: electric permittivity
 % OUTPUT:
-%
-%   mat:    assembled stiffness matrix
-%   rows:   row indices of the nonzero entries
-%   cols:   column indices of the nonzero entries
-%   values: values of the nonzero entries
+%       - mat:    assembled stiffness matrix
+%       - rows:   row indices of the nonzero entries
+%       - cols:   column indices of the nonzero entries
+%       - values: values of the nonzero entries
 
 function varargout = op_es_axi2d (spu, spv, msh, epsilon)
     gradu = reshape(spu.shape_function_gradients, spu.ncomp, [], msh.nqn, spu.nsh_max, msh.nel);
@@ -27,7 +24,7 @@ function varargout = op_es_axi2d (spu, spv, msh, epsilon)
     jacdet = epsilon .* r .* msh.quad_weights .* msh.jacdet;
 
     ncounter = 0;
-    for iel = 1:msh.nel
+    for iel=1:msh.nel
         if (all (msh.jacdet(:, iel)))
             gradu_iel = reshape(gradu(:,:,:,1:spu.nsh(iel),iel), spu.ncomp*ndir, msh.nqn, 1, spu.nsh(iel));
             gradv_iel = reshape(gradv(:,:,:,1:spv.nsh(iel),iel), spv.ncomp*ndir, msh.nqn, spv.nsh(iel), 1);
@@ -57,5 +54,4 @@ function varargout = op_es_axi2d (spu, spv, msh, epsilon)
     else
         error ('op_es_axi2d: wrong number of output arguments')
     end
-
 end

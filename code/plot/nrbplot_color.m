@@ -1,3 +1,9 @@
+% INPUT:
+%       - color
+%       - width
+%       - nurbs
+%       - nsub
+
 function nrbplot_color (color, width, nurbs, nsub)
     nsub  = nsub+1;
     order = nurbs.order;

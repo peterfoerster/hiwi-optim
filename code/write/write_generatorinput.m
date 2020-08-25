@@ -1,3 +1,10 @@
+% INPUT:
+%       - filename
+%       - Ipart
+%       - Q_total
+%       - sig_clock
+%       - geometry
+
 function [] = write_generatorinput (filename, Ipart, Q_total, sig_clock, geometry)
     % rms bunch size in [mm]
     rho   = 400e-3;
