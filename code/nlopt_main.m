@@ -9,13 +9,12 @@ end
 x_init = zeros(2*N_ctrl,1);
 
 % compute bounds based on ls fit (only for order = 8)
-% load('result_nlopt_fit.mat');
-[lb, ub] = compute_bounds (x_init, order, 2*N_ctrl, continuity);
-
-% use previous result as starting shape (only for ISRES, automatic for order > 8)
+% use previous result as starting shape (automatic for order > 8)
 % [x_opt]
+% load('result_nlopt_fit.mat');
 % load('result_nlopt_order=8_run5.mat');
 % x_init = x_opt;
+[lb, ub] = compute_bounds (x_init, order, 2*N_ctrl, continuity);
 
 cst_func  = @(x) cost_function_abs_max(x, order, continuity);
 vol_cstr  = @(x) volume_constraint(x, order, continuity);

@@ -1,4 +1,4 @@
-% variables from create_fieldmap() and geometry_v6
+% variables from create_fieldmap() and geometry_v6_orig
 rho = 1.5e-3;
 dz  = 416e-3 - 307e-3;
 

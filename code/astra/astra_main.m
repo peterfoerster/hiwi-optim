@@ -1,12 +1,12 @@
 pkg load statistics;
 
-geometry_file = 'v6_opt_order=3_run2';
-% geometry_file = 'geometry_v6';
+geometry_file = 'v6_opt_order=8_run6';
+% geometry_file = 'geometry_v6_orig';
 
 [geometry] = mp_geo_load ([geometry_file '.txt']);
 [problem_data, method_data] = setup_problem (geometry_file);
 % tic;
-% [geometry, msh, space, phi] = mp_solve_electrostatics (problem_data, method_data);
+% [geometry, msh, space, phi] = mp_solve_electrostatics_axi_2d (problem_data, method_data);
 % fprintf('\n field solution: %d min \n', toc/60);
 
 % number of particles (11 [9:12])
@@ -27,11 +27,11 @@ if (exist(generatorname, 'file') ~= 2)
    % [status, output] = system(['./generator generator_' generatorname]);
    plot_generator (generatorname);
 end
-
+return
 % time step in [ns] (-12 [-13:-8])
 H = 2^(-12);
 
-% number of transverse grid points (3 convergences study) (4 simulation) ([3:6])
+% number of transverse grid points (3 convergence study) (4 simulation) ([3:6])
 nx = ny = 2^4;
 % number of longitudinal grid points (8 [4:9])
 nz = 2^8;
@@ -65,7 +65,7 @@ fprintf('\n tracking %d min \n', toc/60);
 delete('NORRAN');
 delete([filename '.Log.001']);
 % delete([filename '.track.001']);
-delete([filename '.Zemit.001']);
+% delete([filename '.Zemit.001']);
 delete('win_config.dat');
 
 % signal that the program is finished

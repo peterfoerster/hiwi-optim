@@ -1,4 +1,10 @@
-function [] = create_laserinput(Ipart, sig_clock, Q_total, filename)
+% INPUT:
+%       - Ipart
+%       - sig_clock
+%       - Q_total
+%       - filename
+
+function [] = create_laserinput (Ipart, sig_clock, Q_total, filename)
     % step size from file (in [um])
     dx = 1.6631;
     data = dlmread('laser.txt', ',', 1, 1);
@@ -14,7 +20,7 @@ function [] = create_laserinput(Ipart, sig_clock, Q_total, filename)
     rho = NaN(1,2*Ipart);
 
     tic;
-    np    = 0;
+    np = 0;
     while (np < 2*Ipart)
         R        = rand(2*n,2);
         R(:,1)   = max(x)*R(:,1);
