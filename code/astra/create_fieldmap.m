@@ -8,8 +8,8 @@
 %       - phi
 
 function [] = create_fieldmap (filename, nx, ny, nz, geometry, space, phi)
-    % (1.5 for Gaussian, 4 for laser)
-    rho   = 4e-3;
+    % (1.5 for Gaussian, 3.5 for laser)
+    rho   = 3.5e-3;
     z_min = nrbeval(geometry(6).nurbs, [1 0]);
     z_min = z_min(1);
     z_max = nrbeval(geometry(1).nurbs, [0 1]);

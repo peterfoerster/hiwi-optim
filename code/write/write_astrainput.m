@@ -33,6 +33,8 @@ function [] = write_astrainput (filename, generatorname, fieldmapname, H, sc, Nr
     fprintf(fid, '\n&OUTPUT\n');
     fprintf(fid, '  ZSTART = %d\n', z_min);
     fprintf(fid, '  ZSTOP = %d\n', z_max);
+    % ~ 1 per mm
+    fprintf(fid, '  Zemit = 300\n');
     fprintf(fid, '  EmitS = True\n');
     fprintf(fid, '  TrackS = False\n');
     fprintf(fid, '  RefS = False\n');

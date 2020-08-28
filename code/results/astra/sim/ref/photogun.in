@@ -1,5 +1,5 @@
 &NEWRUN
-  Distribution = 'I=4096_Q=0.0001_sc=0.005.in'
+  Distribution = 'laser_I=4096_Q=0.0001_sc=0.005.in'
   Zoff = 0.307
   Z_min = 0.307
   Z_Cathode = 0.307
@@ -10,8 +10,9 @@
 &OUTPUT
   ZSTART = 0.307
   ZSTOP = 0.596
+  Zemit = 300
   EmitS = True
-  TrackS = True
+  TrackS = False
   RefS = False
 /
 
@@ -24,7 +25,7 @@
 
 &CAVITY
   LEField = True
-  File_Efield(1) = 'DC-3D-p=3_nsub=16_nx=ny=16_nz=512'
+  File_Efield(1) = 'DC-3D-p=3_nsub=16_nx=ny=32_nz=512'
   C_noscale(1) = True
   Com_grid(1) = 'E'
   Nue(1) = 0

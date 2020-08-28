@@ -37,6 +37,9 @@ function [] = create_geometry_opt (filename, x, order, continuity)
     end
 
     if (continuity == order-1)
+        % [x_opt]
+        load('result_nlopt_order=8_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
         nrb_opt = nrbkntins(nrb_opt, [1/2]);
     end
 
