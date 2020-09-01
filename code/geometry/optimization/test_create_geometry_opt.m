@@ -11,7 +11,7 @@
 % Insert knots (only increase number of knots or also multiplicity?), each knot adds a control point.
 
 order = 8;
-continuity = 7;
+continuity = 6;
 if (continuity < order)
     filename = ['v6_opt_order=' num2str(order) '_continuity=' num2str(continuity)];
 else
@@ -20,8 +20,10 @@ end
 
 if (order >= 8)
     N_ctrl = order-3;
-    if (continuity < order)
-        N_ctrl = N_ctrl + order-continuity;
+    if (continuity == order-1)
+        N_ctrl = N_ctrl + 1;
+    elseif (continuity == order-2)
+        N_ctrl = N_ctrl + 3;
     end
 end
 x = zeros(2*N_ctrl,1);

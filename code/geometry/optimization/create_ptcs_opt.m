@@ -29,12 +29,23 @@ function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv, c
     bnds = nrbextract(ptcs_vac(14));
     ptcs_vac(14) = nrbruled(nrbreverse(crv(14)), bnds(4));
     % elevate degree of adjacent patches
-    bnds = nrbextract(ptcs_vac(13));
-    ptcs_vac(13) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
-    bnds = nrbextract(ptcs_vac(12));
-    ptcs_vac(12) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
-    bnds = nrbextract(ptcs_vac(11));
-    ptcs_vac(11) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
+    if (continuity == order-2)
+        bnds = nrbextract(ptcs_vac(14));
+        bnd = bnds(4);
+        bnds = nrbextract(ptcs_vac(13));
+        ptcs_vac(13) = nrbcoons(nrbkntins(nrbdegelev(bnds(3), order-3), bnd.knots(order+1)), bnds(4), bnds(1), bnds(2));
+        bnds = nrbextract(ptcs_vac(12));
+        ptcs_vac(12) = nrbcoons(nrbkntins(nrbdegelev(bnds(3), order-3), bnd.knots(order+1)), bnds(4), bnds(1), bnds(2));
+        bnds = nrbextract(ptcs_vac(11));
+        ptcs_vac(11) = nrbcoons(nrbkntins(nrbdegelev(bnds(3), order-3), bnd.knots(order+1)), bnds(4), bnds(1), bnds(2));
+    else
+        bnds = nrbextract(ptcs_vac(13));
+        ptcs_vac(13) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
+        bnds = nrbextract(ptcs_vac(12));
+        ptcs_vac(12) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
+        bnds = nrbextract(ptcs_vac(11));
+        ptcs_vac(11) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds(2));
+    end
 
     bnds = nrbextract(ptcs_vac(10));
     ptcs_vac(10) = nrbruled(nrbreverse(crv(10)), bnds(4));
@@ -48,26 +59,35 @@ function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv, c
         il = max(find(crv(16).knots < 1/2));
         ih = min(find(crv(16).knots > 1/2));
         if (crv(16).knots(il) > 0)
-            electrode(1) = nrbmak(ctrl(:,1:order+1), [zeros(1,order) crv(16).knots(il) ones(1,order)]);
+            knot = crv(16).knots(il) / (1/2);
+            electrode(1) = nrbmak(ctrl(:,1:order+1), [zeros(1,order) knot ones(1,order)]);
             electrode(2) = nrbmak(ctrl(:,order+2:2*order+1), knts);
         elseif (crv(16).knots(ih) < 1)
+            knot = (crv(16).knots(ih) - 1/2) / (1/2);
             electrode(1) = nrbmak(ctrl(:,1:order), knts);
-            electrode(2) = nrbmak(ctrl(:,order+1:2*order+1), [zeros(1,order) crv(16).knots(ih) ones(1,order)]);
+            electrode(2) = nrbmak(ctrl(:,order+1:2*order+1), [zeros(1,order) knot ones(1,order)]);
         end
+    elseif (continuity == order-2)
+        il = max(find(crv(16).knots < 1/2));
+        ih = min(find(crv(16).knots > 1/2));
+        knot = crv(16).knots(il) / (1/2);
+        knot = [knot ((crv(16).knots(ih) - 1/2) / (1/2))];
+        electrode(1) = nrbmak(ctrl(:,1:order+1), [zeros(1,order) knot(1) ones(1,order)]);
+        electrode(2) = nrbmak(ctrl(:,order+2:2*order+2), [zeros(1,order) knot(2) ones(1,order)]);
     else
         electrode(1) = nrbmak(ctrl(:,1:order), knts);
         electrode(2) = nrbmak(ctrl(:,order+1:2*order), knts);
     end
 
-    bnds    = nrbextract(ptcs_el(6));
-    bnds(1) = nrbline(nrbeval(crv(18), 0), nrbeval(bnds(1), 1));
-    bnds(2) = nrbline(nrbeval(crv(18), 1), nrbeval(bnds(2), 1));
-    ptcs_el(6) = nrbcoons(crv(18), bnds(4), bnds(1), nrbdegelev(bnds(2), order-2));
-
     bnds    = nrbextract(ptcs_el(5));
     bnds(1) = nrbline(nrbeval(crv(17), 0), nrbeval(bnds(1), 1));
     bnds(4) = nrbline(nrbeval(bnds(4), 0), nrbeval(electrode(1), 1));
     ptcs_el(5) = nrbcoons(crv(17), bnds(4), bnds(1), electrode(1));
+
+    bnds5    = nrbextract(ptcs_el(5));
+    bnds    = nrbextract(ptcs_el(6));
+    bnds(1) = nrbline(nrbeval(crv(18), 0), nrbeval(bnds(1), 1));
+    ptcs_el(6) = nrbcoons(crv(18), bnds(4), bnds(1), bnds5(1));
 
     bnds    = nrbextract(ptcs_el(4));
     bnds(1) = nrbline(nrbeval(bnds(1), 0), nrbeval(crv(15), 1));
@@ -78,7 +98,7 @@ function [ptcs_vac, ptcs_el] = create_ptcs_opt (ptcs_vac, ptcs_el, order, crv, c
     bnds    = nrbextract(ptcs_el(3));
     bnds(2) = nrbline(nrbeval(bnds(2), 0), nrbeval(crv(15), 1));
     bnds(4) = nrbline(nrbeval(bnds(4), 0), nrbeval(crv(15), 1));
-    if (continuity == order-1)
+    if (continuity == order-1 || continuity == order-2)
         ptcs_el(3) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), bnds4(1));
     else
         ptcs_el(3) = nrbcoons(nrbdegelev(bnds(3), order-3), bnds(4), bnds(1), nrbdegelev(bnds(2), order-2));

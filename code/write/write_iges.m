@@ -50,7 +50,7 @@ function [] = write_iges (filename, geometry)
     end
 
     % additional vacuum chamber piece
-    nurbs = nrbline([447e-3 20e-3], [447e-3 30e-3]);
-    nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
-    nrb2iges(nurbs, ['additional.igs']);
+    % nurbs = nrbline([447e-3 20e-3], [447e-3 30e-3]);
+    % nurbs = nrbrevolve(nurbs, pnt, ext, 2*pi);
+    % nrb2iges(nurbs, ['additional.igs']);
 end

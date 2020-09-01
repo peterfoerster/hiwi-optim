@@ -7,14 +7,6 @@
 function [] = create_geometry_opt (filename, x, order, continuity)
     [nrb_opt, knts, ptcs_vac, ptcs_el] = create_nrb_opt_electrode (order);
 
-    % alternative (run7)
-    % if (order > 8)
-    %     % [x_opt]
-    %     load('result_nlopt_order=8_run5.mat');
-    %     nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
-    %     nrb_opt = nrbdegelev(nrb_opt, order-8);
-    % end
-
     if (order > 8)
         % [x_opt]
         load('result_nlopt_order=8_run6.mat');
@@ -36,11 +28,18 @@ function [] = create_geometry_opt (filename, x, order, continuity)
         nrb_opt = nrbdegelev(nrb_opt, order-10);
     end
 
-    if (continuity == order-1)
+    if (continuity <= order-1)
         % [x_opt]
         load('result_nlopt_order=8_run6.mat');
         nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
         nrb_opt = nrbkntins(nrb_opt, [1/2]);
+    end
+
+    if (continuity == order-2)
+        % [x_opt]
+        load('result_nlopt_order=8_continuity=7_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
+        nrb_opt = nrbkntins(nrb_opt, [1/4 3/4]);
     end
 
     nrb_opt = move_ctrl_opt (nrb_opt, x);

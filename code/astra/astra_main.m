@@ -10,7 +10,7 @@ geometry_file = 'v6_opt_order=8_run6';
 % fprintf('\n field solution: %d min \n', toc/60);
 
 % number of particles (11 [9:12])
-Ipart = 2^12;
+Ipart = 2^13;
 
 % total charge in [nC]
 Q_total = 100e-6;
@@ -25,16 +25,16 @@ if (exist(generatorname, 'file') ~= 2)
    % create_laserinput(Ipart, sig_clock, Q_total, generatorname);
    % write_generatorinput (generatorname, Ipart, Q_total, sig_clock, geometry);
    % [status, output] = system(['./generator generator_' generatorname]);
-   plot_generator (generatorname);
+   % plot_generator (generatorname);
 end
 
 % time step in [ns] (-12 [-13:-8])
-H = 2^(-13);
+H = 2^(-14);
 
 % number of transverse grid points (3 convergence study) (4 simulation) ([3:6])
-nx = ny = 2^5;
+nx = ny = 2^6;
 % number of longitudinal grid points (8 [4:9])
-nz = 2^9;
+nz = 2^10;
 
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
                 '_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
@@ -45,11 +45,11 @@ end
 % space charge
 sc       = 1;
 % number of radial cells (6 [4:6])
-Nrad     = 2^7;
+Nrad     = 2^8;
 % size factor between innermost and outermost radial cell (1 [-1:2])
 Cell_var = 2^(1);
 % number of longitudinal cells (6 [4:6])
-Nlong_in = 2^7;
+Nlong_in = 2^8;
 
 % filename = ['photogun_H=' num2str(iH)];
 % filename = ['photogun_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
@@ -59,6 +59,7 @@ filename = ['photogun'];
 if (exist(filename, 'file') ~= 2)
    write_astrainput ([filename '.in'], generatorname, fieldmapname, H, sc, Nrad, Cell_var, Nlong_in, geometry);
 end
+
 tic;
 [status, output] = system(['./Astra ' filename '.in']);
 fprintf('\n tracking %d min \n', toc/60);

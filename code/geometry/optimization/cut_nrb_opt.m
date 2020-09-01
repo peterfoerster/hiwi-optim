@@ -61,6 +61,37 @@ function [crv] = cut_nrb_opt (nrb_opt, order, knts, ptcs_vac, continuity)
 
         ctrl10  = nrb_opt.coefs(:,5*order+2:6*order+1);
         crv(10) = nrbmak(ctrl10, knts);
+    elseif (continuity == order-2)
+        il = max(find(knts < 1/4));
+        ih = min(find(knts > 1/4));
+        knots = (1/4 - knts(il)) / (knts(ih) - knts(il));
+
+        il = max(find(knts < 1/2));
+        ih = min(find(knts > 1/2));
+        knots = [knots (1/2 - knts(il)) / (knts(ih) - knts(il))];
+
+        il = max(find(knts < 3/4));
+        ih = min(find(knts > 3/4));
+        knots = [knots (3/4 - knts(il)) / (knts(ih) - knts(il))];
+
+        knts = [zeros(1,order) ones(1,order)];
+        ctrl18  = nrb_opt.coefs(:,1:order);
+        crv(18) = nrbmak(ctrl18, knts);
+
+        ctrl17  = nrb_opt.coefs(:,order+1:2*order);
+        crv(17) = nrbmak(ctrl17, knts);
+
+        ctrl16  = nrb_opt.coefs(:,2*order+1:3*order+2);
+        crv(16) = nrbmak(ctrl16, [zeros(1,order) knots(1:2) ones(1,order)]);
+
+        ctrl15  = nrb_opt.coefs(:,3*order+3:4*order+2);
+        crv(15) = nrbmak(ctrl15, knts);
+
+        ctrl14  = nrb_opt.coefs(:,4*order+3:5*order+3);
+        crv(14) = nrbmak(ctrl14, [zeros(1,order) knots(3) ones(1,order)]);
+
+        ctrl10  = nrb_opt.coefs(:,5*order+4:6*order+3);
+        crv(10) = nrbmak(ctrl10, knts);
     else
         knts = [zeros(1,order) ones(1,order)];
         ctrl18  = nrb_opt.coefs(:,1:order);

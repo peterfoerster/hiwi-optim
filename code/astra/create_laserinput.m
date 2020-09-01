@@ -5,9 +5,9 @@
 %       - filename
 
 function [] = create_laserinput (Ipart, sig_clock, Q_total, filename)
-    % step size from file (in [um])
-    dx = 1.6631;
-    dy = 3.2239;
+    % double the step size from file (in [um])
+    dx = 1.6631/2;
+    dy = 3.2239/2;
     data = dlmread('laser.txt', ',', 1, 1);
 
     f = data(:,1:2);
@@ -23,23 +23,22 @@ function [] = create_laserinput (Ipart, sig_clock, Q_total, filename)
 
     tic;
     np = 0;
-    % NEEDS TO BE CHECKED
     while (np < Ipart)
-        % [x,fx,y,fy]
-        R        = rand(4*n,4);
+        % [x,y,f]
+        R        = rand(4*n,3);
         R(:,1)   = max(x)*R(:,1);
         % 2^nd and 3^rd quadrant
         R(n+1:3*n,1) = -R(n+1:3*n,1);
-        R(:,3)   = max(y)*R(:,3);
+        R(:,2)   = max(y)*R(:,2);
         % 3^rd and 4^th quadrant
-        R(2*n+1:4*n,3) = -R(2*n+1:4*n,3);
+        R(2*n+1:4*n,2) = -R(2*n+1:4*n,2);
         for i=1:4*n
             [~, ix] = min(abs(x-R(i,1)));
-            [~, iy] = min(abs(y-R(i,3)));
-            % (only secondary maxima in x-direction)
-            if (R(i,2) <= f(ix) && R(i,4) <= f(iy) && abs(y(iy)) < 2.5e3)
+            [~, iy] = min(abs(y-R(i,2)));
+            % (cut at -2100)
+            if (R(i,3) <= f(ix,1) && R(i,3) <= f(iy,2) && R(i,2) > -2100)
                 np += 1;
-                rho(:,np) = [R(i,1); R(i,3)];
+                rho(:,np) = [R(i,1); R(i,2)];
                 if (np == Ipart)
                     break;
                 end
