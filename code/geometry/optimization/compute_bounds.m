@@ -34,8 +34,18 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl, continuity)
         nrb_opt = nrbdegelev(nrb_opt, order-10);
     end
 
-    if (continuity == order-1)
+    if (continuity <= order-1)
+        % [x_opt]
+        load('result_nlopt_order=8_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
         nrb_opt = nrbkntins(nrb_opt, [1/2]);
+    end
+
+    if (continuity == order-2)
+        % [x_opt]
+        load('result_nlopt_order=8_continuity=7_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
+        nrb_opt = nrbkntins(nrb_opt, [1/4 3/4]);
     end
 
     nrb_opt = move_ctrl_opt (nrb_opt, x);
@@ -65,11 +75,22 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl, continuity)
     pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
 
     ictrl = 2;
-    ix    = 1;
+    ioff  = 0;
+    ix    = ioff + 1;
     lb(ix) = (pts3(1,end) - tol) - ctrl(1,ictrl);
     ub(ix) = (pts4(1,1) - tol) - ctrl(1,ictrl);
     lb(ix+1) = 0;
     ub(ix+1) = (pts3(2,end) - tol) - ctrl(2,ictrl);
+
+    if (continuity == order-2)
+        ictrl += 1;
+        ioff  += 2;
+        ix    = ioff + 1;
+        lb(ix) = (pts3(1,end) - tol) - ctrl(1,ictrl);
+        ub(ix) = (pts4(1,1) - tol) - ctrl(1,ictrl);
+        lb(ix+1) = (pts4(2,1) - tol) - ctrl(2,ictrl);
+        ub(ix+1) = (pts3(2,end) - tol) - ctrl(2,ictrl);
+    end
 
     % 17
     bnds = nrbextract(geometry(17).nurbs);
@@ -77,7 +98,7 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl, continuity)
     pts4 = bnds(4).coefs(1:2,:) ./ bnds(4).coefs(4,:);
 
     ictrl += 1;
-    ioff  = 2;
+    ioff  += 2;
     ix    = ioff + 1;
 
     lb(ix)   = (pts3(1,1) + tol) - ctrl(1,ictrl);
@@ -118,7 +139,7 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl, continuity)
     lb(ix+1) = (y_min + tol) - ctrl(2,ictrl);
     ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
 
-    if (order == 9 || order == 11 || continuity == order-1)
+    if (order == 9 || order == 11 || continuity == order-1 || continuity == order-2)
         ictrl += 1;
         ioff  += 2;
         ix    = ioff + 1;
@@ -154,7 +175,7 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl, continuity)
     lb(ix) = (pts3(1,1) + tol) - ctrl(1,ictrl);
     ub(ix) = (pts4(1,end) - tol) - ctrl(1,ictrl);
 
-    % 14
+    % (14)
     bnds = nrbextract(geometry(14).nurbs);
     pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
 
@@ -178,4 +199,19 @@ function [lb, ub] = compute_bounds (x, order, N_ctrl, continuity)
 
     lb(ix+1) = (pts3(2,1) + tol) - ctrl(2,ictrl);
     ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
+
+    if (continuity == order-2)
+        ictrl += 1;
+        ioff  += 2;
+        ix    = ioff + 1;
+        lb(ix) = (x_min + tol) - ctrl(1,ictrl);
+        ub(ix) = (pts4(1,1) - tol) - ctrl(1,ictrl);
+
+        % 10
+        bnds = nrbextract(geometry(10).nurbs);
+        pts3 = bnds(3).coefs(1:2,:) ./ bnds(3).coefs(4,:);
+
+        lb(ix+1) = (pts3(2,1) + tol) - ctrl(2,ictrl);
+        ub(ix+1) = (y_max - tol) - ctrl(2,ictrl);
+    end
 end

@@ -29,8 +29,18 @@ function [] = plot_bounds (lb, ub, order, x, continuity)
         nrb_opt = nrbdegelev(nrb_opt, order-10);
     end
 
-    if (continuity == order-1)
+    if (continuity <= order-1)
+        % [x_opt]
+        load('result_nlopt_order=8_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
         nrb_opt = nrbkntins(nrb_opt, [1/2]);
+    end
+
+    if (continuity == order-2)
+        % [x_opt]
+        load('result_nlopt_order=8_continuity=7_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
+        nrb_opt = nrbkntins(nrb_opt, [1/4 3/4]);
     end
 
     nrb_opt = move_ctrl_opt (nrb_opt, x);
@@ -40,7 +50,8 @@ function [] = plot_bounds (lb, ub, order, x, continuity)
 
     % 18
     ictrl = 2;
-    ix    = 1;
+    ioff  = 0;
+    ix    = ioff + 1;
     hold on;
     plot([ctrl(1,ictrl)+lb(ix) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '>', 'color', 'k');
     plot([ctrl(1,ictrl) ctrl(1,ictrl)+ub(ix)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '<', 'color', 'k');
@@ -48,9 +59,21 @@ function [] = plot_bounds (lb, ub, order, x, continuity)
     plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
     hold off;
 
+    if (continuity == order-2)
+        ictrl += 1;
+        ioff  += 2;
+        ix    = ioff + 1;
+        hold on;
+        plot([ctrl(1,ictrl)+lb(ix) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '>', 'color', 'k');
+        plot([ctrl(1,ictrl) ctrl(1,ictrl)+ub(ix)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '<', 'color', 'k');
+        plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl)+lb(ix+1) ctrl(2,ictrl)], 'marker', '^', 'color', 'k');
+        plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+        hold off;
+    end
+
     % 17
     ictrl += 1;
-    ioff  = 2;
+    ioff  += 2;
     ix    = ioff + 1;
     hold on;
     plot([ctrl(1,ictrl)+lb(ix) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '>', 'color', 'k');
@@ -127,4 +150,16 @@ function [] = plot_bounds (lb, ub, order, x, continuity)
     plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl)+lb(ix+1) ctrl(2,ictrl)], 'marker', '^', 'color', 'k');
     plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
     hold off;
+
+    if (continuity == order-2)
+        ictrl += 1;
+        ioff  = 2;
+        ix    = ioff + 1;
+        hold on;
+        plot([ctrl(1,ictrl)+lb(ix) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '>', 'color', 'k');
+        plot([ctrl(1,ictrl) ctrl(1,ictrl)+ub(ix)], [ctrl(2,ictrl) ctrl(2,ictrl)], 'marker', '<', 'color', 'k');
+        plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl)+lb(ix+1) ctrl(2,ictrl)], 'marker', '^', 'color', 'k');
+        plot([ctrl(1,ictrl) ctrl(1,ictrl)], [ctrl(2,ictrl) ctrl(2,ictrl)+ub(ix+1)], 'marker', 'v', 'color', 'k');
+        hold off;
+    end
 end
