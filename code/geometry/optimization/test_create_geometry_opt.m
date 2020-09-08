@@ -11,7 +11,7 @@
 % Insert knots (only increase number of knots or also multiplicity?), each knot adds a control point.
 
 order = 8;
-continuity = 6;
+continuity = 5;
 if (continuity < order)
     filename = ['v6_opt_order=' num2str(order) '_continuity=' num2str(continuity)];
 else
@@ -24,6 +24,8 @@ if (order >= 8)
         N_ctrl = N_ctrl + 1;
     elseif (continuity == order-2)
         N_ctrl = N_ctrl + 3;
+    elseif (continuity == order-3)
+        N_ctrl = N_ctrl + 6;
     end
 end
 x = zeros(2*N_ctrl,1);
@@ -32,18 +34,18 @@ x = 1e-2*rand(2*N_ctrl,1);
 tic;
 create_geometry_opt (filename, x, order, continuity);
 fprintf('\ncreate_geometry_opt: %d s\n', toc);
-
-figure;
-geometry = mp_geo_load ([filename '.txt']);
-for iptc=1:length(geometry)
-    hold on;
-    nrbkntplot(geometry(iptc).nurbs);
-    xt = nrbeval(geometry(iptc).nurbs, {0.5,0.5});
-    text(xt(1), xt(2), num2str(iptc));
-    hold off;
-end
-shading interp;
 return
+% figure;
+% geometry = mp_geo_load ([filename '.txt']);
+% for iptc=1:length(geometry)
+%     hold on;
+%     nrbkntplot(geometry(iptc).nurbs);
+%     xt = nrbeval(geometry(iptc).nurbs, {0.5,0.5});
+%     text(xt(1), xt(2), num2str(iptc));
+%     hold off;
+% end
+% shading interp;
+
 figure;
 geometry = mp_geo_load ('electrode_v6.txt');
 for iptc=1:length(geometry)

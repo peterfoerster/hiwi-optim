@@ -34,11 +34,18 @@ function [] = write_ctrl_opt (order, x, continuity)
         nrb_opt = nrbkntins(nrb_opt, [1/2]);
     end
 
-    if (continuity == order-2)
+    if (continuity <= order-2)
         % [x_opt]
         load('result_nlopt_order=8_continuity=7_run6.mat');
         nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
         nrb_opt = nrbkntins(nrb_opt, [1/4 3/4]);
+    end
+
+    if (continuity == order-3)
+        % [x_opt]
+        load('result_nlopt_order=8_continuity=6_run6.mat');
+        nrb_opt = move_ctrl_opt (nrb_opt, x_opt);
+        nrb_opt = nrbkntins(nrb_opt, [1/8 3/8 5/8 7/8]);
     end
 
     nrb_opt = move_ctrl_opt (nrb_opt, x);

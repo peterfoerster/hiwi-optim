@@ -1,12 +1,16 @@
 % Run the optimization employing the NLopt library.
 
 order = continuity = 8;
-continuity = 7;
+continuity = 5;
 
 if (order >= 8)
     N_ctrl = order-3;
-    if (continuity < order)
-        N_ctrl = N_ctrl + order-continuity;
+    if (continuity == order-1)
+        N_ctrl = N_ctrl + 1;
+    elseif (continuity == order-2)
+        N_ctrl = N_ctrl + 3;
+    elseif (continuity == order-3)
+        N_ctrl = N_ctrl + 6;
     end
 end
 x_init = zeros(2*N_ctrl,1);

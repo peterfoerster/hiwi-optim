@@ -1,6 +1,6 @@
 % Compute the bounds on the control points.
-order = continuity = 11;
-% continuity = 6;
+order = continuity = 8;
+continuity = 5;
 if (continuity < order)
     filename = ['v6_opt_order=' num2str(order) '_continuity=' num2str(continuity)];
 else
@@ -13,6 +13,8 @@ if (order >= 8)
         N_ctrl = N_ctrl + 1;
     elseif (continuity == order-2)
         N_ctrl = N_ctrl + 3;
+    elseif (continuity == order-3)
+        N_ctrl = N_ctrl + 6;
     end
 end
 x = zeros(2*N_ctrl,1);
