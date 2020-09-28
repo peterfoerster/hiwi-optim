@@ -15,5 +15,4 @@ function plot_es_mp (phi, space, geometry, pts, filename)
         end
         hold off;
     end
-    axis equal;
 end
