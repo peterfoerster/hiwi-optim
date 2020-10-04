@@ -2,11 +2,11 @@
 
 % GEOMETRY
 % geometry_file = 'geometry_v6_orig';
+% geometry = mp_geo_load ([geometry_file '.txt']);
 % write_boundary (geometry);
 % write_geometry (geometry);
 
 % ORIGINAL CURVE
-% geometry_file = 'geometry_v6_orig';
 % order = 8;
 % [~, ~, ~, ~, nrb_orig] = create_nrb_opt_electrode (order);
 % nsub = 100;
@@ -32,7 +32,6 @@
 
 % E_ORIG
 % geometry_file = 'geometry_v6_orig';
-% [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 % [problem_data, method_data] = setup_problem (geometry_file);
 % tic;
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
@@ -44,7 +43,6 @@
 
 % E_COBYLA
 % geometry_file = 'v6_opt_order=8_run6';
-% [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
 % [problem_data, method_data] = setup_problem (geometry_file);
 % tic;
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);

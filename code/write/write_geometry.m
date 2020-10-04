@@ -2,7 +2,7 @@
 %       - geometry
 
 function [] = write_geometry (geometry)
-    nsub = 4;
+    nsub = 8;
     % write to .dat file
     for iptc=1:length(geometry)
         hold on;
