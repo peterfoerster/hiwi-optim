@@ -6,6 +6,70 @@
 % write_boundary (geometry);
 % write_geometry (geometry);
 
+% B-SPLINE CURVE
+% knots = [0 0 0 0.3 0.5 1 1 1];
+% ctrl  = [0 1 3 5 7;
+%          1 -1 2 4 1];
+% crv   = nrbmak(ctrl, knots);
+% nrbeval(crv, [0.3 0.5])
+% nsub = 100;
+% nrbctrlplot_dat(crv, nsub, ['bspline_curve']);
+
+% B-SPLINE BASIS
+% knots = [0 0 0 0.3 0.5 1 1 1];
+% ctrl  = [0 1 3 5 7;
+%          1 -1 2 4 1];
+% crv   = nrbmak(ctrl, knots);
+% p  = crv.order - 1;
+% u  = linspace(0, 1, 1000);
+% for ik=1:(length(knots)-3)
+%     B = tbasisfun(u, p, knots(ik:ik+(p+1)));
+%     write_dat1D(['bspline_basis_' num2str(ik) '.dat'], u, B);
+%     hold on;
+%     plot(u, B);
+%     hold off;
+% end
+
+% B-SPLINE DEGREE ELEVATION
+% knots = [0 0 0 0.3 0.5 1 1 1];
+% ctrl  = [0 1 3 5 7;
+%          1 -1 2 4 1];
+% crv   = nrbmak(ctrl, knots);
+% crv   = nrbdegelev(crv, 1);
+% nrbeval(crv, [0.3 0.5])
+% nsub = 100;
+% nrbctrlplot_dat(crv, nsub, ['bspline_curve_degelev']);
+% clf;
+% p  = crv.order - 1;
+% u  = linspace(0, 1, 1000);
+% for ik=1:(length(crv.knots)-(p+1))
+%     B = tbasisfun(u, p, crv.knots(ik:ik+(p+1)));
+%     write_dat1D(['bspline_basis_degelev_' num2str(ik) '.dat'], u, B);
+%     hold on;
+%     plot(u, B);
+%     hold off;
+% end
+
+% B-SPLINE KNOT INSERTION
+% knots = [0 0 0 0.3 0.5 1 1 1];
+% ctrl  = [0 1 3 5 7;
+%          1 -1 2 4 1];
+% crv   = nrbmak(ctrl, knots);
+% crv   = nrbkntins(crv, [0.5 0.7]);
+% nrbeval(crv, [0.3 0.5 0.7])
+% nsub = 100;
+% nrbctrlplot_dat(crv, nsub, ['bspline_curve_kntins']);
+% clf;
+% p  = crv.order - 1;
+% u  = linspace(0, 1, 1000);
+% for ik=1:(length(crv.knots)-(p+1))
+%     B = tbasisfun(u, p, crv.knots(ik:ik+(p+1)));
+%     write_dat1D(['bspline_basis_kntins_' num2str(ik) '.dat'], u, B);
+%     hold on;
+%     plot(u, B);
+%     hold off;
+% end
+
 % ORIGINAL CURVE
 % order = 8;
 % [~, ~, ~, ~, nrb_orig] = create_nrb_opt_electrode (order);

@@ -1,6 +1,6 @@
 % variables from create_fieldmap() and geometry_v6_orig
 rho = 1.5e-3;
-dz  = 416e-3 - 307e-3;
+dz  = 447e-3 - 307e-3;
 
 [err_linf] = compute_astra_error ()
 
