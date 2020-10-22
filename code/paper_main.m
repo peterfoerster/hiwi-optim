@@ -116,41 +116,29 @@
 % plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);
 % view(2);
 
-% E_ORIG_CST
+% E_ORIG_CST (13.041 MV/m)
+% filename = ['E_degree=3_nsub=16'];
+% npts     = 9;
+% nptc     = 34;
+% write_cst_pointlist (filename, npts, nptc);
 % data = dlmread('photogun_orig.txt');
 % x = data(3:end,1);
 % y = data(3:end,2);
 % E = data(3:end,4:6);
 % E = sqrt(E(:,1).^2 + E(:,2).^2 + E(:,3).^2);
-% iE = find(E < 100);
-% x(iE) = y(iE) = E(iE) = [];
-% geometry_file = 'geometry_v6_orig';
-% [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
-% [problem_data, method_data] = setup_problem (geometry_file);
-% tic;
-% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
-% fprintf('\nmp_solve_electrostatics_axi2d: %d min\n', toc/60);
-% npts = 9;
-% vtk_pts = {linspace(0, 1, npts), linspace(0, 1, npts)};
-% write_cst_es_mp (x, y, E, phi, space, geometry, vtk_pts, ['E_cst_degree=2_npts=' num2str(npts)]);
+% write_cst_es_dat (x, y, E, 'E_cst_degree=2', npts, nptc);
 
-% E_COBYLA_CST
+% E_COBYLA_CST (9.172 MV/m)
+% filename = ['E_degree=3_nsub=16'];
+% npts     = 9;
+% nptc     = 34;
+% write_cst_pointlist (filename, npts, nptc);
 % data = dlmread('photogun_opt.txt');
 % x = data(3:end,1);
 % y = data(3:end,2);
 % E = data(3:end,4:6);
 % E = sqrt(E(:,1).^2 + E(:,2).^2 + E(:,3).^2);
-% iE = find(E < 100);
-% x(iE) = y(iE) = E(iE) = [];
-% geometry_file = 'v6_opt_order=8_run6';
-% [geometry, boundaries] = mp_geo_load ([geometry_file '.txt']);
-% [problem_data, method_data] = setup_problem (geometry_file);
-% tic;
-% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
-% fprintf('\nmp_solve_electrostatics_axi2d: %d min\n', toc/60);
-% npts = 9;
-% vtk_pts = {linspace(0, 1, npts), linspace(0, 1, npts)};
-% write_cst_es_mp (x, y, E, phi, space, geometry, vtk_pts, ['E_cst_degree=2_npts=' num2str(npts)]);
+% write_cst_es_dat (x, y, E, 'E_cst_degree=2', npts, nptc);
 
 % CVG CURVE ORDER
 % [x_opt], [obj_opt]
@@ -210,3 +198,18 @@
 % z = 447e-3;
 % filename = 'results/astra/sim/';
 % plot_astra ([filename 'ref/ref/photogun'], z);
+
+% E_CATHODE
+% geometry_file = 'v6_opt_order=8_run6';
+% [problem_data, method_data] = setup_problem (geometry_file);
+% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
+% iptcs = [6];
+% y_c   = linspace(0, 1, 100);
+% % cathode surface only (2.991 MV/m)
+% [E_max] = computeE_max_cathode (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)), y_c)
+% % alternatively take into account the entire patch (4.139 MV/m)
+% obj = 0;
+% for ii=1:length(iptcs)
+%     obj_ptc = computeE_max (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)));
+%     obj = max([obj obj_ptc]);
+% end

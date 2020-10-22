@@ -2,28 +2,20 @@
 %       - x:
 %       - y:
 %       - E:
-%       - phi: vector of dof weights
-%       - space: object defining the discrete space (sp_scalar)
-%       - geometry: geometry structure (geo_load)
-%       - vtk_pts: cell array with coordinates of points along each parametric direction
 %       - filename
-%       - iptc
+%       - npts
+%       - nptc
 
-function write_cst_es_dat (x, y, E, phi, space, geometry, vtk_pts, filename, iptc)
-    [~, F] = sp_eval (phi, space, geometry, vtk_pts, 'gradient');
+function write_cst_es_dat (x, y, E, filename, npts, nptc)
+    for iptc=1:nptc
+        fid = fopen([filename '_npts=' num2str(npts) '_' num2str(iptc) '.dat'], 'w');
+        fprintf(fid, 'x y c\n');
 
-    ndim = numel (space.knots);
-    rdim = size (F, 1);
-    if (ndim == 2)
-        if (rdim == 2)
-            [X, Y] = deal(squeeze(F(1,:,:)), squeeze(F(2,:,:)));
-            E = griddata(x, y, E, X, Y);
-            E(isnan(E)) = 0;
-            surf(X, Y, E);
-            write_dat3D([filename '_' num2str(iptc) '.dat'], X, Y, E);
-        elseif (rdim == 3)
-            [X, Y, Z] = deal(squeeze(F(1,:,:)), squeeze(F(2,:,:)), squeeze(F(3,:,:)));
-            surf(X, Y, Z, E);
+        ioff = (iptc-1)*npts^2;
+        for ip=1:npts
+            dlmwrite(fid, [x(ioff+(ip-1)*npts+1:ioff+ip*npts) y((ioff+(ip-1)*npts+1:ioff+ip*npts)) E(ioff+(ip-1)*npts+1:ioff+ip*npts)], 'delimiter', '  ', 'append', 'on');
+            fprintf(fid, '\n');
         end
+        fclose(fid);
     end
 end
