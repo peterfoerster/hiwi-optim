@@ -94,7 +94,7 @@
 % order = continuity = 8;
 % write_ctrl_opt (order, x_opt, continuity);
 
-% E_ORIG
+% E_ORIG (13 MV/m on patch 17)
 % geometry_file = 'geometry_v6_orig';
 % [problem_data, method_data] = setup_problem (geometry_file);
 % tic;
@@ -105,7 +105,7 @@
 % plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);
 % view(2);
 
-% E_COBYLA
+% E_COBYLA (9.06 MV/m again on patch 17)
 % geometry_file = 'v6_opt_order=8_run6';
 % [problem_data, method_data] = setup_problem (geometry_file);
 % tic;
@@ -116,7 +116,7 @@
 % plot_es_mp (phi, space, geometry, vtk_pts, ['E_degree=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) '_npts=' num2str(npts)]);
 % view(2);
 
-% E_ORIG_CST (13.041 MV/m)
+% E_ORIG_CST (12.933 MV/m on patch 17)
 % filename = ['E_degree=3_nsub=16'];
 % npts     = 9;
 % nptc     = 34;
@@ -128,7 +128,7 @@
 % E = sqrt(E(:,1).^2 + E(:,2).^2 + E(:,3).^2);
 % write_cst_es_dat (x, y, E, 'E_cst_degree=2', npts, nptc);
 
-% E_COBYLA_CST (9.172 MV/m)
+% E_COBYLA_CST (9.06 MV/m on patch 17)
 % filename = ['E_degree=3_nsub=16'];
 % npts     = 9;
 % nptc     = 34;
@@ -206,6 +206,7 @@
 % iptcs = [6];
 % y_c   = linspace(0, 1, 100);
 % % cathode surface only (2.991 MV/m)
+% ii = 1;
 % [E_max] = computeE_max_cathode (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)), y_c)
 % % alternatively take into account the entire patch (4.139 MV/m)
 % obj = 0;
@@ -213,3 +214,12 @@
 %     obj_ptc = computeE_max (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)));
 %     obj = max([obj obj_ptc]);
 % end
+
+% E_ORIG_MAX (need to write specific function)
+geometry_file = 'geometry_v6_orig';
+[problem_data, method_data] = setup_problem (geometry_file);
+[geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
+% 17,16,15
+iptcs = [17];
+y_c   = linspace(0, 1, 100);
+[E_max] = computeE_max_cathode (phi(space.gnum{iptcs}), msh.msh_patch{iptcs}, space.sp_patch{iptcs}, geometry(iptcs), y_c)
