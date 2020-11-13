@@ -59,6 +59,7 @@ function [] = write_astrainput (filename, generatorname, fieldmapname, H, sc, Nr
     fprintf(fid, '  C_noscale(1) = True\n');
     % all field components are given on the same grid
     fprintf(fid, '  Com_grid(1) = ''E''\n');
+    fprintf(fid, '  C_higher_order(1) = True\n');
     fprintf(fid, '  Nue(1) = 0\n');
     fprintf(fid, '/\n');
 

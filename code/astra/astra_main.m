@@ -9,6 +9,12 @@ geometry_file = 'v6_opt_order=8_run6';
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 % fprintf('\n field solution: %d min \n', toc/60);
 
+% fieldtable
+% Nz = 2^10;
+% tic;
+% [E, z] = create_fieldtable (geometry, space, phi, Nz);
+% fprintf('\n fieldtable creation: %d min \n', toc/60);
+
 % number of particles (11 [9:12])
 Ipart = 2^13;
 
