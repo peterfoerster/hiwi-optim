@@ -215,11 +215,9 @@
 %     obj = max([obj obj_ptc]);
 % end
 
-% E_ORIG_MAX (need to write specific function)
-geometry_file = 'geometry_v6_orig';
-[problem_data, method_data] = setup_problem (geometry_file);
-[geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
-% 17,16,15
-iptcs = [17];
-y_c   = linspace(0, 1, 100);
-[E_max] = computeE_max_cathode (phi(space.gnum{iptcs}), msh.msh_patch{iptcs}, space.sp_patch{iptcs}, geometry(iptcs), y_c)
+% ASTRA DELTA_E_RMS (0.0484 keV ~ 48.392 eV)
+% data = dlmread('photogun.Zemit.001');
+% z      = data(:,1);
+% DE_rms = data(:,5);
+% plot(z, DE_rms);
+% DE_rms(end)
