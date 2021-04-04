@@ -221,3 +221,74 @@
 % DE_rms = data(:,5);
 % plot(z, DE_rms);
 % DE_rms(end)
+
+% CST LOW ORDER
+% filename = ['pointlist_loworder'];
+% x = 0e-3 * ones(1000,1); % [-5,-2,2,5]
+% y = 0e-3 * ones(1000,1); % [-5,-2,2,5]
+% z = linspace(307e-3, 447e-3, 1000);
+% dlmwrite([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '.txt'], [z' y x], ' ');
+% filename = ['photogun_loworder'];
+% data = dlmread([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '.txt']);
+% z = data(3:end,1);
+% E = data(3:end,4:6);
+% if (x(1) ~= 0)
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ex' '.dat'], z, E(:,3));
+% elseif (y(1) ~= 0)
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ey' '.dat'], z, E(:,2));
+% else
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ex' '.dat'], z, E(:,3));
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ey' '.dat'], z, E(:,2));
+% end
+
+% IGA LOW ORDER
+% geometry_file = 'v6_opt_order=8_run6';
+% [geometry] = mp_geo_load ([geometry_file '.txt']);
+% [problem_data, method_data] = setup_problem (geometry_file);
+% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
+% x = 0e-3 * ones(1000,1); % [-5,-2,2,5]
+% y = 5e-3 * ones(1000,1); % [-5,-2,2,5]
+% z = linspace(307e-3, 447e-3, 1000);
+% E = NaN(1000,3);
+% for iz=1:length(z)
+%     E(iz,:) = compute_fieldmap(geometry, space, phi, x(iz), y(iz), z(iz));
+% end
+% filename = ['iga_loworder'];
+% if (x(1) ~= 0)
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ex' '.dat'], z, E(:,1));
+% elseif (y(1) ~= 0)
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ey' '.dat'], z, E(:,2));
+% else
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ex' '.dat'], z, E(:,1));
+%     write_dat1D ([filename '_x=' num2str(x(1)) '_y=' num2str(y(1)) '_Ey' '.dat'], z, E(:,2));
+% end
+
+% ASTRA ORIG/OPT
+% z = 447e-3;
+% filename = 'results/astra/sim/';
+% plot_astra ([filename 'ref/photogun'], z);
+% plot_astra ([filename 'orig/photogun'], z);
+
+% ASTRA BUNCH CHARGE INCREASE/VOLTAGE DECREASE
+% z = 447e-3;
+% filename = 'results/astra/sim/';
+% plot_astra ([filename '77pC/photogun'], z);
+% plot_astra ([filename '77pC/150kV/photogun'], z);
+
+% INSULATOR POTENTIAL DISTRIBUTION
+% geometry_file = 'v6_opt_order=8_run6';
+% [problem_data, method_data] = setup_problem (geometry_file);
+% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
+% write_ins_pot (geometry, msh, space, phi);
+
+% E_TRIPLE_POINT (4.38 MV/m)
+% geometry_file = 'v6_opt_order=8_run6';
+% [problem_data, method_data] = setup_problem (geometry_file);
+% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
+% [E_max] = computeE_max_triplepoint (geometry, msh, space, phi);
+
+% E_ANODE_RING (5.63 MV/m)
+% geometry_file = 'v6_opt_order=8_run6';
+% [problem_data, method_data] = setup_problem (geometry_file);
+% [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
+% [E_max] = computeE_max_anodering (geometry, msh, space, phi);

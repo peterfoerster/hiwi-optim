@@ -1,6 +1,6 @@
 % Compute the volume constraint on the electrode.
 order = continuity = 8;
-continuity = 7;
+% continuity = 7;
 
 if (order >= 8)
     N_ctrl = order-3;

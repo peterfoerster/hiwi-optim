@@ -10,16 +10,16 @@ geometry_file = 'v6_opt_order=8_run6';
 % fprintf('\n field solution: %d min \n', toc/60);
 
 % fieldtable
-% Nz = 2^10;
+% Nz = 2^9;
 % tic;
 % [E, z] = create_fieldtable (geometry, space, phi, Nz);
 % fprintf('\n fieldtable creation: %d min \n', toc/60);
 
 % number of particles (11 [9:12])
-Ipart = 2^13;
+Ipart = 2^12;
 
-% total charge in [nC]
-Q_total = 100e-6;
+% total charge in [nC] (100 fC => 100e-6 or 77 pC => 77e-3)
+Q_total = 77e-3;
 
 % sigma bunch length in [ns]
 % 30 ps for 5e-3 (5 ps for 1e-3 (shows sc effect for individual trajectories))
@@ -35,12 +35,12 @@ if (exist(generatorname, 'file') ~= 2)
 end
 
 % time step in [ns] (-12 [-13:-8])
-H = 2^(-14);
+H = 2^(-13);
 
 % number of transverse grid points (3 convergence study) (4 simulation) ([3:6])
-nx = ny = 2^6;
+nx = ny = 2^5;
 % number of longitudinal grid points (8 [4:9])
-nz = 2^10;
+nz = 2^9;
 
 fieldmapname = ['DC-3D-p=' num2str(method_data.degree(1)) '_nsub=' num2str(method_data.nsub(1)) ...
                 '_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
@@ -51,11 +51,11 @@ end
 % space charge
 sc       = 1;
 % number of radial cells (6 [4:6])
-Nrad     = 2^8;
+Nrad     = 2^7;
 % size factor between innermost and outermost radial cell (1 [-1:2])
 Cell_var = 2^(1);
 % number of longitudinal cells (6 [4:6])
-Nlong_in = 2^8;
+Nlong_in = 2^7;
 
 % filename = ['photogun_H=' num2str(iH)];
 % filename = ['photogun_nx=ny=' num2str(nx) '_nz=' num2str(nz)];
@@ -72,7 +72,6 @@ fprintf('\n tracking %d min \n', toc/60);
 delete('NORRAN');
 % delete([filename '.Log.001']);
 % delete([filename '.track.001']);
-% delete([filename '.Zemit.001']);
 delete('win_config.dat');
 
 % signal that the program is finished
