@@ -1,6 +1,6 @@
 % Run the optimization employing the NLopt library.
 
-order = continuity = 11;
+order = continuity = 8;
 % continuity = 5;
 
 if (order >= 8)
@@ -18,9 +18,9 @@ x_init = zeros(2*N_ctrl,1);
 % compute bounds based on ls fit (only for order = 8)
 % use previous result as starting shape (automatic for order > 8)
 % [x_opt]
-% load('result_nlopt_fit.mat');
+load('result_nlopt_fit.mat');
 % load('result_nlopt_order=8_run5.mat');
-% x_init = x_opt;
+x_init = x_opt;
 [lb, ub] = compute_bounds (x_init, order, 2*N_ctrl, continuity);
 
 cst_func  = @(x) cost_function_abs_max(x, order, continuity);
@@ -35,7 +35,7 @@ opt.lower_bounds  = lb;
 opt.upper_bounds  = ub;
 opt.fc            = {vol_cstr};
 opt.verbose       = 1;
-% (1e-3 and 1e5 for ISRES)
+% (1e-4 and 1e2 for COBYLA | 1e-3 and 1e4 for ISRES)
 opt.ftol_rel      = 1e-4;
 opt.ftol_abs      = 1e2;
 opt.maxtime       = 7*24*60*60;

@@ -292,3 +292,8 @@
 % [problem_data, method_data] = setup_problem (geometry_file);
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 % [E_max] = computeE_max_anodering (geometry, msh, space, phi);
+
+% ASTRA OPT CHEAP
+z = 447e-3;
+filename = 'results/astra/sim/';
+plot_astra ([filename 'cheap/photogun'], z);
