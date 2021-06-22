@@ -1,0 +1,33 @@
+#R
+- units in parentheses
+- figure file sizes < 1MB (only pdf)
+
+#A
+- shortened the mathematical section
+- related and distinguished the workflow to/from previous work
+
+- clearly stated the benefits in comparison to other optimization approaches
+- included further beam parameters and emphasized that the focus is on geometry optimization w.r.t field strength
+- contrasted with previous work in a similar (yet clearly different) direction: Bazarov
+
+- it is positive/good that the results are in line with intuition, this increases trust in both our and the existing approaches -> this also promises good results when extending the approach to beam parameters
+- 10 MV/m is the widely quoted standard threshold: Hernandez-Garcia (and others?)
+- also considered potential distribution and gradient along insulator
+
+- beam section contains more beam parameters and studies additional setups
+- beam section is not supposed to contain radically new material as it is not the focus of the work -> it should only support our claims, so achieving "normal" outcomes is sufficient
+
+- new approach has promise to significantly improve/speed up the overall design process of electron guns -> therefore it should be published in an application focussed journal to make that knowledge available to designers (needs further work to include cathode and anode of course)
+
+#B
+- described why these particular optimization methods were chosen and what went into consideration
+- elaborated on alternative strategies (on the mathematical side) that may be pursued
+- volume constraint is chosen according to mechanical considerations
+- discussed the field plots (IGA) and the zoom ins in more detail
+- no CST comparison since a similar geometry optimization would require large number of DOFs due to 3D, could not include refinement, would need to remesh, and there is no simple import for externally generated geometries to allow access to control points (curve parameterizations in general), would also need 3D constraints
+- provided computational times and their scaling
+- improved captions to be more informative
+
+#TODO
+- motivate the comparison with bERLinPro's MESA and cite measurements/simulations of their gun
+

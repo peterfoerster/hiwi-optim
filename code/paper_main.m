@@ -201,14 +201,15 @@
 
 % E_CATHODE
 % geometry_file = 'v6_opt_order=8_run6';
+% geometry_file = 'geometry_v6_orig';
 % [problem_data, method_data] = setup_problem (geometry_file);
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 % iptcs = [6];
 % y_c   = linspace(0, 1, 100);
-% % cathode surface only (2.991 MV/m)
+% % cathode surface only (2.991 MV/m and 2.314 MV/m)
 % ii = 1;
-% [E_max] = computeE_max_cathode (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)), y_c)
-% % alternatively take into account the entire patch (4.139 MV/m)
+% [E_max] = computeE_max_cathode (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)), y_c);
+% % alternatively take into account the entire patch (4.139 MV/m and 4.035 MV/m)
 % obj = 0;
 % for ii=1:length(iptcs)
 %     obj_ptc = computeE_max (phi(space.gnum{iptcs(ii)}), msh.msh_patch{iptcs(ii)}, space.sp_patch{iptcs(ii)}, geometry(iptcs(ii)));
@@ -281,19 +282,21 @@
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 % write_ins_pot (geometry, msh, space, phi);
 
-% E_TRIPLE_POINT (4.38 MV/m)
+% E_TRIPLE_POINT (4.38 MV/m and 3.77 MV/m)
 % geometry_file = 'v6_opt_order=8_run6';
+% geometry_file = 'geometry_v6_orig';
 % [problem_data, method_data] = setup_problem (geometry_file);
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 % [E_max] = computeE_max_triplepoint (geometry, msh, space, phi);
 
-% E_ANODE_RING (5.63 MV/m)
+% E_ANODE_RING (5.63 MV/m and 6.5 MV/m)
 % geometry_file = 'v6_opt_order=8_run6';
+% geometry_file = 'geometry_v6_orig';
 % [problem_data, method_data] = setup_problem (geometry_file);
 % [geometry, msh, space, phi] = mp_solve_electrostatics_axi2d (problem_data, method_data);
 % [E_max] = computeE_max_anodering (geometry, msh, space, phi);
 
 % ASTRA OPT CHEAP
-z = 447e-3;
-filename = 'results/astra/sim/';
-plot_astra ([filename 'cheap/photogun'], z);
+% z = 447e-3;
+% filename = 'results/astra/sim/';
+% plot_astra ([filename 'cheap/photogun'], z);
