@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\begin{axis}[
+    scale only axis=true,
+    width=0.5\textwidth,
+    axis equal,
+    try min ticks=4,
+    max space between ticks=1000pt,
+    enlargelimits=true,
+    colormap name=tuda,
+    point meta min=0,
+    point meta max=13,
+    colorbar horizontal,
+    colorbar style={xshift=-1.35*\pgfkeysvalueof{/pgfplots/parent axis width}, width=0.75*\pgfkeysvalueof{/pgfplots/parent axis width},
+    xlabel=$\| \mathbf{E}_h \|_2$ (\si{\mega\volt\per\meter})},
+    hide axis]
+
+    \addplot[draw=none] coordinates{(0,0)};
+\end{axis}
+\end{tikzpicture}

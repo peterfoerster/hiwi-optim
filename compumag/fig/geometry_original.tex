@@ -1,0 +1,150 @@
+\begin{tikzpicture}
+\begin{axis}[
+    scale only axis=true,
+    width=0.5\textwidth,
+    axis equal,
+    enlargelimits=true,
+    colormap={bg}{color=(TUDa-1a) color=(TUDa-3a)},
+    point meta min=1,
+    point meta max=2,
+    legend columns=4,
+    legend style={at={(0.06, 0.8)}, anchor=north west, draw=none, fill=none},
+    hide axis]
+
+    % legend
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig14.dat};
+    \addlegendentry{$\boldsymbol{\Gamma}_{\mathrm{D}_0}$};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig63.dat};
+    \addlegendentry{$\boldsymbol{\Gamma}_{\mathrm{D}_1}$};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig32.dat};
+    \addlegendentry{$\boldsymbol{\Gamma}_{\mathrm{D}_2}$};
+    \addplot[color=black, very thick] table{dat/boundary_orig11.dat};
+    \addlegendentry{Symmetry axis};
+
+    \addplot[surf, shader=interp, area legend, fill=TUDa-1a] table[point meta=\thisrow{c}]{dat/geometry5.dat};
+    \addlegendentry{$\boldsymbol{\Omega}_{\mathrm{ins}}^{\mathrm{2D}}$};
+    \addplot[surf, shader=interp, area legend, fill=TUDa-3a] table[point meta=\thisrow{c}*2]{dat/geometry14.dat};
+    \addlegendentry{$\boldsymbol{\Omega}_{\mathrm{opt}}^{\mathrm{2D}}$};
+
+    % insulator
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{dat/geometry23.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{dat/geometry24.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{dat/geometry31.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{dat/geometry32.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{dat/geometry33.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}]{dat/geometry34.dat};
+
+    % optimization
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}*2]{dat/geometry15.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}*2]{dat/geometry16.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}*2]{dat/geometry17.dat};
+    \addplot[surf, shader=interp] table[point meta=\thisrow{c}*2]{dat/geometry18.dat};
+
+    % patch boundaries
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig13.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig22.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig23.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig33.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig43.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig52.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig62.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig72.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig82.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig92.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig102.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig113.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig123.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig133.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig142.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig153.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig163.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig171.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig173.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig183.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig191.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig193.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig201.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig211.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig213.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig221.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig231.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig233.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig241.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig251.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig254.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig261.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig264.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig271.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig274.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig281.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig291.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig303.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig313.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig323.dat};
+    \addplot[color=TUDa-0d, thin] table{dat/boundary_orig333.dat};
+
+    % vacuum chamber
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig12.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig54.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig111.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig112.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig114.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig122.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig132.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig152.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig162.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig192.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig202.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig203.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig223.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig243.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig253.dat};
+    \addplot[color=TUDa-5a, very thick] table{dat/boundary_orig343.dat};
+
+    % neumann
+    \addplot[color=black, very thick] table{dat/boundary_orig21.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig31.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig41.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig61.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig311.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig321.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig331.dat};
+    \addplot[color=black, very thick] table{dat/boundary_orig341.dat};
+
+    % anode ring
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig42.dat};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig74.dat};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig84.dat};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig94.dat};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig104.dat};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig131.dat};
+    \addplot[color=TUDa-9a, densely dotted, very thick] table{dat/boundary_orig53.dat};
+
+    % electrode
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig73.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig83.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig93.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig103.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig143.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig151.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig161.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig174.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig184.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig181.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig234.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig272.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig283.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig282.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig284.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig294.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig304.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig301.dat};
+    \addplot[color=TUDa-7a, densely dashed, very thick] table{dat/boundary_orig314.dat};
+\end{axis}
+
+    % coordinate axes
+    \draw[->, >=latex, thick] (0.3, 2.2) to (0.8, 2.2);
+    \node[right] at (0.8, 2.2) {$z$};
+    \draw[->, >=latex, thick] (0.3, 2.2) to (0.3, 2.7);
+    \node[above] at (0.3, 2.7) {$\rho$};
+\end{tikzpicture}

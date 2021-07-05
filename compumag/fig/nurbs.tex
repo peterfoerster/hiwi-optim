@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\begin{axis}[
+    scale only axis=true,
+    width=0.5\textwidth,
+    axis equal,
+    enlargelimits=true,
+    legend entries={Original curve, Optimized curve, Control points},
+    legend style={at={(0.32, 0.47)}, anchor=north west, draw=none, fill=none},
+    hide axis]
+
+    \addplot[color=TUDa-0b, ultra thick] table{dat/nurbs_orig.dat};
+    \addplot[color=black, ultra thick] table{dat/nurbs_cobyla.dat};
+
+    \addplot[color=TUDa-9a, mark=*, only marks, mark size=3pt] table{dat/nurbs_cobyla_coefs.dat};
+    \addplot[color=TUDa-0d, dashed, very thick] table{dat/nurbs_cobyla_net.dat};
+\end{axis}
+\end{tikzpicture}
